@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: calc(100% - 4px);
+}
+
+body {
+    height: calc(100%);
+}
+
+.header {
+    border: solid #0068a7;
+    border-radius: 5px;
+    height: 86px;
+    margin: 2px;
+}
+
+.header-conteiner {
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-information {
+    display: flex;
+}
+
+.system-condition {
+    background-image: url(../svg/condition.svg);
+}
+
+.cow-count {
+    background-image: url(../svg/cow-count.svg);
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.milk-amount {
+    background-image: url(../svg/milk-amount.svg);
+}
+
+.header-icon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+}
+
+.cow-amount {
+    display: flex;
+}
+
+.cow-count-value {
+    margin: auto;
+    margin-right: 30px;
+    font-size: 35px;
+}
+
+.milk-control {
+    display: flex;
+}
+
+.milk-indication {
+    margin: auto;
+    font-size: 35px;
+}
+
+.logo-container {
+    align-self: flex-end;
+}
+
+.logo-icon {
+    display: block;
+    width: 160px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: 160px 70px;
+    background-position: center;
+    background-image: url(../svg/logo.svg);
+}
+
+.monitor {
+    width: 100%;
+    display: flex;
+    height: calc(100% - 86px);
+}
+
+.main {
+    border: solid #25b112;
+    margin: 2px;
+    width: calc(100% - 80px);
+    border-radius: 5px;
+}
+
+.side-bar {
+    width: 80px;
+}
+
+.side-bar-button {
+    margin-top: 7px;
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: center;
+    background-color: white;
+    border: solid #0068a7;
+    border-radius: 5px;
+}
+
+.mode-select-button {
+    display: none;
+}
+
+.milk-action-select-button {
+    display: none;
+}
+
+.side-bar-button:hover {
+    cursor: pointer;
+}
+
+.mode-stop {
+    background-image: url(../svg/button-one-mode-stop.svg);
+}
+
+.mode-pause {
+    background-image: url(../svg/button-one-mode-pause.svg);
+}
+
+.mode-play {
+    background-image: url(../svg/button-one-mode-play.svg);
+}
+
+.mode-active {
+    display: block;
+}
+
+.milk-action-active {
+    display: block;
+}
