@@ -12,12 +12,13 @@ let mainWindow;
 const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 768,
+    width: 1920,
+    height: 1080,
     frame: false,
     fullscreen: true
   });
 
+  mainWindow.webContents.openDevTools();
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 

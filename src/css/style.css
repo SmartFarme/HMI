@@ -16,7 +16,7 @@ body {
     border: solid #0068a7;
     border-radius: 5px;
     height: 86px;
-    margin: 2px;
+    margin: 2px 2px 0 2px;
 }
 
 .header-conteiner {
@@ -92,39 +92,62 @@ body {
 }
 
 .main {
-    margin: 2px;
-    width: calc(100% - 80px);
+    margin: 2px 4px 2px 2px;
+    width: calc(100% - 84px);
     border-radius: 5px;
-    border: solid #0068a7;
+
 }
 
 .tabs {
     height: 100%;
 }
 
-.tab__navigation {
-    display: flex;
+.untabs {
+    height: 100%;
+    border: #ff1616;
 }
 
 .tab {
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    background-color: #7fb4d4;
+    position: relative;
+    border-width: 2px 2px 0;
+    text-align: center;
     display: block;
     width: 90px;
-    height: 90px;
+    height: 87px;
     background-repeat: no-repeat;
     background-size: 45px;
     background-position: center;
-    background-color: white;
     border: solid #0068a7;
-    border-radius: 5px;
+    top: 3px;
+}
+
+.untab {
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    background-color: #7fb4d4;
+    position: relative;
+    border-width: 2px 0 2px 2px;
+    text-align: center;
+    display: block;
+    width: 85px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: center;
+    border: solid #0068a7;
+    top: 2px;
+    right: 1px;
 }
 
 .tab:not(:last-child) {
     margin-right: 4px;
 }
 
-.tab__content {
-    border: solid #c927c1;
-    height: calc(100% - 90px);
+.untab:not(:last-child) {
+    margin-bottom: 4px;
 }
 
 .side-bar {
@@ -154,6 +177,46 @@ body {
 
 .side-bar-button:hover {
     cursor: pointer;
+}
+
+.home-page {
+    background-image: url(../svg/tab-home-page.svg);
+}
+
+.info-page {
+    background-image: url(../svg/tab-info-page.svg);
+}
+
+.control-page {
+    background-image: url(../svg/tab-control-page.svg);
+}
+
+.setting-page {
+    background-image: url(../svg/tab-setting-page.svg);
+}
+
+.milk-yield-statistics {
+    background-image: url(../svg/tab-milk_yield_statistics.svg);
+}
+
+.cleaning-statustics {
+    background-image: url(../svg/tap-cleaning.svg);
+}
+
+.alarm-statistics {
+    background-image: url(../svg/button-alram-list.svg);
+}
+
+.motor-statistics {
+    background-image: url(../svg/MOTOR-NEED-CHECK.svg);
+}
+
+.cleaning-control {
+    background-image: url(../svg/tap-cleaning.svg);
+}
+
+.sampler {
+    background-image: url(../svg/tab-sampler.svg);
 }
 
 .mode-stop {
@@ -222,4 +285,74 @@ body {
 
 .milk-action-select-list {
     display: none;
+}
+
+.tab__navigation {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.untab__navigation {
+    align-items: center;
+    float: left;
+    display: block;
+}
+
+.tab_active {
+    background-color: white;
+    background-size: 60px;
+}
+
+.untab_active {
+    background-color: white;
+    background-size: 60px;
+}
+
+.tab__content {
+    border: solid #0068a7;
+    height: calc(100% - 90px);
+    border-radius: 0 5px 5px 5px;
+    display: none;
+    padding: 3px;
+}
+
+.tab__content_active {
+    display: block;
+}
+
+.untab__content {
+    overflow: hidden;
+    border: solid #0068a7;
+    height: 100%;
+    border-radius: 0 5px 5px 5px;
+    position: relative;
+    right: 4px;
+    top: 2px;
+    display: none;
+}
+
+.untab__content_active {
+    display: block;
+}
+
+.tab_active:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #FFF;
+}
+
+.untab_active:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -3px;
+    bottom: 0;
+    width: 4px;
+    background: #FFF;
+    z-index: 1;
 }
