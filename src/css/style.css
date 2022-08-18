@@ -171,6 +171,10 @@ body {
     display: none;
 }
 
+.green {
+    fill:rgb(36, 211, 12);
+}
+
 .milk-action-select-button {
     display: none;
 }
@@ -181,6 +185,7 @@ body {
 
 .home-page {
     background-image: url(../svg/tab-home-page.svg);
+    fill: rgb(36, 211, 12);
 }
 
 .info-page {
@@ -217,6 +222,30 @@ body {
 
 .sampler {
     background-image: url(../svg/tab-sampler.svg);
+}
+
+.milking-setting {
+    background-image: url(../svg/tab-milking-setting.svg);
+}
+
+.touchscreen-setting {
+    background-image: url(../svg/tab-touchscreen.svg);
+}
+
+.scheme {
+    background-image: url(../svg/tab-scheme.svg);
+}
+
+.calibration {
+    background-image: url(../svg/tab-calibration.svg);
+}
+
+.version {
+    background-image: url(../svg/tab-version.svg);
+}
+
+.global-setting {
+    background-image: url(../svg/tab-global-setting.svg);
 }
 
 .mode-stop {
@@ -285,6 +314,18 @@ body {
 
 .milk-action-select-list {
     display: none;
+}
+
+.tab_bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+    font-size: 50px;
 }
 
 .tab__navigation {

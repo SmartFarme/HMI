@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HMI</title>
   <link rel="stylesheet" href="css/style.css">
+  <title>Data Grid Example</title>
+  <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+  <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
 </head>
 
 <body>
@@ -34,14 +38,16 @@
   <div class="monitor">
     <div class="main">
       <div class="tabs" id="tabs1">
-        <div class="tab__navigation">
-          <div class="tab home-page"></div>
-          <div class="tab info-page tab_active"></div>
-          <div class="tab control-page"></div>
-          <div class="tab setting-page"></div>
+        <div class="tab_bar">
+          <div class="tab__navigation">
+            <div class="tab home-page "></div>
+            <div class="tab info-page tab_active"></div>
+            <div class="tab control-page"></div>
+            <div class="tab setting-page"></div>
+          </div>
+          <div class="time"></div>
         </div>
         <div class="tab__content">
-          1 вкладка
         </div>
         <div class="tab__content tab__content_info tab__content_active">
           <div class="untabs" id="untabs2">
@@ -52,7 +58,15 @@
               <div class="untab motor-statistics"></div>
             </div>
             <div class="untab__content">
-              Статистика по молоку
+              <style>
+                #data-table {
+                    height: calc(100% - 6px);
+                    width: calc(100% - 6px);
+                    margin: 3px;
+                }
+            </style>
+               <div id="data-table" class="ag-theme-balham">
+              </div>
             </div>
             <div class="untab__content untab__content_active">
               Статистика по мойке
@@ -70,11 +84,11 @@
             <div class="untab__navigation">
               <div class="untab cleaning-control"></div>
               <div class="untab sampler untab_active"></div>
-              <div class="untab"></div>
-              <div class="untab"></div>
+              <div class="untab milking-setting"></div>
+              <div class="untab touchscreen-setting"></div>
             </div>
             <div class="untab__content">
-              1 вкладка
+              Схема
             </div>
             <div class="untab__content untab__content_active">
               2 вкладка
@@ -83,17 +97,17 @@
               3 вкладка
             </div>
             <div class="untab__content">
-              4 вкладка
+              Калибровка
             </div>
           </div>
         </div>
         <div class="tab__content">
           <div class="untabs" id="untabs3">
             <div class="untab__navigation">
-              <div class="untab"></div>
-              <div class="untab untab_active"></div>
-              <div class="untab"></div>
-              <div class="untab"></div>
+              <div class="untab scheme"></div>
+              <div class="untab global-setting untab_active"></div>
+              <div class="untab version"></div>
+              <div class="untab calibration"></div>
             </div>
             <div class="untab__content">
               1 вкладка
@@ -126,10 +140,37 @@
     </div>
   </div>
   <script src="./main.js"></script>
+  <script type="text/javascript" charset="utf-8">
+     const columnDefs = [
+            { field: 'userId' },
+            { field: 'id' },
+            { field: 'title' },
+            { field: 'completed' },
+        ];
+
+        const gridOptions = {
+            columnDefs: columnDefs,
+            onGridReady: (event) =>{renderDataInTheTable(event.api)}
+        };
+
+        const eGridDiv = document.getElementById('data-table');
+        new agGrid.Grid(eGridDiv, gridOptions);
+
+        function renderDataInTheTable(api) {
+            fetch('https://jsonplaceholder.typicode.com/todos')
+                .then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    api.setRowData(data);
+                    api.sizeColumnsToFit();
+                })
+        }
+  </script>
 </body>
 <!-- <div class="milk-action-select-list">
   <button class="side-bar-button milk-action-select-button button-milk-save"></button>
   <button class="side-bar-button milk-action-select-button button-milk-remove"></button>
   <button class="side-bar-button milk-action-select-button button-escape"></button>
 </div> -->
+
 </html>
