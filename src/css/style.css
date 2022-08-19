@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.ag-header-cell-label {
+    justify-content: center;
+    text-align: center!important;
+ }
+
 html {
     height: calc(100% - 4px);
 }
@@ -154,7 +159,7 @@ body {
     width: 80px;
 }
 
-.side-bar-button {
+.side-bar-button, .button {
     margin-top: 7px;
     display: block;
     width: 75px;
@@ -396,4 +401,29 @@ body {
     width: 4px;
     background: #FFF;
     z-index: 1;
+}
+
+.new-alarm {
+    display: flex;
+    align-items: flex-end;
+}
+
+.list-of-alarm {
+    display: flex;
+    align-items: flex-end;
+    height: calc(100% - 178px);
+    margin-top: 13px;
+}
+
+.filter-alarm, .stop-alarm {
+    margin-left: 12px;
+    margin-bottom: 2px;
+}
+
+.filter-alarm {
+    background-image: url(../svg/button-filter-alarm.svg);
+}
+
+.stop-alarm {
+    background-image: url(../svg/button-stop-alarm.svg);
 }

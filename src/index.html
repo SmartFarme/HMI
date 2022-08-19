@@ -26,7 +26,7 @@
         <div class="milk-control">
           <div class="header-icon milk-amount">
           </div>
-          <p class="milk-indication">25/66 kg</p>
+          <p class="milk-indication">25.45/66.30 kg</p>
         </div>
       </div>
       <div class="logo-container">
@@ -55,27 +55,55 @@
               <div class="untab milk-yield-statistics"></div>
               <div class="untab cleaning-statustics untab_active"></div>
               <div class="untab alarm-statistics"></div>
-              <div class="untab motor-statistics"></div>
             </div>
             <div class="untab__content">
               <style>
-                #data-table {
-                    height: calc(100% - 6px);
-                    width: calc(100% - 6px);
-                    margin: 3px;
+                #milk-table {
+                  height: calc(100% - 6px);
+                  width: calc(100% - 6px);
+                  margin: 3px;
                 }
-            </style>
-               <div id="data-table" class="ag-theme-balham">
+              </style>
+              <div id="milk-table" class="ag-theme-balham">
               </div>
             </div>
             <div class="untab__content untab__content_active">
-              Статистика по мойке
+              <style>
+                #wash-table {
+                  height: calc(100% - 6px);
+                  width: calc(100% - 6px);
+                  margin: 3px;
+                }
+              </style>
+              <div id="wash-table" class="ag-theme-balham">
+              </div>
             </div>
             <div class="untab__content alarm-statistics-content">
-              Статистика ошибок
-            </div>
-            <div class="untab__content">
-              Мотор
+              <style>
+                #new-alarm-table {
+                  height: 160px;
+                  width: calc(100% - 109px);
+                  margin-top: 3px;
+                  margin-left: 3px;
+                }
+
+                #alarm-list-table {
+                  height: 100%;
+                  width: calc(100% - 109px);
+                  margin-top: 3px;
+                  margin-left: 3px;
+                }
+              </style>
+              <div class="new-alarm">
+                <div id="new-alarm-table" class="ag-theme-balham">
+                </div>
+                <button class="button stop-alarm"></button>
+              </div>
+              <div class="list-of-alarm">
+                <div id="alarm-list-table" class="ag-theme-balham">
+                </div>
+                <button class="button filter-alarm"></button>
+              </div>
             </div>
           </div>
         </div>
@@ -141,36 +169,135 @@
   </div>
   <script src="./main.js"></script>
   <script type="text/javascript" charset="utf-8">
-     const columnDefs = [
-            { field: 'userId' },
-            { field: 'id' },
-            { field: 'title' },
-            { field: 'completed' },
-        ];
+    const milkColumnDefs = [
+      { field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true }
+    ];
 
-        const gridOptions = {
-            columnDefs: columnDefs,
-            onGridReady: (event) =>{renderDataInTheTable(event.api)}
-        };
+    const milkGridOptions = {
+      columnDefs: milkColumnDefs,
+      rowData: null,
+      onGridReady: (event) => { milkRenderDataInTheTable(event.api) }
+    };
 
-        const eGridDiv = document.getElementById('data-table');
-        new agGrid.Grid(eGridDiv, gridOptions);
+    const milkEGridDiv = document.getElementById('milk-table');
+    new agGrid.Grid(milkEGridDiv, milkGridOptions);
 
-        function renderDataInTheTable(api) {
-            fetch('https://jsonplaceholder.typicode.com/todos')
-                .then(function (response) {
-                    return response.json();
-                }).then(function (data) {
-                    api.setRowData(data);
-                    api.sizeColumnsToFit();
-                })
-        }
+    function milkRenderDataInTheTable(api) {
+      fetch('./milk.json')
+        .then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          api.setRowData(data);
+
+        })
+    }
+    const washColumnDefs = [
+      { field: 'Время начала промывки', width: 205, resizable: true, },
+      { field: 'Тип промывки', width: 205, resizable: true },
+      { field: 'Время промывки', width: 200, resizable: true },
+      { field: 'Результат промывки', width: 200, resizable: true }
+    ];
+
+    const washGridOptions = {
+      columnDefs: washColumnDefs,
+      rowData: null,
+      onGridReady: (event) => { washRenderDataInTheTable(event.api) }
+    };
+
+    const washEGridDiv = document.getElementById('wash-table');
+    new agGrid.Grid(washEGridDiv, washGridOptions);
+
+    function washRenderDataInTheTable(api) {
+      fetch('./wash.json')
+        .then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          api.setRowData(data);
+        })
+    }
+    const newAlarmColumnDefs = [
+      { field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true }
+    ];
+
+    const newAlarmGridOptions = {
+      columnDefs: newAlarmColumnDefs,
+      rowData: null,
+      onGridReady: (event) => { newAlarmRenderDataInTheTable(event.api) }
+    };
+
+    const newAlarmEGridDiv = document.getElementById('new-alarm-table');
+    new agGrid.Grid(newAlarmEGridDiv, newAlarmGridOptions);
+
+    function newAlarmRenderDataInTheTable(api) {
+      fetch('./new-alarm.json')
+        .then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          api.setRowData(data);
+        })
+    }
+
+    const alarmListColumnDefs = [
+      { field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
+      { field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true }
+    ];
+
+    const alarmListGridOptions = {
+      columnDefs: alarmListColumnDefs,
+      rowData: null,
+      onGridReady: (event) => { alarmListRenderDataInTheTable(event.api) }
+    };
+
+    const alarmListEGridDiv = document.getElementById('alarm-list-table');
+    new agGrid.Grid(alarmListEGridDiv, alarmListGridOptions);
+
+    function alarmListRenderDataInTheTable(api) {
+      fetch('./alarm-list.json')
+        .then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          api.setRowData(data);
+        })
+    }
   </script>
 </body>
 <!-- <div class="milk-action-select-list">
   <button class="side-bar-button milk-action-select-button button-milk-save"></button>
   <button class="side-bar-button milk-action-select-button button-milk-remove"></button>
   <button class="side-bar-button milk-action-select-button button-escape"></button>
+
+  const washColumnDefs = [
+        { field: 'Время', width: 195, resizable: true, },
+        { field: 'Очистка', width: 200, resizable: true },
+        { field: 'Время', width: 195, resizable: true },
+        { field: 'Результат', width: 195, resizable: true }
+      ];
+
+      const washGridOptions = {
+        columnDefs: washColumnDefs,
+        rowData: null,
+        onGridReady: (event) => { washRenderDataInTheTable(event.api) }
+      };
+
+      const washEGridDiv = document.getElementById('wash-table');
+      new agGrid.Grid(washEGridDiv, washGridOptions);
+
+      function washRenderDataInTheTable(api) {
+        fetch('./wash.json')
+          .then(function (response) {
+            return response.json();
+          }).then(function (data) {
+            api.setRowData(data);
+          })
+      }
 </div> -->
 
 </html>
