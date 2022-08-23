@@ -40,7 +40,7 @@ body {
     border: solid #0068a7;
     border-radius: 5px;
     height: 85px;
-    margin: 2px 4px 0px 2px;
+    margin: 2px 2px 0px 2px;
 }
 
 .header-conteiner {
@@ -138,12 +138,14 @@ body {
 
 .logo-icon {
     display: block;
-    width: 160px;
+    width: 70px;
     height: 70px;
+    margin-bottom: 20px;
+    margin-right: 40px;
     background-repeat: no-repeat;
-    background-size: 160px 70px;
+    background-size: 70px 70px;
     background-position: center;
-    background-image: url(../svg/logo.svg);
+    background-image: url(../images/logo.png);
 }
 
 .monitor {
@@ -153,8 +155,8 @@ body {
 }
 
 .main {
-    margin: 0px 4px 2px 2px;
-    width: calc(100% - 84px);
+    margin: 0px 4px 0px 2px;
+    width: calc(100% - 82px);
     border-radius: 5px;
 }
 
@@ -163,6 +165,7 @@ body {
 }
 
 .untabs {
+    display: flex;
     height: calc(100% + 2px);
     border: #ff1616;
 }
@@ -186,12 +189,13 @@ body {
 }
 
 .untab {
+    position: relative;
+    margin-top: 2px;
     background-origin: padding-box;
     padding: 10px;
     border-radius: 5px 0 0 5px;
     cursor: pointer;
     background-color: #7fb4d4;
-    position: relative;
     border-width: 2px 0 2px 2px;
     text-align: center;
     display: block;
@@ -201,8 +205,6 @@ body {
     background-size: 45px;
     background-position: center;
     border: solid #0068a7;
-    top: 2px;
-    right: 1px;
 }
 
 .tab:not(:last-child) {
@@ -214,7 +216,7 @@ body {
 }
 
 .side-bar {
-    width: 80px;
+    width: 78px;
 }
 
 .side-bar-button, .button {
@@ -247,7 +249,7 @@ body {
 }
 
 .milk-action-select-button {
-    display: none;
+    background-size: 60px;
 }
 
 .side-bar-button:hover {
@@ -306,18 +308,22 @@ body {
 
 .scheme {
     background-image: url(../images/tab-input-outputtest.png);
+    background-size: 30px;
 }
 
 .calibration {
     background-image: url(../images/tab-global-setting.png);
+    background-size: 35px;
 }
 
 .version {
     background-image: url(../images/tab-version.png);
+    background-size: 35px;
 }
 
 .global-setting {
     background-image: url(../images/tab-calibration.png);
+    background-size: 35px;
 }
 
 .mode-stop {
@@ -366,11 +372,13 @@ body {
 }
 
 .button-feed {
+    background-size: 51px;
     background-image: url(../images/button-feed.png);
 }
 
 .button-skip {
     background-image: url(../images/button-separate-animal.png);
+    background-size: 41px;
 }
 
 .skip-is-active {
@@ -383,6 +391,7 @@ body {
 
 .button-open-cell {
     background-image: url(../images/button-open-cell.png);
+    background-size: 60px;
 }
 
 .milk-action-select-list {
@@ -399,7 +408,26 @@ body {
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 20px;
-    font-size: 50px;
+    font-size: 35px;
+    width: 100px;
+}
+
+.clock-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 44px;
+}
+
+.clock-icon{
+    background-image: url(../images/clock.png);
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    margin-top: 21px;
+    margin-right: 19px;
 }
 
 .tab__navigation {
@@ -410,7 +438,6 @@ body {
 
 .untab__navigation {
     align-items: center;
-    float: left;
     display: block;
 }
 
@@ -429,18 +456,19 @@ body {
     background-size: contain;
     background-origin: content-box;
     padding: 7px;
+    padding-left: 9px;
     
 }
 
 .tab__content {
     border: solid #0068a7;
     height: calc(100% - 87px);
-    border-radius: 0 5px 5px 5px;
+    border-radius: 0 10px 10px 10px;
     display: none;
     padding-top: 1px;
-    padding-left: 3px;
+    padding-left: 2px;
     padding-right: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 }
 
 .tab__content_active {
@@ -448,14 +476,14 @@ body {
 }
 
 .untab__content {
-    background-color: #e2ff3b;
+    margin-top: 2px;
+    box-sizing: content-box;
     overflow: hidden;
     border: solid #0068a7;
-    height: 100%;
-    border-radius: 0 5px 5px 5px;
-    position: relative;
-    top: 2px;
+    border-radius: 0 10px 10px 10px;
     display: none;
+    width: 100%;
+    margin-left: -3px;
 }
 
 .untab__content_active {
