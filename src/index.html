@@ -16,17 +16,24 @@
   <header class="header">
     <div class="header-conteiner">
       <div class="header-information">
-        <div class="header-icon system-condition">
+        <div class="system-condition-control">
+          <div class="header-icon system-condition">
+          </div>
         </div>
         <div class="cow-amount">
           <div class="header-icon cow-count">
           </div>
-          <p class="cow-count-value">1732</p>
+          <p class="cow-count-value">0000</p>
         </div>
         <div class="milk-control">
           <div class="header-icon milk-amount">
           </div>
-          <p class="milk-indication">25.45/66.30 kg</p>
+          <p class="milk-indication">23.30/13.70 kg</p>
+        </div>
+        <div class="timer">
+          <div class="timer-icon">
+          </div>
+          <p class="timer-count">0:00 min</p>
         </div>
       </div>
       <div class="logo-container">
@@ -70,6 +77,7 @@
             <div class="untab__content untab__content_active">
               <style>
                 #wash-table {
+                  font-family: Cera-regular;
                   height: calc(100% - 6px);
                   width: calc(100% - 6px);
                   margin: 3px;
@@ -81,6 +89,7 @@
             <div class="untab__content alarm-statistics-content">
               <style>
                 #new-alarm-table {
+                  font-family: Cera-regular;
                   height: 160px;
                   width: calc(100% - 109px);
                   margin-top: 3px;
@@ -88,6 +97,7 @@
                 }
 
                 #alarm-list-table {
+                  font-family: Cera-regular;
                   height: 100%;
                   width: calc(100% - 109px);
                   margin-top: 3px;
@@ -110,15 +120,15 @@
         <div class="tab__content">
           <div class="untabs" id="untabs2">
             <div class="untab__navigation">
-              <div class="untab cleaning-control"></div>
-              <div class="untab sampler untab_active"></div>
+              <div class="untab cleaning-control untab_active"></div>
+              <div class="untab sampler"></div>
               <div class="untab milking-setting"></div>
               <div class="untab touchscreen-setting"></div>
             </div>
-            <div class="untab__content">
+            <div class="untab__content untab__content_active">
               Схема
             </div>
-            <div class="untab__content untab__content_active">
+            <div class="untab__content">
               2 вкладка
             </div>
             <div class="untab__content">
@@ -155,8 +165,8 @@
     </div>
     <div class="side-bar">
       <div class="mode-select">
-        <button class="side-bar-button mode-select-button mode-stop"></button>
-        <button class="side-bar-button mode-select-button mode-pause mode-active"></button>
+        <button class="side-bar-button mode-select-button mode-stop mode-active"></button>
+        <button class="side-bar-button mode-select-button mode-pause"></button>
         <button class="side-bar-button mode-select-button mode-play"></button>
       </div>
       <button class="side-bar-button alarm-button fatal-alarm"></button>
@@ -198,7 +208,7 @@
     }
     const washColumnDefs = [
       { field: 'Время начала промывки', width: 205, resizable: true, },
-      { field: 'Тип промывки', width: 205, resizable: true },
+      { field: 'Тип промывки', width: 205, resizable: true, },
       { field: 'Время промывки', width: 200, resizable: true },
       { field: 'Результат промывки', width: 200, resizable: true }
     ];

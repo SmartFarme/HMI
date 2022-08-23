@@ -1,3 +1,21 @@
+@font-face {
+    font-family: Cera-light;
+    src: url(../fonts/CeraPro-Light.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Cera-regular;
+    src: url(../fonts/CeraPro-Regular.ttf);
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: Cera-bold;
+    src: url(../fonts/CeraPro-Bold.ttf);
+    font-style: normal;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -15,17 +33,18 @@ html {
 
 body {
     height: calc(100%);
+    font-family: Cera-regular;
 }
 
 .header {
     border: solid #0068a7;
     border-radius: 5px;
-    height: 86px;
-    margin: 2px 2px 0 2px;
+    height: 85px;
+    margin: 2px 4px 0px 2px;
 }
 
 .header-conteiner {
-    padding: 3px;
+    padding: 3px 9px 3px 9px;
     display: flex;
     justify-content: space-between;
 }
@@ -35,25 +54,39 @@ body {
 }
 
 .system-condition {
-    background-image: url(../svg/condition.svg);
+    margin-top: 3.5px;
+    background-image: url(../images/status-wait-for-cow.png);
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: 72px;
+    background-position: center;
 }
 
 .cow-count {
-    background-image: url(../svg/cow-count.svg);
+    background-image: url(../images/cow-id.png);
+    margin-top: 5px;
     margin-right: 15px;
-    margin-left: 10px;
-}
-
-.milk-amount {
-    background-image: url(../svg/milk-amount.svg);
-}
-
-.header-icon {
-    display: block;
+    margin-left: 19px;
     width: 70px;
     height: 70px;
     background-repeat: no-repeat;
     background-size: 70px;
+    background-position: center;
+}
+
+.header-icon {
+    display: block;
+}
+
+.milk-amount {
+    background-image: url(../images/milk-amount.png);
+    margin-top: 15px;
+    background-size: 28px auto;
+    width: 50px;
+    height: 50px;
+    margin-left: 1px;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -62,17 +95,40 @@ body {
 }
 
 .cow-count-value {
-    margin: auto;
-    margin-right: 30px;
+    letter-spacing: 1px;
+    margin-top: 22px;
     font-size: 35px;
 }
 
 .milk-control {
+    margin-left: 29px;
     display: flex;
+    flex-direction: row;
 }
 
 .milk-indication {
-    margin: auto;
+    margin-top: 23px;
+    font-size: 35px;
+}
+
+.timer {
+    display: flex;
+    margin-left: 40px;
+}
+
+.timer-icon {
+    background-image: url(../images/timer.png);
+    margin-top: 19px;
+    background-size: 39px auto;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.timer-count {
+    margin-top: 23px;
+    margin-left: 3px;
     font-size: 35px;
 }
 
@@ -93,14 +149,13 @@ body {
 .monitor {
     width: 100%;
     display: flex;
-    height: calc(100% - 86px);
+    height: calc(100% - 85px);
 }
 
 .main {
-    margin: 2px 4px 2px 2px;
+    margin: 0px 4px 2px 2px;
     width: calc(100% - 84px);
     border-radius: 5px;
-
 }
 
 .tabs {
@@ -108,11 +163,12 @@ body {
 }
 
 .untabs {
-    height: 100%;
+    height: calc(100% + 2px);
     border: #ff1616;
 }
 
 .tab {
+    background-color: #e2ff3b;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
     background-color: #7fb4d4;
@@ -123,13 +179,15 @@ body {
     width: 90px;
     height: 87px;
     background-repeat: no-repeat;
-    background-size: 45px;
+    background-size: 50px;
     background-position: center;
     border: solid #0068a7;
     top: 3px;
 }
 
 .untab {
+    background-origin: padding-box;
+    padding: 10px;
     border-radius: 5px 0 0 5px;
     cursor: pointer;
     background-color: #7fb4d4;
@@ -160,16 +218,24 @@ body {
 }
 
 .side-bar-button, .button {
-    margin-top: 7px;
     display: block;
     width: 75px;
     height: 75px;
     background-repeat: no-repeat;
-    background-size: 45px;
+    background-size: 59px;
     background-position: center;
     background-color: white;
     border: solid #0068a7;
     border-radius: 5px;
+    margin-left: 1px;
+}
+
+.side-bar-button:first-child {
+    margin-top: 7px;
+}
+
+.side-bar-button:not(:first-child) {
+    margin-top: 5px;
 }
 
 .mode-select-button {
@@ -189,32 +255,31 @@ body {
 }
 
 .home-page {
-    background-image: url(../svg/tab-home-page.svg);
-    fill: rgb(36, 211, 12);
+    background-image: url(../images/tab-home-page.png);
 }
 
 .info-page {
-    background-image: url(../svg/tab-info-page.svg);
+    background-image: url(../images/tab-statistic-page.png);
 }
 
 .control-page {
-    background-image: url(../svg/tab-control-page.svg);
+    background-image: url(../images/tab-control-page.png);
 }
 
 .setting-page {
-    background-image: url(../svg/tab-setting-page.svg);
+    background-image: url(../images/tab-setting-page.png);
 }
 
 .milk-yield-statistics {
-    background-image: url(../svg/tab-milk_yield_statistics.svg);
+    background-image: url(../images/tab-milk_yield_statistics.png);
 }
 
 .cleaning-statustics {
-    background-image: url(../svg/tap-cleaning.svg);
+    background-image: url(../images/tap-cleaning.png);
 }
 
 .alarm-statistics {
-    background-image: url(../svg/button-alram-list.svg);
+    background-image: url(../images/alarm.png);
 }
 
 .motor-statistics {
@@ -222,51 +287,54 @@ body {
 }
 
 .cleaning-control {
-    background-image: url(../svg/tap-cleaning.svg);
+    background-image: url(../images/tap-cleaning.png);
 }
 
 .sampler {
-    background-image: url(../svg/tab-sampler.svg);
+    background-image: url(../images/tab-sampler.png);
+    background-size: 15px;
+    
 }
 
 .milking-setting {
-    background-image: url(../svg/tab-milking-setting.svg);
+    background-image: url(../images/arm.png);
 }
 
 .touchscreen-setting {
-    background-image: url(../svg/tab-touchscreen.svg);
+    background-image: url(../images/tab-touchscreen.png);
 }
 
 .scheme {
-    background-image: url(../svg/tab-scheme.svg);
+    background-image: url(../images/tab-input-outputtest.png);
 }
 
 .calibration {
-    background-image: url(../svg/tab-calibration.svg);
+    background-image: url(../images/tab-global-setting.png);
 }
 
 .version {
-    background-image: url(../svg/tab-version.svg);
+    background-image: url(../images/tab-version.png);
 }
 
 .global-setting {
-    background-image: url(../svg/tab-global-setting.svg);
+    background-image: url(../images/tab-calibration.png);
 }
 
 .mode-stop {
-    background-image: url(../svg/button-mode-stop.svg);
+    background-image: url(../images/mode-stop.png);
 }
 
 .mode-pause {
-    background-image: url(../svg/button-mode-pause.svg);
+    background-image: url(../images/mode-pause.png);
 }
 
 .mode-play {
-    background-image: url(../svg/button-mode-play.svg);
+    background-image: url(../images/mode-play.png);
 }
 
 .alarm-button {
-    background-image: url(../svg/button-alram-list.svg);
+    background-size: 55px;
+    background-image: url(../images/alarm.png);
 }
 
 .low-alarm {
@@ -274,7 +342,7 @@ body {
 }
 
 .medium-alarm {
-    background-color: #ff7738;
+    background-color: #ffa500;
 }
 
 .fatal-alarm {
@@ -282,7 +350,7 @@ body {
 }
 
 .button-close-cow-exit {
-    background-image: url(../svg/button-close-cow-exit.svg);
+    background-image: url(../images/button-close-cow-exit.png);
 }
 
 .exit-is-close {
@@ -298,11 +366,11 @@ body {
 }
 
 .button-feed {
-    background-image: url(../svg/button-feed.svg);
+    background-image: url(../images/button-feed.png);
 }
 
 .button-skip {
-    background-image: url(../svg/button-skip.svg);
+    background-image: url(../images/button-separate-animal.png);
 }
 
 .skip-is-active {
@@ -310,11 +378,11 @@ body {
 }
 
 .button-milk-action-select {
-    background-image: url(../svg/button-milk-action-select.svg);
+    background-image: url(../images/button-milk-action-select.png);
 }
 
 .button-open-cell {
-    background-image: url(../svg/button-open-cell.svg);
+    background-image: url(../images/button-open-cell.png);
 }
 
 .milk-action-select-list {
@@ -322,6 +390,7 @@ body {
 }
 
 .tab_bar {
+    margin-top: -1px ;
     display: flex;
     justify-content: space-between;
 }
@@ -347,20 +416,31 @@ body {
 
 .tab_active {
     background-color: white;
-    background-size: 60px;
+    background-size: 65px;
+    background-position: 50% 57%;
 }
 
 .untab_active {
+    margin-left: 3px;
+    width: 82px;
+    height: 80px;
+    box-sizing: border-box;
     background-color: white;
-    background-size: 60px;
+    background-size: contain;
+    background-origin: content-box;
+    padding: 7px;
+    
 }
 
 .tab__content {
     border: solid #0068a7;
-    height: calc(100% - 90px);
+    height: calc(100% - 87px);
     border-radius: 0 5px 5px 5px;
     display: none;
-    padding: 3px;
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
 }
 
 .tab__content_active {
@@ -368,12 +448,12 @@ body {
 }
 
 .untab__content {
+    background-color: #e2ff3b;
     overflow: hidden;
     border: solid #0068a7;
     height: 100%;
     border-radius: 0 5px 5px 5px;
     position: relative;
-    right: 4px;
     top: 2px;
     display: none;
 }
@@ -421,9 +501,13 @@ body {
 }
 
 .filter-alarm {
-    background-image: url(../svg/button-filter-alarm.svg);
+    background-image: url(../images/filter.png);
 }
 
 .stop-alarm {
-    background-image: url(../svg/button-stop-alarm.svg);
+    background-image: url(../images/button-clear-alarm.png);
+}
+
+.sampler .untab_active {
+    background-size: 100px;
 }
