@@ -63,6 +63,10 @@ body {
     background-position: center;
 }
 
+.cow-amount {
+    display: flex;
+}
+
 .cow-count {
     background-image: url(../images/cow-id.png);
     margin-top: 5px;
@@ -88,10 +92,6 @@ body {
     margin-left: 1px;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.cow-amount {
-    display: flex;
 }
 
 .cow-count-value {
@@ -202,7 +202,7 @@ body {
     width: 85px;
     height: 80px;
     background-repeat: no-repeat;
-    background-size: 45px;
+    background-size: 32px;
     background-position: center;
     border: solid #0068a7;
 }
@@ -258,21 +258,26 @@ body {
 
 .home-page {
     background-image: url(../images/tab-home-page.png);
+    padding: 4px;
 }
 
 .info-page {
     background-image: url(../images/tab-statistic-page.png);
+    padding: 3px;
 }
 
 .control-page {
     background-image: url(../images/tab-control-page.png);
+    padding: 8px;
 }
 
 .setting-page {
     background-image: url(../images/tab-setting-page.png);
+    padding: 8px;
 }
 
 .milk-yield-statistics {
+    background-size: 34px;
     background-image: url(../images/tab-milk_yield_statistics.png);
 }
 
@@ -294,16 +299,18 @@ body {
 
 .sampler {
     background-image: url(../images/tab-sampler.png);
-    background-size: 15px;
+    background-size: 14px;
     
 }
 
 .milking-setting {
     background-image: url(../images/arm.png);
+    background-size: 35px;
 }
 
 .touchscreen-setting {
     background-image: url(../images/tab-touchscreen.png);
+    background-size: 35px;
 }
 
 .scheme {
@@ -443,8 +450,9 @@ body {
 
 .tab_active {
     background-color: white;
-    background-size: 65px;
+    background-size: contain;
     background-position: 50% 57%;
+    background-origin: content-box;
 }
 
 .untab_active {
@@ -520,12 +528,16 @@ body {
     display: flex;
     align-items: flex-end;
     height: calc(100% - 178px);
-    margin-top: 13px;
+    margin-top: 11px;
 }
 
-.filter-alarm, .stop-alarm {
-    margin-left: 12px;
-    margin-bottom: 2px;
+.stop-alarm {
+    margin-left: 10px;
+    background-size: 55px;
+}
+
+.filter-alarm {
+    margin-left: 10px;
 }
 
 .filter-alarm {
@@ -538,4 +550,12 @@ body {
 
 .sampler .untab_active {
     background-size: 100px;
+}
+
+.milk-filter {
+    background-image: url(../images/filter.png);
+    position: absolute;
+    bottom: 27px;
+    right: 115px;
+    z-index: 2;
 }
