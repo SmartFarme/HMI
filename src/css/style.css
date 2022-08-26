@@ -8,13 +8,13 @@
     font-family: Cera-regular;
     src: url(../fonts/CeraPro-Regular.ttf);
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Cera-bold;
     src: url(../fonts/CeraPro-Bold.ttf);
     font-style: normal;
-  }
+}
 
 * {
     margin: 0;
@@ -28,8 +28,8 @@ button:hover {
 
 .ag-header-cell-label {
     justify-content: center;
-    text-align: center!important;
- }
+    text-align: center !important;
+}
 
 html {
     height: calc(100% - 4px);
@@ -169,7 +169,7 @@ body {
 }
 
 .tab_bar {
-    margin-top: -1px ;
+    margin-top: -1px;
     display: flex;
     justify-content: space-between;
 }
@@ -247,7 +247,7 @@ body {
     margin-right: 44px;
 }
 
-.clock-icon{
+.clock-icon {
     background-image: url(../images/clock.png);
     background-size: 40px;
     width: 40px;
@@ -340,7 +340,8 @@ body {
     margin-left: -3px;
 }
 
-.side-bar-button, .button {
+.side-bar-button,
+.button {
     display: block;
     width: 75px;
     height: 75px;
@@ -408,7 +409,7 @@ body {
     justify-content: start;
 }
 
-.cl-icon{
+.cl-icon {
     display: block;
     width: 50px;
     height: 50px;
@@ -585,7 +586,7 @@ body {
 .sampler {
     background-image: url(../images/tab-sampler.png);
     background-size: 14px;
-    
+
 }
 
 .sampler-status {
@@ -610,6 +611,7 @@ body {
     background-position: center;
     border: solid #0068a7;
     border-radius: 5px;
+    background-color: #FFF;
 }
 
 .sampler-status-play {
@@ -624,6 +626,93 @@ body {
 
 .sampler-status-active {
     display: block;
+}
+
+.sampler-frame {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    padding-bottom: 5px;
+    margin-top: 23px;
+}
+
+.sampler-frame-text,
+.bottle-number-text,
+.last-bottle-number-text {
+    margin-top: 12px;
+    font-size: 20px;
+    width: 262px;
+    text-align: center;
+}
+
+.sampler-frame-button,
+.bottle-number-button,
+.last-bottle-number-button {
+    display: block;
+    width: 120px;
+    height: 43px;
+    background-size: 60px;
+    border: solid #0068a7;
+    border-radius: 5px;
+    background-color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.bottle-number {
+    display: flex;
+    justify-content: start;
+    margin-top: 37px;
+}
+
+.bottle-number-text {
+    margin-top: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+}
+
+.last-bottle-number {
+    margin-top: 33px;
+    display: flex;
+    justify-content: start;
+}
+
+.last-bottle-number-text {
+    margin-top: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 15px;
+}
+
+.language {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.language-icon {
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: center;
+    border: solid #0068a7;
+    border-radius: 5px;
+    background-color: #FFF;
+    background-image: url(../images/language.png);
+}
+
+.select-language {
+    width: 90%;
+}
+
+#language {
+  width: 100%;
+  height: 34px;
+  line-height: 30px;
+  margin-left: 10px;
 }
 
 .milking-setting {
@@ -743,6 +832,7 @@ body {
 .button-milk-action-select {
     background-image: url(../images/button-milk-action-select.png);
 }
+
 .milk-action-select-list {
     display: none;
 }
@@ -761,5 +851,9 @@ body {
     background-origin: content-box;
     padding: 7px;
     padding-left: 9px;
-    
+
+}
+
+.input-button {
+    font-family: Cera-regular;
 }
