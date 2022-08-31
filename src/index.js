@@ -15,7 +15,8 @@ const createWindow = () => {
     width: 1024,
     height: 768,
     frame: true,
-    fullscreen: true
+    fullscreen: true,
+    autoHideMenuBar: true,
   });
 
   //mainWindow.webContents.openDevTools();

@@ -49,7 +49,7 @@ body {
 }
 
 .header {
-    border: solid #0067a9;
+    border: solid #ed1c24;
     border-radius: 5px;
     height: 85px;
     margin: 2px 2px 0px 2px;
@@ -169,7 +169,7 @@ body {
 .main {
     margin: 0px 4px 0px 2px;
     width: calc(100% - 82px);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .tabs {
@@ -189,10 +189,9 @@ body {
 }
 
 .tab {
-    background-color: #e2ff3b;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
-    background-color: #7fb4d4;
+    background-color: #2aa3e6;
     position: relative;
     border-width: 2px 2px 0;
     text-align: center;
@@ -202,7 +201,7 @@ body {
     background-repeat: no-repeat;
     background-size: 50px;
     background-position: center;
-    border: solid #0068a7;
+    border: solid #ed1c24;
     top: 3px;
 }
 
@@ -287,7 +286,7 @@ body {
 }
 
 .tab__content {
-    border: solid #0068a7;
+    border: solid #ed1c24;
     height: calc(100% - 87px);
     border-radius: 0 10px 10px 10px;
     display: none;
@@ -319,7 +318,7 @@ body {
     padding: 10px;
     border-radius: 5px 0 0 5px;
     cursor: pointer;
-    background-color: #7fb4d4;
+    background-color: #2aa3e6;
     border-width: 2px 0 2px 2px;
     text-align: center;
     display: block;
@@ -328,7 +327,7 @@ body {
     background-repeat: no-repeat;
     background-size: 32px;
     background-position: center;
-    border: solid #0068a7;
+    border: solid #ed1c24;
 }
 
 .untab:not(:last-child) {
@@ -368,7 +367,7 @@ body {
     margin-top: 2px;
     box-sizing: content-box;
     overflow: hidden;
-    border: solid #0068a7;
+    border: solid #ed1c24;
     border-radius: 0 7px 7px 7px;
     display: none;
     width: 100%;
@@ -383,7 +382,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: white;
-    border: solid #0068a7;
+    border: solid #2660b6;
     border-radius: 5px;
     margin-left: 1px;
 }
@@ -505,7 +504,7 @@ body {
     background-repeat: no-repeat;
     background-size: 56px;
     background-position: center;
-    border: solid #0068a7;
+    border: solid #2660b6;
     border-radius: 5px;
 }
 
@@ -677,7 +676,7 @@ body {
     background-repeat: no-repeat;
     background-size: 60px;
     background-position: center;
-    border: solid #0068a7;
+    border: solid #2660b6;
     border-radius: 5px;
     background-color: #FFF;
 }
@@ -723,7 +722,7 @@ body {
     width: 120px;
     height: 43px;
     background-size: 60px;
-    border: solid #0068a7;
+    border: solid #2660b6;
     border-radius: 5px;
     background-color: #FFF;
     font-size: 20px;
@@ -779,7 +778,7 @@ body {
     background-repeat: no-repeat;
     background-size: 55px;
     background-position: center;
-    border: solid #0068a7;
+    border: solid #2660b6;
     border-radius: 5px;
     background-color: #FFF;
     background-image: url(../images/language.png);
@@ -795,7 +794,7 @@ body {
 .clean-touch {
     background-image: url(../images/tap-cleaning.png);
     image-rendering: pixelated;
-    border: solid 2px #0068a7;
+    border: solid 2px #2660b6;
     margin-top: 8px;
     box-shadow: 1px 1px #7fb4d4, -1px -1px #7fb4d4, inset 1px 1px #9fdfff, inset -1px -1px #9fdfff;
 }
@@ -803,7 +802,7 @@ body {
 .off-system {
     background-image: url(../images/off-button.png);
     image-rendering: pixelated;
-    border: solid 2px #0068a7;
+    border: solid 2px #2660b6;
     margin-top: 8px;
     box-shadow: 1px 1px #7fb4d4, -1px -1px #7fb4d4, inset 1px 1px #9fdfff, inset -1px -1px #9fdfff;
 }
@@ -940,7 +939,7 @@ body {
 }
 
 .exit-is-close {
-    background-color: #7fb4d4;
+    background-color: #2aa3e6;
 }
 
 .button-feed {
@@ -957,7 +956,7 @@ body {
 }
 
 .skip-is-active {
-    background-color: #7fb4d4;
+    background-color: #2aa3e6;
 }
 
 .milk-action-select-button {
@@ -1004,19 +1003,20 @@ body {
     list-style-type: none;
     font-weight: 300;
     width: 100%;
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
 .dropdown__value {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 5px;
     display: inline-block;
     cursor: pointer;
     width: 100%;
     border: 1px solid gray;
     background-color: #e8e8e8;
     height: 40px;
-    margin-left: 8px;
+    margin-left: 5px;
+    font-size: 27px;
 }
 
 .dropdown__list {
@@ -1024,8 +1024,9 @@ body {
     list-style-type: none;
     border: 1px solid gray;
     box-shadow: 1px 1px gray, 1px 1px gray;
-    margin-left: 8px;
+    margin-left: 5px;
     width: 100%;
+    font-size: 27px;
 }
 
 .dropdown__list_active {
@@ -1047,13 +1048,15 @@ body {
     color: black;
     box-sizing: border-box;
     background-color: #fff;
-    padding-top: 10px;
+    padding-top: 5px;
     width: 100%;
     border: 1px solid gray;
+    padding-left: 5px;
+    font-size: 27px;
 }
 
 .dropdown__item:hover {
-    background-color: #7fb4d4;
+    background-color: #2aa3e6;
 }
 
 .main-div {
@@ -1073,7 +1076,7 @@ body {
     height: 540px;
     width: 420px;
     background: #f9f9f9;
-    border: solid 5px #0067a9;
+    border: solid 5px #ed1c24;
     border-radius: 5px;
     padding: 10px;
     position: absolute;
@@ -1087,7 +1090,7 @@ body {
 
 .main-content:before {
     background: none;
-    border: 5px solid #7fb4d4;
+    border: 5px solid #2aa3e6;
     border-radius: 10px;
     content: "";
     display: block;
@@ -1114,7 +1117,7 @@ body {
     list-style: none;
     height: 80px;
     border-radius: 5px;
-    border: solid #016aac;
+    border: solid #ed1c24;
     vertical-align: center;
     padding-top: 15px;
     text-align: center;
@@ -1129,7 +1132,7 @@ body {
     font-size: 40px;
     width: 83px;
     height: 80px;
-    border: solid #016aac;
+    border: solid #2660b6;
     border-radius: 5px;
     background-color: white;
     margin-top: 20px;
