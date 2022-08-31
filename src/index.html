@@ -13,6 +13,30 @@
 </head>
 
 <body>
+  <div class="main-div">
+    <div class="main-content">
+      <div class="screen" id="screen">0</div>
+
+      <div class="number-div">
+        <button class="num-button">7</button>
+        <button class="num-button">8</button>
+        <button class="num-button">9</button>
+        <button class="clear num-button" id="clear">C</button>
+        <button class="num-button">4</button>
+        <button class="num-button">5</button>
+        <button class="num-button">6</button>
+        <button class="num-button" disabled>+/-</button>
+        <button class="num-button">1</button>
+        <button class="num-button">2</button>
+        <button class="num-button">3</button>
+        <button class="num-button" disabled>.</button>
+        <button class="num-button">X</button>
+        <button class="num-button">0</button>
+        <button class="num-button enter">Ввод</button>
+
+      </div>
+    </div>
+  </div>
   <header class="header">
     <div class="header-conteiner">
       <div class="header-information">
@@ -200,20 +224,23 @@
               3 вкладка
             </div>
             <div class="untab__content">
-              <div class="language">
-                <div class="language-icon"></div>
-                <div class="dropdown">
-                  <div class="dropdown__value">Русский</div>
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item">
-                      Русский
-                    </li>
-                  </ul>
+              <div class="touch-bar">
+                <div class="touch-bar-icons">
+                  <div class="language-icon"></div>
+                  <button class="clean-touch touch-button"></button>
+                  <button class="off-system touch-button"></button>
                 </div>
-
+                <div class="language">
+                  <div class="dropdown">
+                    <div class="dropdown__value">Русский</div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        Русский
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <button class="clean-touch"></button>
-              <button class="off-system"></button>
             </div>
           </div>
         </div>
@@ -256,14 +283,15 @@
     </div>
   </div>
   <script src="./main.js"></script>
+  <script src="./numpud.js"></script>
   <script type="text/javascript" charset="utf-8">
     const milkColumnDefs = [
-      { field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true }
+      { headerName: 'Время начала доения', field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'ID Коровы', field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Фактический / Ожидаемый надой', field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Время доения', field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Конечная точка транспортировки молока', field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Результат доения', field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" }
     ];
 
     const milkGridOptions = {
@@ -285,10 +313,10 @@
         })
     }
     const washColumnDefs = [
-      { field: 'Время начала промывки', width: 205, resizable: true, },
-      { field: 'Тип промывки', width: 205, resizable: true, },
-      { field: 'Время промывки', width: 200, resizable: true },
-      { field: 'Результат промывки', width: 200, resizable: true }
+      { headerName: 'Время начала промывки', field: 'Время начала промывки', width: 205, resizable: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Тип промывки', field: 'Тип промывки', width: 205, resizable: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Время промывки', field: 'Время промывки', width: 200, resizable: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Результат промывки', field: 'Результат промывки', width: 200, resizable: true, cellClass: "grid-cell-centered" }
     ];
 
     const washGridOptions = {
@@ -309,9 +337,9 @@
         })
     }
     const newAlarmColumnDefs = [
-      { field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true }
+      { headerName: 'Время возникновения ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Тип сигнализации', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Описание ошибки', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" }
     ];
 
     const newAlarmGridOptions = {
@@ -333,9 +361,9 @@
     }
 
     const alarmListColumnDefs = [
-      { field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true },
-      { field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true }
+      { headerName: 'Время возникновения ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Тип сигнализации', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
+      { headerName: 'Описание ошибки', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" }
     ];
 
     const alarmListGridOptions = {

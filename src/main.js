@@ -1,4 +1,4 @@
-//Код для переключения между вкладками на главной области программы.
+/// Код для переключения между вкладками на главной области программы. ///
 const tabs = Array.from(document.querySelectorAll(".tabs"));
 for (let b = 0; b < tabs.length; b++) {
   const tab_content = Array.from(tabs[b].querySelectorAll(".tab__content"));
@@ -15,7 +15,7 @@ for (let b = 0; b < tabs.length; b++) {
   }
 }
 
-//Аналогичный код для внутренних вкладок.
+/// Код для переключения между подвкладками. ///
 
 const untabs = Array.from(document.querySelectorAll(".untabs"));
 for (let b = 0; b < untabs.length; b++) {
@@ -33,10 +33,10 @@ for (let b = 0; b < untabs.length; b++) {
   }
 }
 
-//Код для кнопок боковой панели.
+/// Код для кнопок боковой панели. ///
 
 
-//Код для кнопки перехода к списку ошибок.
+/// Код для кнопки перехода к списку ошибок. ///
 const alarmButton = document.querySelector(".alarm-button");
 alarmButton.addEventListener("click", toAlarmList);
 function toAlarmList() {
@@ -64,7 +64,7 @@ function toAlarmList() {
   alarmListContent.classList.add("untab__content_active")
 }
 
-// Отображение реального времени на экране приложения.
+/// Отображение реального времени на экране приложения. ///
 let time = setInterval(function () {
   let date = new Date();
   let hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours();
@@ -74,6 +74,7 @@ let time = setInterval(function () {
 }, 1000);
 
 
+/// Код для выпадающего меню выбора языкового пакета ///
 const dropdown = document.querySelectorAll(".dropdown");
 const list = document.querySelectorAll(".dropdown__list");
 const value = document.querySelectorAll(".dropdown__value");
