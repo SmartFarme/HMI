@@ -49,7 +49,7 @@ body {
 }
 
 .header {
-    border: solid #ed1c24;
+    border: solid #494949;
     border-radius: 5px;
     height: 85px;
     margin: 2px 2px 0px 2px;
@@ -191,7 +191,7 @@ body {
 .tab {
     border-radius: 5px 5px 0 0;
     cursor: pointer;
-    background-color: #2aa3e6;
+    background-color: #2660b6;
     position: relative;
     border-width: 2px 2px 0;
     text-align: center;
@@ -201,11 +201,23 @@ body {
     background-repeat: no-repeat;
     background-size: 50px;
     background-position: center;
-    border: solid #ed1c24;
+    border: solid #494949;
     top: 3px;
 }
 
 .tab:not(:last-child) {
+    margin-right: 4px;
+}
+
+.home {
+    margin-right: 4px;
+}
+
+.info {
+    margin-right: 4px;
+}
+
+.control {
     margin-right: 4px;
 }
 
@@ -234,11 +246,20 @@ body {
     image-rendering: -webkit-optimize-contrast;
 }
 
+.tab__navigation .home .tab_active {
+    background-image: url(../images/tab-home-page-black.png);
+}
+
+
 .info-page {
     background-image: url(../images/tab-statistic-page.png);
     padding: 3px;
     padding-top: 6px;
     image-rendering: pixelated;
+}
+
+.tab__navigation .info .tab_active {
+    background-image: url(../images/tab-statistic-page-black.png);
 }
 
 .control-page {
@@ -249,6 +270,10 @@ body {
     image-rendering: pixelated;
 }
 
+.tab__navigation .control .tab_active {
+    background-image: url(../images/tab-control-page-black.png);
+}
+
 .setting-page {
     background-image: url(../images/tab-setting-page.png);
     padding: 8px;
@@ -256,6 +281,10 @@ body {
     padding-bottom: 6px;
     padding-right: 9px;
     image-rendering: pixelated;
+}
+
+.tab__navigation .setting .tab_active {
+    background-image: url(../images/tab-setting-page-black.png);
 }
 
 .clock-bar {
@@ -286,7 +315,7 @@ body {
 }
 
 .tab__content {
-    border: solid #ed1c24;
+    border: solid #494949;
     height: calc(100% - 87px);
     border-radius: 0 10px 10px 10px;
     display: none;
@@ -303,7 +332,6 @@ body {
 .untabs {
     display: flex;
     height: calc(100% + 2px);
-    border: #ff1616;
 }
 
 .untab__navigation {
@@ -318,7 +346,7 @@ body {
     padding: 10px;
     border-radius: 5px 0 0 5px;
     cursor: pointer;
-    background-color: #2aa3e6;
+    background-color: #2660b6;
     border-width: 2px 0 2px 2px;
     text-align: center;
     display: block;
@@ -327,10 +355,18 @@ body {
     background-repeat: no-repeat;
     background-size: 32px;
     background-position: center;
-    border: solid #ed1c24;
+    border: solid #494949;
 }
 
 .untab:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.yield {
+    margin-bottom: 4px;
+}
+
+.clean-stat {
     margin-bottom: 4px;
 }
 
@@ -346,12 +382,20 @@ body {
     background-size: 35px;
 }
 
-.cleaning-statustics {
+.untab__navigation .yield .untab_active {
+    background-image: url(../images/tab-milk_yield_statistics-black.png);
+}
+
+.cleaning-statistics {
     background-image: url(../images/tap-cleaning.png);
     background-position: 50% 50%;
     padding: 7px;
     padding-left: 9px;
     padding-right: 7px;
+}
+
+.untab__navigation .clean-stat .untab_active {
+    background-image: url(../images/tap-cleaning-black.png);
 }
 
 .alarm-statistics {
@@ -363,11 +407,15 @@ body {
     padding-right: 6px;
 }
 
+.untab__navigation .alarm-stat .untab_active {
+    background-image: url(../images/alarm-black.png);
+}
+
 .untab__content {
     margin-top: 2px;
     box-sizing: content-box;
     overflow: hidden;
-    border: solid #ed1c24;
+    border: solid #494949;
     border-radius: 0 7px 7px 7px;
     display: none;
     width: 100%;
@@ -382,7 +430,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: white;
-    border: solid #2660b6;
+    border: solid #494949;
     border-radius: 5px;
     margin-left: 1px;
 }
@@ -446,7 +494,7 @@ body {
 }
 
 .cleaning-control {
-    background-image: url(../images/tap-cleaning.png);
+    background-image: url(../images/tap-cleaning-black.png);
     position: relative;
     image-rendering: pixelated;
     padding: 7px;
@@ -470,7 +518,7 @@ body {
 }
 
 .cleaning-icon {
-    background-image: url(../images/tap-cleaning.png);
+    background-image: url(../images/tap-cleaning-black.png);
     margin-left: 25px;
     image-rendering: pixelated;
 }
@@ -504,7 +552,7 @@ body {
     background-repeat: no-repeat;
     background-size: 56px;
     background-position: center;
-    border: solid #2660b6;
+    border: solid #494949;
     border-radius: 5px;
 }
 
@@ -676,7 +724,7 @@ body {
     background-repeat: no-repeat;
     background-size: 60px;
     background-position: center;
-    border: solid #2660b6;
+    border: solid #494949;
     border-radius: 5px;
     background-color: #FFF;
 }
@@ -722,7 +770,7 @@ body {
     width: 120px;
     height: 43px;
     background-size: 60px;
-    border: solid #2660b6;
+    border: solid #494949;
     border-radius: 5px;
     background-color: #FFF;
     font-size: 20px;
@@ -756,6 +804,21 @@ body {
     padding-bottom: 15px;
 }
 
+.arm-control {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.control-field {
+    width: calc(100% - 400px);
+    height: calc(100% - 32px);
+    border: solid #494949;
+    margin-right: 6px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
 .touch-bar {
     display: flex;
 }
@@ -778,7 +841,7 @@ body {
     background-repeat: no-repeat;
     background-size: 55px;
     background-position: center;
-    border: solid #2660b6;
+    border: solid #494949;
     border-radius: 5px;
     background-color: #FFF;
     background-image: url(../images/language.png);
@@ -792,9 +855,9 @@ body {
 }
 
 .clean-touch {
-    background-image: url(../images/tap-cleaning.png);
+    background-image: url(../images/tap-cleaning-black.png);
     image-rendering: pixelated;
-    border: solid 2px #2660b6;
+    border: solid 2px #494949;
     margin-top: 8px;
     box-shadow: 1px 1px #7fb4d4, -1px -1px #7fb4d4, inset 1px 1px #9fdfff, inset -1px -1px #9fdfff;
 }
@@ -802,7 +865,7 @@ body {
 .off-system {
     background-image: url(../images/off-button.png);
     image-rendering: pixelated;
-    border: solid 2px #2660b6;
+    border: solid 2px #494949;
     margin-top: 8px;
     box-shadow: 1px 1px #7fb4d4, -1px -1px #7fb4d4, inset 1px 1px #9fdfff, inset -1px -1px #9fdfff;
 }
@@ -916,7 +979,7 @@ body {
 
 .alarm-button {
     background-size: 55px;
-    background-image: url(../images/alarm.png);
+    background-image: url(../images/alarm-black.png);
     image-rendering: pixelated;
 }
 
@@ -1076,7 +1139,7 @@ body {
     height: 540px;
     width: 420px;
     background: #f9f9f9;
-    border: solid 5px #ed1c24;
+    border: solid 5px #494949;
     border-radius: 5px;
     padding: 10px;
     position: absolute;
@@ -1117,7 +1180,7 @@ body {
     list-style: none;
     height: 80px;
     border-radius: 5px;
-    border: solid #ed1c24;
+    border: solid #494949;
     vertical-align: center;
     padding-top: 15px;
     text-align: center;
@@ -1132,7 +1195,7 @@ body {
     font-size: 40px;
     width: 83px;
     height: 80px;
-    border: solid #2660b6;
+    border: solid #494949;
     border-radius: 5px;
     background-color: white;
     margin-top: 20px;
