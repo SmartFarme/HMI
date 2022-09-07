@@ -162,10 +162,18 @@
         <div class="tab__content">
           <div class="untabs" id="untabs2">
             <div class="untab__navigation">
-              <div class="untab cleaning-control untab_active"></div>
-              <div class="untab sampler"></div>
-              <div class="untab milking-setting"></div>
-              <div class="untab touchscreen-setting"></div>
+              <div class="clean-contr-container">
+                <div class="untab cleaning-control untab_active"></div>
+              </div>
+              <div class="sampler-container">
+                <div class="untab sampler"></div>
+              </div>
+              <div class="milking-setting-container">
+                <div class="untab milking-setting"></div>
+              </div>
+              <div class="touch-container">
+                <div class="untab touchscreen-setting"></div>
+              </div>
             </div>
             <div class="untab__content untab__content_active">
               <div class="cleaning-control-header">
@@ -238,23 +246,31 @@
               <div class="arm-control">
                 <div class="main-control-bar">
                   <div class="cow-bar">
-                    <div class="left-cups">
-                      <button class="cup-button left-top-cup"></button>
-                      <button class="cup-button left-bottom-cup"></button>
+                    <div class="left-cups"> 
+                      <button class="cup-button left-top-cup cup-unknow cup-active" ></button>
+                      <button class="cup-button left-top-cup cup-note" disabled></button>
+                      <button class="cup-button left-top-cup cup-done" disabled></button>
+                      <button class="cup-button left-bottom-cup cup-unknow cup-active" disabled></button>
+                      <button class="cup-button left-bottom-cup cup-note" disabled></button>
+                      <button class="cup-button left-bottom-cup cup-done" disabled></button>
                     </div>
                     <div class="middle-cow"></div>
                     <div class="right-cups">
-                      <button class="cup-button right-top-cup"></button>
-                      <button class="cup-button right-bottom-cup"></button>
+                      <button class="cup-button right-top-cup cup-unknow cup-active" disabled></button>
+                      <button class="cup-button right-top-cup cup-note" disabled></button>
+                      <button class="cup-button right-top-cup cup-done" disabled></button>
+                      <button class="cup-button right-bottom-cup cup-unknow cup-active" disabled></button>
+                      <button class="cup-button right-bottom-cup cup-note" disabled></button>
+                      <button class="cup-button right-bottom-cup cup-done" disabled></button>
                     </div>
                   </div>
                   <div class="arm-bar">
                     <div class="side-arm-bar">
-                      <button class="arm-button side-arm-button arm-up"></button>
+                      <button class="arm-button side-arm-button arm-up" disabled></button>
                       <button class="arm-button side-arm-button arm-down"></button>
                       <div class="speed">
-                        <button class="arm-button side-arm-button arm-fast"></button>
-                        <button class="arm-button side-arm-button arm-slow arm-speed-active"></button>
+                        <button class="arm-button side-arm-button arm-fast arm-speed-active"></button>
+                        <button class="arm-button side-arm-button arm-slow"></button>
                       </div>
                     </div>
                     <div class="cross-arm-bar">
@@ -273,10 +289,10 @@
                   </div>
                 </div>
                 <div class="side-control-bar">
-                  <button class="one"></button>
-                  <button class="one"></button>
-                  <button class="one"></button>
-                  <button class="one"></button>
+                  <button class="arm-side-button save-cups-info"></button>
+                  <button class="arm-side-button clear-cups-info"></button>
+                  <button class="arm-side-button manual-cups"></button>
+                  <button class="arm-side-button cups-servise"></button>
                 </div>
                 <div class="control-field">
 
@@ -292,7 +308,7 @@
                 </div>
                 <div class="language">
                   <div class="dropdown">
-                    <div class="dropdown__value">Русский</div>
+                    <div class="dropdown__value"><p>Русский</p></div>
                     <ul class="dropdown__list">
                       <li class="dropdown__item">
                         Русский
@@ -307,16 +323,56 @@
         <div class="tab__content">
           <div class="untabs" id="untabs3">
             <div class="untab__navigation">
-              <div class="untab scheme"></div>
-              <div class="untab global-setting untab_active"></div>
-              <div class="untab version"></div>
-              <div class="untab calibration"></div>
+              <div class="scheme-container">
+                <div class="untab scheme"></div>
+              </div>
+              <div class="global-containter">
+                <div class="untab global-setting untab_active"></div>
+              </div>
+              <div class="version-container">
+                <div class="untab version"></div>
+              </div>
+              <div class="calibration-container">
+                <div class="untab calibration"></div>
+              </div>
             </div>
             <div class="untab__content">
               1 вкладка
             </div>
             <div class="untab__content untab__content_active">
-              2 вкладка
+              <div class="arm-setting">
+                <div class="main-setting-bar">
+                  <div class="top-setting-bar">
+                    
+                  </div>
+                  <div class="arm-setting-bar">
+                    <div class="side-setting-arm-bar">
+                      <button class="arm-setting-button side-setting-arm-button arm-setting-up" disabled></button>
+                      <button class="arm-setting-button side-setting-arm-button arm-setting-down"></button>
+                      <div class="speed-setting">
+                        <button class="arm-setting-button side-setting-arm-button arm-setting-fast arm-setting-speed-active"></button>
+                        <button class="arm-setting-button side-setting-arm-button arm-setting-slow"></button>
+                      </div>
+                    </div>
+                    <div class="cross-setting-arm-bar">
+                      <div class="top-setting-cross">
+                        <button class="arm-setting-button cross-setting-button top-setting-cross-button"></button>
+                      </div>
+                      <div class="middle-setting-cross">
+                        <button class="arm-setting-button cross-setting-button left-setting-cross-button"></button>
+                        <div class="cross-setting-cow"></div>
+                        <button class="arm-setting-button cross-setting-button right-setting-cross-button"></button>
+                      </div>
+                      <div class="bottom-setting-cross">
+                        <button class="arm-setting-button cross-setting-button bottom-setting-cross-button"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="setting-field">
+
+                </div>
+              </div>
             </div>
             <div class="untab__content">
               3 вкладка
@@ -334,7 +390,7 @@
         <button class="side-bar-button mode-select-button mode-pause"></button>
         <button class="side-bar-button mode-select-button mode-play"></button>
       </div>
-      <button class="side-bar-button alarm-button medium-alarm"></button>
+      <button class="side-bar-button alarm-button medium alarm"></button>
       <button class="side-bar-button button-close-cow-exit"></button>
       <button class="side-bar-button button-feed"></button>
       <button class="side-bar-button button-skip"></button>
@@ -357,7 +413,9 @@
     const milkGridOptions = {
       columnDefs: milkColumnDefs,
       rowData: null,
-      onGridReady: (event) => { milkRenderDataInTheTable(event.api) }
+      onGridReady: (event) => { milkRenderDataInTheTable(event.api) },
+
+      rowSelection: 'single',
     };
 
     const milkEGridDiv = document.getElementById('milk-table');
@@ -474,6 +532,11 @@
             api.setRowData(data);
           })
       }
+
+
+      #grid-theme-wrapper.red-theme .ag-theme-alpine .ag-row-selected {
+  background-color: rgb(255, 9, 111);
+}
 </div> -->
 
 </html>
