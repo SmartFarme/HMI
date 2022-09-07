@@ -20,6 +20,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 *:focus {
@@ -81,7 +82,7 @@ body {
     width: 72px;
     height: 72px;
     background-repeat: no-repeat;
-    background-size: 72px 59px;
+    background-size: 72px;
     background-position: center;
     image-rendering: pixelated;
 }
@@ -122,13 +123,12 @@ body {
 .milk-amount {
     background-image: url(../svg/milk-amount.svg);
     margin-top: 15px;
-    background-size: 28px 40px;
+    background-size: 29px;
     width: 50px;
     height: 50px;
     margin-left: 1px;
     background-repeat: no-repeat;
     background-position: center;
-    image-rendering: pixelated;
 }
 
 .milk-indication {
@@ -262,8 +262,9 @@ body {
 
 .info-page {
     background-image: url(../svg/tab-statistic-page-white.svg);
-    padding: 3px;
-    padding-top: 6px;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 0px;
 }
 
 .tab__navigation .info .tab_active {
@@ -284,8 +285,8 @@ body {
 .setting-page {
     background-image: url(../svg/tab-setting-page-white.svg);
     padding: 8px;
-    padding-top: 11px;
-    padding-bottom: 6px;
+    padding-top: 10px;
+    padding-bottom: 7px;
     padding-right: 9px;
 }
 
@@ -381,10 +382,8 @@ body {
     background-image: url(../svg/tab-milk-yield-statistics-white.svg);
     image-rendering: pixelated;
     padding: 7px;
-    padding-left: 9px;
+    padding-left: 8px;
     padding-right: 6px;
-    padding-bottom: 8px;
-    padding-top: 8px;
     background-size: 35px;
 }
 
@@ -398,6 +397,7 @@ body {
     padding: 7px;
     padding-left: 9px;
     padding-right: 7px;
+    background-size: 35px;
 }
 
 .untab__navigation .clean-stat .untab_active {
@@ -411,6 +411,7 @@ body {
     padding: 7px;
     padding-left: 8px;
     padding-right: 6px;
+    background-size: 35px;
 }
 
 .untab__navigation .alarm-stat .untab_active {
@@ -439,6 +440,7 @@ body {
     border: solid #2A569A;
     border-radius: 5px;
     margin-left: 1px;
+    transition: 0.3s;
 }
 
 .side-bar-button, .sumpler-button {
@@ -481,7 +483,7 @@ body {
 .list-of-alarm {
     display: flex;
     align-items: flex-end;
-    height: calc(100% - 178px);
+    height: calc(100% - 179px);
     margin-top: 11px;
 }
 
@@ -506,6 +508,7 @@ body {
     padding: 7px;
     padding-left: 9px;
     padding-right: 7px;
+    background-size: 35px;
 }
 
 .clean-contr-container {
@@ -728,8 +731,8 @@ body {
     background-image: url(../svg/tab-sampler-white.svg);
     background-size: 35px;
     padding: 7px;
-    padding-left: 10px;
-    padding-right: 8px;
+    padding-left: 8px;
+    padding-right: 6px;
 }
 
 .sampler-container {
@@ -927,14 +930,6 @@ button.cup-button:disabled {
     background-repeat: no-repeat;
 }
 
-.side-arm-bar {
-    background-color: #ffa500;
-}
-
-.cross-arm-bar {
-    background-color: green;
-}
-
 .arm-up {
     border-width: 3px 2px 2px 3px;
     box-shadow: 1px 1px #b8b8b8, 0px 0px #b8b8b8, inset 0px 0px #b8b8b8, inset -1px -1px #b8b8b8;
@@ -1075,10 +1070,9 @@ button.cup-button:disabled {
 
 .manual-cups {
     background-image: url(../svg/arm-manual.svg);
-    background-size: 51px 60px;
+    background-size: 51px;
     background-origin: padding-box;
     background-origin: content-box;
-    padding-right: 2px;
 }
 
 .cups-servise {
@@ -1124,7 +1118,7 @@ button.cup-button:disabled {
     border: solid #2A569A;
     border-radius: 5px;
     background-color: #FFF;
-    background-image: url(../images/language.png);
+    background-image: url(../svg/language.svg);
     margin-left: 13px;
     image-rendering: pixelated;
 }
@@ -1135,7 +1129,7 @@ button.cup-button:disabled {
 }
 
 .clean-touch {
-    background-image: url(../images/tap-cleaning-black.png);
+    background-image: url(../svg/tap-cleaning-black.svg);
     image-rendering: pixelated;
     border: solid 2px #2A569A;
     margin-top: 8px;
@@ -1143,7 +1137,7 @@ button.cup-button:disabled {
 }
 
 .off-system {
-    background-image: url(../images/off-button.png);
+    background-image: url(../svg/off-button.svg);
     image-rendering: pixelated;
     border: solid 2px #2A569A;
     margin-top: 8px;
@@ -1153,11 +1147,9 @@ button.cup-button:disabled {
 .milking-setting {
     background-image: url(../svg/arm-white.svg);
     background-size: 35px;
-    padding: 8px;
+    padding: 7px;
     padding-left: 9px;
-    padding-right: 6px;
-    padding-bottom: 10px;
-    padding-top: 8px;
+    padding-right: 5px;
 }
 
 .milking-setting-container {
@@ -1182,7 +1174,7 @@ button.cup-button:disabled {
 
 .scheme {
     background-image: url(../svg/tab-input-outputtest-white.svg);
-    background-size: 30px;
+    background-size: 35px;
     image-rendering: pixelated;
     padding: 7px;
     padding-left: 8px;
@@ -1198,27 +1190,25 @@ button.cup-button:disabled {
 }
 
 .calibration {
-    background-image: url(../svg/tab-global-setting-white.svg);
+    background-image: url(../svg/tab-calibration-white.svg);
     background-size: 35px;
     image-rendering: pixelated;
-    padding: 8px;
-    padding-top: 7px;
-    padding-left: 10px;
-    padding-right: 7px;
-    padding-bottom: 7px;
+    padding: 7px;
+    padding-left: 9px;
+    padding-right: 5px;
 }
 
 .untab__navigation .calibration-container .untab_active {
-    background-image: url(../svg/tab-global-setting-blue.svg);
+    background-image: url(../svg/tab-calibration-blue.svg);
 }
 
 .version {
     background-image: url(../svg/tab-version-white.svg);
     background-size: 35px;
     image-rendering: pixelated;
-    padding: 8px;
+    padding: 7px;
     padding-left: 8px;
-    padding-right: 5px;
+    padding-right: 6px;
 }
 
 .version-container {
@@ -1230,10 +1220,10 @@ button.cup-button:disabled {
 }
 
 .global-setting {
-    background-image: url(../svg/tab-calibration-white.svg);
+    background-image: url(../svg/tab-global-setting-white.svg);
     background-size: 35px;
     image-rendering: pixelated;
-    padding: 8px;
+    padding: 7px;
     padding-left: 10px;
     padding-right: 6px;
 }
@@ -1243,7 +1233,7 @@ button.cup-button:disabled {
 }
 
 .untab__navigation .global-containter .untab_active {
-    background-image: url(../svg/tab-calibration-blue.svg);
+    background-image: url(../svg/tab-global-setting-blue.svg);
 }
 
 .side-bar {
@@ -1458,6 +1448,7 @@ button.cup-button:disabled {
     bottom: 0;
     font-family: Cera-regular;
     z-index: 3;
+    background-color: rgb(0, 0, 0, .4);
 }
 
 .main-content {
@@ -1540,13 +1531,14 @@ button.cup-button:disabled {
 
 .bluc {
     background-color: #2A569A;
+    transition: 0.3s;
 }
 
 /* Стили для вкладки натроек */
 
 .arm-setting {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     height: 100%;
 }
 
@@ -1557,6 +1549,40 @@ button.cup-button:disabled {
 }
 
 .top-setting-bar {
+    margin-top: 24px;
+    margin-left: 12px;
+}
+
+.setting-bar { 
+    display: flex;
+    justify-content: start;
+}
+
+.description-setting {
+    width: 135px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 12px;
+    margin-right: 5px;
+}
+
+.into-description {
+    margin-top: 62px;
+}
+
+.top-setting-button {
+    width: 54px;
+    height: 54px;
+    border: solid 2px #2A569A;
+    border-radius: 5px;
+    font-size: 10px;
+    background-color: #FFF;
+    box-shadow: 1px 1px #a1defd, -1px -1px #a1defd, inset 1px 1px #a1defd, inset -1px -1px #a1defd;
+}
+
+.into-button {
+    margin-top: 41px;
+    margin-bottom: 41px;
 }
 
 .arm-setting-button {
@@ -1568,6 +1594,10 @@ button.cup-button:disabled {
     border-radius: 5px;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.center-setting-save, .center-setting-clear, .into-setting-save, .into-setting-clear, .under-setting-save, .under-setting-clear {
+    margin-left: 16px;
 }
 
 .arm-setting-up {
@@ -1681,6 +1711,71 @@ button.cup-button:disabled {
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 14px;
+}
+
+.setting-field {
+    margin-top: 9px;
+}
+
+.configuration-field {
+    width: 385px;
+    height: calc(100% - 94px);
+    margin-left: 22px;
+    overflow: auto;
+}
+
+.configuration-item {
+    display: flex;
+    justify-content: start;
+}
+
+.configuration-item-name {
+    font-size: 12px;
+    margin-left: 2px;
+    margin-top: 8px;
+    width: 135px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.configuration-item-button {
+    width: 90px;
+    height: 30px;
+    background-color: #d3d3d3;
+    border:none;
+    margin-left: 54px;
+    text-align: center;
+    padding: auto;
+}
+
+.configuration-item:not(:first-child) {
+    margin-top: 10px
+}
+
+.configuration-item-value {
+    font-size: 12px;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+.configuration-buttons {
+    display: flex;
+    justify-content: start;
+    margin-left: 240px;
+    margin-top: 7px;
+}
+
+.configuration-button {
+    width: 75px;
+    height: 75px;
+    display: block;
+    border: solid 3px #2A569A;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+.configuration-button:not(:first-child) {
+    margin-left: 10px;
 }
 
 
