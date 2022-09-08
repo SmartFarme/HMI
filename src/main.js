@@ -110,12 +110,16 @@ for (let i = 0; i < sideover.length; i++) {
 const sideover2 = Array.from(document.querySelectorAll(".side-bar-button"));
 for (let i = 0; i < sideover2.length; i++) {
   document.ontouchstart = function() {
-    console.log("event start")
+    console.log("event start2")
     sideover2[i].classList.toggle("bluc");
    
   };
 }
 
-document.ontouchstart = function() {
-  console.log("event start");
-};
+document.addEventListener("touchstart", e => {
+  console.log("Start")
+})
+
+document.addEventListener("touchend", e => {
+  console.log("End")
+})
