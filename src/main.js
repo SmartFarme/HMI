@@ -74,7 +74,7 @@ let time = setInterval(function () {
 }, 1000);
 
 
-/// Код для выпадающего меню выбора языкового пакета ///
+/// Код для 22выпадающего меню выбора языкового пакета ///
 const dropdown = document.querySelectorAll(".dropdown");
 const list = document.querySelectorAll(".dropdown__list");
 const value = document.querySelectorAll(".dropdown__value");
@@ -91,20 +91,6 @@ for (let i = 0; i < dropdown.length; i++) {
       event.preventDefault();
     });
   }
-}
-
-const sideover = Array.from(document.querySelectorAll(".side-bar-button"));
-for (let i = 0; i < sideover.length; i++) {
-  sideover[i].onmousedown = function() {
-    console.log("event start")
-    sideover[i].classList.add("bluc");
-    sideover[i].onmouseup = function() {
-      sideover[i].classList.remove("bluc");
-    }
-    sideover[i].onmouseout = function() {
-      sideover[i].classList.remove("bluc");
-    }
-  };
 }
 
 const sideover2 = Array.from(document.querySelectorAll(".side-bar-button"));
