@@ -112,5 +112,8 @@ for (let i = 0; i < sidetouch.length; i++) {
   sidetouch[i].addEventListener("touchstart", e => {
     console.log("Start")
   })
+  sidetouch[i].addEventListener("touchend", e => {
+    console.log("End")
+  })
 }
 
