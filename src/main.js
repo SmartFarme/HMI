@@ -98,11 +98,11 @@ for (let i = 0; i < dropdown.length; i++) {
 const sidetouch = Array.from(document.querySelectorAll(".side-bar-button"));
 for (let i = 0; i < sidetouch.length; i++) {
   sidetouch[i].addEventListener("touchstart", e => {
-    sideover[i].classList.add("bluc");
+    sidetouch[i].classList.add("bluc");
     console.log("Start")
   })
   sidetouch[i].addEventListener("touchend", e => {
-    sideover[i].classList.remove("bluc");
+    sidetouch[i].classList.remove("bluc");
     console.log("End")
   })
 }
