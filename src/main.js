@@ -96,6 +96,7 @@ for (let i = 0; i < dropdown.length; i++) {
 const sideover = Array.from(document.querySelectorAll(".side-bar-button"));
 for (let i = 0; i < sideover.length; i++) {
   sideover[i].onmousedown = function() {
+    console.log("event start")
     sideover[i].classList.add("bluc");
     sideover[i].onmouseup = function() {
       sideover[i].classList.remove("bluc");
