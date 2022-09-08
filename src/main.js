@@ -109,6 +109,7 @@ for (let i = 0; i < sideover.length; i++) {
 const sideover2 = Array.from(document.querySelectorAll(".side-bar-button"));
 for (let i = 0; i < sideover2.length; i++) {
   sideover2[i].ontouchstart = function() {
+    console.log("event start")
     sideover2[i].classList.add("bluc");
     sideover2[i].touchend = function() {
       sideover2[i].classList.remove("bluc");
