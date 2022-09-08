@@ -113,8 +113,5 @@ for (let i = 0; i < sideover2.length; i++) {
     sideover2[i].touchend = function() {
       sideover2[i].classList.remove("bluc");
     }
-    sideover2[i].onmouseout = function() {
-      sideover2[i].classList.remove("bluc");
-    }
   };
 }

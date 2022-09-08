@@ -1449,6 +1449,7 @@ button.cup-button:disabled {
     font-family: Cera-regular;
     z-index: 3;
     background-color: rgb(0, 0, 0, .4);
+    backdrop-filter: blur(4px);
 }
 
 .main-content {
