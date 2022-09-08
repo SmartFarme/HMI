@@ -107,11 +107,11 @@ for (let i = 0; i < sideover.length; i++) {
   };
 }
 
-const sideover2 = Array.from(document.querySelectorAll(".side-bar-button"));
-for (let i = 0; i < sideover2.length; i++) {
-  document.ontouchstart = function() {
+const sidetouch = Array.from(document.querySelectorAll(".side-bar-button"));
+for (let i = 0; i < sidetouch.length; i++) {
+  sidetouch[i].ontouchstart = function() {
     console.log("event start2")
-    sideover2[i].classList.toggle("bluc");
+    sidetouch[i].classList.toggle("bluc");
    
   };
 }
