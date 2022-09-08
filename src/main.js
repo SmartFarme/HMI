@@ -109,17 +109,8 @@ for (let i = 0; i < sideover.length; i++) {
 
 const sidetouch = Array.from(document.querySelectorAll(".side-bar-button"));
 for (let i = 0; i < sidetouch.length; i++) {
-  sidetouch[i].ontouchstart = function() {
-    console.log("event start2")
-    sidetouch[i].classList.toggle("bluc");
-   
-  };
+  sidetouch[i].addEventListener("touchstart", e => {
+    console.log("Start")
+  })
 }
 
-document.addEventListener("touchstart", e => {
-  console.log("Start")
-})
-
-document.addEventListener("touchend", e => {
-  console.log("End")
-})
