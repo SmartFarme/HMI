@@ -531,21 +531,22 @@
   <script src="./numpud.js"></script>
   <script type="text/javascript" charset="utf-8">
     const milkColumnDefs = [
-      { headerName: 'Время начала доения', field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'ID Коровы', field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Фактический / Ожидаемый надой', field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Время доения', field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Конечная точка транспортировки молока', field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Результат доения', field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" }
+      { headerName: 'Время начала доения', field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'ID Коровы', field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Фактический / Ожидаемый надой', field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Время доения', field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Конечная точка транспортировки молока', field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Результат доения', field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' }
     ];
 
     const milkGridOptions = {
       columnDefs: milkColumnDefs,
       rowData: null,
       onGridReady: (event) => { milkRenderDataInTheTable(event.api) },
-
+      lockPinned: true,
       rowSelection: 'single',
     };
+    
 
     const milkEGridDiv = document.getElementById('milk-table');
     new agGrid.Grid(milkEGridDiv, milkGridOptions);
@@ -560,23 +561,18 @@
         })
     }
     const washColumnDefs = [
-      { headerName: 'Время начала промывки', field: 'Время начала промывки', width: 205, resizable: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Тип промывки', field: 'Тип промывки', width: 205, resizable: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Время промывки', field: 'Время промывки', width: 200, resizable: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Результат промывки', field: 'Результат промывки', width: 200, resizable: true, cellClass: "grid-cell-centered" }
+      { headerName: 'Время начала промывки', field: 'Время начала промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Тип промывки', field: 'Тип промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Время промывки', field: 'Время промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Результат промывки', field: 'Результат промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' }
     ];
 
     const washGridOptions = {
       onGridReady: (event) => { washRenderDataInTheTable(event.api) },
       columnDefs: washColumnDefs,
       rowData: null,
-  rowSelection: 'single',
-  defaultColDef: {
-    editable: true,
-    sortable: true,
-    filter: true,
-    resizable: true,
-  },
+      rowSelection: 'single',
+      editable: false,
     };
 
     const washEGridDiv = document.getElementById('wash-table');
@@ -591,14 +587,15 @@
         })
     }
     const newAlarmColumnDefs = [
-      { headerName: 'Время возникновения ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Тип сигнализации', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Описание ошибки', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" }
+      { headerName: 'Время возникновения ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Тип сигнализации', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Описание ошибки', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' }
     ];
 
     const newAlarmGridOptions = {
       columnDefs: newAlarmColumnDefs,
       rowData: null,
+      rowSelection: 'single',
       onGridReady: (event) => { newAlarmRenderDataInTheTable(event.api) }
     };
 
@@ -615,14 +612,15 @@
     }
 
     const alarmListColumnDefs = [
-      { headerName: 'Время возникновения ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Тип сигнализации', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" },
-      { headerName: 'Описание ошибки', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered" }
+      { headerName: 'Время возникновения ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Тип сигнализации', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
+      { headerName: 'Описание ошибки', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' }
     ];
 
     const alarmListGridOptions = {
       columnDefs: alarmListColumnDefs,
       rowData: null,
+      rowSelection: 'single',
       onGridReady: (event) => { alarmListRenderDataInTheTable(event.api) }
     };
 

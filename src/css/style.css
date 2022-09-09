@@ -48,7 +48,7 @@ button:hover {
     --ag-selected-row-foreground-color: white;
     --ag-selected-row-background-color: #2A569A;
     --ag-hover-row-background-color: rgb(0, 255, 0, 0.1);
-    --ag-row-hover-color: white;
+    --ag-row-hover-color: transparent;
     --ag-balham-active-color: red;
 }
 
@@ -60,6 +60,7 @@ button:hover {
     border:none !important;
     outline: none;
   }
+
 
 html {
     height: calc(100% - 4px);
