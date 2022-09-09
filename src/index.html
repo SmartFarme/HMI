@@ -567,9 +567,16 @@
     ];
 
     const washGridOptions = {
+      onGridReady: (event) => { washRenderDataInTheTable(event.api) },
       columnDefs: washColumnDefs,
       rowData: null,
-      onGridReady: (event) => { washRenderDataInTheTable(event.api) }
+  rowSelection: 'single',
+  defaultColDef: {
+    editable: true,
+    sortable: true,
+    filter: true,
+    resizable: true,
+  },
     };
 
     const washEGridDiv = document.getElementById('wash-table');

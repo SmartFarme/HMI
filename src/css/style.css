@@ -44,8 +44,12 @@ button:hover {
     --ag-header-foreground-color: white;
     --ag-header-background-color: #2A569A;
     --ag-background-color: white;
-    --ag-odd-row-background-color: #CCE5FF;
-
+    --ag-odd-row-background-color: #CFEFF4;
+    --ag-selected-row-foreground-color: white;
+    --ag-selected-row-background-color: #2A569A;
+    --ag-hover-row-background-color: rgb(0, 255, 0, 0.1);
+    --ag-row-hover-color: white;
+    --ag-balham-active-color: red;
 }
 
 .ag-cell-focus,.ag-cell-no-focus{
