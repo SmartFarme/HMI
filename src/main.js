@@ -105,5 +105,8 @@ for (let i = 0; i < sidetouch.length; i++) {
     sidetouch[i].classList.remove("bluc");
     console.log("End")
   })
+  sidetouch[i].addEventListener("touchover", e => {
+    sidetouch[i].classList.remove("bluc");
+    console.log("Over")
+  })
 }
-

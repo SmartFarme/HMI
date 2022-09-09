@@ -40,6 +40,14 @@ button:hover {
     text-align: center;
 }
 
+.ag-theme-balham {
+    --ag-header-foreground-color: white;
+    --ag-header-background-color: #2A569A;
+    --ag-background-color: white;
+    --ag-odd-row-background-color: #CCE5FF;
+
+}
+
 .ag-cell-focus,.ag-cell-no-focus{
     border:none !important;
   }
@@ -1715,7 +1723,7 @@ button.cup-button:disabled {
 }
 
 .setting-field {
-    margin-top: 9px;
+    padding-top: 6px;
 }
 
 .configuration-field {
@@ -1733,24 +1741,25 @@ button.cup-button:disabled {
 .configuration-item-name {
     font-size: 12px;
     margin-left: 2px;
-    margin-top: 8px;
+    margin-top: 11px;
     width: 135px;
     overflow: hidden;
     white-space: nowrap;
 }
 
 .configuration-item-button {
-    width: 90px;
-    height: 30px;
+    width: 96px;
+    height: 36px;
     background-color: #d3d3d3;
     border:none;
-    margin-left: 54px;
+    margin-left: 51px;
     text-align: center;
     padding: auto;
+    border: solid #FFF;
 }
 
 .configuration-item:not(:first-child) {
-    margin-top: 10px
+    margin-top: 4px
 }
 
 .configuration-item-value {
@@ -1775,9 +1784,146 @@ button.cup-button:disabled {
     border-radius: 5px;
 }
 
+.configuration-done {
+    background-image: url(../svg/ok.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.configuration-cancel {
+    background-image: url(../svg/cancel.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.option {
+    z-index: 0;
+    display: block;
+}
+
 .configuration-button:not(:first-child) {
     margin-left: 10px;
 }
+
+.sel {
+    font-family: Cera-light;
+    text-align-last:center;
+    border: #494949 solid;
+    margin-left: 51px;
+    padding: auto;
+}
+
+.option {
+    text-align-last:center;
+}
+
+.configuration-item-button:hover {
+   border: #2A569A solid;
+}
+
+.block select{
+    text-align : center;
+}
+
+
+/* Окно очистки панели */
+
+.cleaning-popup-main {
+    position: absolute;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(0, 0, 0, .4);
+      backdrop-filter: blur(4px);
+      z-index: 4;
+  }
+  
+  .cleaning-popup-container {
+    width: 410px;
+    height: 240px;
+    border: solid 5px #2A569A;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #f9f9f9;
+  }
+  
+  .cleaning-popup-container:before {
+    background: none;
+      border: 5px solid #ed1c24;
+      border-radius: 10px;
+      content: "";
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      pointer-events: none;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+  }
+  
+  .clean-main-h {
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 24px;
+    text-align: center;
+  }
+  
+  .cleaning-message {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .clean-second-h {
+    font-size: 14px;
+    font-weight: 200;
+    text-align: center;
+    color: red;
+    margin-top: 20px;
+  }
+  
+  .progress {
+    width: 95%;
+    height: 20px;
+    background-color: black;
+    position: relative;
+    visibility: visible;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+  }
+  
+  .progress-inner {
+    background-color: #2A569A;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
 
 
 /*.control-setting-field {

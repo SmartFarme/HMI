@@ -25,11 +25,11 @@
         <button class="num-button">4</button>
         <button class="num-button">5</button>
         <button class="num-button">6</button>
-        <button class="num-button" disabled>+/-</button>
+        <button class="num-button mark">+/-</button>
         <button class="num-button">1</button>
         <button class="num-button">2</button>
         <button class="num-button">3</button>
-        <button class="num-button" disabled>.</button>
+        <button class="num-button dot" disabled>.</button>
         <button class="num-button">X</button>
         <button class="num-button">0</button>
         <button class="num-button enter">Ввод</button>
@@ -246,8 +246,8 @@
               <div class="arm-control">
                 <div class="main-control-bar">
                   <div class="cow-bar">
-                    <div class="left-cups"> 
-                      <button class="cup-button left-top-cup cup-unknow cup-active" ></button>
+                    <div class="left-cups">
+                      <button class="cup-button left-top-cup cup-unknow cup-active"></button>
                       <button class="cup-button left-top-cup cup-note" disabled></button>
                       <button class="cup-button left-top-cup cup-done" disabled></button>
                       <button class="cup-button left-bottom-cup cup-unknow cup-active" disabled></button>
@@ -304,11 +304,23 @@
                 <div class="touch-bar-icons">
                   <div class="language-icon"></div>
                   <button class="clean-touch touch-button"></button>
+                  <div class="cleaning-popup-main hide">
+                    <div class="cleaning-popup-container">
+                      <h1 class="clean-main-h">Очистить cенсорный экран</h1>
+                      <p class="cleaning-message">Теперь вы можете очистить сенсорный экран при помощи влажной салфетки</p>
+                      <h2 class="clean-second-h"> НЕ ИСПОЛЬЗУЙТЕ АБРАЗИВНЫЕ ИЛИ АГРЕССИВНЫЕ ЧИСТЯЩИЕ СРЕДСТВА!</h2>
+                        <div class="progress">
+                          <div class="progress-inner"></div>
+                        </div>
+                    </div>
+                  </div>
                   <button class="off-system touch-button"></button>
                 </div>
                 <div class="language">
                   <div class="dropdown">
-                    <div class="dropdown__value"><p>Русский</p></div>
+                    <div class="dropdown__value">
+                      <p>Русский</p>
+                    </div>
                     <ul class="dropdown__list">
                       <li class="dropdown__item">
                         Русский
@@ -344,7 +356,9 @@
                 <div class="main-setting-bar">
                   <div class="top-setting-bar">
                     <div class="setting-bar center-setting-bar">
-                      <div class="description-setting"><p>Центральное положение</p></div>
+                      <div class="description-setting">
+                        <p>Центральное положение</p>
+                      </div>
                       <button class="top-setting-button center-setting-start">Пуск</button>
                       <button class="top-setting-button center-setting-save">Установить</button>
                       <button class="top-setting-button center-setting-clear">Очистить</button>
@@ -367,7 +381,8 @@
                       <button class="arm-setting-button side-setting-arm-button arm-setting-up" disabled></button>
                       <button class="arm-setting-button side-setting-arm-button arm-setting-down"></button>
                       <div class="speed-setting">
-                        <button class="arm-setting-button side-setting-arm-button arm-setting-fast arm-setting-speed-active"></button>
+                        <button
+                          class="arm-setting-button side-setting-arm-button arm-setting-fast arm-setting-speed-active"></button>
                         <button class="arm-setting-button side-setting-arm-button arm-setting-slow"></button>
                       </div>
                     </div>
@@ -395,7 +410,7 @@
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Задержка сжатия</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <button class="configuration-item-button dot-button input-button">-</button>
                       <div class="configuration-item-value">сек.</div>
                     </div>
                     <div class="configuration-item">
@@ -410,32 +425,35 @@
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Время очистки сосков</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <button class="configuration-item-button dot-button input-button">-</button>
                       <div class="configuration-item-value">сек.</div>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Высота очистки сосков</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <button class="configuration-item-button dot-button input-button">-</button>
                       <div class="configuration-item-value">см</div>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Teat clean x-compensati</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <select name="select" class="configuration-item-button sel">
+                        <option value="value1" class="option" selected>Нет</option>
+                        <option value="value2" class="option">Да</option>
+                      </select>
                       <div class="configuration-item-value"></div>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Teat spray time</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <button class="configuration-item-button dot-button input-button">-</button>
                       <div class="configuration-item-value">сек</div>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Смещение по оси Х</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <button class="configuration-item-button mark-button input-button">-</button>
                       <div class="configuration-item-value">мм</div>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Смещение по оси Y</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <button class="configuration-item-button mark-button input-button">-</button>
                       <div class="configuration-item-value">мм</div>
                     </div>
                     <div class="configuration-item">
@@ -450,7 +468,11 @@
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Уровень доступа</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <select name="select" class="configuration-item-button sel">
+                        <option value="value1" class="option" selected>Нет</option>
+                        <option value="value2" class="option">Обычный</option>
+                        <option value="value2" class="option">Детали</option>
+                      </select>
                       <div class="configuration-item-value"></div>
                     </div>
                     <div class="configuration-item">
@@ -470,7 +492,7 @@
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Attachment z offset</div>
-                      <button class="configuration-item-button input-button">-</button>
+                      <button class="configuration-item-button mark-button input-button">-</button>
                       <div class="configuration-item-value">мм</div>
                     </div>
                   </div>
