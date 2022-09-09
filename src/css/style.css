@@ -50,6 +50,11 @@ button:hover {
     --ag-hover-row-background-color: rgb(0, 255, 0, 0.1);
     --ag-row-hover-color: transparent;
     --ag-balham-active-color: red;
+    --ag-range-selection-background-color: white;
+}
+
+.ag-row-selected {
+    --ag-foreground-color: white;
 }
 
 .ag-cell-focus,.ag-cell-no-focus{
@@ -1375,6 +1380,7 @@ button.cup-button:disabled {
 
 .input-button {
     font-family: Cera-regular;
+    font-size: 20px;
 }
 
 
@@ -1803,9 +1809,10 @@ button.cup-button:disabled {
     background-size: 60px;
 }
 
-.option {
-    z-index: 0;
-    display: block;
+option {
+    display:block;
+    text-align: center;
+    padding-left: 45%;
 }
 
 .configuration-button:not(:first-child) {
