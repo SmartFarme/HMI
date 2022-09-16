@@ -42,29 +42,28 @@ button:hover {
 
 .ag-theme-balham {
     --ag-header-foreground-color: white;
-    --ag-header-background-color: #2A569A;
+    --ag-header-background-color: #ed1c24;
     --ag-background-color: white;
-    --ag-odd-row-background-color: #CFEFF4;
+    --ag-odd-row-background-color: #dddddd;
     --ag-selected-row-foreground-color: white;
     --ag-selected-row-background-color: #2A569A;
-    --ag-hover-row-background-color: rgb(0, 255, 0, 0.1);
-    --ag-row-hover-color: transparent;
-    --ag-balham-active-color: red;
-    --ag-range-selection-background-color: white;
+    --ag-row-hover-color: purple;
 }
 
 .ag-row-selected {
     --ag-foreground-color: white;
 }
 
-.ag-cell-focus,.ag-cell-no-focus{
-    border:none !important;
-  }
-  /* This CSS is to not apply the border for the column having 'no-border' class */
-  .no-border.ag-cell:focus{
-    border:none !important;
+.ag-cell-focus,
+.ag-cell-no-focus {
+    border: none !important;
+}
+
+/* This CSS is to not apply the border for the column having 'no-border' class */
+.no-border.ag-cell:focus {
+    border: none !important;
     outline: none;
-  }
+}
 
 
 html {
@@ -111,13 +110,13 @@ body {
 
 .cow-count {
     background-image: url(../svg/cow-id.svg);
-    margin-top: 5px;
+    margin-top: 4px;
     margin-right: 15px;
-    margin-left: 19px;
-    width: 70px;
-    height: 70px;
+    margin-left: 17px;
+    width: 72px;
+    height: 72px;
     background-repeat: no-repeat;
-    background-size: 70px 60px;
+    background-size: 71px;
     background-position: center;
     image-rendering: pixelated;
 }
@@ -156,7 +155,7 @@ body {
 
 .timer {
     display: flex;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .timer-icon {
@@ -175,6 +174,12 @@ body {
     margin-top: 23px;
     margin-left: 3px;
     font-size: 35px;
+    width: 75px;
+}
+
+.timer-unit {
+    font-size: 35px;
+    margin-top: 23px;
 }
 
 .logo-icon {
@@ -395,6 +400,234 @@ body {
     margin-bottom: 4px;
 }
 
+.home-status-icon {
+    display: block;
+    width: 270px;
+    height: 230px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+    margin-top: 124px;
+    margin-left: 97px;
+}
+
+.status-cleaning-icons-bottom {
+    margin-top: 40px;
+}
+
+.status-wait-icon {
+    background-image: url(../svg/status-wait-for-cow.svg);
+}
+
+.status-cow-in-cell {
+    justify-content: start;
+    height: 100%;
+}
+
+.home-status {
+    display: none;
+}
+
+.status-active {
+    display: flex;
+}
+
+.status-cow-in-cell-icon {
+    background-image: url(../svg/button-open-cell.svg);
+}
+
+.cow-in-cell-id {
+    font-size: 85px;
+    font-family: Cera-regular;
+    display: block;
+    width: 270px;
+    height: 120px;
+    margin-left: 97px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.status-milk-transport-bar {
+    display: flex;
+    justify-content: start;
+    margin-top: 170px;
+    margin-left: 175px;
+}
+
+.status-milk-transport-status-ok {
+    background-image: url(../svg/status-ok.svg);
+    display: block;
+    width: 90px;
+    height: 90px;
+    background-size: 80px;
+    background-repeat: no-repeat;
+}
+
+.status-milk-transport-arrow {
+    font-size: 35px;
+    margin-top: 23px;
+    margin-left: 15px;
+}
+
+.status-milk-transport-place-tanker {
+    background-image: url(../svg/tanker.svg);
+    display: block;
+    width: 90px;
+    height: 90px;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    margin-top: 17px;
+    margin-left: 33px;
+}
+
+.stutus-milk-refresh-button {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-size: 58px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border: solid #2A569A;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-left: 26px;
+    margin-bottom: 10px;
+    background-image: url(../svg/refresh.svg);
+}
+
+.status-cow-id-enter {
+    justify-content: start;
+}
+
+.status-cow-id-enter-icon {
+    background-image: url(../svg/numpud.svg);
+}
+
+.status-pump-icon {
+    background-image: url(../svg/pump.svg);
+    height: 260px;
+    margin-top: 109px;
+}
+
+.status-acid-icon {
+    background-image: url(../svg/acid-cleaning-black.svg);
+    background-size: 232px;
+    height: 260px;
+    margin-top: 109px;
+    shape-rendering: "crispEdges";
+}
+
+.status-alkaline-icon {
+    background-image: url(../svg/alkaline-cleaning-black.svg);
+    background-size: 232px;
+    height: 260px;
+    margin-top: 109px;
+    shape-rendering: "crispEdges";
+}
+
+.status-half-rising-icon {
+    background-image: url(../svg/half-rising.svg);
+}
+
+.status-full-rising-icon {
+    background-image: url(../svg/full-rising.svg);
+}
+
+.progress-bars {
+    margin-top: 129px;
+}
+
+.acid-progress-bar {
+    margin-top: 30px;
+}
+
+.alkaline-progress-bar {
+    margin-top: 30px;
+}
+
+.status-cleaning-progress-bar-local {
+    width: 400px;
+    height: 21px;
+    background-color: #e6e6e6;
+    position: relative;
+    border: solid 1px #bcbcbc;
+}
+
+.status-cleaning-progress-bar-global {
+    width: 400px;
+    height: 21px;
+    background-color: #e6e6e6;
+    position: relative;
+    margin-top: 19px;
+    display: block;
+    border: solid 1px #bcbcbc;
+}
+
+.status-cleaning-icons, .status-cleaning-icons-top, .status-cleaning-icons-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+.progress-inner {
+    background-color: #2A569A;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.status-cleaning-bar {
+    margin-top: 173px;
+    margin-left: 98px;
+}
+
+.status-icon {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 56px;
+    width: 80px;
+    height: 60px;
+}
+
+.current-state {
+    background-color: lawngreen;
+}
+
+.status-icon-cold {
+    background-image: url(../svg/coldwash.svg);
+    
+}
+
+.status-icon-normal {
+    background-image: url(../svg/normalwash.svg);
+}
+
+.status-icon-hot {
+    background-image: url(../svg/hotwash.svg);
+}
+
+.status-icon-clean-tanker {
+    background-image: url(../svg/clean-tanker.svg);
+    background-size: 80px;
+}
+
+.status-icon-cups-shower {
+    background-image: url(../svg/cups-shower.svg);
+    background-size: 32px;
+}
+
+.status-icon-drain {
+    background-image: url(../svg/drain.svg);
+    background-size: 66px;
+}
+
+.status-icon-dry {
+    background-image: url(../svg/dry.svg);
+    background-size: 80px;
+}
+
 .milk-yield-statistics {
     background-size: 34px;
     background-image: url(../svg/tab-milk-yield-statistics-white.svg);
@@ -402,7 +635,7 @@ body {
     padding: 7px;
     padding-left: 8px;
     padding-right: 6px;
-    background-size: 35px;
+    background-size: 39px;
 }
 
 .untab__navigation .yield .untab_active {
@@ -415,7 +648,7 @@ body {
     padding: 7px;
     padding-left: 9px;
     padding-right: 7px;
-    background-size: 35px;
+    background-size: 39px;
 }
 
 .untab__navigation .clean-stat .untab_active {
@@ -429,7 +662,7 @@ body {
     padding: 7px;
     padding-left: 8px;
     padding-right: 6px;
-    background-size: 35px;
+    background-size: 39px;
 }
 
 .untab__navigation .alarm-stat .untab_active {
@@ -461,7 +694,8 @@ body {
     transition: 0.3s;
 }
 
-.side-bar-button, .sumpler-button {
+.side-bar-button,
+.sumpler-button {
     border-top: solid 2px #2A569A;
     border-bottom: solid 2px #2A569A;
     box-shadow: 0px 1px #b8b8b8, 0px -1px #b8b8b8;
@@ -526,7 +760,7 @@ body {
     padding: 7px;
     padding-left: 9px;
     padding-right: 7px;
-    background-size: 35px;
+    background-size: 39px;
 }
 
 .clean-contr-container {
@@ -575,7 +809,7 @@ body {
 
 .container-icon {
     background-image: url(../svg/chemical-container.svg);
-    margin-left: 49px;
+    margin-left: 192px;
     background-size: 29px;
     image-rendering: pixelated;
 }
@@ -628,13 +862,13 @@ body {
     font-size: 25px;
     text-align: left;
     margin-top: 25px;
-    margin-left: 1px;
+    margin-left: 55px;
 }
 
 .acid-container-icon {
     background-image: url(../svg/acid-pump.svg);
     background-color: #FFF;
-    margin-left: 65px;
+    margin-left: 153px;
     background-size: 60px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -661,7 +895,7 @@ body {
 .alkaline-container-icon {
     background-image: url(../svg/alkaline-pump.svg);
     background-color: #fff;
-    margin-left: 65px;
+    margin-left: 153px;
     background-size: 60px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -690,7 +924,7 @@ body {
 .line-rinsing-container-icon {
     background-image: url(../svg/line-pump.svg);
     background-color: #FFF;
-    margin-left: 65px;
+    margin-left: 153px;
     background-size: 60px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -719,7 +953,7 @@ body {
 .robot-rinsing-container-icon {
     background-image: url(../svg/brushes.svg);
     background-color: #f9f9f9;
-    margin-left: 65px;
+    margin-left: 153px;
     background-size: 63px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -733,7 +967,7 @@ body {
 
 .iodine-valve-icon {
     background-image: url(../svg/spray.svg);
-    margin-left: calc(28% + 232px);
+    margin-left: calc(28% + 374px);
     background-size: 46px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -747,7 +981,7 @@ body {
 
 .sampler {
     background-image: url(../svg/tab-sampler-white.svg);
-    background-size: 35px;
+    background-size: 39px;
     padding: 7px;
     padding-left: 8px;
     padding-right: 6px;
@@ -769,9 +1003,10 @@ body {
 
 .sampler-status-text {
     font-size: 20px;
-    width: 262px;
-    text-align: center;
-    margin-top: 15px;
+    width: 244px;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 18px;
 }
 
 .sampler-status-icon {
@@ -816,8 +1051,9 @@ body {
 .last-bottle-number-text {
     margin-top: 12px;
     font-size: 20px;
-    width: 262px;
-    text-align: center;
+    width: 244px;
+    text-align: left;
+    margin-left: 18px;
 }
 
 .sampler-frame-button,
@@ -842,23 +1078,17 @@ body {
 }
 
 .bottle-number-text {
-    margin-top: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 2px;
+    margin-top: 11px;
 }
 
 .last-bottle-number {
-    margin-top: 33px;
+    margin-top: 42px;
     display: flex;
     justify-content: start;
 }
 
 .last-bottle-number-text {
-    margin-top: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 15px;
+    margin-top: 11px;
 }
 
 .arm-control {
@@ -917,7 +1147,8 @@ body {
     margin-left: 23px;
 }
 
-.right-bottom-cup, .left-bottom-cup {
+.right-bottom-cup,
+.left-bottom-cup {
     margin-top: 13px;
 }
 
@@ -997,7 +1228,9 @@ button.cup-button:disabled {
     margin-left: 4px;
 }
 
-.top-cross-button, .left-cross-button, .right-cross-button {
+.top-cross-button,
+.left-cross-button,
+.right-cross-button {
     margin-bottom: 3px;
 }
 
@@ -1036,7 +1269,8 @@ button.cup-button:disabled {
     margin-bottom: 3px;
 }
 
-.side-arm-button:last-child, .bottom-cross-button {
+.side-arm-button:last-child,
+.bottom-cross-button {
     margin-bottom: 4px;
 }
 
@@ -1117,6 +1351,7 @@ button.cup-button:disabled {
 
 .touch-bar-icons {
     margin-top: 4px;
+    background-size: 38px;
 }
 
 .language {
@@ -1164,7 +1399,7 @@ button.cup-button:disabled {
 
 .milking-setting {
     background-image: url(../svg/arm-white.svg);
-    background-size: 35px;
+    background-size: 39px;
     padding: 7px;
     padding-left: 9px;
     padding-right: 5px;
@@ -1180,7 +1415,7 @@ button.cup-button:disabled {
 
 .touchscreen-setting {
     background-image: url(../svg/tab-touchscreen-white.svg);
-    background-size: 34px;
+    background-size: 39px;
     padding: 7px;
     padding-left: 9px;
     padding-right: 5px;
@@ -1192,7 +1427,7 @@ button.cup-button:disabled {
 
 .scheme {
     background-image: url(../svg/tab-input-outputtest-white.svg);
-    background-size: 35px;
+    background-size: 39px;
     image-rendering: pixelated;
     padding: 7px;
     padding-left: 8px;
@@ -1209,7 +1444,7 @@ button.cup-button:disabled {
 
 .calibration {
     background-image: url(../svg/tab-calibration-white.svg);
-    background-size: 35px;
+    background-size: 39px;
     image-rendering: pixelated;
     padding: 7px;
     padding-left: 9px;
@@ -1222,7 +1457,7 @@ button.cup-button:disabled {
 
 .version {
     background-image: url(../svg/tab-version-white.svg);
-    background-size: 35px;
+    background-size: 39px;
     image-rendering: pixelated;
     padding: 7px;
     padding-left: 8px;
@@ -1239,7 +1474,7 @@ button.cup-button:disabled {
 
 .global-setting {
     background-image: url(../svg/tab-global-setting-white.svg);
-    background-size: 35px;
+    background-size: 39px;
     image-rendering: pixelated;
     padding: 7px;
     padding-left: 10px;
@@ -1465,15 +1700,15 @@ button.cup-button:disabled {
     top: 0;
     right: 0;
     bottom: 0;
-    font-family: Cera-regular;
+    font-family: Cera-bold;
     z-index: 3;
     background-color: rgb(0, 0, 0, .4);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
 }
 
 .main-content {
     height: 540px;
-    width: 420px;
+    width: 330px;
     background: #f9f9f9;
     border: solid 5px #2A569A;
     border-radius: 5px;
@@ -1487,20 +1722,6 @@ button.cup-button:disabled {
     z-index: 4;
 }
 
-.main-content:before {
-    background: none;
-    border: 5px solid #ed1c24;
-    border-radius: 10px;
-    content: "";
-    display: block;
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    pointer-events: none;
-  }
-
 .main-div-active {
     display: flex;
 }
@@ -1512,7 +1733,7 @@ button.cup-button:disabled {
 }
 
 .screen {
-    font-family: Cera-regular;
+    font-family: Cera-bold;
     list-style: none;
     height: 80px;
     border-radius: 5px;
@@ -1522,13 +1743,15 @@ button.cup-button:disabled {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    width: 390px;
+    width: 300px;
 }
 
 
-.num-button, .clear, .enter {
-    font-family: Cera-regular;
-    font-size: 40px;
+.num-button,
+.clear,
+.enter {
+    font-family: Cera-bold;
+    font-size: 38px;
     width: 83px;
     height: 80px;
     border: solid #2A569A;
@@ -1539,8 +1762,9 @@ button.cup-button:disabled {
 }
 
 .enter {
-    font-size: 20px;
-    width: 185px;
+    font-size: 28px;
+    background-color: #2A569A;
+    color: white;
 }
 
 .number-div {
@@ -1558,7 +1782,7 @@ button.cup-button:disabled {
 
 .arm-setting {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     height: 100%;
 }
 
@@ -1573,7 +1797,7 @@ button.cup-button:disabled {
     margin-left: 12px;
 }
 
-.setting-bar { 
+.setting-bar {
     display: flex;
     justify-content: start;
 }
@@ -1581,13 +1805,17 @@ button.cup-button:disabled {
 .description-setting {
     width: 135px;
     font-size: 13px;
-    text-align: center;
+    text-align: left;
     margin-top: 12px;
     margin-right: 5px;
 }
 
 .into-description {
-    margin-top: 62px;
+    margin-top: 52px;
+}
+
+.center-description {
+    margin-top: 20px;
 }
 
 .top-setting-button {
@@ -1597,7 +1825,9 @@ button.cup-button:disabled {
     border-radius: 5px;
     font-size: 10px;
     background-color: #FFF;
-    box-shadow: 1px 1px #a1defd, -1px -1px #a1defd, inset 1px 1px #a1defd, inset -1px -1px #a1defd;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*box-shadow: 1px 1px #2A569A, -1px -1px #2A569A, inset 1px 1px #2A569A, inset -1px -1px #2A569A;*/
 }
 
 .into-button {
@@ -1616,8 +1846,28 @@ button.cup-button:disabled {
     background-repeat: no-repeat;
 }
 
-.center-setting-save, .center-setting-clear, .into-setting-save, .into-setting-clear, .under-setting-save, .under-setting-clear {
+.center-setting-save,
+.center-setting-clear,
+.into-setting-save,
+.into-setting-clear,
+.under-setting-save,
+.under-setting-clear {
     margin-left: 16px;
+}
+
+.under-setting-start, .into-setting-start, .center-setting-start {
+    background-image: url(../svg/mode-play.svg);
+    background-size: 42px;
+}
+
+.under-setting-save, .center-setting-save, .into-setting-save {
+    background-image: url(../svg/save.svg);
+    background-size: 42px;
+}
+
+.under-setting-clear, .into-setting-clear, .center-setting-clear {
+    background-image: url(../svg/cancel.svg);
+    background-size: 42px;
 }
 
 .arm-setting-up {
@@ -1667,10 +1917,12 @@ button.cup-button:disabled {
     display: flex;
     justify-content: start;
     margin-left: 4px;
-    
+
 }
 
-.top-setting-cross-button, .left-setting-cross-button, .right-setting-cross-button {
+.top-setting-cross-button,
+.left-setting-cross-button,
+.right-setting-cross-button {
     margin-bottom: 2px;
 }
 
@@ -1680,6 +1932,10 @@ button.cup-button:disabled {
     margin-left: 69px;
     background-image: url(../svg/arm-up.svg);
     background-size: 47px 60px;
+    background-position: center;
+    padding-right: 1px;
+    background-origin: padding-box;
+    background-origin: content-box;
 }
 
 .left-setting-cross-button {
@@ -1709,12 +1965,13 @@ button.cup-button:disabled {
     margin-bottom: 2px;
 }
 
-.side-setting-arm-button:last-child, .bottom-setting-cross-button {
+.side-setting-arm-button:last-child,
+.bottom-setting-cross-button {
     margin-bottom: 4px;
 }
 
 .cross-setting-arm-bar {
-    margin-left: 3px;
+    margin-left: 72px;
 }
 
 .middle-setting-cross {
@@ -1738,7 +1995,6 @@ button.cup-button:disabled {
 }
 
 .configuration-field {
-    width: 385px;
     height: calc(100% - 94px);
     margin-left: 22px;
     overflow: auto;
@@ -1753,7 +2009,7 @@ button.cup-button:disabled {
     font-size: 12px;
     margin-left: 2px;
     margin-top: 11px;
-    width: 135px;
+    width: 275px;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -1762,8 +2018,8 @@ button.cup-button:disabled {
     width: 96px;
     height: 36px;
     background-color: #d3d3d3;
-    border:none;
-    margin-left: 51px;
+    border: none;
+    margin-left: 17px;
     text-align: center;
     padding: auto;
     border: solid #FFF;
@@ -1776,7 +2032,8 @@ button.cup-button:disabled {
 .configuration-item-value {
     font-size: 12px;
     margin-top: 8px;
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
 }
 
 .configuration-buttons {
@@ -1810,7 +2067,7 @@ button.cup-button:disabled {
 }
 
 option {
-    display:block;
+    display: block;
     text-align: center;
     padding-left: 45%;
 }
@@ -1821,22 +2078,22 @@ option {
 
 .sel {
     font-family: Cera-light;
-    text-align-last:center;
+    text-align-last: center;
     border: #494949 solid;
-    margin-left: 51px;
+    margin-left: 17px;
     padding: auto;
 }
 
 .option {
-    text-align-last:center;
+    text-align-last: center;
 }
 
 .configuration-item-button:hover {
-   border: #2A569A solid;
+    border: #2A569A solid;
 }
 
-.block select{
-    text-align : center;
+.block select {
+    text-align: center;
 }
 
 
@@ -1844,18 +2101,18 @@ option {
 
 .cleaning-popup-main {
     position: absolute;
-      justify-content: center;
-      align-items: center;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgb(0, 0, 0, .4);
-      backdrop-filter: blur(4px);
-      z-index: 4;
-  }
-  
-  .cleaning-popup-container {
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .4);
+    backdrop-filter: blur(2px);
+    z-index: 4;
+}
+
+.cleaning-popup-container {
     width: 410px;
     height: 240px;
     border: solid 5px #2A569A;
@@ -1866,23 +2123,9 @@ option {
     left: 0;
     margin: auto;
     background: #f9f9f9;
-  }
-  
-  .cleaning-popup-container:before {
-    background: none;
-      border: 5px solid #ed1c24;
-      border-radius: 10px;
-      content: "";
-      display: block;
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      pointer-events: none;
-  }
-  
-  .container {
+}
+
+.container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1890,52 +2133,112 @@ option {
     align-items: center;
     height: 100%;
     position: absolute;
-  }
-  
-  .clean-main-h {
+}
+
+.clean-main-h {
     font-size: 25px;
     font-weight: 400;
     margin-left: 10px;
     margin-top: 24px;
     text-align: center;
-  }
-  
-  .cleaning-message {
+    font-family: Cera-bold;
+}
+
+.cleaning-message {
     font-size: 13px;
     text-align: center;
     margin-top: 30px;
-  }
-  
-  .clean-second-h {
+}
+
+.clean-second-h {
     font-size: 14px;
     font-weight: 200;
     text-align: center;
     color: red;
     margin-top: 20px;
-  }
-  
-  .progress {
+}
+
+.progress {
     width: 95%;
     height: 20px;
-    background-color: black;
     position: relative;
     visibility: visible;
     margin-left: auto;
     margin-right: auto;
     margin-top: 16px;
-  }
-  
-  .progress-inner {
+}
+
+.progress-inner {
     background-color: #2A569A;
     position: absolute;
     width: 100%;
     height: 100%;
-  }
-  
-  .hide {
+}
+
+.hide {
     display: none;
-  }
-  
+}
+
+/* status-numpud */
+
+.numpud-content {
+    height: 540px;
+    width: 330px;
+    background: #fff;
+    
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+.numpud-number-div,
+.numpud-screen {
+    padding: 0;
+    margin: 0;
+}
+
+.numpud-screen {
+    font-family: Cera-bold;
+    list-style: none;
+    height: 80px;
+    border-radius: 5px;
+    border: solid #2A569A;
+    vertical-align: center;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    width: 300px;
+}
+
+
+.numpud-button,
+.numpud-clear,
+.numpud-enter {
+    font-family: Cera-bold;
+    font-size: 38px;
+    width: 83px;
+    height: 80px;
+    border: solid #2A569A;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.numpud-enter {
+    font-size: 28px;
+    background-color: #2A569A;
+    color: white;
+}
+
+.numpud-number-div {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 
 /*.control-setting-field {

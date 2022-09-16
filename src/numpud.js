@@ -9,41 +9,22 @@ for (let b = 0; b < inputt.length; b += 1) {
 		let screen = document.querySelectorAll('.screen')[0];
 		let clear = document.getElementsByClassName('clear')[0];
 		let main = document.querySelector('.main-div');
+		let mainContetn = document.querySelector(".main-content");
 		main.classList.toggle("main-div-active");
-		mark.disabled = true;
-		dot.disabled = true;
+		main.onclick = function (e) {
+			if (!e.target.closest(".main-content")) {
+				main.classList.remove("main-div-active");
+				screen.innerHTML = '0';
+			}
+		}
+		false
 		for (let i = 0; i < elements.length; i += 1) {
-			if (inputt[b].classList.contains("dot-button")) {
-				dot.disabled = false;
-			};
-			if (inputt[b].classList.contains("mark-button")) {
-				mark.disabled = false;
-			};
-			if (elements[i].innerHTML === 'Ввод') {
+			if (elements[i].innerHTML === 'ВВОД') {
 				elements[i].onclick = function () {
 					inputt[b].innerHTML = screen.innerHTML;
 					main.classList.remove("main-div-active")
 					screen.innerHTML = '0';
 				}
-			} else if (elements[i].innerHTML === "X") {
-				elements[i].onclick = function () {
-					main.classList.remove("main-div-active")
-					screen.innerHTML = '0';
-				};
-			} else if (elements[i].innerHTML === "+/-") {
-				elements[i].onclick = function () {
-					screen.innerHTML = screen.innerHTML * (-1);
-				};
-			} else if (elements[i].innerHTML === ".") {
-				elements[i].onclick = function () {
-					if (screen.innerHTML === "0") {
-						screen.innerHTML = "0.";
-					} else if (screen.innerHTML.includes(".")) {
-						screen.innerHTML = screen.innerHTML;
-					} else {
-						screen.innerHTML += elements[i].innerHTML;
-					}
-				};
 			} else {
 				elements[i].onclick = function () {
 					if (elements[i].innerHTML === "÷") {
@@ -89,3 +70,34 @@ btnStart.addEventListener("click", () => {
     }
   }, 10)
 })
+
+/* Цифровой блок на домашней странице */
+
+let numElements = document.querySelectorAll(".numpud-button");
+		let numScreen = document.querySelectorAll('.numpud-screen')[0];
+		let numClear = document.getElementsByClassName('numpud-clear')[0];
+		let numMain = document.querySelector('.numpud-main-div');
+		let numMainContetn = document.querySelector(".numpud-main-content");
+		for (let i = 0; i < numElements.length; i += 1) {
+			if (numElements[i].innerHTML === 'ВВОД') {
+				numElements[i].onclick = function () {
+					numScreen.innerHTML = '0';
+				}
+			} else {
+				numElements[i].onclick = function () {
+					if (numScreen.innerHTML === "0") {
+							numScreen.innerHTML = numElements[i].innerHTML;
+						} else {
+							numScreen.innerHTML += numElements[i].innerHTML;
+							console.log(numScreen.textContent);
+							if (numScreen.innerHTML.indexOf(".") != "-1") {
+								numScreen.innerHTML = numScreen.innerHTML.substring(0, numScreen.innerHTML.indexOf(".") + 3);
+							}
+						}
+					}
+				};
+			}
+	
+		numClear.onclick = function () {
+			numScreen.innerHTML = '0';
+		};

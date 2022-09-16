@@ -9,10 +9,11 @@
   <title>Data Grid Example</title>
   <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
-  <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/23.2.1/styles/ag-theme-balham.css">
 </head>
 
 <body>
+<!-- Всплывающий цифровой блок -->
   <div class="main-div">
     <div class="main-content">
       <div class="screen" id="screen">0</div>
@@ -21,22 +22,20 @@
         <button class="num-button">7</button>
         <button class="num-button">8</button>
         <button class="num-button">9</button>
-        <button class="clear num-button" id="clear">C</button>
         <button class="num-button">4</button>
         <button class="num-button">5</button>
         <button class="num-button">6</button>
-        <button class="num-button mark">+/-</button>
         <button class="num-button">1</button>
         <button class="num-button">2</button>
         <button class="num-button">3</button>
-        <button class="num-button dot" disabled>.</button>
-        <button class="num-button">X</button>
+        <button class="clear num-button" id="clear">C</button>
         <button class="num-button">0</button>
-        <button class="num-button enter">Ввод</button>
+        <button class="num-button enter">ВВОД</button>
 
       </div>
     </div>
   </div>
+  <!-- Шапка программы -->
   <header class="header">
     <div class="header-conteiner">
       <div class="header-information">
@@ -57,7 +56,8 @@
         <div class="timer">
           <div class="timer-icon">
           </div>
-          <p class="timer-count">0:00 мин</p>
+          <p class="timer-count">0:00</p>
+          <p class="timer-unit"> мин:с</p>
         </div>
       </div>
       <div class="logo-container">
@@ -66,6 +66,7 @@
       </div>
     </div>
   </header>
+  <!-- Основная рабочая область программы -->
   <div class="monitor">
     <div class="main">
       <div class="tabs" id="tabs1">
@@ -89,8 +90,158 @@
             <div class="time"></div>
           </div>
         </div>
+         <!-- Состояния "Домашней" вкладки -->
         <div class="tab__content">
+          <div class="status-wait home-status">
+            <div class="status-weit-icon-bar">
+              <div class="status-wait-icon home-status-icon"></div>
+            </div>
+          </div>
+          
+          <div class="status-cow-in-cell home-status">
+            <div class="status-cow-in-cell-bar">
+              <div class="status-cow-in-cell-icon home-status-icon"></div>
+              <div class="cow-in-cell-id">0</div>
+            </div>
+            <div class="status-milk-transport-bar">
+              <div class="status-milk-transport-status">
+                <div class="status-milk-transport-status-ok"></div>
+              </div>
+              <div class="status-milk-transport-arrow">->></div>
+              <div class="status-milk-transport-place">
+                <div class="status-milk-transport-place-tanker"></div>
+              </div>
+            </div>
+            <button class="stutus-milk-refresh-button"></button>
+          </div>
+          
+          <div class="status-cow-id-enter home-status">
+            <div class="status-cow-id-enter-icon home-status-icon"></div>
+            <div class="status-cow-id-numpud">
+              <div class="numpud-content">
+                <div class="numpud-screen" id="numpud-screen">0</div>
+<!-- Цифровой блок "Домашней" вкладки -->
+                <div class="numpud-number-div">
+                  <button class="numpud-button">7</button>
+                  <button class="numpud-button">8</button>
+                  <button class="numpud-button">9</button>
+                  <button class="numpud-button">4</button>
+                  <button class="numpud-button">5</button>
+                  <button class="numpud-button">6</button>
+                  <button class="numpud-button">1</button>
+                  <button class="numpud-button">2</button>
+                  <button class="numpud-button">3</button>
+                  <button class="numpud-clear numpud-button" id="numpud-clear">C</button>
+                  <button class="numpud-button">0</button>
+                  <button class="numpud-button numpud-enter">ВВОД</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-pump home-status">
+            <div class="status-pump-icon home-status-icon"></div>
+            <div class="status-cleaning-bar pumps-bar">
+              <div class="status-cleaning-icons pumps-icons">
+                <div class="status-icon-cold status-icon current-state"></div>
+              </div>
+              <div class="progress-bars pumps-progress-bar">
+                <div class="status-cleaning-progress-bar-local pump-local"></div>
+                <div class="status-cleaning-progress-bar-global pump-global"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-acid home-status">
+            <div class="status-acid-icon home-status-icon"></div>
+            <div class="status-cleaning-bar acid-bar">
+              <div class="status-cleaning-icons acid-icons">
+                <div class="status-cleaning-icons-top">
+                  <div class="status-icon-clean-tanker status-icon current-state"></div>
+                  <div class="status-icon-cups-shower status-icon"></div>
+                  <div class="status-icon-cold status-icon"></div>
+                  <div class="status-icon-normal status-icon"></div>
+                  <div class="status-icon-hot status-icon"></div>
+                </div>
+                <div class="status-cleaning-icons-bottom">
+                  <div class="status-icon-drain status-icon"></div>
+                  <div class="status-icon-cold status-icon"></div>
+                  <div class="status-icon-drain status-icon"></div>
+                  <div class="status-icon-dry status-icon"></div>
+                </div>
+              </div>
+              <div class="progress-bars acid-progress-bar">
+                <div class="status-cleaning-progress-bar-local pump-local"></div>
+                <div class="status-cleaning-progress-bar-global pump-global"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-alkaline home-status">
+            <div class="status-alkaline-icon home-status-icon"></div>
+            <div class="status-cleaning-bar alkaline-bar">
+              <div class="status-cleaning-icons alkaline-icons">
+                <div class="status-cleaning-icons-top">
+                  <div class="status-icon-clean-tanker status-icon current-state"></div>
+                  <div class="status-icon-cups-shower status-icon"></div>
+                  <div class="status-icon-cold status-icon"></div>
+                  <div class="status-icon-normal status-icon"></div>
+                  <div class="status-icon-hot status-icon"></div>
+                </div>
+                <div class="status-cleaning-icons-bottom">
+                  <div class="status-icon-drain status-icon"></div>
+                  <div class="status-icon-cold status-icon"></div>
+                  <div class="status-icon-drain status-icon"></div>
+                  <div class="status-icon-dry status-icon"></div>
+                </div>
+              </div>
+              <div class="progress-bars alkaline-progress-bar">
+                <div class="status-cleaning-progress-bar-local pump-local"></div>
+                <div class="status-cleaning-progress-bar-global pump-global"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-half-rising home-status">
+            <div class="status-half-rising-icon home-status-icon"></div>
+            <div class="status-cleaning-bar half-rising-bar">
+              <div class="status-cleaning-icons half-rising-icons">
+                <div class="status-cleaning-icons-top">
+                  <div class="status-icon-cups-shower status-icon current-state"></div>
+                  <div class="status-icon-cold status-icon"></div>
+                  <div class="status-icon-drain status-icon"></div>
+                  <div class="status-icon-dry status-icon"></div>
+                </div>
+              </div>
+              <div class="progress-bars half-rising-progress-bar">
+                <div class="status-cleaning-progress-bar-local pump-local"></div>
+                <div class="status-cleaning-progress-bar-global pump-global"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-full-rising home-status status-active">
+            <div class="status-full-rising-icon home-status-icon"></div>
+            <div class="status-cleaning-bar full-rising-bar">
+              <div class="status-cleaning-icons full-rising-icons">
+                <div class="status-cleaning-icons-top">
+                  <div class="status-icon-clean-tanker status-icon"></div>
+                  <div class="status-icon-cups-shower status-icon current-state"></div>
+                  <div class="status-icon-cold status-icon"></div>
+                  <div class="status-icon-drain status-icon"></div>
+                  <div class="status-icon-dry status-icon"></div>
+                </div>
+              </div>
+              <div class="progress-bars full-rising-progress-bar">
+                <div class="status-cleaning-progress-bar-local pump-local"></div>
+                <div class="status-cleaning-progress-bar-global pump-global"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <!-- Вкладки содержащие статистику -->
         <div class="tab__content tab__content_info tab__content_active">
           <div class="untabs" id="untabs2">
             <div class="untab__navigation">
@@ -104,6 +255,7 @@
                 <div class="untab alarm-statistics"></div>
               </div>
             </div>
+            <!-- Статистика по надоям -->
             <div class="untab__content">
               <style>
                 #milk-table {
@@ -116,6 +268,7 @@
                 <button class="button milk-filter"></button>
               </div>
             </div>
+            <!-- Статистика по промывкам -->
             <div class="untab__content untab__content_active">
               <style>
                 #wash-table {
@@ -128,6 +281,7 @@
               <div id="wash-table" class="ag-theme-balham">
               </div>
             </div>
+            <!-- Статистика по ошибкам -->
             <div class="untab__content alarm-statistics-content">
               <style>
                 #new-alarm-table {
@@ -159,6 +313,7 @@
             </div>
           </div>
         </div>
+        <!-- Вкладки управления -->
         <div class="tab__content">
           <div class="untabs" id="untabs2">
             <div class="untab__navigation">
@@ -175,6 +330,7 @@
                 <div class="untab touchscreen-setting"></div>
               </div>
             </div>
+            <!-- Управление промывками -->
             <div class="untab__content untab__content_active">
               <div class="cleaning-control-header">
                 <div class="cl-icon cleaning-icon"></div>
@@ -186,7 +342,7 @@
                 <button class="cl-bar-button acid-cleaning-icon"></button>
                 <div class="cl-bar-atention-icon acid-atention atention-active"></div>
                 <div class="cl-date-value">
-                  <p>25/08/2023 9:00</p>
+                  <p>25 августа 9:00</p>
                 </div>
                 <div class="cl-bar-button acid-container-icon"></div>
               </div>
@@ -194,7 +350,7 @@
                 <button class="cl-bar-button alkaline-cleaning-icon"></button>
                 <div class="cl-bar-atention-icon alkaline-atention atention-active"></div>
                 <div class="cl-date-value acid-value">
-                  <p>--:--:--</p>
+                  <p>25 августа 9:00</p>
                 </div>
                 <div class="cl-bar-button alkaline-container-icon"></div>
               </div>
@@ -202,7 +358,7 @@
                 <div class="cl-bar-button line-rinsing-icon"></div>
                 <div class="cl-bar-atention-icon line-rinsing-atention atention-active"></div>
                 <div class="cl-date-value line-rinsing-value">
-                  <p>26/08/2023 9:00</p>
+                  <p>25 августа 9:00</p>
                 </div>
                 <div class="cl-bar-button line-rinsing-container-icon"></div>
               </div>
@@ -210,7 +366,7 @@
                 <div class="cl-bar-button robot-rinsing-icon"></div>
                 <div class="cl-bar-atention-icon robot-rinsing-atention atention-active"></div>
                 <div class="cl-date-value robot-rinsing-value">
-                  <p>--:--:--</p>
+                  <p></p>
                 </div>
                 <div class="cl-bar-button robot-rinsing-container-icon"></div>
               </div>
@@ -218,11 +374,12 @@
                 <div class="cl-bar-button iodine-valve-icon"></div>
               </div>
             </div>
+            <!-- Управление отбором проб -->
             <div class="untab__content">
               <div class="sampler-tab"></div>
               <div class="sampler-status">
                 <div class="sampler-status-text">
-                  <p>Режим отбора пробы молока</p>
+                  <p>Статус отбора проб</p>
                 </div>
                 <div class="sampler-status-icons">
                   <button class="sampler-status-icon sampler-status-play sampler-status-active"></button>
@@ -230,18 +387,19 @@
                 </div>
               </div>
               <div class="sampler-frame">
-                <div class="sampler-frame-text">Sampler frame</div>
+                <div class="sampler-frame-text">Штатив</div>
                 <button class="sampler-frame-button input-button">0</button>
               </div>
               <div class="bottle-number">
-                <div class="bottle-number-text">Номер бутылки для отбора пробы молока</div>
+                <div class="bottle-number-text">Первая пробирка</div>
                 <button class="bottle-number-button input-button">0</button>
               </div>
               <div class="last-bottle-number">
-                <div class="last-bottle-number-text">Номер бутылки в которую отбиралась проба молока</div>
+                <div class="last-bottle-number-text">Последняя пробирка</div>
                 <button class="last-bottle-number-button input-button">0</button>
               </div>
             </div>
+            <!-- Управление манипулятором -->
             <div class="untab__content">
               <div class="arm-control">
                 <div class="main-control-bar">
@@ -299,6 +457,7 @@
                 </div>
               </div>
             </div>
+            <!-- Локализация, очистка экрана, выключение -->
             <div class="untab__content">
               <div class="touch-bar">
                 <div class="touch-bar-icons">
@@ -306,12 +465,12 @@
                   <button class="clean-touch touch-button"></button>
                   <div class="cleaning-popup-main hide">
                     <div class="cleaning-popup-container">
-                      <h1 class="clean-main-h">Очистить cенсорный экран</h1>
-                      <p class="cleaning-message">Теперь вы можете очистить сенсорный экран при помощи влажной салфетки</p>
-                      <h2 class="clean-second-h"> НЕ ИСПОЛЬЗУЙТЕ АБРАЗИВНЫЕ ИЛИ АГРЕССИВНЫЕ ЧИСТЯЩИЕ СРЕДСТВА!</h2>
-                        <div class="progress">
-                          <div class="progress-inner"></div>
-                        </div>
+                      <h1 class="clean-main-h">Экран заблокирован!</h1>
+                      <p class="cleaning-message">Можете протереть его при помощи владной салфетки.</p>
+                      <h2 class="clean-second-h"> Не используйте абразивные или агрессивные чистящие средства!</h2>
+                      <div class="progress">
+                        <div class="progress-inner"></div>
+                      </div>
                     </div>
                   </div>
                   <button class="off-system touch-button"></button>
@@ -332,6 +491,7 @@
             </div>
           </div>
         </div>
+        <!-- Вкладки конфигурации -->
         <div class="tab__content">
           <div class="untabs" id="untabs3">
             <div class="untab__navigation">
@@ -348,32 +508,32 @@
                 <div class="untab calibration"></div>
               </div>
             </div>
+            <!-- Мнемосхема -->
             <div class="untab__content">
               1 вкладка
             </div>
+            <!-- Глобальная настройка -->
             <div class="untab__content untab__content_active">
               <div class="arm-setting">
                 <div class="main-setting-bar">
                   <div class="top-setting-bar">
                     <div class="setting-bar center-setting-bar">
-                      <div class="description-setting">
-                        <p>Центральное положение</p>
-                      </div>
-                      <button class="top-setting-button center-setting-start">Пуск</button>
-                      <button class="top-setting-button center-setting-save">Установить</button>
-                      <button class="top-setting-button center-setting-clear">Очистить</button>
+                      <div class="description-setting center-description">В центр бокса</div>
+                      <button class="top-setting-button center-setting-start"></button>
+                      <button class="top-setting-button center-setting-save"></button>
+                      <button class="top-setting-button center-setting-clear"></button>
                     </div>
                     <div class="setting-bar into-setting-bar">
-                      <div class="description-setting into-description">В моечной установке</div>
-                      <button class="top-setting-button into-button into-setting-start">Пуск</button>
-                      <button class="top-setting-button into-button into-setting-save">Установить</button>
-                      <button class="top-setting-button into-button into-setting-clear">Очистить</button>
+                      <div class="description-setting into-description">В положение промывки</div>
+                      <button class="top-setting-button into-button into-setting-start"></button>
+                      <button class="top-setting-button into-button into-setting-save"></button>
+                      <button class="top-setting-button into-button into-setting-clear"></button>
                     </div>
                     <div class="setting-bar under-setting-bar">
-                      <div class="description-setting">Под моечной установкой</div>
-                      <button class="top-setting-button under-setting-start">Пуск</button>
-                      <button class="top-setting-button under-setting-save">Установить</button>
-                      <button class="top-setting-button under-setting-clear">Очистить</button>
+                      <div class="description-setting">В положение ополаскивания</div>
+                      <button class="top-setting-button under-setting-start"></button>
+                      <button class="top-setting-button under-setting-save"></button>
+                      <button class="top-setting-button under-setting-clear"></button>
                     </div>
                   </div>
                   <div class="arm-setting-bar">
@@ -404,12 +564,12 @@
                 <div class="setting-field">
                   <div class="configuration-field">
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Уровень снятия</div>
+                      <div class="configuration-item-name">Порог отсоединения стаканов</div>
                       <button class="configuration-item-button input-button">-</button>
                       <div class="configuration-item-value"></div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Задержка сжатия</div>
+                      <div class="configuration-item-name">Задержка отсоединения стаканов</div>
                       <button class="configuration-item-button dot-button input-button">-</button>
                       <div class="configuration-item-value">сек.</div>
                     </div>
@@ -419,45 +579,37 @@
                       <div class="configuration-item-value">ppm</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Отношение продолжительности</div>
+                      <div class="configuration-item-name">Соотношение тактов пульсации</div>
                       <button class="configuration-item-button input-button">-</button>
                       <div class="configuration-item-value"></div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Время очистки сосков</div>
+                      <div class="configuration-item-name">Время подготовки сосков</div>
                       <button class="configuration-item-button dot-button input-button">-</button>
                       <div class="configuration-item-value">сек.</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Высота очистки сосков</div>
+                      <div class="configuration-item-name">Высота подъема щеток</div>
                       <button class="configuration-item-button dot-button input-button">-</button>
                       <div class="configuration-item-value">см</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Teat clean x-compensati</div>
-                      <select name="select" class="configuration-item-button sel">
-                        <option value="value1" class="option" selected>Нет</option>
-                        <option value="value2" class="option">Да</option>
-                      </select>
-                      <div class="configuration-item-value"></div>
-                    </div>
-                    <div class="configuration-item">
-                      <div class="configuration-item-name">Teat spray time</div>
+                      <div class="configuration-item-name">Время обработки сосков</div>
                       <button class="configuration-item-button dot-button input-button">-</button>
                       <div class="configuration-item-value">сек</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Смещение по оси Х</div>
+                      <div class="configuration-item-name">Корректировка горизонтального перемещения</div>
                       <button class="configuration-item-button mark-button input-button">-</button>
                       <div class="configuration-item-value">мм</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Смещение по оси Y</div>
+                      <div class="configuration-item-name">Корректировка вертикального перемещения</div>
                       <button class="configuration-item-button mark-button input-button">-</button>
                       <div class="configuration-item-value">мм</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Адрес магистрального</div>
+                      <div class="configuration-item-name">Адрес УДР</div>
                       <button class="configuration-item-button input-button">-</button>
                       <div class="configuration-item-value"></div>
                     </div>
@@ -531,22 +683,22 @@
   <script src="./numpud.js"></script>
   <script type="text/javascript" charset="utf-8">
     const milkColumnDefs = [
-      { headerName: 'Время начала доения', field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'ID Коровы', field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Фактический / Ожидаемый надой', field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Время доения', field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Конечная точка транспортировки молока', field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Результат доения', field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' }
+      { headerName: 'Время начала доения', field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'ID Коровы', field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Фактический / Ожидаемый надой', field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Время доения', field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Конечная точка транспортировки молока', field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Результат доения', field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const milkGridOptions = {
       columnDefs: milkColumnDefs,
-      rowData: null,
+
       onGridReady: (event) => { milkRenderDataInTheTable(event.api) },
-      lockPinned: true,
       rowSelection: 'single',
     };
-    
+
+
 
     const milkEGridDiv = document.getElementById('milk-table');
     new agGrid.Grid(milkEGridDiv, milkGridOptions);
@@ -561,10 +713,10 @@
         })
     }
     const washColumnDefs = [
-      { headerName: 'Время начала промывки', field: 'Время начала промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Тип промывки', field: 'Тип промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Время промывки', field: 'Время промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Результат промывки', field: 'Результат промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' }
+      { headerName: 'Время начала промывки', field: 'Время начала промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Тип промывки', field: 'Тип промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Время промывки', field: 'Время промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Результат промывки', field: 'Результат промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const washGridOptions = {
@@ -572,7 +724,6 @@
       columnDefs: washColumnDefs,
       rowData: null,
       rowSelection: 'single',
-      editable: false,
     };
 
     const washEGridDiv = document.getElementById('wash-table');
@@ -587,9 +738,9 @@
         })
     }
     const newAlarmColumnDefs = [
-      { headerName: 'Время возникновения ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Тип сигнализации', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Описание ошибки', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' }
+      { headerName: 'Время ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Тип ошибки', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Подробности', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const newAlarmGridOptions = {
@@ -612,15 +763,15 @@
     }
 
     const alarmListColumnDefs = [
-      { headerName: 'Время возникновения ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Тип сигнализации', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' },
-      { headerName: 'Описание ошибки', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", cellClass: 'locked-col', lockPosition: 'left' }
+      { headerName: 'Время ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Тип ошибки', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Подробности', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const alarmListGridOptions = {
       columnDefs: alarmListColumnDefs,
       rowData: null,
-      rowSelection: 'single',
+      rowSelection: "multiple",
       onGridReady: (event) => { alarmListRenderDataInTheTable(event.api) }
     };
 
