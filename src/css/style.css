@@ -1773,11 +1773,6 @@ button.cup-button:disabled {
     flex-wrap: wrap;
 }
 
-.bluc {
-    background-color: #2A569A;
-    transition: 0.3s;
-}
-
 /* Стили для вкладки натроек */
 
 .arm-setting {
@@ -2239,7 +2234,10 @@ option {
     flex-wrap: wrap;
 }
 
-
+.bluc {
+    background-color: #2A569A;
+    transition: 0.3s;
+}
 
 /*.control-setting-field {
     width: calc(100% - 400px);
