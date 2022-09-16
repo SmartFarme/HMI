@@ -95,7 +95,7 @@ for (let i = 0; i < dropdown.length; i++) {
 
 
 
-const sidetouch = Array.from(document.querySelectorAll(".side-bar-button"));
+const sidetouch = Array.from(document.querySelectorAll(".sidetouch"));
 for (let i = 0; i < sidetouch.length; i++) {
   sidetouch[i].addEventListener("touchstart", e => {
     sidetouch[i].classList.add("bluc");
