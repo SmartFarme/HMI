@@ -110,3 +110,29 @@ for (let i = 0; i < sidetouch.length; i++) {
     console.log("Over")
   })
 }
+
+const samplerStatusBtn = document.querySelectorAll(".sampler-status-icon");
+const samplerChange = document.querySelector(".change-sampler-div");
+for (let i = 0; i < samplerStatusBtn.length; i++) {
+  samplerStatusBtn[i].addEventListener("click", samplerChangeActive);
+  function samplerChangeActive() {
+    samplerChange.classList.add("change-sampler-div-active")
+    const samplerButton = Array.from(document.querySelectorAll(".sampler-button"));
+    const samplerStop = document.querySelector(".change-sampler-stop");
+    const samplerPlay = document.querySelector(".change-sampler-play");
+    const samplerStatusPlay = document.querySelector(".sampler-status-play");
+    const samplerStatusStop = document.querySelector(".sampler-status-stop");
+    samplerStop.onclick = function () {
+      samplerChange.classList.remove("change-sampler-div-active")
+      samplerButton.forEach(button => button.disabled = false);
+      samplerStatusPlay.classList.remove("sampler-status-active");
+      samplerStatusStop.classList.add("sampler-status-active");
+    }
+    samplerPlay.onclick = function () {
+      samplerChange.classList.remove("change-sampler-div-active")
+      samplerButton.forEach(button => button.disabled = true);
+      samplerStatusStop.classList.remove("sampler-status-active");
+      samplerStatusPlay.classList.add("sampler-status-active");
+    }
+  }
+}

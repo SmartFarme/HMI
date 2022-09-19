@@ -19,7 +19,7 @@ for (let b = 0; b < inputt.length; b += 1) {
 		}
 		false
 		for (let i = 0; i < elements.length; i += 1) {
-			if (elements[i].innerHTML === 'ВВОД') {
+			if (elements[i].innerHTML === 'ОК') {
 				elements[i].onclick = function () {
 					inputt[b].innerHTML = screen.innerHTML;
 					main.classList.remove("main-div-active")
@@ -79,7 +79,7 @@ let numElements = document.querySelectorAll(".numpud-button");
 		let numMain = document.querySelector('.numpud-main-div');
 		let numMainContetn = document.querySelector(".numpud-main-content");
 		for (let i = 0; i < numElements.length; i += 1) {
-			if (numElements[i].innerHTML === 'ВВОД') {
+			if (numElements[i].innerHTML === 'ОК') {
 				numElements[i].onclick = function () {
 					numScreen.innerHTML = '0';
 				}

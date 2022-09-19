@@ -42,12 +42,12 @@ button:hover {
 
 .ag-theme-balham {
     --ag-header-foreground-color: white;
-    --ag-header-background-color: #ed1c24;
+    --ag-header-background-color: #494949;
     --ag-background-color: white;
     --ag-odd-row-background-color: #dddddd;
     --ag-selected-row-foreground-color: white;
-    --ag-selected-row-background-color: #2A569A;
-    --ag-row-hover-color: purple;
+    --ag-selected-row-background-color: #25be2c;
+    --ag-row-hover-color: #494949;
 }
 
 .ag-row-selected {
@@ -429,7 +429,7 @@ body {
 }
 
 .status-active {
-    display: flex;
+    display: block;
 }
 
 .status-cow-in-cell-icon {
@@ -450,7 +450,7 @@ body {
 .status-milk-transport-bar {
     display: flex;
     justify-content: start;
-    margin-top: 170px;
+    margin-top: 245px;
     margin-left: 175px;
 }
 
@@ -535,7 +535,7 @@ body {
 }
 
 .progress-bars {
-    margin-top: 129px;
+    margin-top: 25px;
 }
 
 .acid-progress-bar {
@@ -546,9 +546,13 @@ body {
     margin-top: 30px;
 }
 
+.icon-and-progress-status {
+    display: flex;
+}
+
 .status-cleaning-progress-bar-local {
     width: 400px;
-    height: 21px;
+    height: 32px;
     background-color: #e6e6e6;
     position: relative;
     border: solid 1px #bcbcbc;
@@ -556,7 +560,7 @@ body {
 
 .status-cleaning-progress-bar-global {
     width: 400px;
-    height: 21px;
+    height: 32px;
     background-color: #e6e6e6;
     position: relative;
     margin-top: 19px;
@@ -564,7 +568,9 @@ body {
     border: solid 1px #bcbcbc;
 }
 
-.status-cleaning-icons, .status-cleaning-icons-top, .status-cleaning-icons-bottom {
+.status-cleaning-icons,
+.status-cleaning-icons-top,
+.status-cleaning-icons-bottom {
     display: flex;
     flex-wrap: wrap;
     width: 400px;
@@ -597,7 +603,7 @@ body {
 
 .status-icon-cold {
     background-image: url(../svg/coldwash.svg);
-    
+
 }
 
 .status-icon-normal {
@@ -794,7 +800,7 @@ body {
 
 .atention-icon {
     background-image: url(../svg/attention.svg);
-    margin-left: 35px;
+    margin-left: 95px;
     background-size: 46px;
     image-rendering: pixelated;
 }
@@ -803,13 +809,13 @@ body {
     background-image: url(../svg/clock.svg);
     width: 28%;
     background-size: 40px;
-    margin-left: 35px;
+    margin-left: 65px;
     image-rendering: pixelated;
 }
 
 .container-icon {
     background-image: url(../svg/chemical-container.svg);
-    margin-left: 192px;
+    margin-left: 102px;
     background-size: 29px;
     image-rendering: pixelated;
 }
@@ -846,9 +852,9 @@ body {
     background-repeat: no-repeat;
     background-size: 60px;
     background-position: center;
-    background-image: url(../svg/attention.svg);
+    background-image: url(../svg/30-attention-yellow.svg);
     margin-top: 2px;
-    margin-left: 13px;
+    margin-left: 73px;
     image-rendering: pixelated;
 }
 
@@ -862,13 +868,13 @@ body {
     font-size: 25px;
     text-align: left;
     margin-top: 25px;
-    margin-left: 55px;
+    margin-left: 85px;
 }
 
 .acid-container-icon {
     background-image: url(../svg/acid-pump.svg);
     background-color: #FFF;
-    margin-left: 153px;
+    margin-left: 63px;
     background-size: 60px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -895,7 +901,7 @@ body {
 .alkaline-container-icon {
     background-image: url(../svg/alkaline-pump.svg);
     background-color: #fff;
-    margin-left: 153px;
+    margin-left: 63px;
     background-size: 60px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -924,7 +930,7 @@ body {
 .line-rinsing-container-icon {
     background-image: url(../svg/line-pump.svg);
     background-color: #FFF;
-    margin-left: 153px;
+    margin-left: 63px;
     background-size: 60px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -953,7 +959,7 @@ body {
 .robot-rinsing-container-icon {
     background-image: url(../svg/brushes.svg);
     background-color: #f9f9f9;
-    margin-left: 153px;
+    margin-left: 63px;
     background-size: 63px;
     image-rendering: pixelated;
     border-width: 2px 3px;
@@ -998,7 +1004,7 @@ body {
 .sampler-status {
     display: flex;
     justify-content: start;
-    margin-top: 5px;
+    margin-top: 23px;
 }
 
 .sampler-status-text {
@@ -1042,14 +1048,15 @@ body {
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    padding-bottom: 5px;
     margin-top: 23px;
 }
 
 .sampler-frame-text,
 .bottle-number-text,
-.last-bottle-number-text {
-    margin-top: 12px;
+.last-bottle-number-text,
+.off-system-text,
+.clean-touch-text {
+    margin-top: 23px;
     font-size: 20px;
     width: 244px;
     text-align: left;
@@ -1060,7 +1067,7 @@ body {
 .bottle-number-button,
 .last-bottle-number-button {
     display: block;
-    width: 120px;
+    width: 75px;
     height: 43px;
     background-size: 60px;
     border: solid #2A569A;
@@ -1074,7 +1081,7 @@ body {
 .bottle-number {
     display: flex;
     justify-content: start;
-    margin-top: 37px;
+    margin-top: 23px;
 }
 
 .bottle-number-text {
@@ -1082,7 +1089,7 @@ body {
 }
 
 .last-bottle-number {
-    margin-top: 42px;
+    margin-top: 23px;
     display: flex;
     justify-content: start;
 }
@@ -1350,16 +1357,9 @@ button.cup-button:disabled {
 }
 
 .touch-bar-icons {
-    margin-top: 4px;
     background-size: 38px;
 }
 
-.language {
-    margin-top: 21px;
-    width: calc(100% - 100px);
-}
-
-.language-icon,
 .clean-touch,
 .off-system {
     display: block;
@@ -1372,20 +1372,21 @@ button.cup-button:disabled {
     border-radius: 5px;
     background-color: #FFF;
     background-image: url(../svg/language.svg);
-    margin-left: 13px;
     image-rendering: pixelated;
 }
 
-.language-icon {
-    background-size: 56px 60px;
-    border: 0px;
+.clean-touch-bar, .off-system-bar {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        margin-top: 23px;
+       
 }
 
 .clean-touch {
     background-image: url(../svg/tap-cleaning-black.svg);
     image-rendering: pixelated;
     border: solid 2px #2A569A;
-    margin-top: 8px;
     box-shadow: 1px 1px #b8b8b8, -1px -1px #b8b8b8, inset 1px 1px #b8b8b8, inset -1px -1px #b8b8b8;
 }
 
@@ -1393,7 +1394,6 @@ button.cup-button:disabled {
     background-image: url(../svg/off-button.svg);
     image-rendering: pixelated;
     border: solid 2px #2A569A;
-    margin-top: 8px;
     box-shadow: 1px 1px #b8b8b8, -1px -1px #b8b8b8, inset 1px 1px #b8b8b8, inset -1px -1px #b8b8b8;
 }
 
@@ -1708,11 +1708,11 @@ button.cup-button:disabled {
 
 .main-content {
     height: 540px;
-    width: 330px;
+    width: 339px;
     background: #f9f9f9;
-    border: solid 5px #2A569A;
-    border-radius: 5px;
-    padding: 10px;
+    border: solid 5px #24A81B;
+    border-radius: 10px;
+    padding: 20px;
     position: absolute;
     top: 0;
     right: 0;
@@ -1743,7 +1743,7 @@ button.cup-button:disabled {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    width: 300px;
+    width: 289px;
 }
 
 
@@ -1762,8 +1762,7 @@ button.cup-button:disabled {
 }
 
 .enter {
-    font-size: 28px;
-    background-color: #2A569A;
+    background-color: #25be2c;
     color: white;
 }
 
@@ -1850,17 +1849,23 @@ button.cup-button:disabled {
     margin-left: 16px;
 }
 
-.under-setting-start, .into-setting-start, .center-setting-start {
+.under-setting-start,
+.into-setting-start,
+.center-setting-start {
     background-image: url(../svg/mode-play.svg);
     background-size: 42px;
 }
 
-.under-setting-save, .center-setting-save, .into-setting-save {
+.under-setting-save,
+.center-setting-save,
+.into-setting-save {
     background-image: url(../svg/save.svg);
     background-size: 42px;
 }
 
-.under-setting-clear, .into-setting-clear, .center-setting-clear {
+.under-setting-clear,
+.into-setting-clear,
+.center-setting-clear {
     background-image: url(../svg/cancel.svg);
     background-size: 42px;
 }
@@ -2010,31 +2015,26 @@ button.cup-button:disabled {
 }
 
 .configuration-item-button {
-    width: 96px;
-    height: 36px;
-    background-color: #d3d3d3;
+    width: 75px;
+    height: 43px;
+    background-color: white;
     border: none;
-    margin-left: 17px;
+    margin-left: 6px;
     text-align: center;
     padding: auto;
-    border: solid #FFF;
+    border: solid #2A569A;
+    margin-right: 5px;
+    border-radius: 5px;
 }
 
 .configuration-item:not(:first-child) {
     margin-top: 4px
 }
 
-.configuration-item-value {
-    font-size: 12px;
-    margin-top: 8px;
-    margin-left: 15px;
-    margin-right: 10px;
-}
-
 .configuration-buttons {
     display: flex;
     justify-content: start;
-    margin-left: 240px;
+    margin-left: 220px;
     margin-top: 7px;
 }
 
@@ -2075,7 +2075,7 @@ option {
     font-family: Cera-light;
     text-align-last: center;
     border: #494949 solid;
-    margin-left: 17px;
+    margin-left: 6px;
     padding: auto;
 }
 
@@ -2108,9 +2108,10 @@ option {
 }
 
 .cleaning-popup-container {
-    width: 410px;
-    height: 240px;
-    border: solid 5px #2A569A;
+    width: 510px;
+    height: 215px;
+    border: solid 5px #24A81B;
+    border-radius: 10px;
     position: absolute;
     top: 0;
     right: 0;
@@ -2137,6 +2138,7 @@ option {
     margin-top: 24px;
     text-align: center;
     font-family: Cera-bold;
+    color: red;
 }
 
 .cleaning-message {
@@ -2149,7 +2151,6 @@ option {
     font-size: 14px;
     font-weight: 200;
     text-align: center;
-    color: red;
     margin-top: 20px;
 }
 
@@ -2178,9 +2179,9 @@ option {
 
 .numpud-content {
     height: 540px;
-    width: 330px;
+    width: 319px;
     background: #fff;
-    
+
     border-radius: 5px;
     padding: 10px;
     margin-top: 20px;
@@ -2191,6 +2192,10 @@ option {
 .numpud-screen {
     padding: 0;
     margin: 0;
+}
+
+.numpud-number-div {
+    margin-right: 10px;
 }
 
 .numpud-screen {
@@ -2204,7 +2209,7 @@ option {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    width: 300px;
+    width: 289px;
 }
 
 
@@ -2223,8 +2228,7 @@ option {
 }
 
 .numpud-enter {
-    font-size: 28px;
-    background-color: #2A569A;
+    background-color: #25be2c;
     color: white;
 }
 
@@ -2239,6 +2243,9 @@ option {
     transition: 0.3s;
 }
 
+
+
+
 /*.control-setting-field {
     width: calc(100% - 400px);
     height: calc(100% - 32px);
@@ -2247,3 +2254,50 @@ option {
     margin-top: 12px;
     border-radius: 5px;
 }
+*/
+
+.change-sampler-div {
+    display: none;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      font-family: Cera-bold;
+      z-index: 3;
+  }
+  
+  .change-sampler-div-active {
+    display: block;
+  }
+  
+  .change-sampler-content {
+    width: 210px;
+    margin: auto;
+    height: 140px;
+    padding: 12px;
+    border: solid 5px #2A569A;
+    border-radius: 4px;
+    display: none;
+    position: fixed;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  
+  .change-sampler-button {
+    width: 74px;
+    height: 74px;
+    border: solid #016aac;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+  }

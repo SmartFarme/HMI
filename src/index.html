@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<!-- Всплывающий цифровой блок -->
+  <!-- Всплывающий цифровой блок -->
   <div class="main-div">
     <div class="main-content">
       <div class="screen" id="screen">0</div>
@@ -30,7 +30,7 @@
         <button class="num-button sidetouch">3</button>
         <button class="clear num-button sidetouch" id="clear">C</button>
         <button class="num-button sidetouch">0</button>
-        <button class="num-button enter sidetouch">ВВОД</button>
+        <button class="num-button enter sidetouch">ОК</button>
 
       </div>
     </div>
@@ -57,7 +57,6 @@
           <div class="timer-icon">
           </div>
           <p class="timer-count">0:00</p>
-          <p class="timer-unit"> мин:с</p>
         </div>
       </div>
       <div class="logo-container">
@@ -90,14 +89,14 @@
             <div class="time"></div>
           </div>
         </div>
-         <!-- Состояния "Домашней" вкладки -->
+        <!-- Состояния "Домашней" вкладки -->
         <div class="tab__content">
           <div class="status-wait home-status">
             <div class="status-weit-icon-bar">
               <div class="status-wait-icon home-status-icon"></div>
             </div>
           </div>
-          
+
           <div class="status-cow-in-cell home-status">
             <div class="status-cow-in-cell-bar">
               <div class="status-cow-in-cell-icon home-status-icon"></div>
@@ -114,13 +113,13 @@
             </div>
             <button class="stutus-milk-refresh-button sidetouch"></button>
           </div>
-          
+
           <div class="status-cow-id-enter home-status">
             <div class="status-cow-id-enter-icon home-status-icon"></div>
             <div class="status-cow-id-numpud">
               <div class="numpud-content">
                 <div class="numpud-screen" id="numpud-screen">0</div>
-<!-- Цифровой блок "Домашней" вкладки -->
+                <!-- Цифровой блок "Домашней" вкладки -->
                 <div class="numpud-number-div">
                   <button class="numpud-button sidetouch">7</button>
                   <button class="numpud-button sidetouch">8</button>
@@ -133,23 +132,25 @@
                   <button class="numpud-button sidetouch">3</button>
                   <button class="numpud-clear numpud-button sidetouch" id="numpud-clear">C</button>
                   <button class="numpud-button sidetouch">0</button>
-                  <button class="numpud-button sidetouch numpud-enter">ВВОД</button>
+                  <button class="numpud-button sidetouch numpud-enter">ОК</button>
 
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="status-pump home-status">
-            <div class="status-pump-icon home-status-icon"></div>
-            <div class="status-cleaning-bar pumps-bar">
-              <div class="status-cleaning-icons pumps-icons">
-                <div class="status-icon-cold status-icon current-state"></div>
+          <div class="status-pump home-status status-active">
+            <div class="icon-and-progress-status">
+              <div class="status-pump-icon home-status-icon"></div>
+              <div class="status-cleaning-bar pumps-bar">
+                <div class="progress-bars pumps-progress-bar">
+                  <div class="status-cleaning-progress-bar-local pump-local"></div>
+                  <div class="status-cleaning-progress-bar-global pump-global"></div>
+                </div>
               </div>
-              <div class="progress-bars pumps-progress-bar">
-                <div class="status-cleaning-progress-bar-local pump-local"></div>
-                <div class="status-cleaning-progress-bar-global pump-global"></div>
-              </div>
+            </div>
+            <div class="status-cleaning-icons pumps-icons">
+              <div class="status-icon-cold status-icon current-state"></div>
             </div>
           </div>
 
@@ -221,13 +222,13 @@
             </div>
           </div>
 
-          <div class="status-full-rising home-status status-active">
+          <div class="status-full-rising home-status">
             <div class="status-full-rising-icon home-status-icon"></div>
             <div class="status-cleaning-bar full-rising-bar">
               <div class="status-cleaning-icons full-rising-icons">
                 <div class="status-cleaning-icons-top">
-                  <div class="status-icon-clean-tanker status-icon"></div>
-                  <div class="status-icon-cups-shower status-icon current-state"></div>
+                  <div class="status-icon-clean-tanker status-icon current-state"></div>
+                  <div class="status-icon-cups-shower status-icon"></div>
                   <div class="status-icon-cold status-icon"></div>
                   <div class="status-icon-drain status-icon"></div>
                   <div class="status-icon-dry status-icon"></div>
@@ -388,15 +389,22 @@
               </div>
               <div class="sampler-frame">
                 <div class="sampler-frame-text">Штатив</div>
-                <button class="sampler-frame-button input-button">0</button>
+                <button class="sampler-frame-button sampler-button input-button">0</button>
               </div>
               <div class="bottle-number">
                 <div class="bottle-number-text">Первая пробирка</div>
-                <button class="bottle-number-button input-button">0</button>
+                <button class="bottle-number-button sampler-button input-button">0</button>
               </div>
               <div class="last-bottle-number">
                 <div class="last-bottle-number-text">Последняя пробирка</div>
-                <button class="last-bottle-number-button input-button">0</button>
+                <button class="last-bottle-number-button sampler-button input-button">0</button>
+              </div>
+            </div>
+
+            <div class="change-sampler-div">
+              <div class="change-sampler-content">
+                <button class="change-sampler-button change-sampler-stop"></button>
+                <button class="change-sampler-button change-sampler-play"></button>
               </div>
             </div>
             <!-- Управление манипулятором -->
@@ -405,7 +413,7 @@
                 <div class="main-control-bar">
                   <div class="cow-bar">
                     <div class="left-cups">
-                      <button class="cup-button sidetouch left-top-cup cup-unknow cup-active"></button>
+                      <button class="cup-button sidetouch left-top-cup cup-unknow cup-active" disabled></button>
                       <button class="cup-button sidetouch left-top-cup cup-note" disabled></button>
                       <button class="cup-button sidetouch left-top-cup cup-done" disabled></button>
                       <button class="cup-button sidetouch left-bottom-cup cup-unknow cup-active" disabled></button>
@@ -461,8 +469,10 @@
             <div class="untab__content">
               <div class="touch-bar">
                 <div class="touch-bar-icons">
-                  <div class="language-icon"></div>
-                  <button class="clean-touch sidetouch touch-button"></button>
+                  <div class="clean-touch-bar">
+                    <div class="clean-touch-text">Очистка экрана</div>
+                    <button class="clean-touch sidetouch"></button>
+                  </div>
                   <div class="cleaning-popup-main hide">
                     <div class="cleaning-popup-container">
                       <h1 class="clean-main-h">Экран заблокирован!</h1>
@@ -473,18 +483,9 @@
                       </div>
                     </div>
                   </div>
-                  <button class="off-system sidetouch touch-button"></button>
-                </div>
-                <div class="language">
-                  <div class="dropdown">
-                    <div class="dropdown__value">
-                      <p>Русский</p>
-                    </div>
-                    <ul class="dropdown__list">
-                      <li class="dropdown__item">
-                        Русский
-                      </li>
-                    </ul>
+                  <div class="off-system-bar">
+                    <div class="off-system-text">Выключение системы</div>
+                    <button class="off-system sidetouch"></button>
                   </div>
                 </div>
               </div>
@@ -502,7 +503,7 @@
                 <div class="untab global-setting untab_active"></div>
               </div>
               <div class="version-container">
-                <div class="untab version"></div>0
+                <div class="untab version"></div>
               </div>
               <div class="calibration-container">
                 <div class="untab calibration"></div>
@@ -538,24 +539,30 @@
                   </div>
                   <div class="arm-setting-bar">
                     <div class="side-setting-arm-bar">
-                      <button class="arm-setting-button sidetouch side-setting-arm-button arm-setting-up" disabled></button>
+                      <button class="arm-setting-button sidetouch side-setting-arm-button arm-setting-up"
+                        disabled></button>
                       <button class="arm-setting-button sidetouch side-setting-arm-button arm-setting-down"></button>
                       <div class="speed-setting">
-                        <button class="arm-setting-button sidetouch side-setting-arm-button arm-setting-fast arm-setting-speed-active"></button>
+                        <button
+                          class="arm-setting-button sidetouch side-setting-arm-button arm-setting-fast arm-setting-speed-active"></button>
                         <button class="arm-setting-button sidetouch side-setting-arm-button arm-setting-slow"></button>
                       </div>
                     </div>
                     <div class="cross-setting-arm-bar">
                       <div class="top-setting-cross">
-                        <button class="arm-setting-button sidetouch cross-setting-button top-setting-cross-button"></button>
+                        <button
+                          class="arm-setting-button sidetouch cross-setting-button top-setting-cross-button"></button>
                       </div>
                       <div class="middle-setting-cross">
-                        <button class="arm-setting-button sidetouch cross-setting-button left-setting-cross-button"></button>
+                        <button
+                          class="arm-setting-button sidetouch cross-setting-button left-setting-cross-button"></button>
                         <div class="cross-setting-cow"></div>
-                        <button class="arm-setting-button sidetouch cross-setting-button right-setting-cross-button"></button>
+                        <button
+                          class="arm-setting-button sidetouch cross-setting-button right-setting-cross-button"></button>
                       </div>
                       <div class="bottom-setting-cross">
-                        <button class="arm-setting-button cross-setting-button bottom-setting-cross-button"></button>
+                        <button
+                          class="arm-setting-button sidetouch cross-setting-button bottom-setting-cross-button"></button>
                       </div>
                     </div>
                   </div>
@@ -568,14 +575,12 @@
                       <div class="configuration-item-value"></div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Задержка отсоединения стаканов</div>
+                      <div class="configuration-item-name">Задержка отсоединения стаканов, сек</div>
                       <button class="configuration-item-button dot-button input-button">-</button>
-                      <div class="configuration-item-value">сек.</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Частота пульсации</div>
+                      <div class="configuration-item-name">Частота пульсации, ppm</div>
                       <button class="configuration-item-button input-button">-</button>
-                      <div class="configuration-item-value">ppm</div>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Соотношение тактов пульсации</div>
@@ -583,29 +588,24 @@
                       <div class="configuration-item-value"></div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Время подготовки сосков</div>
+                      <div class="configuration-item-name">Время подготовки сосков, сек</div>
                       <button class="configuration-item-button dot-button input-button">-</button>
-                      <div class="configuration-item-value">сек.</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Высота подъема щеток</div>
+                      <div class="configuration-item-name">Высота подъема щеток, см</div>
                       <button class="configuration-item-button dot-button input-button">-</button>
-                      <div class="configuration-item-value">см</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Время обработки сосков</div>
+                      <div class="configuration-item-name">Время обработки сосков, сек</div>
                       <button class="configuration-item-button dot-button input-button">-</button>
-                      <div class="configuration-item-value">сек</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Корректировка горизонтального перемещения</div>
+                      <div class="configuration-item-name">Корректировка по горизонтали, мм</div>
                       <button class="configuration-item-button mark-button input-button">-</button>
-                      <div class="configuration-item-value">мм</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Корректировка вертикального перемещения</div>
+                      <div class="configuration-item-name">Корректировка по вертикали, мм</div>
                       <button class="configuration-item-button mark-button input-button">-</button>
-                      <div class="configuration-item-value">мм</div>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Адрес УДР</div>
@@ -632,19 +632,16 @@
                       <div class="configuration-item-value"></div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Milking zZ offset</div>
+                      <div class="configuration-item-name">Milking zZ offset, мм</div>
                       <button class="configuration-item-button input-button">-</button>
-                      <div class="configuration-item-value">мм</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Milking y offset</div>
+                      <div class="configuration-item-name">Milking y offset, мм</div>
                       <button class="configuration-item-button input-button">-</button>
-                      <div class="configuration-item-value">мм</div>
                     </div>
                     <div class="configuration-item">
-                      <div class="configuration-item-name">Attachment z offset</div>
+                      <div class="configuration-item-name">Attachment z offset, мм</div>
                       <button class="configuration-item-button mark-button input-button">-</button>
-                      <div class="configuration-item-value">мм</div>
                     </div>
                   </div>
                   <div class="configuration-buttons">
