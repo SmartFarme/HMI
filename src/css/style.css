@@ -539,7 +539,7 @@ body {
 }
 
 .acid-progress-bar {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .alkaline-progress-bar {
@@ -552,7 +552,7 @@ body {
 
 .status-cleaning-progress-bar-local {
     width: 400px;
-    height: 32px;
+    height: 28px;
     background-color: #e6e6e6;
     position: relative;
     border: solid 1px #bcbcbc;
@@ -560,12 +560,15 @@ body {
 
 .status-cleaning-progress-bar-global {
     width: 400px;
-    height: 32px;
+    height: 28px;
     background-color: #e6e6e6;
     position: relative;
-    margin-top: 19px;
     display: block;
     border: solid 1px #bcbcbc;
+}
+
+.global-progress-title {
+margin-top: 14px;
 }
 
 .status-cleaning-icons,
@@ -573,7 +576,11 @@ body {
 .status-cleaning-icons-bottom {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
+}
+
+.status-cleaning-icons {
+    margin-top: 20px;
+    margin-left: 70px;
 }
 
 .progress-inner {
@@ -593,12 +600,14 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 56px;
-    width: 80px;
-    height: 60px;
+    width: 90px;
+    height: 65px;
+    padding: 3px;
 }
 
 .current-state {
-    background-color: lawngreen;
+    border: solid green;
+    border-radius: 5px;
 }
 
 .status-icon-cold {
@@ -1171,7 +1180,7 @@ button.cup-button:disabled {
     background-size: 66px 180px;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 23px;
+    margin-top: 0px;
     margin-left: 20px;
 }
 
@@ -1282,7 +1291,7 @@ button.cup-button:disabled {
 }
 
 .cross-arm-bar {
-    margin-left: 3px;
+    margin-left: 60px;
 }
 
 .middle-cross {
@@ -1303,6 +1312,7 @@ button.cup-button:disabled {
 
 .side-control-bar {
     margin-top: 12px;
+    margin-right: 8px;
 }
 
 .arm-side-button {
