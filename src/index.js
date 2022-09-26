@@ -14,8 +14,8 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 768,
-    frame: true,
-    fullscreen: true,
+    frame: false,
+    fullscreen: false,
     autoHideMenuBar: true,
   });
 

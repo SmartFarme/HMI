@@ -57,13 +57,13 @@ const progressCont = document.querySelector(".cleaning-popup-main");
 
 btnStart.addEventListener("click", () => {
   progressCont.classList.remove("hide");
-  let interval = 30000;
+  let interval = 0;
   let countDown = setInterval(() => {
     let progressWidth = interval / 30000 * 100;
     
-    if(interval >0) {
+    if(interval <30000) {
       progressBar.style.width = progressWidth + "%";
-      interval -= 10;
+      interval += 10;
     } else {
       clearInterval(countDown)
       progressCont.classList.add("hide");

@@ -48,6 +48,12 @@ button:hover {
     --ag-selected-row-foreground-color: white;
     --ag-selected-row-background-color: #25be2c;
     --ag-row-hover-color: #494949;
+
+    --ag-header-column-separator-display: block;
+    --ag-header-column-separator-height: 100%;
+    --ag-header-column-separator-width: 2px;
+    --ag-header-column-separator-color: #494949;
+  
 }
 
 .ag-row-selected {
@@ -253,6 +259,10 @@ body {
     margin-right: 4px;
 }
 
+.setting {
+  margin-right: 4px;
+}
+
 .tab_active {
     background-color: white;
     background-size: contain;
@@ -429,7 +439,11 @@ body {
 }
 
 .status-active {
-    display: block;
+    display: flex;
+}
+
+.clean-container {
+  display: block;
 }
 
 .status-cow-in-cell-icon {
@@ -464,9 +478,15 @@ body {
 }
 
 .status-milk-transport-arrow {
-    font-size: 35px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    background-size: 50px;
+    background-image: url(../svg/gorightarrow_99748.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     margin-top: 23px;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .status-milk-transport-place-tanker {
@@ -556,6 +576,7 @@ body {
     background-color: #e6e6e6;
     position: relative;
     border: solid 1px #bcbcbc;
+    margin-bottom: 50px;
 }
 
 .status-cleaning-progress-bar-global {
@@ -565,6 +586,33 @@ body {
     position: relative;
     display: block;
     border: solid 1px #bcbcbc;
+}
+
+.acid-global-progress-inner {
+  background-color: #25be2c;
+  position: absolute;
+  width: 20%;
+  height: 100%;
+}
+
+.acid-local-progress-inner {
+  background-color: #25be2c;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+}
+
+.local-progress-title, .global-progress-title{
+  margin-bottom: 5px;
+  font-family: Cera-bold;
+}
+
+.value-progress {
+  position: absolute;
+  z-index: 5;
+  font-family: Cera-regular;
+  margin-left: 10px;
+  margin-top: 2px;
 }
 
 .global-progress-title {
@@ -591,7 +639,7 @@ margin-top: 14px;
 }
 
 .status-cleaning-bar {
-    margin-top: 173px;
+    margin-top: 123px;
     margin-left: 98px;
 }
 
@@ -606,7 +654,7 @@ margin-top: 14px;
 }
 
 .current-state {
-    border: solid green;
+    border: solid #25be2c;
     border-radius: 5px;
 }
 
@@ -640,7 +688,7 @@ margin-top: 14px;
 
 .status-icon-dry {
     background-image: url(../svg/dry.svg);
-    background-size: 80px;
+    background-size: 66px;
 }
 
 .milk-yield-statistics {
@@ -721,10 +769,30 @@ margin-top: 14px;
     background-image: url(../svg/filter.svg);
     position: absolute;
     bottom: 27px;
-    right: 115px;
+    right: 117px;
     z-index: 2;
     image-rendering: pixelated;
     background-size: 60px;
+}
+
+.milk-search {
+  background-image: url(../svg/search.svg);
+  position: absolute;
+  bottom: 27px;
+  right: 197px;
+  z-index: 2;
+  image-rendering: pixelated;
+  background-size: 70px;
+}
+
+.wash-search {
+  background-image: url(../svg/search.svg);
+  position: absolute;
+  bottom: 27px;
+  right: 117px;
+  z-index: 2;
+  image-rendering: pixelated;
+  background-size: 70px;
 }
 
 .untab_active:after {
@@ -1013,7 +1081,7 @@ margin-top: 14px;
 .sampler-status {
     display: flex;
     justify-content: start;
-    margin-top: 23px;
+    margin-top: 21px;
 }
 
 .sampler-status-text {
@@ -1072,10 +1140,14 @@ margin-top: 14px;
     margin-left: 18px;
 }
 
+.sampler-frame-text {
+  margin-top: 8px;
+}
+
 .sampler-frame-button,
 .bottle-number-button,
 .last-bottle-number-button {
-    display: block;
+    display: flex;
     width: 75px;
     height: 43px;
     background-size: 60px;
@@ -1083,8 +1155,8 @@ margin-top: 14px;
     border-radius: 5px;
     background-color: #FFF;
     font-size: 20px;
-    text-align: center;
-    padding-top: 2px;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottle-number {
@@ -1362,6 +1434,35 @@ button.cup-button:disabled {
     border-radius: 5px;
 }
 
+.point {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../svg/icons8-neotmechennyy-krug.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+.point-bar {
+  margin-top: 200px;
+  margin-left: 100px;
+  width: 100px;
+}
+
+.point-bar-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.point-bar-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+}
+
 .touch-bar {
     display: flex;
 }
@@ -1382,7 +1483,7 @@ button.cup-button:disabled {
     border-radius: 5px;
     background-color: #FFF;
     background-image: url(../svg/language.svg);
-    image-rendering: pixelated;
+    margin-left: 32px;
 }
 
 .clean-touch-bar, .off-system-bar {
@@ -1717,10 +1818,10 @@ button.cup-button:disabled {
 }
 
 .main-content {
-    height: 540px;
+    height: 526px;
     width: 339px;
     background: #f9f9f9;
-    border: solid 5px #24A81B;
+    border: solid #2A569A;
     border-radius: 10px;
     padding: 20px;
     position: absolute;
@@ -1749,11 +1850,13 @@ button.cup-button:disabled {
     border-radius: 5px;
     border: solid #2A569A;
     vertical-align: center;
-    padding-top: 15px;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
     width: 289px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -1774,6 +1877,8 @@ button.cup-button:disabled {
 .enter {
     background-color: #25be2c;
     color: white;
+    padding-bottom: 4px;
+    border: solid #25be2c;
 }
 
 .number-div {
@@ -1869,7 +1974,7 @@ button.cup-button:disabled {
 .under-setting-save,
 .center-setting-save,
 .into-setting-save {
-    background-image: url(../svg/save.svg);
+    background-image: url(../svg/save5.svg);
     background-size: 42px;
 }
 
@@ -2120,7 +2225,7 @@ option {
 .cleaning-popup-container {
     width: 510px;
     height: 215px;
-    border: solid 5px #24A81B;
+    border: solid #2A569A;
     border-radius: 10px;
     position: absolute;
     top: 0;
@@ -2152,7 +2257,7 @@ option {
 }
 
 .cleaning-message {
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     margin-top: 30px;
 }
@@ -2214,12 +2319,12 @@ option {
     height: 80px;
     border-radius: 5px;
     border: solid #2A569A;
-    vertical-align: center;
-    padding-top: 15px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-size: 40px;
     font-weight: bold;
     width: 289px;
+    display: flex;
 }
 
 
@@ -2240,6 +2345,12 @@ option {
 .numpud-enter {
     background-color: #25be2c;
     color: white;
+    border: solid #25be2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4px;
+    font-size: 39px;
 }
 
 .numpud-number-div {

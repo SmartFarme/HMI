@@ -83,6 +83,9 @@
             <div class="setting">
               <div class="tab setting-page"></div>
             </div>
+            <div class="setting">
+              <div class="tab setting-page"></div>
+            </div>
           </div>
           <div class="clock-bar">
             <div class="clock-icon"></div>
@@ -106,7 +109,7 @@
               <div class="status-milk-transport-status">
                 <div class="status-milk-transport-status-ok"></div>
               </div>
-              <div class="status-milk-transport-arrow">->></div>
+              <div class="status-milk-transport-arrow"></div>
               <div class="status-milk-transport-place">
                 <div class="status-milk-transport-place-tanker"></div>
               </div>
@@ -140,34 +143,75 @@
           </div>
 
           <div class="status-pump home-status">
-            <div class="icon-and-progress-status">
-              <div class="status-pump-icon home-status-icon"></div>
-              <div class="status-cleaning-bar pumps-bar">
-                <div class="progress-bars pumps-progress-bar">
-                  <div class="local-progress-title">Прогресс этапа:</div> 
-                  <div class="status-cleaning-progress-bar-local pump-local"></div>
-                  <div class="global-progress-title">Общий прогресс:</div> 
-                  <div class="status-cleaning-progress-bar-global pump-global"></div>
+            <div class="clean-container">
+              <div class="icon-and-progress-status">
+                <div class="status-pump-icon home-status-icon"></div>
+                <div class="status-cleaning-bar pumps-bar">
+                  <div class="progress-bars pumps-progress-bar">
+                    <div class="local-progress-title">Прогресс этапа:</div>
+                    <div class="status-cleaning-progress-bar-local pump-local"></div>
+                    <div class="global-progress-title">Общий прогресс:</div>
+                    <div class="status-cleaning-progress-bar-global pump-global"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="status-cleaning-icons pumps-icons">
-              <div class="status-icon-cold status-icon current-state"></div>
+              <div class="status-cleaning-icons pumps-icons">
+                <div class="status-icon-cold status-icon current-state"></div>
+              </div>
             </div>
           </div>
 
-          <div class="status-acid home-status">
-            <div class="icon-and-progress-status">
-              <div class="status-acid-icon home-status-icon"></div>
-              <div class="status-cleaning-bar acid-bar">
-                <div class="progress-bars acid-progress-bar">
-                  <div class="local-progress-title">Прогресс этапа:</div> 
-                  <div class="status-cleaning-progress-bar-local pump-local"></div>
-                  <div class="status-cleaning-progress-bar-global pump-global"></div>
+          <div class="status-acid home-status status-active">
+            <div class="clean-container">
+              <div class="icon-and-progress-status">
+                <div class="status-acid-icon home-status-icon"></div>
+                <div class="status-cleaning-bar acid-bar">
+                  <div class="progress-bars acid-progress-bar">
+                    <div class="local-progress-title">Прогресс этапа:</div>
+                    <div class="status-cleaning-progress-bar-local pump-local">
+                      <div class="progress-child value-progress">
+                        Промывка стаканов доильных
+                      </div>
+                      <div class="progress-child acid-local-progress-inner"></div>
+                    </div>
+                    <div class="global-progress-title">Общий прогресс:</div>
+                    <div class="status-cleaning-progress-bar-global pump-global">
+                      <div class="progress-child value-progress">
+                        Промывка кислотная
+                      </div>
+                      <div class="progress-child acid-global-progress-inner"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div class="status-cleaning-icons acid-icons">
+                <div class="status-icon-clean-tanker status-icon"></div>
+                <div class="status-icon-cups-shower status-icon current-state"></div>
+                <div class="status-icon-cold status-icon"></div>
+                <div class="status-icon-normal status-icon"></div>
+                <div class="status-icon-hot status-icon"></div>
+                <div class="status-icon-drain status-icon"></div>
+                <div class="status-icon-cold status-icon"></div>
+                <div class="status-icon-drain status-icon"></div>
+                <div class="status-icon-dry status-icon"></div>
+              </div>
             </div>
-            <div class="status-cleaning-icons acid-icons">
+          </div>
+
+          <div class="status-alkaline home-status">
+            <div class="clean-container">
+              <div class="icon-and-progress-status">
+                <div class="status-alkaline-icon home-status-icon"></div>
+                <div class="status-cleaning-bar alkaline-bar">
+                  <div class="progress-bars alkaline-progress-bar">
+                    <div class="local-progress-title">Прогресс этапа:</div>
+                    <div class="status-cleaning-progress-bar-local pump-local"></div>
+                    <div class="global-progress-title">Общий прогресс:</div>
+                    <div class="status-cleaning-progress-bar-global pump-global"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="status-cleaning-icons alkaline-icons">
                 <div class="status-icon-clean-tanker status-icon current-state"></div>
                 <div class="status-icon-cups-shower status-icon"></div>
                 <div class="status-icon-cold status-icon"></div>
@@ -177,75 +221,55 @@
                 <div class="status-icon-cold status-icon"></div>
                 <div class="status-icon-drain status-icon"></div>
                 <div class="status-icon-dry status-icon"></div>
-            </div>
-          </div>
-
-          <div class="status-alkaline home-status status-active">
-            <div class="icon-and-progress-status">
-              <div class="status-alkaline-icon home-status-icon"></div>
-              <div class="status-cleaning-bar alkaline-bar">
-                <div class="progress-bars alkaline-progress-bar">
-                  <div class="local-progress-title">Прогресс этапа:</div> 
-                  <div class="status-cleaning-progress-bar-local pump-local"></div>
-                  <div class="global-progress-title">Общий прогресс:</div> 
-                  <div class="status-cleaning-progress-bar-global pump-global"></div>
-                </div>
               </div>
-            </div>
-            <div class="status-cleaning-icons alkaline-icons">
-                <div class="status-icon-clean-tanker status-icon current-state"></div>
-                <div class="status-icon-cups-shower status-icon"></div>
-                <div class="status-icon-cold status-icon"></div>
-                <div class="status-icon-normal status-icon"></div>
-                <div class="status-icon-hot status-icon"></div>
-                <div class="status-icon-drain status-icon"></div>
-                <div class="status-icon-cold status-icon"></div>
-                <div class="status-icon-drain status-icon"></div>
-                <div class="status-icon-dry status-icon"></div>
             </div>
           </div>
 
           <div class="status-half-rising home-status">
-            <div class="icon-and-progress-status">
-              <div class="status-half-rising-icon home-status-icon"></div>
-              <div class="status-cleaning-bar half-rising-bar">
-                <div class="progress-bars half-rising-progress-bar">
-                  <div class="local-progress-title">Прогресс этапа:</div> 
-                  <div class="status-cleaning-progress-bar-local pump-local"></div>
-                  <div class="global-progress-title">Общий прогресс:</div> 
-                  <div class="status-cleaning-progress-bar-global pump-global"></div>
+            <div class="clean-container">
+              <div class="icon-and-progress-status">
+                <div class="status-half-rising-icon home-status-icon"></div>
+                <div class="status-cleaning-bar half-rising-bar">
+                  <div class="progress-bars half-rising-progress-bar">
+                    <div class="local-progress-title">Прогресс этапа:</div>
+                    <div class="status-cleaning-progress-bar-local pump-local"></div>
+                    <div class="global-progress-title">Общий прогресс:</div>
+                    <div class="status-cleaning-progress-bar-global pump-global"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="status-cleaning-icons half-rising-icons">
-              <div class="status-cleaning-icons-top">
-                <div class="status-icon-cups-shower status-icon current-state"></div>
-                <div class="status-icon-cold status-icon"></div>
-                <div class="status-icon-drain status-icon"></div>
-                <div class="status-icon-dry status-icon"></div>
+              <div class="status-cleaning-icons half-rising-icons">
+                <div class="status-cleaning-icons-top">
+                  <div class="status-icon-cups-shower status-icon current-state"></div>
+                  <div class="status-icon-cold status-icon"></div>
+                  <div class="status-icon-drain status-icon"></div>
+                  <div class="status-icon-dry status-icon"></div>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="status-full-rising home-status">
-            <div class="icon-and-progress-status">
-              <div class="status-full-rising-icon home-status-icon"></div>
-            <div class="status-cleaning-bar full-rising-bar">
-              <div class="progress-bars full-rising-progress-bar">
-                <div class="local-progress-title">Прогресс этапа:</div> 
-                <div class="status-cleaning-progress-bar-local pump-local"></div>
-                <div class="global-progress-title">Общий прогресс:</div> 
-                <div class="status-cleaning-progress-bar-global pump-global"></div>
+            <div class="clean-container">
+              <div class="icon-and-progress-status">
+                <div class="status-full-rising-icon home-status-icon"></div>
+                <div class="status-cleaning-bar full-rising-bar">
+                  <div class="progress-bars full-rising-progress-bar">
+                    <div class="local-progress-title">Прогресс этапа:</div>
+                    <div class="status-cleaning-progress-bar-local pump-local"></div>
+                    <div class="global-progress-title">Общий прогресс:</div>
+                    <div class="status-cleaning-progress-bar-global pump-global"></div>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div>
-            <div class="status-cleaning-icons full-rising-icons">
-              <div class="status-cleaning-icons-top">
-                <div class="status-icon-clean-tanker status-icon current-state"></div>
-                <div class="status-icon-cups-shower status-icon"></div>
-                <div class="status-icon-cold status-icon"></div>
-                <div class="status-icon-drain status-icon"></div>
-                <div class="status-icon-dry status-icon"></div>
+              <div class="status-cleaning-icons full-rising-icons">
+                <div class="status-cleaning-icons-top">
+                  <div class="status-icon-clean-tanker status-icon current-state"></div>
+                  <div class="status-icon-cups-shower status-icon"></div>
+                  <div class="status-icon-cold status-icon"></div>
+                  <div class="status-icon-drain status-icon"></div>
+                  <div class="status-icon-dry status-icon"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -269,13 +293,16 @@
             <div class="untab__content">
               <style>
                 #milk-table {
-                  height: calc(100% - 6px);
+                  font-family: Cera-regular;
+                  overflow: auto;
+                  max-height: calc(100% - 6px);
                   width: calc(100% - 6px);
                   margin: 3px;
                 }
               </style>
               <div id="milk-table" class="ag-theme-balham">
                 <button class="button milk-filter sidetouch"></button>
+                <button class="button milk-search sidetouch"></button>
               </div>
             </div>
             <!-- Статистика по промывкам -->
@@ -283,12 +310,14 @@
               <style>
                 #wash-table {
                   font-family: Cera-regular;
-                  height: calc(100% - 6px);
+                  overflow: auto;
+                  max-height: calc(100% - 6px);
                   width: calc(100% - 6px);
                   margin: 3px;
                 }
               </style>
               <div id="wash-table" class="ag-theme-balham">
+                <button class="button wash-search sidetouch"></button>
               </div>
             </div>
             <!-- Статистика по ошибкам -->
@@ -304,7 +333,8 @@
 
                 #alarm-list-table {
                   font-family: Cera-regular;
-                  height: 100%;
+                  overflow: auto;
+                  max-height: 100%;
                   width: calc(100% - 107px);
                   margin-top: 3px;
                   margin-left: 3px;
@@ -470,7 +500,16 @@
                   <button class="arm-side-button sidetouch cups-servise"></button>
                 </div>
                 <div class="control-field">
-
+                  <div class="point-bar">
+                    <div class="point-bar-top">
+                      <div class="point"></div>
+                      <div class="point"></div>
+                    </div>
+                    <div class="point-bar-bottom">
+                      <div class="point"></div>
+                      <div class="point"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -479,13 +518,13 @@
               <div class="touch-bar">
                 <div class="touch-bar-icons">
                   <div class="clean-touch-bar">
-                    <div class="clean-touch-text">Очистка экрана</div>
+                    <div class="clean-touch-text">Заблокировать экран</div>
                     <button class="clean-touch sidetouch"></button>
                   </div>
                   <div class="cleaning-popup-main hide">
                     <div class="cleaning-popup-container">
                       <h1 class="clean-main-h">Экран заблокирован!</h1>
-                      <p class="cleaning-message">Можете протереть его при помощи владной салфетки.</p>
+                      <p class="cleaning-message">Можете протереть его при помощи влажной салфетки.</p>
                       <h2 class="clean-second-h"> Не используйте абразивные или агрессивные чистящие средства!</h2>
                       <div class="progress">
                         <div class="progress-inner"></div>
@@ -493,7 +532,7 @@
                     </div>
                   </div>
                   <div class="off-system-bar">
-                    <div class="off-system-text">Выключение системы</div>
+                    <div class="off-system-text">Перезагрузить панель</div>
                     <button class="off-system sidetouch"></button>
                   </div>
                 </div>
@@ -688,12 +727,12 @@
   <script src="./numpud.js"></script>
   <script type="text/javascript" charset="utf-8">
     const milkColumnDefs = [
-      { headerName: 'Время начала доения', field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'ID Коровы', field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Фактический / Ожидаемый надой', field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Время доения', field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Конечная точка транспортировки молока', field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Результат доения', field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
+      { headerName: 'Время', field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Животное', field: 'ID Коровы', width: 90, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Надой (план/факт)', field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'ЧВД', field: 'Время доения', width: 130, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Направление молока', field: 'Конечная точка транспортировки молока', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Результат', field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const milkGridOptions = {
@@ -701,6 +740,8 @@
 
       onGridReady: (event) => { milkRenderDataInTheTable(event.api) },
       rowSelection: 'single',
+      domLayout: 'autoHeight',
+      overflow: scroll,
     };
 
 
@@ -718,15 +759,16 @@
         })
     }
     const washColumnDefs = [
-      { headerName: 'Время начала промывки', field: 'Время начала промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Тип промывки', field: 'Тип промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Время промывки', field: 'Время промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Результат промывки', field: 'Результат промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
+      { headerName: 'Время', field: 'Время начала промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Тип', field: 'Тип промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Продолжительность', field: 'Время промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Результат', field: 'Результат промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const washGridOptions = {
       onGridReady: (event) => { washRenderDataInTheTable(event.api) },
       columnDefs: washColumnDefs,
+      domLayout: 'autoHeight',
       rowData: null,
       rowSelection: 'single',
     };
@@ -775,6 +817,7 @@
 
     const alarmListGridOptions = {
       columnDefs: alarmListColumnDefs,
+      domLayout: 'autoHeight',
       rowData: null,
       rowSelection: "multiple",
       onGridReady: (event) => { alarmListRenderDataInTheTable(event.api) }
