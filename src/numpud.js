@@ -54,16 +54,19 @@ for (let b = 0; b < inputt.length; b += 1) {
 const btnStart = document.querySelector(".clean-touch");
 const progressBar = document.querySelector(".progress-inner");
 const progressCont = document.querySelector(".cleaning-popup-main");
+const cleanTouch = document.querySelector(".progress-cl-timer");
 
 btnStart.addEventListener("click", () => {
   progressCont.classList.remove("hide");
   let interval = 0;
+  let timeLeft = 30;
   let countDown = setInterval(() => {
     let progressWidth = interval / 30000 * 100;
     
     if(interval <30000) {
       progressBar.style.width = progressWidth + "%";
       interval += 10;
+	  cleanTouch.innerHTML = Math.trunc(timeLeft - (interval / 1000));
     } else {
       clearInterval(countDown)
       progressCont.classList.add("hide");
