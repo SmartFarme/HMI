@@ -166,7 +166,7 @@
                   <div class="progress-bars acid-progress-bar">
                     <div class="local-progress-title">Прогресс этапа:</div>
                     <div class="status-cleaning-progress-bar-local pump-local">
-                      <div class="progress-child value-progress">
+                      <div class="acid-stage progress-child value-progress">
                         Промывка стаканов доильных
                       </div>
                       <div class="progress-child acid-local-progress-inner"></div>
@@ -182,16 +182,53 @@
                 </div>
               </div>
               <div class="status-cleaning-icons acid-icons">
-                <div class="status-icon-clean-tanker status-icon"></div>
-                <div class="status-icon-cups-shower status-icon current-state"></div>
-                <div class="status-icon-cold status-icon"></div>
-                <div class="status-icon-normal status-icon"></div>
-                <div class="status-icon-hot status-icon"></div>
-                <div class="status-icon-drain status-icon"></div>
-                <div class="status-icon-cold status-icon"></div>
-                <div class="status-icon-drain status-icon"></div>
-                <div class="status-icon-dry status-icon"></div>
+                <div class="acid-1 acid-st">
+                  <div class="stage-name">Проверка</div>
+                  <div class="stage-time">1</div>
+                  <div class="status-icon-clean-tanker status-icon" value="20" id="acid-1"></div>
+                </div>
+                <div class="acid-2 acid-st">
+                  <div class="stage-name">Промывка стаканов доильных</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-cups-shower status-icon" value="30" id="acid-2"></div>
+                </div>
+                <div class="acid-3 acid-st">
+                  <div class="stage-name">Холодная промывка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-cold status-icon" id="acid-3"></div>
+                </div>
+                <div class="acid-4 acid-st">
+                  <div class="stage-name">Теплая промывка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-normal status-icon" id="acid-4"></div>
+                </div>
+                <div class="acid-5 acid-st">
+                  <div class="stage-name">Горячая промывка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-hot status-icon" id="acid-5"></div>
+                </div>
+                <div class="acid-6 acid-st">
+                  <div class="stage-name">Первый слив</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-drain status-icon" id="acid-6"></div>
+                </div>
+                <div class="acid-7 acid-st">
+                  <div class="stage-name">Холодная промывка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-cold status-icon" id="acid-7"></div>
+                </div>
+                <div class="acid-8 acid-st">
+                  <div class="stage-name">Первый слив</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-drain status-icon" id="acid-8"></div>
+                </div>
+                <div class="acid-9 acid-st">
+                  <div class="stage-name">Второй слив</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-dry status-icon" id="acid-9"></div>
+                </div>
               </div>
+              <button class="demo-start">Demo Start</button>
             </div>
           </div>
 

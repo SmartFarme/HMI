@@ -65,6 +65,7 @@ btnStart.addEventListener("click", () => {
     
     if(interval <30000) {
       progressBar.style.width = progressWidth + "%";
+	  console.log(progressWidth)
       interval += 10;
 	  cleanTouch.innerHTML = Math.trunc(timeLeft - (interval / 1000));
     } else {

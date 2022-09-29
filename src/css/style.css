@@ -591,14 +591,14 @@ body {
 .acid-global-progress-inner {
   background-color: #25be2c;
   position: absolute;
-  width: 20%;
+  width: 100%;
   height: 100%;
 }
 
 .acid-local-progress-inner {
   background-color: #25be2c;
   position: absolute;
-  width: 40%;
+  width: 100%;
   height: 100%;
 }
 
@@ -664,6 +664,7 @@ margin-top: 14px;
 
 .current-state {
     border: solid #25be2c;
+    background-color: #25be2c;
     border-radius: 5px;
 }
 
@@ -698,6 +699,48 @@ margin-top: 14px;
 .status-icon-dry {
     background-image: url(../svg/dry.svg);
     background-size: 66px;
+}
+
+.stage-time {
+    display: none;
+}
+
+.stage-name {
+    display: none;
+}
+
+.current-state .status-icon-clean-tanker {
+    background-image: url(../svg/clean-tanker-white.svg);
+}
+
+.current-state .status-icon-cups-shower {
+    background-image: url(../svg/cups-shower-white.svg);
+    background-size: 66px;
+}
+
+.current-state .status-icon-cold {
+    background-size: 56px;
+    background-image: url(../svg/coldwash-white.svg);
+}
+
+.current-state .status-icon-normal {
+    background-size: 56px;
+    background-image: url(../svg/normal-wash-white.svg);
+}
+
+.current-state .status-icon-hot {
+    background-size: 56px;
+    background-image: url(../svg/hotwash-white.svg);
+}
+
+.current-state .status-icon-drain {
+    background-size: 66px;
+    background-image: url(../svg/drain-white.svg);
+}
+
+.current-state .status-icon-dry {
+    background-size: 66px;
+    background-image: url(../svg/dry-white.svg);
 }
 
 .milk-yield-statistics {

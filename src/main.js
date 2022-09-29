@@ -137,3 +137,75 @@ for (let i = 0; i < samplerStatusBtn.length; i++) {
   }
 }
 
+const localProgress = document.querySelector(".acid-local-progress-inner");
+const demoStart = document.querySelector(".demo-start");
+const timerCount = document.querySelector(".timer-count");
+const start = document.querySelector(".demo-start");
+const acid1 = document.getElementById("acid-1");
+const firstA = document.querySelector(".acid-main");
+const stages = Array.from(document.querySelectorAll(".acid-st"));
+const acidStage = document.querySelector(".acid-stage");
+let secondsRemaining;
+let secondsCount;
+let intervalProgress;
+let intervalHandle;
+let i = 0;
+
+let interval = 0;
+let progressWidth = 0;
+
+function tick() {
+  progressWidth = (100/secondsCount)*(secondsCount - secondsRemaining);
+  console.log(progressWidth)
+  if (progressWidth <= 100) {
+    interval += 1;
+    localProgress.style.width = progressWidth + "%";
+  }
+  let min = Math.floor(secondsRemaining / 60);
+  let sec = secondsRemaining - (min * 60);
+
+  if (sec < 10) {
+    sec = "0" + sec;
+  }
+
+  let timeValue = min.toString() + ":" + sec;
+  timerCount.innerHTML = timeValue
+
+  if (secondsRemaining === 0) {
+    if (i === 8) {
+      clearInterval(intervalHandle);
+    } else {
+      interval = 0;
+      progressWidth = 0;
+      clearInterval(intervalHandle);
+      stages[i].classList.remove("current-state")
+      stages[i].classList.remove("current")
+      i++;
+      next();
+    }
+  }
+  secondsRemaining--
+}
+
+function startCountdown() {
+  let curSt = document.querySelector(".current");
+  let curTime = curSt.querySelector(".stage-time");
+  let curName = curSt.querySelector(".stage-name");
+  acidStage.innerHTML = curName.innerHTML;
+  console.log(curTime);
+  secondsCount = curTime.innerHTML;
+  secondsRemaining = curTime.innerHTML;
+  intervalHandle = setInterval(tick, 1000);
+}
+
+start.onclick = function () {
+  stages[i].classList.add("current-state")
+  stages[i].classList.add("current")
+  startCountdown();
+};
+
+function next() {
+  stages[i].classList.add("current-state")
+  stages[i].classList.add("current")
+  startCountdown();
+}
