@@ -777,7 +777,7 @@ margin-top: 14px;
 .milk-filter {
     background-image: url(../svg/filter.svg);
     position: absolute;
-    bottom: 27px;
+    bottom: 20px;
     right: 117px;
     z-index: 2;
     image-rendering: pixelated;
@@ -785,23 +785,23 @@ margin-top: 14px;
 }
 
 .milk-search {
-  background-image: url(../svg/search.svg);
+  background-image: url(../svg/details.svg);
   position: absolute;
-  bottom: 27px;
+  bottom: 20px;
   right: 197px;
   z-index: 2;
   image-rendering: pixelated;
-  background-size: 70px;
+  background-size: 60px;
 }
 
 .wash-search {
-  background-image: url(../svg/search.svg);
+  background-image: url(../svg/details.svg);
   position: absolute;
-  bottom: 27px;
+  bottom: 20px;
   right: 117px;
   z-index: 2;
   image-rendering: pixelated;
-  background-size: 70px;
+  background-size: 60px;
 }
 
 .untab_active:after {
@@ -1102,7 +1102,7 @@ margin-top: 14px;
 }
 
 .sampler-status-icon {
-    display: block;
+    display: none;
     width: 75px;
     height: 75px;
     background-repeat: no-repeat;
@@ -1113,7 +1113,7 @@ margin-top: 14px;
     background-color: #FFF;
 }
 
-.sampler-status-playsampler-frame {
+.sampler-status-play{
     background-image: url(../svg/mode-play.svg);
     display: none;
     image-rendering: pixelated;
@@ -1996,8 +1996,11 @@ button.cup-button:disabled {
 .under-setting-save,
 .center-setting-save,
 .into-setting-save {
-    background-image: url(../svg/save5.svg);
+    background-image: url(../svg/save.svg);
     background-size: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .under-setting-clear,
