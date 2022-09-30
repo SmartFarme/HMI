@@ -138,6 +138,7 @@ for (let i = 0; i < samplerStatusBtn.length; i++) {
 }
 
 const localProgress = document.querySelector(".acid-local-progress-inner");
+const globalProgress = document.querySelector(".acid-global-progress-inner");
 const demoStart = document.querySelector(".demo-start");
 const timerCount = document.querySelector(".timer-count");
 const start = document.querySelector(".demo-start");
@@ -148,21 +149,23 @@ const acidStage = document.querySelector(".acid-stage");
 let secondsRemaining;
 let secondsCount;
 let intervalProgress;
+let intervalAllProgress;
 let intervalHandle;
+let progressAllWidth;
 let i = 0;
 
 let interval = 0;
 let progressWidth = 0;
+let intervalAll = 0;
 
 function tick() {
-  progressWidth = (100/secondsCount)*(secondsCount - secondsRemaining);
-  console.log(progressWidth)
-  if (progressWidth <= 100) {
-    interval += 1;
-    localProgress.style.width = progressWidth + "%";
-  }
+  console.log(secondsRemaining)
   let min = Math.floor(secondsRemaining / 60);
   let sec = secondsRemaining - (min * 60);
+
+  if (sec >= 10) {
+    sec = sec;
+  }
 
   if (sec < 10) {
     sec = "0" + sec;
@@ -173,18 +176,32 @@ function tick() {
 
   if (secondsRemaining === 0) {
     if (i === 8) {
-      clearInterval(intervalHandle);
+      clearInterval(intervalProgress);
     } else {
-      interval = 0;
-      progressWidth = 0;
-      clearInterval(intervalHandle);
+      console.log(i);
+      clearInterval(intervalProgress);
       stages[i].classList.remove("current-state")
       stages[i].classList.remove("current")
       i++;
       next();
     }
+  } else {
+    secondsRemaining--
+    setTimeout(tick, 1000);
   }
-  secondsRemaining--
+
+}
+
+function tilt() {
+  progressWidth = interval / (secondsCount * 1000) * 100;
+  if (progressWidth < 100) {
+    interval += 10;
+    localProgress.style.width = progressWidth + "%";
+  } else {
+    interval = 0;
+      progressWidth = 0;
+      clearInterval(intervalProgress);
+  }
 }
 
 function startCountdown() {
@@ -195,7 +212,8 @@ function startCountdown() {
   console.log(curTime);
   secondsCount = curTime.innerHTML;
   secondsRemaining = curTime.innerHTML;
-  intervalHandle = setInterval(tick, 1000);
+  tick();
+  intervalProgress = setInterval(tilt, 10)
 }
 
 start.onclick = function () {
