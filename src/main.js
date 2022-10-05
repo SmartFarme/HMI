@@ -159,7 +159,6 @@ let progressWidth = 0;
 let intervalAll = 0;
 
 function tick() {
-  console.log(secondsRemaining)
   let min = Math.floor(secondsRemaining / 60);
   let sec = secondsRemaining - (min * 60);
 
@@ -178,8 +177,6 @@ function tick() {
     if (i === 8) {
       clearInterval(intervalProgress);
     } else {
-      console.log(i);
-      clearInterval(intervalProgress);
       stages[i].classList.remove("current-state")
       stages[i].classList.remove("current")
       i++;
@@ -192,8 +189,24 @@ function tick() {
 
 }
 
+function tiltAll() {
+  progressCont.classList.remove("hide");
+  let intervalAll = 0;
+  let countDownAll = setInterval(() => {
+    let progressAllWidth = intervalAll / 90000 * 100;
+    
+    if(intervalAll <90000) {
+      globalProgress.style.width = progressAllWidth + "%";
+      intervalAll += 10;
+    } else {
+      clearInterval(countDownAll)
+    }
+  }, 10)
+};
+
 function tilt() {
   progressWidth = interval / (secondsCount * 1000) * 100;
+  console.log(progressWidth);
   if (progressWidth < 100) {
     interval += 10;
     localProgress.style.width = progressWidth + "%";
@@ -209,7 +222,6 @@ function startCountdown() {
   let curTime = curSt.querySelector(".stage-time");
   let curName = curSt.querySelector(".stage-name");
   acidStage.innerHTML = curName.innerHTML;
-  console.log(curTime);
   secondsCount = curTime.innerHTML;
   secondsRemaining = curTime.innerHTML;
   tick();
@@ -220,6 +232,7 @@ start.onclick = function () {
   stages[i].classList.add("current-state")
   stages[i].classList.add("current")
   startCountdown();
+  tiltAll();
 };
 
 function next() {
