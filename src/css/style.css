@@ -533,6 +533,75 @@ body {
     margin-top: 109px;
 }
 
+.graphics-cup-button {
+    width: 70px;
+    height: 70px;
+    border: solid 3px #2A569A;
+    background-color: white;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cup-graphics-done {
+    background-image: url(../svg/milk-ok-graphics.svg);
+    background-size: 39px;
+    background-position: center;
+    background-color: #25be2c;
+}
+
+.graphics-cow-right-buttons, .gaphics-cow-left-buttons {
+    flex-direction: column;
+    width: 75px;
+}
+
+.graphics-tanker-value {
+    margin-top: 25px;
+    margin-left: 51px;
+    font-size: 70px;
+}
+
+.graphics-cow-icon {
+    width: 105px;
+    height: 280px;
+    display: block;
+    background-image: url(../svg/cow-color.svg);
+    background-size: 102px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    margin-left: 4px;
+}
+
+.graphics-tanker-container {
+    display: flex;
+}
+
+.graphics-cow-right-buttons {
+    margin-left: 4px;
+}
+
+.graphics-cow-container {
+    display: flex;
+    margin-left: 5px;
+    margin-top: 112px;
+}
+
+.graphics-cow-right-bottom-button, .graphics-cow-left-bottom-button {
+    margin-top: 9px;
+}
+
+.graphics-tanker {
+    background-image: url(../svg/tanker.svg);
+    display: block;
+    width: 130px;
+    height: 90px;
+    background-size: 123px;
+    background-repeat: no-repeat;
+    margin-top: 37px;
+    margin-left: 5px;
+}
+
 .status-acid-icon {
     background-image: url(../svg/acid-cleaning-black.svg);
     background-size: 232px;
@@ -616,6 +685,14 @@ body {
   font-family: Cera-regular;
   margin-left: 10px;
   margin-top: 2px;
+}
+
+.local-stage-time, .global-stage-time {
+    position: absolute;
+  z-index: 5;
+  font-family: Cera-regular;
+  right: 10px;
+  top: 2px;
 }
 
 .global-progress-title {
@@ -1916,7 +1993,7 @@ button.cup-button:disabled {
 .clear,
 .enter {
     font-family: Cera-bold;
-    font-size: 38px;
+    font-size: 39px;
     width: 83px;
     height: 80px;
     border: solid #2A569A;
@@ -1927,7 +2004,7 @@ button.cup-button:disabled {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
 }
 
 .enter {
@@ -2281,7 +2358,7 @@ option {
 
 .cleaning-popup-container {
     width: 510px;
-    height: 215px;
+    height: 213px;
     border: solid #2A569A;
     border-radius: 10px;
     position: absolute;
@@ -2307,7 +2384,7 @@ option {
     font-size: 25px;
     font-weight: 400;
     margin-left: 10px;
-    margin-top: 18px;
+    margin-top: 16px;
     text-align: center;
     font-family: Cera-bold;
     color: red;
