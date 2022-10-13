@@ -227,8 +227,8 @@ function tiltAll() {
   let intervalAll = 0;
   let countDownAll = setInterval(() => {
     let progressAllWidth = intervalAll / 90000 * 100;
-    
-    if(intervalAll <90000) {
+
+    if (intervalAll < 90000) {
       globalProgress.style.width = progressAllWidth + "%";
       intervalAll += 10;
     } else {
@@ -245,8 +245,8 @@ function tilt() {
     localProgress.style.width = progressWidth + "%";
   } else {
     interval = 0;
-      progressWidth = 0;
-      clearInterval(intervalProgress);
+    progressWidth = 0;
+    clearInterval(intervalProgress);
   }
 }
 
@@ -275,3 +275,50 @@ function next() {
   stages[i].classList.add("current")
   startCountdown();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  new Chart(
+    document.querySelector('.chart'),
+    {
+      type: 'line',
+      data: {
+        labels: ['April', 'May', 'June', 'July', 'August'],
+        datasets: [
+          {
+            label: 'Books read',
+            data: [3, 6, 2, 7, 4],
+            borderColor: 'crimson',
+            borderWidth: 5,
+            backgroundColor: 'crimson',
+            cubicInterpolationMode: 'monotone',
+          },
+          // добавили еще один график с другими значениями и цветом
+          {
+            label: 'Books bought',
+            data: [5, 2, 3, 1, 4],
+            borderColor: 'teal',
+            borderWidth: 5,
+            backgroundColor: 'teal',
+            cubicInterpolationMode: 'monotone'
+          }
+        ]
+      },
+      options: {
+        plugins: {
+          legend: {
+              display: false
+          },
+      },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    }
+  );
+
+})

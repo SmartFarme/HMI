@@ -156,7 +156,12 @@
                     <button class="graphics-cup-button graphics-cow-right-top-button cup-graphics-done"></button>
                     <button class="graphics-cup-button graphics-cow-right-bottom-button cup-graphics-done"></button>
                   </div>
-                </div>  
+                </div>
+              </div>
+              <div class="graphics-right-bar" style="position: relative; height:200px; width:400px">
+                <div class="app-chart__canvas ">
+                  <canvas class="chart"></canvas>
+                </div>
               </div>
             </div>
           </div>
@@ -180,13 +185,13 @@
             </div>
           </div>
 
-          <div class="status-acid home-status">
+          <div class="status-acid home-status ">
             <div class="clean-container">
               <div class="icon-and-progress-status">
                 <div class="status-acid-icon home-status-icon"></div>
                 <div class="status-cleaning-bar acid-bar">
                   <div class="progress-bars acid-progress-bar">
-                    <div class="local-progress-title">Прогресс этапа:</div>
+                    <div class="local-progress-title">Прогресс этапа</div>
                     <div class="status-cleaning-progress-bar-local pump-local">
                       <div class="acid-stage progress-child value-progress">
                         Промывка стаканов доильных
@@ -196,7 +201,7 @@
                       </div>
                       <div class="progress-child acid-local-progress-inner"></div>
                     </div>
-                    <div class="global-progress-title">Общий прогресс:</div>
+                    <div class="global-progress-title">Общий прогресс</div>
                     <div class="status-cleaning-progress-bar-global pump-global">
                       <div class="progress-child value-progress">
                         Промывка кислотная
@@ -266,24 +271,77 @@
                 <div class="status-alkaline-icon home-status-icon"></div>
                 <div class="status-cleaning-bar alkaline-bar">
                   <div class="progress-bars alkaline-progress-bar">
-                    <div class="local-progress-title">Прогресс этапа:</div>
-                    <div class="status-cleaning-progress-bar-local pump-local"></div>
-                    <div class="global-progress-title">Общий прогресс:</div>
-                    <div class="status-cleaning-progress-bar-global pump-global"></div>
+                    <div class="local-progress-title">Прогресс этапа</div>
+                    <div class="status-cleaning-progress-bar-local pump-local">
+                      <div class="alkaline-stage progress-child value-progress">
+                        Промывка стаканов доильных
+                      </div>
+                      <div class="alkaline-stage progress-child local-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-local-progress-inner"></div>
+                    </div>
+                    <div class="global-progress-title">Общий прогресс</div>
+                    <div class="status-cleaning-progress-bar-global pump-global">
+                      <div class="progress-child value-progress">
+                        Промывка кислотная
+                      </div>
+                      <div class="alkaline-stage progress-child global-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-global-progress-inner"></div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="status-cleaning-icons alkaline-icons">
-                <div class="status-icon-clean-tanker status-icon current-state"></div>
-                <div class="status-icon-cups-shower status-icon"></div>
-                <div class="status-icon-cold status-icon"></div>
-                <div class="status-icon-normal status-icon"></div>
-                <div class="status-icon-hot status-icon"></div>
-                <div class="status-icon-drain status-icon"></div>
-                <div class="status-icon-cold status-icon"></div>
-                <div class="status-icon-drain status-icon"></div>
-                <div class="status-icon-dry status-icon"></div>
+                <div class="alkaline-1 alkaline-st">
+                  <div class="stage-name">Проверка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-clean-tanker status-icon" value="20" id="alkaline-1"></div>
+                </div>
+                <div class="alkaline-2 alkaline-st">
+                  <div class="stage-name">Промывка стаканов доильных</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-cups-shower status-icon" value="30" id="alkaline-2"></div>
+                </div>
+                <div class="alkaline-3 alkaline-st">
+                  <div class="stage-name">Холодная промывка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-cold status-icon" id="alkaline-3"></div>
+                </div>
+                <div class="alkaline-4 alkaline-st">
+                  <div class="stage-name">Теплая промывка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-normal status-icon" id="alkaline-4"></div>
+                </div>
+                <div class="alkaline-5 alkaline-st">
+                  <div class="stage-name">Горячая промывка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-hot status-icon" id="alkaline-5"></div>
+                </div>
+                <div class="alkaline-6 alkaline-st">
+                  <div class="stage-name">Первый слив</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-drain status-icon" id="alkaline-6"></div>
+                </div>
+                <div class="alkaline-7 alkaline-st">
+                  <div class="stage-name">Холодная промывка</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-cold status-icon" id="alkaline-7"></div>
+                </div>
+                <div class="alkaline-8 alkaline-st">
+                  <div class="stage-name">Первый слив</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-drain status-icon" id="alkaline-8"></div>
+                </div>
+                <div class="alkaline-9 alkaline-st">
+                  <div class="stage-name">Второй слив</div>
+                  <div class="stage-time">10</div>
+                  <div class="status-icon-dry status-icon" id="alkaline-9"></div>
+                </div>
               </div>
+              <button class="demo-start">Demo Start</button>
             </div>
           </div>
 
@@ -514,7 +572,7 @@
                 <div class="main-control-bar">
                   <div class="cow-bar">
                     <div class="left-cups">
-                      <button class="cup-button sidetouch left-top-cup cup-unknow cup-active" ></button>
+                      <button class="cup-button sidetouch left-top-cup cup-unknow cup-active"></button>
                       <button class="cup-button sidetouch left-top-cup cup-note"></button>
                       <button class="cup-button sidetouch left-top-cup cup-done"></button>
                       <button class="cup-button sidetouch left-bottom-cup cup-unknow cup-active"></button>
@@ -589,6 +647,7 @@
                       <p class="cleaning-message">Можете протереть его при помощи влажной салфетки.</p>
                       <h2 class="clean-second-h"> Не используйте абразивные или агрессивные чистящие средства!</h2>
                       <div class="progress">
+                        <div class="progress-cl-value">Окончание блокировки</div>
                         <div class="progress-cl-timer">30</div>
                         <div class="progress-inner"></div>
                       </div>
@@ -642,7 +701,7 @@
                       <button class="top-setting-button sidetouch into-button into-setting-clear"></button>
                     </div>
                     <div class="setting-bar under-setting-bar">
-                      <div class="description-setting">Ополаскивание</div>
+                      <div class="description-setting bottom-description">Ополаскивание</div>
                       <button class="top-setting-button sidetouch under-setting-start"></button>
                       <button class="top-setting-button sidetouch under-setting-save"></button>
                       <button class="top-setting-button sidetouch under-setting-clear"></button>
@@ -774,6 +833,8 @@
       <button class="side-bar-button sidetouch button-open-cell"></button>
     </div>
   </div>
+  <script></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
   <script src="./main.js"></script>
   <script src="./numpud.js"></script>
   <script type="text/javascript" charset="utf-8">

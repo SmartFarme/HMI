@@ -1,3 +1,5 @@
+/* Добавление шрифтов */
+
 @font-face {
     font-family: Cera-light;
     src: url(../fonts/CeraPro-Light.ttf);
@@ -16,6 +18,8 @@
     font-style: normal;
 }
 
+/* Глобальные стили */
+
 * {
     outline: none;
     box-shadow: none;
@@ -32,6 +36,8 @@
 button:hover {
     cursor: pointer;
 }
+
+/* Стили ag-grid */
 
 .ag-header-cell-label {
     justify-content: center;
@@ -92,7 +98,7 @@ body {
 }
 
 .header-conteiner {
-    padding: 3px 9px 3px 9px;
+    padding: 1px 9px 3px 9px;
     display: flex;
     justify-content: space-between;
 }
@@ -199,6 +205,7 @@ body {
     background-size: 170px 65px;
     background-position: center;
     background-image: url(../images/logo.png);
+    margin-top: 2px;
 }
 
 .monitor {
@@ -533,6 +540,12 @@ body {
     margin-top: 109px;
 }
 
+.graphics-container {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
 .graphics-cup-button {
     width: 70px;
     height: 70px;
@@ -573,9 +586,24 @@ body {
     margin-left: 4px;
 }
 
+.graphics-left-bar {
+    background-color: #25be2c;
+}
+
+.graphics-right-bar {
+    width: calc(100% - 280px);
+    height: 200px;
+}
+
 .graphics-tanker-container {
     display: flex;
 }
+
+.app-chart__canvas {
+    position: relative;
+  
+    margin: 5px auto;
+  }
 
 .graphics-cow-right-buttons {
     margin-left: 4px;
@@ -603,7 +631,7 @@ body {
 }
 
 .status-acid-icon {
-    background-image: url(../svg/acid-cleaning-black.svg);
+    background-image: url(../svg/acid.svg);
     background-size: 232px;
     height: 260px;
     margin-top: 109px;
@@ -611,7 +639,7 @@ body {
 }
 
 .status-alkaline-icon {
-    background-image: url(../svg/alkaline-cleaning-black.svg);
+    background-image: url(../svg/alkaline.svg);
     background-size: 232px;
     height: 260px;
     margin-top: 109px;
@@ -718,6 +746,22 @@ margin-top: 14px;
     height: 100%;
 }
 
+.progress-cl-value {
+    position: absolute;
+    z-index: 5;
+    font-family: Cera-regular;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+  
+  .progress-cl-timer {
+      position: absolute;
+    z-index: 5;
+    font-family: Cera-regular;
+    right: 10px;
+    top: 2px;
+  }
+
 .status-cleaning-bar {
     margin-top: 123px;
     margin-left: 98px;
@@ -733,7 +777,7 @@ margin-top: 14px;
     padding: 3px;
 }
 
-.progress-cl-timer {
+/*.progress-cl-timer {
     position: absolute;
     font-size: 22px;
     z-index: 2;
@@ -741,7 +785,7 @@ margin-top: 14px;
     height: 20px;
     bottom: 30%;
     width: 80px;
-}
+}*/
 
 .current-state {
     border: solid #25be2c;
@@ -779,7 +823,10 @@ margin-top: 14px;
 
 .status-icon-dry {
     background-image: url(../svg/dry.svg);
-    background-size: 66px;
+    background-size: contain;
+    background-origin: content-box;
+    padding-bottom: 12px;
+    padding-top: 3px;
 }
 
 .stage-time {
@@ -893,8 +940,8 @@ margin-top: 14px;
 
 .side-bar-button,
 .sumpler-button {
-    border-top: solid 2px #2A569A;
-    border-bottom: solid 2px #2A569A;
+    border-top: solid 3px #2A569A;
+    border-bottom: solid 3px #2A569A;
     height: 74px;
 }
 
@@ -1325,7 +1372,7 @@ margin-top: 14px;
     display: flex;
     justify-content: start;
 
-    transform: rotate(-90deg) translate(-7px, 63px);
+    transform: rotate(-90deg) translate(-26px, 82px);
 }
 
 .cup-button {
@@ -1398,6 +1445,17 @@ button.cup-button:disabled {
     background-repeat: no-repeat;
 }
 
+.side-arm-button {
+    width: 83px;
+    height: 75px;
+    display: block;
+    border: solid #2A569A;
+    background-color: white;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .arm-up {
     border-width: 3px 3px 3px 3px;
     background-image: url(../svg/arm-to-up.svg);
@@ -1458,23 +1516,27 @@ button.cup-button:disabled {
     margin-left: 74px;
     background-image: url(../svg/arm-up.svg);
     background-size: 47px 60px;
+    transform: translate(4px, 0px);
 }
 
 .left-cross-button {
     background-image: url(../svg/arm-left.svg);
     background-size: 60px 46px;
+    transform: translate(0px, 3px);
 }
 
 .right-cross-button {
     background-image: url(../svg/arm-right.svg);
     margin-left: 18px;
     background-size: 60px 46px;
+    transform: translate(9px, 3px);
 }
 
 .bottom-cross-button {
     margin-left: 74px;
     background-image: url(../svg/arm-down.svg);
     background-size: 47px 60px;
+    transform: translate(4px, 0px);
 }
 
 .side-arm-button:not(:last-child) {
@@ -1491,18 +1553,17 @@ button.cup-button:disabled {
 }
 
 .side-arm-bar {
-    margin-top: 3px;
+    margin-top: 16px;
 }
 
 .cross-arm-bar {
-    margin-left: 46px;
-    margin-bottom: 3px;
-  transform: rotate(270deg);
+  transform: rotate(270deg) translate(-5px, 38px);
 }
 
 .middle-cross {
     display: flex;
     justify-content: space-between;
+    transform: translate(0px, -3px);
 }
 
 .cross-cow {
@@ -1514,12 +1575,15 @@ button.cup-button:disabled {
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 17px;
+    transform: translate(4px, 3px);
 }
 
 .side-control-bar {
     margin-top: 12px;
-    margin-left: 21px;
+    transform: translate(30px, 0px);
 }
+
+
 
 .arm-side-button {
     width: 75px;
@@ -1560,7 +1624,7 @@ button.cup-button:disabled {
 
 .control-field {
     width: 362px;
-    height: calc(100% - 32px);
+    height: calc(100% - 24px);
     border: solid #d4ddeb;
     margin-right: 8px;
     margin-top: 12px;
@@ -2053,11 +2117,11 @@ button.cup-button:disabled {
 }
 
 .into-description {
-    margin-top: 52px;
+    margin-top: 57px;
 }
 
 .center-description {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .top-setting-button {
@@ -2071,20 +2135,29 @@ button.cup-button:disabled {
     background-repeat: no-repeat;
 }
 
+.bottom-description {
+    margin-top: 15px;
+}
+
 .into-button {
     margin-top: 41px;
     margin-bottom: 41px;
 }
 
 .arm-setting-button {
-    width: 69px;
-    height: 93px;
+    width: 75px;
+    height: 83px;
     display: block;
     border: solid #2A569A;
     background-color: white;
     border-radius: 5px;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.side-setting-arm-button {
+    width: 83px;
+    height: 75px;
 }
 
 .center-setting-save,
@@ -2107,10 +2180,16 @@ button.cup-button:disabled {
 .center-setting-save,
 .into-setting-save {
     background-image: url(../svg/save.svg);
-    background-size: 42px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-origin: content-box;
+    
+    background-size: contain;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 2px;
+    padding-top: 3px;
 }
 
 .under-setting-clear,
@@ -2121,7 +2200,7 @@ button.cup-button:disabled {
 }
 
 .arm-setting-up {
-    border-width: 2px 2px 3px 3px;
+
     background-image: url(../svg/arm-to-up.svg);
     background-origin: padding-box;
     background-origin: content-box;
@@ -2130,7 +2209,6 @@ button.cup-button:disabled {
 }
 
 .arm-setting-down {
-    border-width: 2px 2px 3px 3px;
     background-image: url(../svg/arm-to-down.svg);
     background-origin: padding-box;
     background-origin: content-box;
@@ -2157,7 +2235,6 @@ button.cup-button:disabled {
 
 .arm-setting-speed-active {
     display: block;
-    border-width: 2px 2px 3px 3px;
 }
 
 .arm-setting-bar {
@@ -2174,7 +2251,6 @@ button.cup-button:disabled {
 }
 
 .top-setting-cross-button {
-    border-width: 3px 2px 3px 3px;
     margin-left: 69px;
     background-image: url(../svg/arm-up.svg);
     background-size: 47px 60px;
@@ -2185,27 +2261,25 @@ button.cup-button:disabled {
 }
 
 .left-setting-cross-button {
-    border-width: 2px 3px 3px 2px;
     background-image: url(../svg/arm-left.svg);
     background-size: 60px 46px;
 }
 
 .right-setting-cross-button {
-    border-width: 2px 3px 3px 2px;
+    transform: translate(8px, 0px);
     background-image: url(../svg/arm-right.svg);
     margin-left: 16px;
     background-size: 60px 46px;
 }
 
 .bottom-setting-cross-button {
-    border-width: 2px 2px 3px 3px;
     margin-left: 69px;
     background-image: url(../svg/arm-down.svg);
     background-size: 47px 60px;
 }
 
 .side-setting-arm-button:not(:last-child) {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 .side-setting-arm-button:last-child,
@@ -2214,29 +2288,31 @@ button.cup-button:disabled {
 }
 
 .side-setting-arm-bar {
-    margin-top: 2px;
+    margin-top: 14px;
 }
 
 .cross-setting-arm-bar {
-    margin-left: 62px;
-    margin-bottom: 2px;
-    transform: rotate(270deg);
+    transform: rotate(-90deg) translate(4px, 40px);
 }
+
+
 
 .middle-setting-cross {
     display: flex;
     justify-content: space-between;
+    transform: translate(-9px, 0px);
 }
 
 .cross-setting-cow {
     width: 40px;
-    height: 93px;
+    height: 82px;
     display: block;
     background-image: url(../svg/cow.svg);
-    background-size: 35px 93px;
+    background-size: 30px 82px;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 14px;
+    margin-left: 17px;
+    transform: translate(4px, 0px);
 }
 
 .setting-field {

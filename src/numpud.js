@@ -67,7 +67,12 @@ btnStart.addEventListener("click", () => {
       progressBar.style.width = progressWidth + "%";
 	  console.log(progressWidth)
       interval += 10;
-	  cleanTouch.innerHTML = Math.trunc(timeLeft - (interval / 1000)) + " Сек.";
+	  let secLeft = Math.trunc(timeLeft - (interval / 1000));
+	  if (secLeft >= 10) {
+		cleanTouch.innerHTML = "0:" + Math.trunc(timeLeft - (interval / 1000));
+	  } else {
+		cleanTouch.innerHTML = "0:" + "0" + Math.trunc(timeLeft - (interval / 1000));
+	  }
     } else {
       clearInterval(countDown)
       progressCont.classList.add("hide");
