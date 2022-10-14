@@ -27,19 +27,23 @@ for (let b = 0; b < inputt.length; b += 1) {
 				}
 			} else {
 				elements[i].onclick = function () {
-					if (elements[i].innerHTML === "÷") {
-						screen.innerHTML += "/ ";
-					} else {
-						if (screen.innerHTML === "0") {
-							screen.innerHTML = elements[i].innerHTML;
-						} else {
-							screen.innerHTML += elements[i].innerHTML;
-							console.log(screen.textContent);
-							if (screen.innerHTML.indexOf(".") != "-1") {
-								screen.innerHTML = screen.innerHTML.substring(0, screen.innerHTML.indexOf(".") + 3);
-							}
-						}
-					}
+          if (screen.innerHTML.length == 4) {
+            screen.innerHTML = screen.innerHTML;
+          } else {
+            if (elements[i].innerHTML === "÷") {
+              screen.innerHTML += "/ ";
+            } else {
+              if (screen.innerHTML === "0") {
+                screen.innerHTML = elements[i].innerHTML;
+              } else {
+                screen.innerHTML += elements[i].innerHTML;
+                console.log(screen.textContent);
+                if (screen.innerHTML.indexOf(".") != "-1") {
+                  screen.innerHTML = screen.innerHTML.substring(0, screen.innerHTML.indexOf(".") + 3);
+                }
+              }
+            }
+          }
 				};
 			}
 		}

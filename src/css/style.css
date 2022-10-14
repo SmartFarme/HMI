@@ -586,9 +586,6 @@ body {
     margin-left: 4px;
 }
 
-.graphics-left-bar {
-    background-color: #25be2c;
-}
 
 .graphics-right-bar {
     width: calc(100% - 280px);
@@ -913,6 +910,10 @@ margin-top: 14px;
     background-image: url(../svg/alarm-blue.svg);
 }
 
+.graph-container {
+  width: 100%;
+}
+
 .untab__content {
     margin-top: 2px;
     box-sizing: content-box;
@@ -947,6 +948,16 @@ margin-top: 14px;
 
 .milk-filter {
     background-image: url(../svg/filter.svg);
+    position: absolute;
+    bottom: 20px;
+    right: 117px;
+    z-index: 2;
+    image-rendering: pixelated;
+    background-size: 60px;
+}
+
+.graph-swap {
+  background-image: url(../svg/61_charge.svg);
     position: absolute;
     bottom: 20px;
     right: 117px;
@@ -1096,7 +1107,7 @@ margin-top: 14px;
 }
 
 .acid-cleaning-icon {
-    background-image: url(../svg/acid-cleaning.svg);
+    background-image: url(../svg/acid-red.svg);
     background-color: #FFF;
     image-rendering: pixelated;
 }
@@ -1145,7 +1156,7 @@ margin-top: 14px;
 }
 
 .alkaline-cleaning-icon {
-    background-image: url(../svg/alkaline-cleaning.svg);
+    background-image: url(../svg/alkaline-bl.svg);
     background-color: #FFF;
     image-rendering: pixelated;
 }
@@ -1315,6 +1326,10 @@ margin-top: 14px;
     width: 276px;
     text-align: left;
     margin-left: 18px;
+}
+
+.clean-touch-text, .off-system-text {
+  width: 244px;
 }
 
 .sampler-frame-text {
@@ -1694,13 +1709,13 @@ button.cup-button:disabled {
 .clean-touch {
     background-image: url(../svg/tap-cleaning-black.svg);
     image-rendering: pixelated;
-    border: solid 2px #2A569A;
+    border: solid 3px #2A569A;
 }
 
 .off-system {
     background-image: url(../svg/off-button.svg);
     image-rendering: pixelated;
-    border: solid 2px #2A569A;
+    border: solid 3px #2A569A;
 }
 
 .milking-setting {
