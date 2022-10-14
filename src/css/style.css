@@ -1305,6 +1305,22 @@ margin-top: 14px;
     background-size: 60px;
 }
 
+.change-sampler-stop {
+    background-image: url(../svg/mode-stop.svg);
+    image-rendering: optimizeSpeed;
+    background-size: 60px;
+    background-position: center;
+  background-repeat: no-repeat;
+}
+
+.change-sampler-play{
+  background-image: url(../svg/mode-play.svg);
+  image-rendering: pixelated;
+  background-size: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .sampler-status-active {
     display: block;
 }
