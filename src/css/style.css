@@ -568,9 +568,10 @@ body {
     width: 75px;
 }
 
+
 .graphics-tanker-value {
     margin-top: 25px;
-    margin-left: 51px;
+    margin-left: 20px;
     font-size: 70px;
 }
 
@@ -583,7 +584,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 0px;
-    margin-left: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 
@@ -608,7 +610,7 @@ body {
 
 .graphics-cow-container {
     display: flex;
-    margin-left: 5px;
+    margin-left: 6px;
     margin-top: 112px;
 }
 
@@ -688,14 +690,14 @@ body {
 .acid-global-progress-inner {
   background-color: #25be2c;
   position: absolute;
-  width: 12%;
+  width: 0%;
   height: 100%;
 }
 
 .acid-local-progress-inner {
   background-color: #25be2c;
   position: absolute;
-  width: 100%;
+  width: 0%;
   height: 100%;
 }
 
@@ -960,7 +962,7 @@ margin-top: 14px;
   background-image: url(../svg/61_charge.svg);
     position: absolute;
     bottom: 20px;
-    right: 117px;
+    right: 93px;
     z-index: 2;
     image-rendering: pixelated;
     background-size: 60px;
@@ -1062,7 +1064,7 @@ margin-top: 14px;
 
 .cleaning-icon {
     background-image: url(../svg/tap-cleaning-black.svg);
-    margin-left: 25px;
+    margin-left: 20px;
     image-rendering: pixelated;
 }
 
@@ -1103,7 +1105,7 @@ margin-top: 14px;
     display: flex;
     justify-content: start;
     margin-top: 20px;
-    margin-left: 13px;
+    margin-left: 8px;
 }
 
 .acid-cleaning-icon {
@@ -1144,7 +1146,7 @@ margin-top: 14px;
     margin-left: 63px;
     background-size: 60px;
     image-rendering: pixelated;
-    border-width: 2px 3px;
+    border-width: 3px;
     width: 75px;
 }
 
@@ -1152,7 +1154,7 @@ margin-top: 14px;
     display: flex;
     justify-content: start;
     margin-top: 8px;
-    margin-left: 13px;
+    margin-left: 8px;
 }
 
 .alkaline-cleaning-icon {
@@ -1171,7 +1173,7 @@ margin-top: 14px;
     margin-left: 63px;
     background-size: 60px;
     image-rendering: pixelated;
-    border-width: 2px 3px;
+    border-width: 3px;
     width: 75px;
 }
 
@@ -1179,15 +1181,15 @@ margin-top: 14px;
     display: flex;
     justify-content: start;
     margin-top: 8px;
-    margin-left: 13px;
+    margin-left: 8px;
 }
 
 .line-rinsing-icon {
     background-image: url(../svg/rinsing-gr.svg);
     background-color: #fff;
-    background-size: 66px 60px;
+    background-size: 64px 60px;
     image-rendering: pixelated;
-    border-width: 2px;
+    border-width: 3px;
 }
 
 .line-rinsing-atention {
@@ -1200,7 +1202,7 @@ margin-top: 14px;
     margin-left: 63px;
     background-size: 60px;
     image-rendering: pixelated;
-    border-width: 2px 3px;
+    border-width: 3px;
     width: 75px;
 }
 
@@ -1208,15 +1210,15 @@ margin-top: 14px;
     display: flex;
     justify-content: start;
     margin-top: 8px;
-    margin-left: 13px;
+    margin-left: 8px;
 }
 
 .robot-rinsing-icon {
     background-image: url(../svg/rinsing.svg);
     background-color: #f9f9f9;
-    background-size: 66px 60px;
+    background-size: 64px 60px;
     image-rendering: pixelated;
-    border-width: 2px;
+    border-width: 3px;
 }
 
 .robot-rinsing-atention {
@@ -1229,7 +1231,7 @@ margin-top: 14px;
     margin-left: 63px;
     background-size: 63px;
     image-rendering: pixelated;
-    border-width: 2px 3px;
+    border-width: 3px;
     width: 75px;
 }
 
@@ -1239,10 +1241,10 @@ margin-top: 14px;
 
 .iodine-valve-icon {
     background-image: url(../svg/spray.svg);
-    margin-left: calc(28% + 374px);
+    margin-left: calc(28% + 369px);
     background-size: 46px;
     image-rendering: pixelated;
-    border-width: 2px 3px;
+    border-width: 3px;
     width: 75px;
 }
 
@@ -2271,7 +2273,7 @@ button.cup-button:disabled {
 .arm-setting-bar {
     display: flex;
     justify-content: start;
-    margin-left: 4px;
+    margin-left: 8px;
 
 }
 
@@ -2323,7 +2325,7 @@ button.cup-button:disabled {
 }
 
 .cross-setting-arm-bar {
-    transform: rotate(-90deg) translate(4px, 40px);
+    transform: rotate(-90deg) translate(4px, 36px);
 }
 
 

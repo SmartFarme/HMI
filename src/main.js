@@ -74,24 +74,6 @@ let time = setInterval(function () {
 }, 1000);
 
 
-/// Код для выпадающего меню выбора языкового пакета ///
-const dropdown = document.querySelectorAll(".dropdown");
-const list = document.querySelectorAll(".dropdown__list");
-const value = document.querySelectorAll(".dropdown__value");
-for (let i = 0; i < dropdown.length; i++) {
-  value[i].addEventListener("click", onClick);
-  function onClick() {
-    list[i].classList.toggle("dropdown__list_active");
-  }
-  const item = dropdown[i].querySelectorAll(".dropdown__item");
-  for (let b = 0; b < item.length; b++) {
-    item[b].addEventListener("click", function (event) {
-      value[i].textContent = item[b].textContent;
-      list[i].classList.remove("dropdown__list_active");
-      event.preventDefault();
-    });
-  }
-}
 
 
 
@@ -136,6 +118,10 @@ for (let i = 0; i < samplerStatusBtn.length; i++) {
     }
   }
 }
+
+
+
+
 
 const localProgress = document.querySelector(".acid-local-progress-inner");
 const globalProgress = document.querySelector(".acid-global-progress-inner");
@@ -342,70 +328,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   );
-
-
-  new Chart(
-    document.querySelector('.chart2'),
-    {
-      type: 'line',
-      data: {
-        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
-        datasets: [
-          {
-            label: '1',
-            data: [0, 0, 0, 0, 0, 0, 2, 4, 6, 8, 12, 18, 28, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 34, 34, 36, 32, 36, 36, 36, 36, 36, 28, 24, 22, 15, 10, 10, 0, 0],
-            borderColor: '#22b14c',
-            borderWidth: 3,
-            backgroundColor: '#22b14c',
-            cubicInterpolationMode: 'monotone',
-          },
-          // добавили еще один график с другими значениями и цветом
-          {
-            label: '2',
-            data: [0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 8, 12, 20, 22, 24, 30, 30, 30, 30, 30, 32, 32, 32, 30, 30, 30, 34, 34, 36, 36, 38, 34, 32, 30, 30, 30, 30, 30, 30, 28, 28, 28, 22, 20, 20, 20, 12, 4, 2, 0],
-            borderColor: '#00a2e8',
-            borderWidth: 3,
-            backgroundColor: '#00a2e8',
-            cubicInterpolationMode: 'monotone'
-          },
-          {
-            label: '3',
-            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 6, 8, 10, 12, 14, 14, 14, 16, 16, 16, 14, 14, 14, 14, 14, 16, 12, 12, 12, 14, 14, 16, 12, 16, 16, 16, 16, 16, 18, 14, 12, 6, 4, 0, 0, 0],
-            borderColor: '#ed1c24',
-            borderWidth: 3,
-            backgroundColor: '#ed1c24',
-            cubicInterpolationMode: 'monotone',
-          },
-          {
-            label: '4',
-            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 12, 16, 20, 20, 22, 22, 22, 22, 22, 24, 24, 24, 22, 22, 26, 28, 22, 18, 16, 12, 8, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            borderColor: '#ffc90e',
-            borderWidth: 3,
-            backgroundColor: '#ffc90e',
-            cubicInterpolationMode: 'monotone',
-          }
-        ]
-      },
-      options: {
-        elements: {
-          point:{
-              radius: 0
-          }
-      },
-        plugins: {
-          legend: {
-              display: false
-          },
-      },
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          y: {
-            display: false,
-            beginAtZero: true
-          }
-        }
-      }
-    }
-  );
-})
+  })
