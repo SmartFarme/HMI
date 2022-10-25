@@ -62,7 +62,7 @@ button:hover {
     --ag-header-column-separator-height: 100%;
     --ag-header-column-separator-width: 2px;
     --ag-header-column-separator-color: #494949;
-  
+
 }
 
 .ag-row-selected {
@@ -270,7 +270,7 @@ body {
 }
 
 .setting {
-  margin-right: 4px;
+    margin-right: 4px;
 }
 
 .tab_active {
@@ -453,7 +453,7 @@ body {
 }
 
 .clean-container {
-  display: block;
+    display: block;
 }
 
 .status-cow-in-cell-icon {
@@ -549,8 +549,8 @@ body {
 .graphics-cup-button {
     width: 70px;
     height: 70px;
+    background-color: #25be2c;
     border: solid 3px #2A569A;
-    background-color: white;
     border-radius: 5px;
     background-position: center;
     background-repeat: no-repeat;
@@ -560,10 +560,38 @@ body {
     background-image: url(../svg/milk-ok-graphics.svg);
     background-size: 39px;
     background-position: center;
+}
+
+.cup-graphics-do-not-milk {
+    background-image: url(../svg/do-not-milk.svg);
+    background-size: 39px;
+    background-position: center;
     background-color: #25be2c;
 }
 
-.graphics-cow-right-buttons, .gaphics-cow-left-buttons {
+.cup-graphics-remove-cup {
+    background-image: url(../svg/remove-cup.svg);
+    background-size: 39px;
+    background-position: center;
+    background-color: #25be2c;
+}
+
+.cup-graphics-simulate-milk-flow {
+    background-image: url(../svg/milk-flow.svg);
+    background-size: 39px;
+    background-position: center;
+    background-color: #25be2c;
+}
+
+.cup-graphics-cancel-acr {
+    background-image: url(../svg/cancel-acr.svg);
+    background-size: 39px;
+    background-position: center;
+    background-color: #25be2c;
+}
+
+.graphics-cow-right-buttons,
+.gaphics-cow-left-buttons {
     flex-direction: column;
     width: 75px;
 }
@@ -600,9 +628,9 @@ body {
 
 .app-chart__canvas {
     position: relative;
-  
+
     margin: 5px auto;
-  }
+}
 
 .graphics-cow-right-buttons {
     margin-left: 4px;
@@ -614,7 +642,8 @@ body {
     margin-top: 112px;
 }
 
-.graphics-cow-right-bottom-button, .graphics-cow-left-bottom-button {
+.graphics-cow-right-bottom-button,
+.graphics-cow-left-bottom-button {
     margin-top: 9px;
 }
 
@@ -688,42 +717,44 @@ body {
 }
 
 .acid-global-progress-inner {
-  background-color: #25be2c;
-  position: absolute;
-  width: 0%;
-  height: 100%;
+    background-color: #25be2c;
+    position: absolute;
+    width: 0%;
+    height: 100%;
 }
 
 .acid-local-progress-inner {
-  background-color: #25be2c;
-  position: absolute;
-  width: 0%;
-  height: 100%;
+    background-color: #25be2c;
+    position: absolute;
+    width: 0%;
+    height: 100%;
 }
 
-.local-progress-title, .global-progress-title{
-  margin-bottom: 5px;
-  font-family: Cera-bold;
+.local-progress-title,
+.global-progress-title {
+    margin-bottom: 5px;
+    font-family: Cera-bold;
 }
 
 .value-progress {
-  position: absolute;
-  z-index: 5;
-  font-family: Cera-regular;
-  margin-left: 10px;
-  margin-top: 2px;
+    position: absolute;
+    z-index: 5;
+    font-family: Cera-regular;
+    margin-left: 10px;
+    margin-top: 2px;
 }
 
-.local-stage-time, .global-stage-time {
+.local-stage-time,
+.global-stage-time {
     position: absolute;
-  z-index: 5;
-  font-family: Cera-regular;
-  right: 10px;
-  top: 2px;
+    z-index: 5;
+    font-family: Cera-regular;
+    right: 10px;
+    top: 2px;
 }
 
 .global-progress-title {
-margin-top: 14px;
+    margin-top: 14px;
 }
 
 .status-cleaning-icons,
@@ -751,15 +782,15 @@ margin-top: 14px;
     font-family: Cera-regular;
     margin-left: 10px;
     margin-top: 2px;
-  }
-  
-  .progress-cl-timer {
-      position: absolute;
+}
+
+.progress-cl-timer {
+    position: absolute;
     z-index: 5;
     font-family: Cera-regular;
     right: 10px;
     top: 2px;
-  }
+}
 
 .status-cleaning-bar {
     margin-top: 123px;
@@ -913,7 +944,7 @@ margin-top: 14px;
 }
 
 .graph-container {
-  width: 100%;
+    width: 100%;
 }
 
 .untab__content {
@@ -942,7 +973,7 @@ margin-top: 14px;
 }
 
 .side-bar-button,
-.sumpler-button {
+.sampler-button {
     border-top: solid 3px #2A569A;
     border-bottom: solid 3px #2A569A;
     height: 74px;
@@ -959,7 +990,7 @@ margin-top: 14px;
 }
 
 .graph-swap {
-  background-image: url(../svg/61_charge.svg);
+    background-image: url(../svg/61_charge.svg);
     position: absolute;
     bottom: 20px;
     right: 93px;
@@ -969,23 +1000,23 @@ margin-top: 14px;
 }
 
 .milk-search {
-  background-image: url(../svg/details.svg);
-  position: absolute;
-  bottom: 20px;
-  right: 197px;
-  z-index: 2;
-  image-rendering: pixelated;
-  background-size: 60px;
+    background-image: url(../svg/details.svg);
+    position: absolute;
+    bottom: 20px;
+    right: 197px;
+    z-index: 2;
+    image-rendering: pixelated;
+    background-size: 60px;
 }
 
 .wash-search {
-  background-image: url(../svg/details.svg);
-  position: absolute;
-  bottom: 20px;
-  right: 117px;
-  z-index: 2;
-  image-rendering: pixelated;
-  background-size: 60px;
+    background-image: url(../svg/details.svg);
+    position: absolute;
+    bottom: 20px;
+    right: 117px;
+    z-index: 2;
+    image-rendering: pixelated;
+    background-size: 60px;
 }
 
 .untab_active:after {
@@ -1294,7 +1325,7 @@ margin-top: 14px;
     background-color: #FFF;
 }
 
-.sampler-status-play{
+.sampler-status-play {
     background-image: url(../svg/mode-play.svg);
     display: none;
     image-rendering: pixelated;
@@ -1312,15 +1343,63 @@ margin-top: 14px;
     image-rendering: optimizeSpeed;
     background-size: 60px;
     background-position: center;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
-.change-sampler-play{
-  background-image: url(../svg/mode-play.svg);
-  image-rendering: pixelated;
-  background-size: 60px;
-  background-position: center;
-  background-repeat: no-repeat;
+.change-sampler-play {
+    background-image: url(../svg/mode-play.svg);
+    image-rendering: pixelated;
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.change-mode-play {
+    background-image: url(../svg/mode-play.svg);
+    image-rendering: pixelated;
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.change-mode-pause {
+    background-image: url(../svg/mode-pause.svg);
+    image-rendering: pixelated;
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.change-mode-stop {
+    background-image: url(../svg/mode-stop.svg);
+    image-rendering: pixelated;
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.milk-mode-remove {
+    background-image: url(../svg/milk-drain.svg);
+    image-rendering: pixelated;
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.milk-mode-tanker {
+    background-image: url(../svg/milk-backet.svg);
+    image-rendering: pixelated;
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.milk-mode-close {
+    background-image: url(../svg/cancel.svg);
+    image-rendering: pixelated;
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .sampler-status-active {
@@ -1346,12 +1425,13 @@ margin-top: 14px;
     margin-left: 18px;
 }
 
-.clean-touch-text, .off-system-text {
-  width: 244px;
+.clean-touch-text,
+.off-system-text {
+    width: 244px;
 }
 
 .sampler-frame-text {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
 .sampler-frame-button,
@@ -1417,7 +1497,7 @@ margin-top: 14px;
     display: none;
     background-position: center;
     background-repeat: no-repeat;
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .cup-active {
@@ -1546,23 +1626,23 @@ button.cup-button:disabled {
 }
 
 .top-cross-button {
-    margin-left: 74px;
+    margin-left: 69px;
     background-image: url(../svg/arm-up.svg);
     background-size: 47px 60px;
-    transform: translate(4px, 0px);
+    padding-right: 1px;
+    transform: translate(9px, 0px);
 }
 
 .left-cross-button {
     background-image: url(../svg/arm-left.svg);
     background-size: 60px 46px;
-    transform: translate(0px, 3px);
 }
 
 .right-cross-button {
     background-image: url(../svg/arm-right.svg);
-    margin-left: 18px;
     background-size: 60px 46px;
-    transform: translate(9px, 3px);
+    margin-left: 16px;
+    transform: translate(8px, 0px);
 }
 
 .bottom-cross-button {
@@ -1590,13 +1670,13 @@ button.cup-button:disabled {
 }
 
 .cross-arm-bar {
-  transform: rotate(270deg) translate(-5px, 38px);
+    transform: rotate(270deg) translate(-6px, 38px);
 }
 
 .middle-cross {
     display: flex;
     justify-content: space-between;
-    transform: translate(0px, -3px);
+    transform: translate(0px, 0px);
 }
 
 .cross-cow {
@@ -1608,7 +1688,7 @@ button.cup-button:disabled {
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 17px;
-    transform: translate(4px, 3px);
+    transform: translate(4px, 0px);
 }
 
 .side-control-bar {
@@ -1665,32 +1745,32 @@ button.cup-button:disabled {
 }
 
 .point {
-  display: block;
-  width: 14px;
-  height: 14px;
-  background-image: url(../svg/point.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 16px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../svg/point.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
 }
 
 .point-bar {
-  margin-top: 200px;
-  margin-left: 100px;
-  width: 100px;
+    margin-top: 200px;
+    margin-left: 100px;
+    width: 100px;
 }
 
 .point-bar-top {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .point-bar-bottom {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
 }
 
 .touch-bar {
@@ -1716,12 +1796,13 @@ button.cup-button:disabled {
     margin-left: 32px;
 }
 
-.clean-touch-bar, .off-system-bar {
-        display: flex;
-        justify-content: start;
-        align-items: flex-start;
-        margin-top: 23px;
-       
+.clean-touch-bar,
+.off-system-bar {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 23px;
+
 }
 
 .clean-touch {
@@ -1832,11 +1913,11 @@ button.cup-button:disabled {
     width: 78px;
 }
 
-.side-bar-button:first-child {
-    margin-top: 7px;
+.side-bar-button {
+    margin-top: 6px;
 }
 
-.side-bar-button:not(:first-child) {
+.mode-select-button {
     margin-top: 6px;
 }
 
@@ -1851,14 +1932,7 @@ button.cup-button:disabled {
 .mode-stop {
     background-image: url(../svg/mode-stop.svg);
     image-rendering: pixelated;
-    background-size: contain;
-    background-origin: padding-box;
-    background-origin: content-box;
-    padding: 4px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-left: 3px;
+    background-size: 60px;
 }
 
 .mode-pause {
@@ -2217,7 +2291,7 @@ button.cup-button:disabled {
     justify-content: center;
     align-items: center;
     background-origin: content-box;
-    
+
     background-size: contain;
     padding: 3px;
     padding-left: 6px;
@@ -2296,6 +2370,7 @@ button.cup-button:disabled {
 .left-setting-cross-button {
     background-image: url(../svg/arm-left.svg);
     background-size: 60px 46px;
+    transform: translate(0px, 1px);
 }
 
 .right-setting-cross-button {
@@ -2303,12 +2378,14 @@ button.cup-button:disabled {
     background-image: url(../svg/arm-right.svg);
     margin-left: 16px;
     background-size: 60px 46px;
+    transform: translate(8px, 1px);
 }
 
 .bottom-setting-cross-button {
     margin-left: 69px;
     background-image: url(../svg/arm-down.svg);
     background-size: 47px 60px;
+    transform: translate(0px, 2px);
 }
 
 .side-setting-arm-button:not(:last-child) {
@@ -2325,7 +2402,7 @@ button.cup-button:disabled {
 }
 
 .cross-setting-arm-bar {
-    transform: rotate(-90deg) translate(4px, 36px);
+    transform: rotate(-90deg) translate(4px, 37px);
 }
 
 
@@ -2343,9 +2420,12 @@ button.cup-button:disabled {
     background-image: url(../svg/cow.svg);
     background-size: 30px 82px;
     background-position: center;
+    background-origin: padding-box;
+    background-origin: content-box;
     background-repeat: no-repeat;
     margin-left: 17px;
     transform: translate(4px, 0px);
+    margin-top: 1px;
 }
 
 .setting-field {
@@ -2618,27 +2698,28 @@ option {
 
 .change-sampler-div {
     display: none;
-      position: absolute;
-      justify-content: center;
-      align-items: center;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      font-family: Cera-bold;
-      z-index: 3;
-  }
-  
-  .change-sampler-div-active {
+    background-color: rgb(255, 255, 255, .66);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Cera-bold;
+    z-index: 3;
+}
+
+.change-sampler-div-active {
     display: block;
-  }
-  
-  .change-sampler-content {
+}
+
+.change-sampler-content {
     width: 210px;
     margin: auto;
     height: 140px;
     padding: 12px;
-    border: solid 5px #2A569A;
+    border: solid 3px #2A569A;
     border-radius: 4px;
     display: none;
     position: fixed;
@@ -2650,17 +2731,156 @@ option {
     display: flex;
     justify-content: space-between;
     background-color: #fff;
-  }
-  
-  .change-sampler-button {
+}
+
+.change-mode-div,
+.milk-mode-div {
+    background-color: rgb(255, 255, 255, .66);
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Cera-bold;
+    z-index: 3;
+}
+
+.change-mode-div-active,
+.milk-mode-div-active {
+    display: block;
+}
+
+.change-mode-content,
+.milk-mode-content {
+    width: 316px;
+    margin: auto;
+    height: 140px;
+    padding: 12px;
+    border: solid 3px #2A569A;
+    border-radius: 4px;
+    display: none;
+    position: fixed;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.change-mode-button,
+.milk-mode-button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 74px;
     height: 74px;
-    border: solid #016aac;
+    border: solid #2A569A;
     border-radius: 5px;
     background-color: white;
     margin-top: 20px;
     text-align: center;
-  }
+}
+
+.change-sampler-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74px;
+    height: 74px;
+    border: solid #2A569A;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.gr-cup-milk-mode-div {
+    display: none;
+    background-color: rgb(255, 255, 255, .66);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Cera-bold;
+    z-index: 3;
+}
+
+.gr-cup-milk-mode-div-active {
+    display: block;
+}
+
+.gr-cup-milk-mode-content {
+    width: 528px;
+    margin: auto;
+    height: 140px;
+    padding: 12px;
+    border: solid 3px #2A569A;
+    border-radius: 4px;
+    display: none;
+    position: fixed;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.milk-cup-mode-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 74px;
+    height: 74px;
+    border: solid #2A569A;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.do-not-milk-mode {
+    background-image: url(../svg/do-not-milk.svg);
+    image-rendering: optimizeSpeed;
+    background-size: 29px;
+}
+
+.remove-cup-mode {
+    background-image: url(../svg/remove-cup.svg);
+    image-rendering: optimizeSpeed;
+    background-size: 29px;
+}
+
+.milk-flow-mode {
+    background-image: url(../svg/milk-flow.svg);
+    image-rendering: optimizeSpeed;
+    background-size: 39px;
+}
+
+.cancel-acr-mode {
+    background-image: url(../svg/cancel-acr.svg);
+    image-rendering: optimizeSpeed;
+    background-size: 39px;
+}
+
+.cancel-acr-mode {
+    background-image: url(../svg/cancel-acr.svg);
+    image-rendering: optimizeSpeed;
+    background-size: 39px;
+}
+
+.milk-cup-mode-close {
+    background-image: url(../svg/cancel.svg);
+    image-rendering: optimizeSpeed;
+    background-size: 39px;
+}

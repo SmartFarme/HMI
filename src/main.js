@@ -119,6 +119,106 @@ for (let i = 0; i < samplerStatusBtn.length; i++) {
   }
 }
 
+const modeStatusBtn = document.querySelectorAll(".mode-select-button");
+const modeChange = document.querySelector(".change-mode-div");
+for (let i = 0; i < modeStatusBtn.length; i++) {
+  modeStatusBtn[i].addEventListener("click", modeChangeActive);
+  function modeChangeActive() {
+    modeChange.classList.toggle("change-mode-div-active")
+    const modeStop = document.querySelector(".change-mode-stop");
+    const modePause = document.querySelector(".change-mode-pause");
+    const modePlay = document.querySelector(".change-mode-play");
+    const modeStatusPlay = document.querySelector(".mode-play");
+    const modeStatusPause = document.querySelector(".mode-pause");
+    const modeStatusStop = document.querySelector(".mode-stop");
+    modeStop.onclick = function () {
+      modeChange.classList.remove("change-mode-div-active")
+      modeStatusPlay.classList.remove("mode-active");
+      modeStatusPause.classList.remove("mode-active");
+      modeStatusStop.classList.add("mode-active");
+    }
+    modePause.onclick = function () {
+      modeChange.classList.remove("change-mode-div-active")
+      modeStatusPlay.classList.remove("mode-active");
+      modeStatusPause.classList.add("mode-active");
+      modeStatusStop.classList.remove("mode-active");
+    }
+    modePlay.onclick = function () {
+      modeChange.classList.remove("change-mode-div-active")
+      modeStatusPlay.classList.add("mode-active");
+      modeStatusPause.classList.remove("mode-active");
+      modeStatusStop.classList.remove("mode-active");
+    }
+  }
+}
+
+const grCupStatusBtn = document.querySelectorAll(".graphics-cup-button");
+const grCupChange = document.querySelector(".gr-cup-milk-mode-div");
+for (let i = 0; i < grCupStatusBtn.length; i++) {
+  grCupStatusBtn[i].addEventListener("click", grCupChangeActive);
+  function grCupChangeActive() {
+    grCupChange.classList.add("gr-cup-milk-mode-div-active")
+    const doNotMilkMode = document.querySelector(".do-not-milk-mode");
+    const removeCupMode = document.querySelector(".remove-cup-mode");
+    const milkFlowMode = document.querySelector(".milk-flow-mode");
+    const cancelAcrMode = document.querySelector(".cancel-acr-mode");
+    const milkCupModeClose = document.querySelector(".milk-cup-mode-close");
+    doNotMilkMode.onclick = function () {
+      grCupChange.classList.remove("gr-cup-milk-mode-div-active")
+      grCupStatusBtn[i].classList.remove("cup-graphics-done");
+      grCupStatusBtn[i].classList.remove("remove-cup-mode");
+      grCupStatusBtn[i].classList.remove("milk-flow-mode");
+      grCupStatusBtn[i].classList.remove("cancel-acr-mode");
+      grCupStatusBtn[i].classList.add("do-not-milk-mode");
+    }
+    removeCupMode.onclick = function () {
+      grCupChange.classList.remove("gr-cup-milk-mode-div-active")
+      grCupStatusBtn[i].classList.remove("cup-graphics-done");
+      grCupStatusBtn[i].classList.add("remove-cup-mode");
+      grCupStatusBtn[i].classList.remove("milk-flow-mode");
+      grCupStatusBtn[i].classList.remove("cancel-acr-mode");
+      grCupStatusBtn[i].classList.remove("do-not-milk-mode");
+    }
+    milkFlowMode.onclick = function () {
+      grCupChange.classList.remove("gr-cup-milk-mode-div-active")
+      grCupStatusBtn[i].classList.remove("cup-graphics-done");
+      grCupStatusBtn[i].classList.remove("remove-cup-mode");
+      grCupStatusBtn[i].classList.add("milk-flow-mode");
+      grCupStatusBtn[i].classList.remove("cancel-acr-mode");
+      grCupStatusBtn[i].classList.remove("do-not-milk-mode");
+    }
+    cancelAcrMode.onclick = function () {
+      grCupChange.classList.remove("gr-cup-milk-mode-div-active")
+      grCupStatusBtn[i].classList.remove("cup-graphics-done");
+      grCupStatusBtn[i].classList.remove("remove-cup-mode");
+      grCupStatusBtn[i].classList.remove("milk-flow-mode");
+      grCupStatusBtn[i].classList.add("cancel-acr-mode");
+      grCupStatusBtn[i].classList.remove("do-not-milk-mode");
+    }
+    milkCupModeClose.onclick = function () {
+      grCupChange.classList.remove("gr-cup-milk-mode-div-active")
+    }
+  }
+}
+
+const milkStatusBtn = document.querySelector(".button-milk-action-select");
+const milkChange = document.querySelector(".milk-mode-div");
+milkStatusBtn.addEventListener("click", milkChangeActive);
+  function milkChangeActive() {
+    milkChange.classList.add("milk-mode-div-active")
+    const milkRemove = document.querySelector(".milk-mode-remove");
+    const milkToTanker = document.querySelector(".milk-mode-tanker");
+    const milkClose = document.querySelector(".milk-mode-close");
+    milkRemove.onclick = function () {
+      milkChange.classList.remove("milk-mode-div-active")
+    }
+    milkToTanker.onclick = function () {
+      milkChange.classList.remove("milk-mode-div-active")
+    }
+    milkClose.onclick = function () {
+      milkChange.classList.remove("milk-mode-div-active")
+    }
+  }
 
 
 
