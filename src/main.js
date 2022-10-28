@@ -124,7 +124,7 @@ const modeChange = document.querySelector(".change-mode-div");
 for (let i = 0; i < modeStatusBtn.length; i++) {
   modeStatusBtn[i].addEventListener("click", modeChangeActive);
   function modeChangeActive() {
-    modeChange.classList.toggle("change-mode-div-active")
+    modeChange.classList.add("change-mode-div-active")
     const modeStop = document.querySelector(".change-mode-stop");
     const modePause = document.querySelector(".change-mode-pause");
     const modePlay = document.querySelector(".change-mode-play");
@@ -165,35 +165,35 @@ for (let i = 0; i < grCupStatusBtn.length; i++) {
     const milkCupModeClose = document.querySelector(".milk-cup-mode-close");
     doNotMilkMode.onclick = function () {
       grCupChange.classList.remove("gr-cup-milk-mode-div-active")
-      grCupStatusBtn[i].classList.remove("cup-graphics-done");
-      grCupStatusBtn[i].classList.remove("remove-cup-mode");
-      grCupStatusBtn[i].classList.remove("milk-flow-mode");
-      grCupStatusBtn[i].classList.remove("cancel-acr-mode");
-      grCupStatusBtn[i].classList.add("do-not-milk-mode");
+      grCupStatusBtn[i].classList.remove("cup-graphics-done-btn");
+      grCupStatusBtn[i].classList.remove("remove-cup-mode-btn");
+      grCupStatusBtn[i].classList.remove("milk-flow-mode-btn");
+      grCupStatusBtn[i].classList.remove("cancel-acr-mode-btn");
+      grCupStatusBtn[i].classList.add("do-not-milk-mode-btn");
     }
     removeCupMode.onclick = function () {
       grCupChange.classList.remove("gr-cup-milk-mode-div-active")
-      grCupStatusBtn[i].classList.remove("cup-graphics-done");
-      grCupStatusBtn[i].classList.add("remove-cup-mode");
-      grCupStatusBtn[i].classList.remove("milk-flow-mode");
-      grCupStatusBtn[i].classList.remove("cancel-acr-mode");
-      grCupStatusBtn[i].classList.remove("do-not-milk-mode");
+      grCupStatusBtn[i].classList.remove("cup-graphics-done-btn");
+      grCupStatusBtn[i].classList.add("remove-cup-mode-btn");
+      grCupStatusBtn[i].classList.remove("milk-flow-mode-btn");
+      grCupStatusBtn[i].classList.remove("cancel-acr-mode-btn");
+      grCupStatusBtn[i].classList.remove("do-not-milk-mode-btn");
     }
     milkFlowMode.onclick = function () {
+      grCupStatusBtn[i].classList.remove("cup-graphics-done-btn");
+      grCupStatusBtn[i].classList.remove("remove-cup-mode-btn");
+      grCupStatusBtn[i].classList.add("milk-flow-mode-btn");
+      grCupStatusBtn[i].classList.remove("cancel-acr-mode-btn");
+      grCupStatusBtn[i].classList.remove("do-not-milk-mode-btn");
       grCupChange.classList.remove("gr-cup-milk-mode-div-active")
-      grCupStatusBtn[i].classList.remove("cup-graphics-done");
-      grCupStatusBtn[i].classList.remove("remove-cup-mode");
-      grCupStatusBtn[i].classList.add("milk-flow-mode");
-      grCupStatusBtn[i].classList.remove("cancel-acr-mode");
-      grCupStatusBtn[i].classList.remove("do-not-milk-mode");
     }
     cancelAcrMode.onclick = function () {
       grCupChange.classList.remove("gr-cup-milk-mode-div-active")
-      grCupStatusBtn[i].classList.remove("cup-graphics-done");
-      grCupStatusBtn[i].classList.remove("remove-cup-mode");
-      grCupStatusBtn[i].classList.remove("milk-flow-mode");
-      grCupStatusBtn[i].classList.add("cancel-acr-mode");
-      grCupStatusBtn[i].classList.remove("do-not-milk-mode");
+      grCupStatusBtn[i].classList.remove("cup-graphics-done-btn");
+      grCupStatusBtn[i].classList.remove("remove-cup-mode-btn");
+      grCupStatusBtn[i].classList.remove("milk-flow-mode-btn");
+      grCupStatusBtn[i].classList.add("cancel-acr-mode-btn");
+      grCupStatusBtn[i].classList.remove("do-not-milk-mode-btn");
     }
     milkCupModeClose.onclick = function () {
       grCupChange.classList.remove("gr-cup-milk-mode-div-active")
@@ -204,21 +204,21 @@ for (let i = 0; i < grCupStatusBtn.length; i++) {
 const milkStatusBtn = document.querySelector(".button-milk-action-select");
 const milkChange = document.querySelector(".milk-mode-div");
 milkStatusBtn.addEventListener("click", milkChangeActive);
-  function milkChangeActive() {
-    milkChange.classList.add("milk-mode-div-active")
-    const milkRemove = document.querySelector(".milk-mode-remove");
-    const milkToTanker = document.querySelector(".milk-mode-tanker");
-    const milkClose = document.querySelector(".milk-mode-close");
-    milkRemove.onclick = function () {
-      milkChange.classList.remove("milk-mode-div-active")
-    }
-    milkToTanker.onclick = function () {
-      milkChange.classList.remove("milk-mode-div-active")
-    }
-    milkClose.onclick = function () {
-      milkChange.classList.remove("milk-mode-div-active")
-    }
+function milkChangeActive() {
+  milkChange.classList.add("milk-mode-div-active")
+  const milkRemove = document.querySelector(".milk-mode-remove");
+  const milkToTanker = document.querySelector(".milk-mode-tanker");
+  const milkClose = document.querySelector(".milk-mode-close");
+  milkRemove.onclick = function () {
+    milkChange.classList.remove("milk-mode-div-active")
   }
+  milkToTanker.onclick = function () {
+    milkChange.classList.remove("milk-mode-div-active")
+  }
+  milkClose.onclick = function () {
+    milkChange.classList.remove("milk-mode-div-active")
+  }
+}
 
 
 
@@ -364,4 +364,3 @@ function next() {
 
 
 
-  

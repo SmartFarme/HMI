@@ -2849,38 +2849,32 @@ option {
     text-align: center;
 }
 
-.do-not-milk-mode {
+.do-not-milk-mode, .do-not-milk-mode-btn {
     background-image: url(../svg/do-not-milk.svg);
     image-rendering: optimizeSpeed;
-    background-size: 29px;
+    background-size: 26px;
 }
 
-.remove-cup-mode {
+.remove-cup-mode, .remove-cup-mode-btn {
     background-image: url(../svg/remove-cup.svg);
     image-rendering: optimizeSpeed;
-    background-size: 29px;
+    background-size: 20px;
 }
 
-.milk-flow-mode {
+.milk-flow-mode, .milk-flow-mode-btn {
     background-image: url(../svg/milk-flow.svg);
     image-rendering: optimizeSpeed;
-    background-size: 39px;
+    background-size: 46px;
 }
 
-.cancel-acr-mode {
+.cancel-acr-mode, .cancel-acr-mode-btn {
     background-image: url(../svg/cancel-acr.svg);
     image-rendering: optimizeSpeed;
-    background-size: 39px;
-}
-
-.cancel-acr-mode {
-    background-image: url(../svg/cancel-acr.svg);
-    image-rendering: optimizeSpeed;
-    background-size: 39px;
+    background-size: 50px;
 }
 
 .milk-cup-mode-close {
     background-image: url(../svg/cancel.svg);
     image-rendering: optimizeSpeed;
-    background-size: 39px;
+    background-size: 60px;
 }
