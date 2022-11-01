@@ -958,6 +958,10 @@ body {
     margin-left: -3px;
 }
 
+.mnem {
+    background-color: #d1d1d1;
+}
+
 .side-bar-button,
 .button {
     display: block;
@@ -2755,12 +2759,12 @@ option {
 
 .change-mode-content,
 .milk-mode-content {
-    width: 316px;
+    border-radius: 10px;
+    width: 308px;
     margin: auto;
-    height: 140px;
-    padding: 12px;
+    height: 120px;
+    padding: 20px;
     border: solid 3px #2A569A;
-    border-radius: 4px;
     display: none;
     position: fixed;
     position: absolute;
@@ -2783,7 +2787,6 @@ option {
     border: solid #2A569A;
     border-radius: 5px;
     background-color: white;
-    margin-top: 20px;
     text-align: center;
 }
 
@@ -2819,12 +2822,12 @@ option {
 }
 
 .gr-cup-milk-mode-content {
-    width: 528px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 496px;
     margin: auto;
-    height: 140px;
-    padding: 12px;
+    height: 120px;
     border: solid 3px #2A569A;
-    border-radius: 4px;
     display: none;
     position: fixed;
     position: absolute;
@@ -2845,7 +2848,6 @@ option {
     border: solid #2A569A;
     border-radius: 5px;
     background-color: white;
-    margin-top: 20px;
     text-align: center;
 }
 
