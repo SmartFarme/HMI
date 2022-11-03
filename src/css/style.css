@@ -1003,6 +1003,16 @@ body {
     background-size: 60px;
 }
 
+.arm-close {
+    background-image: url(../svg/cancel.svg);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    image-rendering: pixelated;
+    background-size: 60px;
+}
+
 .milk-search {
     background-image: url(../svg/details.svg);
     position: absolute;
@@ -2121,13 +2131,46 @@ button.cup-button:disabled {
     background-color: rgb(255, 255, 255, .66);
 }
 
+.main-div-mnem {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Cera-bold;
+    z-index: 3;
+    background-color: rgb(255, 255, 255, .66);
+}
+
+.main-div-mnem-active {
+    display: flex;
+}
+
 .main-content {
     height: 526px;
     width: 335px;
     background: #f9f9f9;
-    border: solid #2A569A;
+    border: solid #2a569a;
     border-radius: 10px;
     padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 4;
+}
+
+.main-content-mnem {
+    height: 470px;
+    width: 400px;
+    background: #d1d1d1;
+    border: solid #2A569A;
+    border-radius: 10px;
     position: absolute;
     top: 0;
     right: 0;
@@ -2496,8 +2539,24 @@ button.cup-button:disabled {
     background-size: 60px;
 }
 
-.configuration-cancel {
+
+.configuration-cancel, 
+.klapan-mode-close {
     background-image: url(../svg/cancel.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.klapan-mode-off {
+    background-image: url(../svg/klapan-off.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.klapan-mode-on {
+    background-image: url(../svg/klapan-on.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60px;
@@ -2511,6 +2570,10 @@ option {
 
 .configuration-button:not(:first-child) {
     margin-left: 10px;
+}
+
+.klapan-black {
+    fill: #000000;
 }
 
 .sel {
@@ -2719,13 +2782,12 @@ option {
 }
 
 .change-sampler-content {
-    width: 210px;
+    width: 214px;
     margin: auto;
-    height: 140px;
-    padding: 12px;
+    height: 120px;
+    padding: 20px;
     border: solid 3px #2A569A;
-    border-radius: 4px;
-    display: none;
+    border-radius: 10px;
     position: fixed;
     position: absolute;
     left: 0;
@@ -2738,7 +2800,8 @@ option {
 }
 
 .change-mode-div,
-.milk-mode-div {
+.milk-mode-div,
+.klapan-mode-div {
     background-color: rgb(255, 255, 255, .66);
     display: none;
     position: absolute;
@@ -2753,12 +2816,14 @@ option {
 }
 
 .change-mode-div-active,
-.milk-mode-div-active {
+.milk-mode-div-active,
+.klapan-mode-div-active {
     display: block;
 }
 
 .change-mode-content,
-.milk-mode-content {
+.milk-mode-content,
+.klapan-mode-content {
     border-radius: 10px;
     width: 308px;
     margin: auto;
@@ -2778,7 +2843,8 @@ option {
 }
 
 .change-mode-button,
-.milk-mode-button {
+.milk-mode-button,
+.klapan-mode-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2799,7 +2865,6 @@ option {
     border: solid #2A569A;
     border-radius: 5px;
     background-color: white;
-    margin-top: 20px;
     text-align: center;
 }
 
@@ -2879,4 +2944,12 @@ option {
     background-image: url(../svg/cancel.svg);
     image-rendering: optimizeSpeed;
     background-size: 60px;
+}
+
+.klapan-white {
+    fill: #ffffff;
+}
+
+.stop-art {
+    display: none;
 }

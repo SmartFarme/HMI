@@ -201,6 +201,43 @@ for (let i = 0; i < grCupStatusBtn.length; i++) {
   }
 }
 
+
+
+
+const klapanStatusButton = document.querySelectorAll(".klapan");
+const klapanStatusChange = document.querySelector(".klapan-mode-div");
+for (let i = 0; i < klapanStatusButton.length; i++) {
+  klapanStatusButton[i].addEventListener("click", klapanChangeActive);
+  function klapanChangeActive() {
+    klapanStatusChange.classList.add("klapan-mode-div-active")
+    let klapanTr = Array.from(klapanStatusButton[i].querySelectorAll(".klapan-tr"))
+    const klapanModeOff = document.querySelector(".klapan-mode-off");
+    const klapanModeOn = document.querySelector(".klapan-mode-on");
+    const klapanModeClose = document.querySelector(".klapan-mode-close");
+    klapanModeOff.onclick = function () {
+      klapanStatusChange.classList.remove("klapan-mode-div-active")
+      klapanTr.forEach(klapanTriangle => {
+        klapanTriangle.classList.add("klapan-black");
+        klapanTriangle.classList.remove("klapan-white");
+      });
+    }
+    klapanModeOn.onclick = function () {
+      klapanStatusChange.classList.remove("klapan-mode-div-active")
+      klapanTr.forEach(klapanTriangle => {
+        klapanTriangle.classList.remove("klapan-black");
+        klapanTriangle.classList.add("klapan-white");
+      });
+    }
+    klapanModeClose.onclick = function () {
+      klapanStatusChange.classList.remove("klapan-mode-div-active")
+    }
+  }
+}
+
+
+
+
+
 const milkStatusBtn = document.querySelector(".button-milk-action-select");
 const milkChange = document.querySelector(".milk-mode-div");
 milkStatusBtn.addEventListener("click", milkChangeActive);
@@ -362,5 +399,12 @@ function next() {
   startCountdown();
 }
 
-
-
+const schemeArmButton = document.querySelector(".scheme-arm")
+const schemeMainDiv = document.querySelector(".main-div-mnem")
+  schemeArmButton.onclick = function () {
+    schemeMainDiv.classList.add("main-div-mnem-active")
+  }
+const armDivClose = document.querySelector(".arm-close")
+armDivClose.onclick = function () {
+  schemeMainDiv.classList.remove("main-div-mnem-active")
+}
