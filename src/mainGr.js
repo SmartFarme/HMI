@@ -98,7 +98,7 @@ const config = {
 
 
     options: {
-      
+      animation: false,
       elements: {
         point:{
             radius: 0
@@ -144,7 +144,7 @@ const config2 = {
   type: 'line',
   data: data_2,
   options: {
-    
+    animation: false,
     elements: {
       point:{
           radius: 0

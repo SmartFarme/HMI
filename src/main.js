@@ -79,15 +79,15 @@ let time = setInterval(function () {
 
 const sidetouch = Array.from(document.querySelectorAll(".sidetouch"));
 for (let i = 0; i < sidetouch.length; i++) {
-  sidetouch[i].addEventListener("touchstart", e => {
+  sidetouch[i].addEventListener("mousedown", e => {
     sidetouch[i].classList.add("bluc");
     console.log("Start")
   })
-  sidetouch[i].addEventListener("touchend", e => {
+  sidetouch[i].addEventListener("mouseup", e => {
     sidetouch[i].classList.remove("bluc");
     console.log("End")
   })
-  sidetouch[i].addEventListener("touchover", e => {
+  sidetouch[i].addEventListener("mouseout", e => {
     sidetouch[i].classList.remove("bluc");
     console.log("Over")
   })

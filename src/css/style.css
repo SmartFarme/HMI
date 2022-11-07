@@ -43,6 +43,8 @@ button:hover {
     justify-content: center;
     text-align: center !important;
     padding-bottom: 1px;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 .grid-cell-centered {
@@ -959,7 +961,7 @@ body {
 }
 
 .mnem {
-    background-color: #d1d1d1;
+    background-color: white;
 }
 
 .side-bar-button,
@@ -2043,6 +2045,10 @@ button.cup-button:disabled {
 .input-button {
     font-family: Cera-regular;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
 }
 
 
@@ -2141,6 +2147,7 @@ button.cup-button:disabled {
     right: 0;
     bottom: 0;
     font-family: Cera-bold;
+    backdrop-filter: blur(2px);
     z-index: 3;
     background-color: rgb(255, 255, 255, .66);
 }
@@ -2168,7 +2175,7 @@ button.cup-button:disabled {
 .main-content-mnem {
     height: 470px;
     width: 400px;
-    background: #d1d1d1;
+    background: white;
     border: solid #2A569A;
     border-radius: 10px;
     position: absolute;
@@ -2925,19 +2932,19 @@ option {
 .remove-cup-mode, .remove-cup-mode-btn {
     background-image: url(../svg/remove-cup.svg);
     image-rendering: optimizeSpeed;
-    background-size: 20px;
+    background-size: 19px;
 }
 
 .milk-flow-mode, .milk-flow-mode-btn {
     background-image: url(../svg/milk-flow.svg);
     image-rendering: optimizeSpeed;
-    background-size: 46px;
+    background-size: 35px;
 }
 
 .cancel-acr-mode, .cancel-acr-mode-btn {
     background-image: url(../svg/cancel-acr.svg);
     image-rendering: optimizeSpeed;
-    background-size: 50px;
+    background-size: 47px;
 }
 
 .milk-cup-mode-close {
