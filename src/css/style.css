@@ -58,13 +58,19 @@ button:hover {
     --ag-odd-row-background-color: #dddddd;
     --ag-selected-row-foreground-color: white;
     --ag-selected-row-background-color: #25be2c;
-    --ag-row-hover-color: #494949;
 
     --ag-header-column-separator-display: block;
     --ag-header-column-separator-height: 100%;
     --ag-header-column-separator-width: 2px;
     --ag-header-column-separator-color: #494949;
+}
 
+.white-row {
+    --ag-row-hover-color: white;
+}
+
+.gray-row {
+    --ag-row-hover-color: #dddddd;
 }
 
 .ag-row-selected {
@@ -1405,7 +1411,7 @@ body {
 .milk-mode-tanker {
     background-image: url(../svg/milk-backet.svg);
     image-rendering: pixelated;
-    background-size: 50px;
+    background-size: 46px;
     background-position: center;
     background-repeat: no-repeat;
 }
