@@ -43,7 +43,7 @@ button:hover {
     justify-content: center;
     text-align: center !important;
     padding-bottom: 1px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -1869,7 +1869,7 @@ button.cup-button:disabled {
 
 .scheme {
     background-image: url(../svg/tab-input-outputtest-white.svg);
-    background-size: 39px;
+    background-size: 45px;
     image-rendering: pixelated;
     padding: 7px;
     padding-left: 8px;
@@ -2141,6 +2141,7 @@ button.cup-button:disabled {
     font-family: Cera-bold;
     z-index: 3;
     background-color: rgb(255, 255, 255, .66);
+    backdrop-filter: blur(2px);
 }
 
 .main-div-mnem {
@@ -2758,11 +2759,6 @@ option {
     flex-wrap: wrap;
 }
 
-.bluc {
-    background-color: #2A569A;
-    transition: 0.3s;
-}
-
 
 
 
@@ -2779,6 +2775,7 @@ option {
 .change-sampler-div {
     display: none;
     background-color: rgb(255, 255, 255, .66);
+    backdrop-filter: blur(2px);
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -2814,9 +2811,11 @@ option {
 
 .change-mode-div,
 .milk-mode-div,
-.klapan-mode-div {
+.klapan-mode-div,
+.select-mode-div {
     background-color: rgb(255, 255, 255, .66);
     display: none;
+    backdrop-filter: blur(2px);
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -2830,13 +2829,15 @@ option {
 
 .change-mode-div-active,
 .milk-mode-div-active,
-.klapan-mode-div-active {
+.klapan-mode-div-active,
+.select-mode-div-active {
     display: block;
 }
 
 .change-mode-content,
 .milk-mode-content,
-.klapan-mode-content {
+.klapan-mode-content,
+.select-mode-content {
     border-radius: 10px;
     width: 308px;
     margin: auto;
@@ -2857,7 +2858,8 @@ option {
 
 .change-mode-button,
 .milk-mode-button,
-.klapan-mode-button {
+.klapan-mode-button,
+.select-mode-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2867,6 +2869,15 @@ option {
     border-radius: 5px;
     background-color: white;
     text-align: center;
+}
+
+.select-mode-button {
+    font-size: 14px;
+    font-family: Cera-regular;
+}
+
+.sel {
+    font-family: Cera-regular;
 }
 
 .change-sampler-button {
@@ -2884,6 +2895,7 @@ option {
 .gr-cup-milk-mode-div {
     display: none;
     background-color: rgb(255, 255, 255, .66);
+    backdrop-filter: blur(2px);
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -2965,4 +2977,9 @@ option {
 
 .stop-art {
     display: none;
+}
+
+.bluc {
+    background-color: #2A569A;
+    transition: 0.3s;
 }

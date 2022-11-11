@@ -238,6 +238,8 @@ for (let i = 0; i < klapanStatusButton.length; i++) {
 
 
 
+
+
 const milkStatusBtn = document.querySelector(".button-milk-action-select");
 const milkChange = document.querySelector(".milk-mode-div");
 milkStatusBtn.addEventListener("click", milkChangeActive);
@@ -257,7 +259,27 @@ function milkChangeActive() {
   }
 }
 
-
+const selectBtn = document.querySelector(".sel");
+  const selectChange = document.querySelector(".select-mode-div");
+  selectBtn.addEventListener("click", selectChangeActive);
+    function selectChangeActive() {
+      selectChange.classList.add("select-mode-div-active")
+      const selectNote = document.querySelector(".select-note");
+      const selectSimple = document.querySelector(".select-simple");
+      const selectDitail = document.querySelector(".select-ditail");
+      selectNote.onclick = function () {
+        selectChange.classList.remove("select-mode-div-active")
+        selectBtn.innerHTML=selectNote.innerHTML
+      }
+      selectSimple.onclick = function () {
+        selectChange.classList.remove("select-mode-div-active")
+        selectBtn.innerHTML=selectSimple.innerHTML
+      }
+      selectDitail.onclick = function () {
+        selectChange.classList.remove("select-mode-div-active")
+        selectBtn.innerHTML=selectDitail.innerHTML
+      }
+    }
 
 
 const localProgress = document.querySelector(".acid-local-progress-inner");
