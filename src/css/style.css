@@ -2593,17 +2593,13 @@ option {
 .sel {
     font-family: Cera-light;
     text-align-last: center;
-    border: #494949 solid;
+    border: #2A569A solid;
     margin-left: 6px;
     padding: auto;
 }
 
 .option {
     text-align-last: center;
-}
-
-.configuration-item-button:hover {
-    border: #2A569A solid;
 }
 
 .block select {
@@ -2981,5 +2977,6 @@ option {
 
 .bluc {
     background-color: #2A569A;
+    border: solid 3px #2A569A;
     transition: 0.3s;
 }

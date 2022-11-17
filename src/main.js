@@ -201,7 +201,7 @@ for (let i = 0; i < grCupStatusBtn.length; i++) {
   }
 }
 
-
+rect63402-7-8-8-0-5-9-4-8-9-2
 
 
 const klapanStatusButton = document.querySelectorAll(".klapan");
