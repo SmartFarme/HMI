@@ -202,7 +202,7 @@ document
   function onClickButton1() {
     if (g < 50) {
      
-        // データを追加
+      
     list.push({
         pref: `${list.length}`,
         patients: data1[g],
@@ -236,7 +236,6 @@ document
         patients8: data8[g],
       });
       g++;
-      // チャートを更新
       updateChart();
       updateChart2();
     } else if ( g >= 50) {
