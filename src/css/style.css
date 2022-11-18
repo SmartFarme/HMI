@@ -1868,12 +1868,13 @@ button.cup-button:disabled {
 }
 
 .scheme {
-    background-image: url(../svg/tab-input-outputtest-white.svg);
-    background-size: 45px;
-    image-rendering: pixelated;
-    padding: 7px;
-    padding-left: 8px;
-    padding-right: 6px;
+    font-family: Cera-regular;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .scheme-container {
@@ -1881,7 +1882,13 @@ button.cup-button:disabled {
 }
 
 .untab__navigation .scheme-container .untab_active {
-    background-image: url(../svg/tab-input-outputtest-blue.svg);
+    font-family: Cera-regular;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color: #2A569A;
+    font-weight: 600;
 }
 
 .calibration {
@@ -2595,7 +2602,8 @@ option {
     text-align-last: center;
     border: #2A569A solid;
     margin-left: 6px;
-    padding: auto;
+    padding-bottom: 1px;
+    padding-right: 1px;
 }
 
 .option {
@@ -2943,6 +2951,16 @@ option {
     background-size: 26px;
 }
 
+.buttonsOfGr {
+    display: flex;
+}
+
+.demoGr, .stopGr {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+}
+
 .remove-cup-mode, .remove-cup-mode-btn {
     background-image: url(../svg/remove-cup.svg);
     image-rendering: optimizeSpeed;
@@ -2950,9 +2968,11 @@ option {
 }
 
 .milk-flow-mode, .milk-flow-mode-btn {
+    background-origin: content-box;
     background-image: url(../svg/milk-flow.svg);
     image-rendering: optimizeSpeed;
     background-size: 35px;
+    padding-left: 10px;
 }
 
 .cancel-acr-mode, .cancel-acr-mode-btn {
@@ -2976,7 +2996,7 @@ option {
 }
 
 .bluc {
-    background-color: #2A569A;
+    background-color: #d4ddeb;
     border: solid 3px #2A569A;
     transition: 0.3s;
 }

@@ -79,15 +79,15 @@ let time = setInterval(function () {
 
 const sidetouch = Array.from(document.querySelectorAll(".sidetouch"));
 for (let i = 0; i < sidetouch.length; i++) {
-  sidetouch[i].addEventListener("mousedown", e => {
+  sidetouch[i].addEventListener("touchstart", e => {
     sidetouch[i].classList.add("bluc");
     console.log("Start")
   })
-  sidetouch[i].addEventListener("mouseup", e => {
+  sidetouch[i].addEventListener("touchend", e => {
     sidetouch[i].classList.remove("bluc");
     console.log("End")
   })
-  sidetouch[i].addEventListener("mouseout", e => {
+  sidetouch[i].addEventListener("touchover", e => {
     sidetouch[i].classList.remove("bluc");
     console.log("Over")
   })
@@ -233,6 +233,36 @@ for (let i = 0; i < klapanStatusButton.length; i++) {
 }
 
 
+
+const klapanPrStatusButton = document.querySelectorAll(".klapan-pr");
+const klapanPrStatusChange = document.querySelector(".klapan-mode-div");
+for (let i = 0; i < klapanPrStatusButton.length; i++) {
+  klapanPrStatusButton[i].addEventListener("click", klapanPrChangeActive);
+  function klapanPrChangeActive() {
+    klapanStatusChange.classList.add("klapan-mode-div-active")
+    let klapanPr = Array.from(document.querySelectorAll(".klapan-pr-tr"))
+    const klapanPrModeOff = document.querySelector(".klapan-mode-off");
+    const klapanPrModeOn = document.querySelector(".klapan-mode-on");
+    const klapanPrModeClose = document.querySelector(".klapan-mode-close");
+    klapanPrModeOff.onclick = function () {
+      klapanStatusChange.classList.remove("klapan-mode-div-active")
+      klapanPr.forEach(klapanPrTriangle => {
+        klapanPrTriangle.classList.add("klapan-black");
+        klapanPrTriangle.classList.remove("klapan-white");
+      });
+    }
+    klapanPrModeOn.onclick = function () {
+      klapanStatusChange.classList.remove("klapan-mode-div-active")
+      klapanPr.forEach(klapanPrTriangle => {
+        klapanPrTriangle.classList.remove("klapan-black");
+        klapanPrTriangle.classList.add("klapan-white");
+      });
+    }
+    klapanPrModeClose.onclick = function () {
+      klapanStatusChange.classList.remove("klapan-mode-div-active")
+    }
+  }
+}
 
 
 

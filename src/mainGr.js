@@ -1,11 +1,11 @@
-const list: { pref: string; patients: number }[] = [];
-const list2: { pref2: string; patients2: number }[] = [];
-const list3: { pref3: string; patients3: number }[] = [];
-const list4: { pref4: string; patients4: number }[] = [];
-const list5: { pref5: string; patients5: number }[] = [];
-const list6: { pref6: string; patients6: number }[] = [];
-const list7: { pref7: string; patients7: number }[] = [];
-const list8: { pref8: string; patients8: number }[] = [];
+let list: { pref: string; patients: number }[] = [];
+let list2: { pref2: string; patients2: number }[] = [];
+let list3: { pref3: string; patients3: number }[] = [];
+let list4: { pref4: string; patients4: number }[] = [];
+let list5: { pref5: string; patients5: number }[] = [];
+let list6: { pref6: string; patients6: number }[] = [];
+let list7: { pref7: string; patients7: number }[] = [];
+let list8: { pref8: string; patients8: number }[] = [];
 let g = 0;
 const data1 = [0, 0, 0, 0, 0, 0, 2, 4, 6, 8, 12, 18, 28, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 34, 34, 36, 32, 36, 36, 36, 36, 36, 28, 24, 22, 15, 10, 10, 0, 0];
 const data2 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 8, 12, 20, 22, 24, 30, 30, 30, 30, 30, 32, 32, 32, 30, 30, 30, 34, 34, 36, 36, 38, 34, 32, 30, 30, 30, 30, 30, 30, 28, 28, 28, 22, 20, 20, 20, 12, 4, 2, 0];
@@ -163,7 +163,7 @@ const config2 = {
         beginAtZero: true,
         ticks: {
           // forces step size to be 50 units
-          stepSize: 10
+          stepSize: 1
         }
       },
       x: {
@@ -198,6 +198,10 @@ const barChart2 = new Chart(
 document
   .querySelector(`.demoGr`)
   .addEventListener(`click`, startGr);
+
+  document
+  .querySelector(`.stopGr`)
+  .addEventListener(`click`, stopGr);
 
   function onClickButton1() {
     if (g < 50) {
@@ -296,4 +300,19 @@ document
 
   function startGr() {
     grInterval = setInterval(onClickButton1, 1000)
+  }
+
+  function stopGr() {
+    clearInterval(grInterval);
+    g=0;
+    list=[];
+    list2=[];
+    list3=[];
+    list4=[];
+    list5=[];
+    list6=[];
+    list7=[];
+    list8=[];
+    updateChart();
+    updateChart2();
   }
