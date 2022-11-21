@@ -296,13 +296,18 @@ document
     barChart2.update();
   }
 
+  let onStart = false;
   let grInterval;
 
   function startGr() {
+    if (!onStart) {
     grInterval = setInterval(onClickButton1, 1000)
+    onStart = true;
+    }
   }
 
   function stopGr() {
+    onStart = false;
     clearInterval(grInterval);
     g=0;
     list=[];

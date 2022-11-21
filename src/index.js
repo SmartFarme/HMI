@@ -16,10 +16,18 @@ const createWindow = () => {
     height: 768,
     frame: false,
     fullscreen: false,
+<<<<<<< HEAD
    
+=======
+    autoHideMenuBar: true,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    }
+>>>>>>> 5c7b8c4a5da80ce41a45772c37be280276c233f5
   });
 
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
