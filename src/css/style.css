@@ -1875,6 +1875,7 @@ button.cup-button:disabled {
     font-size: 23px;
     color: #ffffff;
     font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .scheme-container {
@@ -1889,6 +1890,7 @@ button.cup-button:disabled {
     font-size: 23px;
     color: #2A569A;
     font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .calibration {
