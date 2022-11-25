@@ -90,7 +90,7 @@
           </div>
         </div>
         <!-- Состояния "Домашней" вкладки -->
-        <div class="tab__content">
+        <div class="tab__content tab-content-home">
           <div class="status-wait home-status">
             <div class="status-weit-icon-bar">
               <div class="status-wait-icon home-status-icon "></div>
@@ -282,7 +282,6 @@
                   <div class="status-icon-dry status-icon" id="acid-9"></div>
                 </div>
               </div>
-              <button class="demo-start">Demo Start</button>
             </div>
           </div>
 
@@ -305,7 +304,7 @@
                     <div class="global-progress-title">Общий прогресс</div>
                     <div class="status-cleaning-progress-bar-global pump-global">
                       <div class="progress-child value-progress">
-                        Промывка кислотная
+                        Промывка щелочная
                       </div>
                       <div class="alkaline-stage progress-child global-stage-time">
                         0:00
@@ -362,7 +361,7 @@
                   <div class="status-icon-dry status-icon" id="alkaline-9"></div>
                 </div>
               </div>
-              <button class="demo-start">Demo Start</button>
+              
             </div>
           </div>
 
@@ -373,6 +372,12 @@
                 <div class="status-cleaning-bar half-rising-bar">
                   <div class="progress-bars half-rising-progress-bar">
                     <div class="local-progress-title">Прогресс этапа:</div>
+                    <div class="half-stage progress-child value-progress">
+                      Подготовка
+                    </div>
+                    <div class="half-stage progress-child local-stage-time">
+                      0:00
+                    </div>
                     <div class="status-cleaning-progress-bar-local pump-local"></div>
                     <div class="global-progress-title">Общий прогресс:</div>
                     <div class="status-cleaning-progress-bar-global pump-global"></div>
@@ -933,6 +938,7 @@
      transform="matrix(0.01259921,0,0,-0.01259921,77.863193,29.012467)"
      fill="#000000"
            stroke="none"
+           display="none"
            shape-rendering="geometricPrecision"
            id="g3803"><path
              d="M 0,920 C 0,893 3,890 30,890 H 60 V 465 C 60,53 61,39 80,20 95,5 113,0 150,0 c 37,0 55,5 70,20 19,19 20,33 20,445 v 425 h 30 30 V 773 656 l 30,29 c 29,28 30,31 30,127 0,120 -11,138 -90,138 -37,0 -55,-5 -70,-20 -19,-19 -20,-33 -20,-445 V 60 h -30 -30 v 425 c 0,412 -1,426 -20,445 C 87,943 67,950 40,950 2,950 0,948 0,920 Z"
@@ -1021,7 +1027,7 @@
          stroke="none"
          shape-rendering="geometricPrecision"
          id="g66061"
-         style="display:inline"><path
+         style="display:none"><path
            d="m 39216.39,-24097.106 c -18,-18 -20,-33 -20,-140 0,-116 1,-122 25,-144 l 25,-23 v -302 c 0,-320 2,-332 49,-375 17,-15 21,-31 21,-81 0,-34 -3,-64 -6,-67 -3,-3 -80,14 -172,38 -92,24 -177,44 -190,44 -44,0 -99,-37 -121,-83 -20,-42 -21,-57 -21,-462 0,-398 1,-421 20,-460 13,-26 34,-49 59,-63 39,-22 42,-22 588,-22 h 550 l 33,22 c 63,43 74,69 78,176 l 4,97 77,23 c 169,52 315,170 384,312 59,122 69,174 68,351 -1,146 0,157 20,175 47,43 49,55 49,375 v 302 l 25,23 c 24,22 25,28 25,144 0,164 4,160 -178,160 -189,0 -182,6 -182,-160 0,-119 2,-131 20,-142 19,-12 20,-24 20,-311 0,-327 2,-342 59,-389 l 31,-27 v -128 c 0,-142 -15,-222 -57,-311 -32,-68 -109,-153 -178,-197 -46,-29 -153,-75 -175,-75 -6,0 -10,38 -10,88 0,82 2,90 26,113 35,32 79,121 93,187 6,29 11,117 11,196 0,133 1,144 21,162 46,40 49,66 49,378 v 295 l 25,25 c 24,24 25,31 25,134 0,95 -3,113 -21,136 -20,26 -21,26 -165,26 -189,0 -184,4 -184,-159 0,-114 1,-120 25,-142 l 25,-24 v -305 c 0,-287 1,-307 20,-338 11,-18 31,-38 45,-44 24,-11 25,-14 25,-118 0,-103 -12,-197 -31,-247 l -9,-25 -33,29 c -25,22 -56,34 -139,52 -89,20 -107,27 -112,45 -3,11 -6,73 -6,137 0,114 0,116 25,127 14,6 34,26 45,44 19,31 20,51 20,337 v 303 l 25,30 c 23,27 25,37 25,137 0,94 -3,112 -21,135 -20,26 -21,26 -162,26 -78,0 -147,-4 -153,-8 -25,-17 -34,-56 -34,-156 0,-97 2,-107 25,-134 l 25,-30 v -291 c 0,-245 3,-297 16,-331 9,-22 25,-45 35,-51 17,-9 19,-23 19,-134 0,-69 -3,-125 -6,-125 -5,0 -162,39 -246,61 l -38,10 v 82 c 0,82 0,82 35,110 20,16 38,42 44,65 7,21 11,157 11,327 0,279 1,291 20,303 18,11 20,23 20,142 0,166 7,160 -182,160 -125,0 -140,-2 -158,-20 z"
            id="path66053" /><path
            d="m 38386.39,-25330.106 -35,-12 -3,-317 -2,-316 44,-17 c 35,-14 67,-16 148,-13 57,3 115,11 131,18 l 27,13 v 314 313 l -27,12 c -40,17 -240,21 -283,5 z"
@@ -1864,6 +1870,7 @@
              y="13.230242" /></g></g><g
          inkscape:groupmode="layer"
          id="layer2"
+         display="none"
          inkscape:label="Слой 2"><image
          shape-rendering="geometricPrecision"
            x="103.38499"
@@ -1895,6 +1902,15 @@
                   <button class="klapan-mode-button sidetouch klapan-mode-close"></button>
                 </div>
               </div>
+
+              <div class="pump-mode-div">
+                <div class="pump-mode-content">
+                  <button class="pump-mode-button sidetouch pump-mode-off"></button>
+                  <button class="pump-mode-button sidetouch pump-mode-on"></button>
+                  <button class="pump-mode-button sidetouch pump-mode-close"></button>
+                </div>
+              </div>
+
               <svg
    width="840"
    height="570"
@@ -2293,6 +2309,7 @@
        d="M 80.469494 278.6649 L 81.469494 278.6649 L 81.469494 251.6649 L 109.96949 251.6649 L 109.96949 245.6649 L 109.96949 240.6649 L 109.96949 205.38169 L 103.96949 205.38169 L 103.96949 240.6649 L 103.96949 245.6649 L 89.469494 245.6649 L 89.469494 240.6649 L 89.469494 205.38169 L 83.469494 205.38169 L 83.469494 240.6649 L 83.469494 245.6649 L 69.469494 245.6649 L 69.469494 240.6649 L 69.469494 205.38169 L 63.469494 205.38169 L 63.469494 240.6649 L 63.469494 245.6649 L 48.969494 245.6649 L 48.969494 240.6649 L 48.969494 205.38169 L 42.969494 205.38169 L 42.969494 205.38169 L 42.969494 240.6649 L 42.969494 245.6649 L 42.969494 251.6649 L 71.469494 251.6649 L 71.469494 278.6649 L 72.469492 278.66489 " /><g
        id="g29835-6"
        inkscape:label="Насос"
+       class="pump"
        shape-rendering="geometricPrecision"
        transform="translate(135.75971,-209.51792)"
        style="fill:#ffffff;fill-opacity:1"><circle
@@ -2303,7 +2320,8 @@
          r="19.046518"
          inkscape:label="path25976" /><path
          sodipodi:type="star"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         class="pump-tr pump-black"
+         style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="path29841-7"
          inkscape:flatsided="true"
          sodipodi:sides="3"
@@ -2323,6 +2341,7 @@
        transform="translate(158.3291,-261.72685)" /><g
        id="g29835"
        inkscape:label="Насос"
+       class="pump"
        shape-rendering="geometricPrecision"
        style="opacity:1;fill:#ffffff;fill-opacity:1"
        transform="translate(10.608742,0.36393166)"><circle
@@ -2333,8 +2352,9 @@
          r="19.046518"
          inkscape:label="path25976" /><path
          sodipodi:type="star"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="path29841"
+         class="pump-tr pump-black"
          inkscape:flatsided="true"
          sodipodi:sides="3"
          sodipodi:cx="210.00743"
@@ -2349,6 +2369,7 @@
          inkscape:transform-center-x="-4.0918922" /></g><g
        id="g29835-0"
        inkscape:label="Насос"
+       class="pump"
        shape-rendering="geometricPrecision"
        style="fill:#ffffff;fill-opacity:1"
        transform="rotate(89.962941,292.85155,167.10182)"><circle
@@ -2359,8 +2380,9 @@
          r="19.046518"
          inkscape:label="path25976" /><path
          sodipodi:type="star"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="path29841-6"
+         class="pump-tr pump-black"
          inkscape:flatsided="true"
          sodipodi:sides="3"
          sodipodi:cx="210.00743"
@@ -2375,6 +2397,7 @@
          inkscape:transform-center-x="-4.0918922" /></g><g
        id="g29835-66"
        inkscape:label="Насос"
+       class="pump"
        shape-rendering="geometricPrecision"
        style="fill:#ffffff;fill-opacity:1"
        transform="rotate(89.962941,316.8706,191.1364)"><circle
@@ -2385,8 +2408,9 @@
          r="19.046518"
          inkscape:label="path25976" /><path
          sodipodi:type="star"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="path29841-64"
+         class="pump-tr pump-black"
          inkscape:flatsided="true"
          sodipodi:sides="3"
          sodipodi:cx="210.00743"
@@ -2401,6 +2425,7 @@
          inkscape:transform-center-x="-4.0918922" /></g><g
        id="g29835-7"
        inkscape:label="Насос"
+       class="pump"
        shape-rendering="geometricPrecision"
        style="fill:#ffffff;fill-opacity:1"
        transform="rotate(89.973848,340.84198,215.15537)"><circle
@@ -2411,8 +2436,9 @@
          r="19.046518"
          inkscape:label="path25976" /><path
          sodipodi:type="star"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="path29841-8"
+         class="pump-tr pump-black"
          inkscape:flatsided="true"
          sodipodi:sides="3"
          sodipodi:cx="210.00743"
@@ -2427,6 +2453,7 @@
          inkscape:transform-center-x="-4.0918922" /></g><g
        id="g29835-6-4"
        inkscape:label="Насос"
+       class="pump"
        shape-rendering="geometricPrecision"
        transform="rotate(180,277.88729,249.35201)"
        style="fill:none;fill-opacity:1"><circle
@@ -2437,8 +2464,9 @@
          r="19.046518"
          inkscape:label="path25976" /><path
          sodipodi:type="star"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="path29841-7-1"
+         class="pump-tr pump-black"
          inkscape:flatsided="true"
          sodipodi:sides="3"
          sodipodi:cx="210.00743"
@@ -3049,8 +3077,8 @@
        x="-93.689453"
        y="223.96568" /><path
        id="rect63402-7-8-8-0-5-9-4-1-4-8"
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.9997;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 263.89756,28.595523 v 0.998282 h -10.00029 v -10.0003 h 10.00029 v 0 1.00021" /><path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 264.12857,28.921446 v 1.0195 h -9.98984 V 19.7281 h 9.98984 v 0 1.021468" /><path
        id="rect32906"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.99955;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="Труба к предохладителю лево"
@@ -4240,7 +4268,13 @@
            width="1"
            height="9"
            x="74.469482"
-           y="165.5256" /></g></g></svg>
+           y="165.5256" /></g><rect
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.32919;stroke-linecap:round;stroke-dasharray:none"
+           id="rect96274"
+           width="9.3319998"
+           height="4.153882"
+           x="255.85564"
+           y="20.657324" /></g></svg>
 
             </div>
             <!-- Глобальная настройка -->

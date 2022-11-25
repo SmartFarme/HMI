@@ -64,6 +64,69 @@ function toAlarmList() {
   alarmListContent.classList.add("untab__content_active")
 }
 
+const acidClButton = document.querySelector(".acid-cleaning-icon");
+acidClButton.addEventListener("click", toAcidClean);
+function toAcidClean() {
+  const tab = Array.from(document.querySelectorAll(".tab"));
+  tab.forEach(tab => {
+    tab.classList.remove("tab_active")
+  });
+  const homePage = document.querySelector(".home-page");
+  homePage.classList.add("tab_active");
+  const tabContent = Array.from(document.querySelectorAll(".tab__content"));
+  const homeContent = document.querySelector(".tab-content-home");
+  tabContent.forEach(tabContent => { tabContent.classList.remove("tab__content_active") });
+  homeContent.classList.add("tab__content_active");
+  const homeStatus = Array.from(homeContent.querySelectorAll(".home-status"))
+  homeStatus.forEach(homeStatus => {
+    homeStatus.classList.remove("status-active")
+  })
+  const acidCleanPage = homeContent.querySelector(".status-acid");
+  acidCleanPage.classList.add("status-active");
+}
+
+const alkalineClButton = document.querySelector(".alkaline-cleaning-icon");
+alkalineClButton.addEventListener("click", toAlkalineClean);
+function toAlkalineClean() {
+  const tab = Array.from(document.querySelectorAll(".tab"));
+  tab.forEach(tab => {
+    tab.classList.remove("tab_active")
+  });
+  const homePage = document.querySelector(".home-page");
+  homePage.classList.add("tab_active");
+  const tabContent = Array.from(document.querySelectorAll(".tab__content"));
+  const homeContent = document.querySelector(".tab-content-home");
+  tabContent.forEach(tabContent => { tabContent.classList.remove("tab__content_active") });
+  homeContent.classList.add("tab__content_active");
+  const homeStatus = Array.from(homeContent.querySelectorAll(".home-status"))
+  homeStatus.forEach(homeStatus => {
+    homeStatus.classList.remove("status-active")
+  })
+  const alkalineCleanPage = homeContent.querySelector(".status-alkaline");
+  alkalineCleanPage.classList.add("status-active");
+}
+
+const milkButton = document.querySelector(".iodine-valve-icon");
+milkButton.addEventListener("click", toMilk);
+function toMilk() {
+  const tab = Array.from(document.querySelectorAll(".tab"));
+  tab.forEach(tab => {
+    tab.classList.remove("tab_active")
+  });
+  const homePage = document.querySelector(".home-page");
+  homePage.classList.add("tab_active");
+  const tabContent = Array.from(document.querySelectorAll(".tab__content"));
+  const homeContent = document.querySelector(".tab-content-home");
+  tabContent.forEach(tabContent => { tabContent.classList.remove("tab__content_active") });
+  homeContent.classList.add("tab__content_active");
+  const homeStatus = Array.from(homeContent.querySelectorAll(".home-status"))
+  homeStatus.forEach(homeStatus => {
+    homeStatus.classList.remove("status-active")
+  })
+  const milkPage = homeContent.querySelector(".graphics");
+  milkPage.classList.add("status-active");
+}
+
 /// Отображение реального времени на экране приложения. ///
 let time = setInterval(function () {
   let date = new Date();
@@ -232,6 +295,36 @@ for (let i = 0; i < klapanStatusButton.length; i++) {
   }
 }
 
+const pumpStatusButton = document.querySelectorAll(".pump");
+const pumpStatusChange = document.querySelector(".pump-mode-div");
+for (let i = 0; i < pumpStatusButton.length; i++) {
+  pumpStatusButton[i].addEventListener("click", pumpChangeActive);
+  function pumpChangeActive() {
+    pumpStatusChange.classList.add("pump-mode-div-active")
+    let pumpTr = Array.from(pumpStatusButton[i].querySelectorAll(".pump-tr"))
+    const pumpModeOff = document.querySelector(".pump-mode-off");
+    const pumpModeOn = document.querySelector(".pump-mode-on");
+    const pumpModeClose = document.querySelector(".pump-mode-close");
+    pumpModeOff.onclick = function () {
+      pumpStatusChange.classList.remove("pump-mode-div-active")
+      pumpTr.forEach(pumpTriangle => {
+        pumpTriangle.classList.add("pump-black");
+        pumpTriangle.classList.remove("pump-white");
+      });
+    }
+    pumpModeOn.onclick = function () {
+      pumpStatusChange.classList.remove("pump-mode-div-active")
+      pumpTr.forEach(pumpTriangle => {
+        pumpTriangle.classList.remove("pump-black");
+        pumpTriangle.classList.add("pump-white");
+      });
+    }
+    pumpModeClose.onclick = function () {
+      pumpStatusChange.classList.remove("pump-mode-div-active")
+    }
+  }
+}
+
 
 
 const klapanPrStatusButton = document.querySelectorAll(".klapan-pr");
@@ -310,144 +403,144 @@ const selectBtn = document.querySelector(".sel");
     }
 
 
-const localProgress = document.querySelector(".acid-local-progress-inner");
-const globalProgress = document.querySelector(".acid-global-progress-inner");
-const demoStart = document.querySelector(".demo-start");
-const timerLeft = document.querySelector(".timer-count");
-const timerCount = document.querySelector(".local-stage-time");
-const timerCountAll = document.querySelector(".global-stage-time");
-const start = document.querySelector(".demo-start");
-const acid1 = document.getElementById("acid-1");
-const firstA = document.querySelector(".acid-main");
-const stages = Array.from(document.querySelectorAll(".acid-st"));
-const acidStage = document.querySelector(".acid-stage");
-let secondsRemainingAll;
-let secondsRemaining;
-let secondsCount;
-let intervalProgress;
-let intervalAllProgress;
-let intervalHandle;
-let progressAllWidth;
-let i = 0;
+// const localProgress = document.querySelector(".acid-local-progress-inner");
+// const globalProgress = document.querySelector(".acid-global-progress-inner");
+// const demoStart = document.querySelector(".demo-start");
+// const timerLeft = document.querySelector(".timer-count");
+// const timerCount = document.querySelector(".local-stage-time");
+// const timerCountAll = document.querySelector(".global-stage-time");
+// const start = document.querySelector(".demo-start");
+// const acid1 = document.getElementById("acid-1");
+// const firstA = document.querySelector(".acid-main");
+// const stages = Array.from(document.querySelectorAll(".acid-st"));
+// const acidStage = document.querySelector(".acid-stage");
+// let secondsRemainingAll;
+// let secondsRemaining;
+// let secondsCount;
+// let intervalProgress;
+// let intervalAllProgress;
+// let intervalHandle;
+// let progressAllWidth;
+// let i = 0;
 
-let interval = 0;
-let progressWidth = 0;
-let intervalAll = 0;
+// let interval = 0;
+// let progressWidth = 0;
+// let intervalAll = 0;
 
-function tick() {
-  let min = Math.floor(secondsRemaining / 60);
-  let sec = secondsRemaining - (min * 60);
+// function tick() {
+//   let min = Math.floor(secondsRemaining / 60);
+//   let sec = secondsRemaining - (min * 60);
 
-  if (sec >= 10) {
-    sec = sec;
-  }
+//   if (sec >= 10) {
+//     sec = sec;
+//   }
 
-  if (sec < 10) {
-    sec = "0" + sec;
-  }
+//   if (sec < 10) {
+//     sec = "0" + sec;
+//   }
 
-  let timeValue = min.toString() + ":" + sec;
-  timerCount.innerHTML = timeValue
+//   let timeValue = min.toString() + ":" + sec;
+//   timerCount.innerHTML = timeValue
 
-  if (secondsRemaining === 0) {
-    if (i === 8) {
-      clearInterval(intervalProgress);
-    } else {
-      stages[i].classList.remove("current-state")
-      stages[i].classList.remove("current")
-      i++;
-      next();
-    }
-  } else {
-    secondsRemaining--
-    setTimeout(tick, 1000);
-  }
+//   if (secondsRemaining === 0) {
+//     if (i === 8) {
+//       clearInterval(intervalProgress);
+//     } else {
+//       stages[i].classList.remove("current-state")
+//       stages[i].classList.remove("current")
+//       i++;
+//       next();
+//     }
+//   } else {
+//     secondsRemaining--
+//     setTimeout(tick, 1000);
+//   }
 
-}
+// }
 
-function tickAll() {
-  let minAll = Math.floor(secondsRemainingAll / 60);
-  let secAll = secondsRemainingAll - (minAll * 60);
+// function tickAll() {
+//   let minAll = Math.floor(secondsRemainingAll / 60);
+//   let secAll = secondsRemainingAll - (minAll * 60);
 
-  if (secAll >= 10) {
-    secAll = secAll;
-  }
+//   if (secAll >= 10) {
+//     secAll = secAll;
+//   }
 
-  if (secAll < 10) {
-    secAll = "0" + secAll;
-  }
+//   if (secAll < 10) {
+//     secAll = "0" + secAll;
+//   }
 
-  let timeValueAll = minAll.toString() + ":" + secAll;
-  timerCountAll.innerHTML = timeValueAll
+//   let timeValueAll = minAll.toString() + ":" + secAll;
+//   timerCountAll.innerHTML = timeValueAll
 
-  if (secondsRemainingAll === 0) {
-    if (i === 8) {
-      clearInterval(intervalProgress);
-    } else {
-      stages[i].classList.remove("current-state")
-      stages[i].classList.remove("current")
-      i++;
-      next();
-    }
-  } else {
-    secondsRemainingAll--
-    setTimeout(tickAll, 1000);
-  }
-}
+//   if (secondsRemainingAll === 0) {
+//     if (i === 8) {
+//       clearInterval(intervalProgress);
+//     } else {
+//       stages[i].classList.remove("current-state")
+//       stages[i].classList.remove("current")
+//       i++;
+//       next();
+//     }
+//   } else {
+//     secondsRemainingAll--
+//     setTimeout(tickAll, 1000);
+//   }
+// }
 
-function tiltAll() {
-  progressCont.classList.remove("hide");
-  let intervalAll = 0;
-  let countDownAll = setInterval(() => {
-    let progressAllWidth = intervalAll / 90000 * 100;
+// function tiltAll() {
+//   progressCont.classList.remove("hide");
+//   let intervalAll = 0;
+//   let countDownAll = setInterval(() => {
+//     let progressAllWidth = intervalAll / 90000 * 100;
 
-    if (intervalAll < 90000) {
-      globalProgress.style.width = progressAllWidth + "%";
-      intervalAll += 10;
-    } else {
-      clearInterval(countDownAll)
-    }
-  }, 10)
-};
+//     if (intervalAll < 90000) {
+//       globalProgress.style.width = progressAllWidth + "%";
+//       intervalAll += 10;
+//     } else {
+//       clearInterval(countDownAll)
+//     }
+//   }, 10)
+// };
 
-function tilt() {
-  progressWidth = interval / (secondsCount * 1000) * 100;
-  console.log(progressWidth);
-  if (progressWidth < 100) {
-    interval += 10;
-    localProgress.style.width = progressWidth + "%";
-  } else {
-    interval = 0;
-    progressWidth = 0;
-    clearInterval(intervalProgress);
-  }
-}
+// function tilt() {
+//   progressWidth = interval / (secondsCount * 1000) * 100;
+//   console.log(progressWidth);
+//   if (progressWidth < 100) {
+//     interval += 10;
+//     localProgress.style.width = progressWidth + "%";
+//   } else {
+//     interval = 0;
+//     progressWidth = 0;
+//     clearInterval(intervalProgress);
+//   }
+// }
 
-function startCountdown() {
-  let curSt = document.querySelector(".current");
-  let curTime = curSt.querySelector(".stage-time");
-  let curName = curSt.querySelector(".stage-name");
-  acidStage.innerHTML = curName.innerHTML;
-  secondsCount = curTime.innerHTML;
-  secondsRemaining = curTime.innerHTML;
-  tick();
-  intervalProgress = setInterval(tilt, 10)
-}
+// function startCountdown() {
+//   let curSt = document.querySelector(".current");
+//   let curTime = curSt.querySelector(".stage-time");
+//   let curName = curSt.querySelector(".stage-name");
+//   acidStage.innerHTML = curName.innerHTML;
+//   secondsCount = curTime.innerHTML;
+//   secondsRemaining = curTime.innerHTML;
+//   tick();
+//   intervalProgress = setInterval(tilt, 10)
+// }
 
-start.onclick = function () {
-  stages[i].classList.add("current-state")
-  stages[i].classList.add("current")
-  startCountdown();
-  tiltAll();
-  secondsRemainingAll = 90;
-  tickAll();
-};
+// start.onclick = function () {
+//   stages[i].classList.add("current-state")
+//   stages[i].classList.add("current")
+//   startCountdown();
+//   tiltAll();
+//   secondsRemainingAll = 90;
+//   tickAll();
+// };
 
-function next() {
-  stages[i].classList.add("current-state")
-  stages[i].classList.add("current")
-  startCountdown();
-}
+// function next() {
+//   stages[i].classList.add("current-state")
+//   stages[i].classList.add("current")
+//   startCountdown();
+// }
 
 const schemeArmButton = document.querySelector(".scheme-arm")
 const schemeMainDiv = document.querySelector(".main-div-mnem")

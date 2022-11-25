@@ -2564,7 +2564,8 @@ button.cup-button:disabled {
 
 
 .configuration-cancel, 
-.klapan-mode-close {
+.klapan-mode-close,
+.pump-mode-close {
     background-image: url(../svg/cancel.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -2585,6 +2586,20 @@ button.cup-button:disabled {
     background-size: 60px;
 }
 
+.pump-mode-off {
+    background-image: url(../svg/pupm-off.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.pump-mode-on {
+    background-image: url(../svg/pupm-on.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
 option {
     display: block;
     text-align: center;
@@ -2595,7 +2610,8 @@ option {
     margin-left: 10px;
 }
 
-.klapan-black {
+.klapan-black,
+.pump-black {
     fill: #000000;
 }
 
@@ -2818,7 +2834,8 @@ option {
 .change-mode-div,
 .milk-mode-div,
 .klapan-mode-div,
-.select-mode-div {
+.select-mode-div,
+.pump-mode-div {
     background-color: rgb(255, 255, 255, .66);
     display: none;
     backdrop-filter: blur(2px);
@@ -2836,14 +2853,16 @@ option {
 .change-mode-div-active,
 .milk-mode-div-active,
 .klapan-mode-div-active,
-.select-mode-div-active {
+.select-mode-div-active,
+.pump-mode-div-active {
     display: block;
 }
 
 .change-mode-content,
 .milk-mode-content,
 .klapan-mode-content,
-.select-mode-content {
+.select-mode-content,
+.pump-mode-content {
     border-radius: 10px;
     width: 308px;
     margin: auto;
@@ -2865,7 +2884,8 @@ option {
 .change-mode-button,
 .milk-mode-button,
 .klapan-mode-button,
-.select-mode-button {
+.select-mode-button,
+.pump-mode-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2989,7 +3009,8 @@ option {
     background-size: 60px;
 }
 
-.klapan-white {
+.klapan-white,
+.pump-white {
     fill: #ffffff;
 }
 
