@@ -6,7 +6,7 @@
       { headerName: 'Надой (план/факт)', field: 'Фактический / Ожидаемый надой', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
       { headerName: 'ЧВД', field: 'Время доения', width: 80, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
       { headerName: 'Направление молока', field: 'Конечная точка транспортировки молока', width: 190, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Результат', field: 'Результат доения', width: 150, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
+      { headerName: 'Результат', field: 'Результат доения', width: 155, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const milkGridOptions = {
@@ -24,7 +24,6 @@
 
       onGridReady: (event) => { milkRenderDataInTheTable(event.api) },
       rowSelection: 'single',
-      domLayout: 'autoHeight',
       overflow: scroll,
     };
 
@@ -46,7 +45,7 @@
       { headerName: 'Время', field: 'Время начала промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
       { headerName: 'Тип', field: 'Тип промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
       { headerName: 'Продолжительность', field: 'Время промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Результат', field: 'Результат промывки', width: 200, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
+      { headerName: 'Результат', field: 'Результат промывки', width: 205, resizable: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const washGridOptions = {
@@ -58,7 +57,6 @@
     },
       onGridReady: (event) => { washRenderDataInTheTable(event.api) },
       columnDefs: washColumnDefs,
-      domLayout: 'autoHeight',
       rowData: null,
       rowSelection: 'single',
     };
@@ -76,8 +74,8 @@
     }
     const newAlarmColumnDefs = [
       { headerName: 'Время ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Тип ошибки', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Подробности', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
+      { headerName: 'Тип ошибки', field: 'Тип сигнализации', width: 290, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Подробности', field: 'Описание ошибки', width: 290, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const newAlarmGridOptions = {
@@ -86,7 +84,7 @@
             return 'white-row';
         } else 
         return "gray-row"
-    },
+      },
       columnDefs: newAlarmColumnDefs,
       rowData: null,
       rowSelection: 'single',
@@ -107,8 +105,8 @@
 
     const alarmListColumnDefs = [
       { headerName: 'Время ошибки', field: 'Время возникновения ошибки', width: 134, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Тип ошибки', field: 'Тип сигнализации', width: 284, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
-      { headerName: 'Подробности', field: 'Описание ошибки', width: 285, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
+      { headerName: 'Тип ошибки', field: 'Тип сигнализации', width: 290, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
+      { headerName: 'Подробности', field: 'Описание ошибки', width: 290, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' }
     ];
 
     const alarmListGridOptions = {
@@ -119,7 +117,6 @@
         return "gray-row"
     },
       columnDefs: alarmListColumnDefs,
-      domLayout: 'autoHeight',
       rowData: null,
       rowSelection: "multiple",
       onGridReady: (event) => { alarmListRenderDataInTheTable(event.api) }
