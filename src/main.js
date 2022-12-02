@@ -358,7 +358,45 @@ for (let i = 0; i < klapanPrStatusButton.length; i++) {
 }
 
 
-
+const cupStatusButton = document.querySelectorAll(".arm-cup");
+const cupForChangeButton = document.querySelectorAll(".cup");
+const cupStatusChange = document.querySelector(".cup-mode-div");
+for (let i = 0; i < cupStatusButton.length; i++) {
+  cupStatusButton[i].addEventListener("click", cupChangeActive);
+  function cupChangeActive() {
+    cupStatusChange.classList.add("cup-mode-div-active")
+    let armCup = Array.from(cupStatusButton[i].querySelectorAll(".arm-cup-tr"))
+    let cup = Array.from(cupForChangeButton[i].querySelectorAll(".cup-tr"))
+    const cupModeOff = document.querySelector(".cup-mode-off");
+    const cupModeOn = document.querySelector(".cup-mode-on");
+    const cupModeClose = document.querySelector(".cup-mode-close");
+    cupModeOff.onclick = function () {
+      cupStatusChange.classList.remove("cup-mode-div-active")
+      armCup.forEach(cupItem => {
+        cupItem.classList.add("klapan-black");
+        cupItem.classList.remove("klapan-white");
+      });
+      cup.forEach(cupItem => {
+        cupItem.classList.add("klapan-black");
+        cupItem.classList.remove("klapan-white");
+      });
+    }
+    cupModeOn.onclick = function () {
+      cupStatusChange.classList.remove("cup-mode-div-active")
+      armCup.forEach(cupItem => {
+        cupItem.classList.remove("klapan-black");
+        cupItem.classList.add("klapan-white");
+      });
+      cup.forEach(cupItem => {
+        cupItem.classList.remove("klapan-black");
+        cupItem.classList.add("klapan-white");
+      });
+    }
+    cupModeClose.onclick = function () {
+      cupStatusChange.classList.remove("cup-mode-div-active")
+    }
+  }
+}
 
 
 const milkStatusBtn = document.querySelector(".button-milk-action-select");
@@ -542,11 +580,13 @@ const selectBtn = document.querySelector(".sel");
 //   startCountdown();
 // }
 
-const schemeArmButton = document.querySelector(".scheme-arm")
+const schemeArmButton = Array.from(document.querySelectorAll(".scheme-arm"))
 const schemeMainDiv = document.querySelector(".main-div-mnem")
-  schemeArmButton.onclick = function () {
-    schemeMainDiv.classList.add("main-div-mnem-active")
-  }
+  schemeArmButton.forEach(armButton => {
+    armButton.onclick = function () {
+      schemeMainDiv.classList.add("main-div-mnem-active")
+    }
+  });
 const armDivClose = document.querySelector(".arm-close")
 armDivClose.onclick = function () {
   schemeMainDiv.classList.remove("main-div-mnem-active")

@@ -7,6 +7,12 @@
 }
 
 @font-face {
+    font-family: Cera-Medium;
+    src: url(../fonts/CeraPro-Medium.ttf);
+    font-style: normal;
+}
+
+@font-face {
     font-family: Cera-regular;
     src: url(../fonts/CeraPro-Regular.ttf);
     font-style: normal;
@@ -1869,14 +1875,19 @@ button.cup-button:disabled {
 }
 
 .scheme {
-    font-family: Cera-regular;
+    font-family: Cera-Bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 23px;
+    font-size: 24px;
     color: #ffffff;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1px;
+}
+
+.scheme p {
+    width: 58px;
 }
 
 .scheme-container {
@@ -1884,14 +1895,11 @@ button.cup-button:disabled {
 }
 
 .untab__navigation .scheme-container .untab_active {
-    font-family: Cera-regular;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 23px;
+    font-size: 24px;
+    font-family: Cera-Bold;
+    font-weight: 100;
     color: #2A569A;
-    font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
 }
 
 .calibration {
@@ -2566,7 +2574,8 @@ button.cup-button:disabled {
 
 .configuration-cancel, 
 .klapan-mode-close,
-.pump-mode-close {
+.pump-mode-close,
+.cup-mode-close {
     background-image: url(../svg/cancel.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -2582,6 +2591,21 @@ button.cup-button:disabled {
 
 .klapan-mode-on {
     background-image: url(../svg/klapan-on.svg);
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.cup-mode-off {
+    background-image: url(../svg/cup-close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.cup-mode-on {
+    background-image: url(../svg/cup-open.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60px;
@@ -2836,7 +2860,8 @@ option {
 .milk-mode-div,
 .klapan-mode-div,
 .select-mode-div,
-.pump-mode-div {
+.pump-mode-div,
+.cup-mode-div {
     background-color: rgb(255, 255, 255, .66);
     display: none;
     backdrop-filter: blur(2px);
@@ -2855,7 +2880,8 @@ option {
 .milk-mode-div-active,
 .klapan-mode-div-active,
 .select-mode-div-active,
-.pump-mode-div-active {
+.pump-mode-div-active,
+.cup-mode-div-active {
     display: block;
 }
 
@@ -2863,7 +2889,8 @@ option {
 .milk-mode-content,
 .klapan-mode-content,
 .select-mode-content,
-.pump-mode-content {
+.pump-mode-content,
+.cup-mode-content {
     border-radius: 10px;
     width: 308px;
     margin: auto;
@@ -2886,7 +2913,8 @@ option {
 .milk-mode-button,
 .klapan-mode-button,
 .select-mode-button,
-.pump-mode-button {
+.pump-mode-button,
+.cup-mode-button {
     display: flex;
     justify-content: center;
     align-items: center;
