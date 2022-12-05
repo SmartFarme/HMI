@@ -25,14 +25,14 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="11.930303"
-     inkscape:cx="16.889764"
+     inkscape:cx="16.931674"
      inkscape:cy="31.097282"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g29855" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs27649" />
   <g
@@ -42,9 +42,9 @@
     <g
        id="g29855"
        inkscape:label="Стакан"
-       transform="matrix(0.86717765,0,0,0.86717765,-30.527812,-14.54946)">
+       transform="matrix(0.6131872,0.6131872,-0.6131872,0.6131872,-3.3609008,-35.162265)">
       <rect
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="rect14248-2"
          width="4.2333488"
          height="13.229183"
