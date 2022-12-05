@@ -156,6 +156,8 @@ for (let i = 0; i < sidetouch.length; i++) {
   })
 }
 
+
+
 const samplerStatusBtn = document.querySelectorAll(".sampler-status-icon");
 const samplerChange = document.querySelector(".change-sampler-div");
 for (let i = 0; i < samplerStatusBtn.length; i++) {
