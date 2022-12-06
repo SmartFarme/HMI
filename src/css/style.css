@@ -407,11 +407,9 @@ body {
     margin-top: 2px;
     background-origin: padding-box;
     padding: 10px;
-    border-radius: 5px 0 0 5px;
-    cursor: pointer;
+    border-radius: 5px 0 0 5px; 
     background-color: #2a569a;
     border-width: 2px 0 2px 2px;
-    text-align: center;
     display: block;
     width: 85px;
     height: 80px;
