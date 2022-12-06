@@ -253,12 +253,11 @@ body {
 
 .tab {
     border-radius: 5px 5px 0 0;
-    cursor: pointer;
+    
     background-color: #2a569a;
     position: relative;
     border-width: 2px 2px 0;
-    text-align: center;
-    display: block;
+ 
     width: 90px;
     height: 87px;
     background-repeat: no-repeat;
@@ -310,9 +309,6 @@ body {
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 3px;
-    width: 70px;
-    height: 70px;
-    border: solid #2A569A;
 }
 
 .tab__navigation .home .tab_active {
