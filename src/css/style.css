@@ -310,7 +310,9 @@ body {
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 3px;
-    image-rendering: -webkit-optimize-contrast;
+    width: 70px;
+    height: 70px;
+    border: solid #2A569A;
 }
 
 .tab__navigation .home .tab_active {
