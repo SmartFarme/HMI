@@ -367,17 +367,13 @@ for (let i = 0; i < cupStatusButton.length; i++) {
   cupStatusButton[i].addEventListener("click", cupChangeActive);
   function cupChangeActive() {
     cupStatusChange.classList.add("cup-mode-div-active")
-    let armCup = Array.from(cupStatusButton[i].querySelectorAll(".arm-cup-tr"))
     let cup = Array.from(cupForChangeButton[i].querySelectorAll(".cup-tr"))
     const cupModeOff = document.querySelector(".cup-mode-off");
     const cupModeOn = document.querySelector(".cup-mode-on");
     const cupModeClose = document.querySelector(".cup-mode-close");
     cupModeOff.onclick = function () {
       cupStatusChange.classList.remove("cup-mode-div-active")
-      armCup.forEach(cupItem => {
-        cupItem.classList.add("klapan-black");
-        cupItem.classList.remove("klapan-white");
-      });
+      cupStatusButton[i].classList.add("cup-close")
       cup.forEach(cupItem => {
         cupItem.classList.add("klapan-black");
         cupItem.classList.remove("klapan-white");
@@ -385,10 +381,7 @@ for (let i = 0; i < cupStatusButton.length; i++) {
     }
     cupModeOn.onclick = function () {
       cupStatusChange.classList.remove("cup-mode-div-active")
-      armCup.forEach(cupItem => {
-        cupItem.classList.remove("klapan-black");
-        cupItem.classList.add("klapan-white");
-      });
+      cupStatusButton[i].classList.remove("cup-close")
       cup.forEach(cupItem => {
         cupItem.classList.remove("klapan-black");
         cupItem.classList.add("klapan-white");

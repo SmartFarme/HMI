@@ -2636,6 +2636,10 @@ option {
     fill: #000000;
 }
 
+.cup-close{
+    padding-bottom: 10px;
+}
+
 .sel {
     font-family: Cera-light;
     text-align-last: center;
