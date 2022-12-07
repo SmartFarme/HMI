@@ -2571,7 +2571,10 @@ button.cup-button:disabled {
 .configuration-cancel, 
 .klapan-mode-close,
 .pump-mode-close,
-.cup-mode-close {
+.cup-mode-close,
+.brushes-mode-close,
+.brushes-clean-mode-close,
+.pulsator-mode-close {
     background-image: url(../svg/cancel.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -2585,10 +2588,37 @@ button.cup-button:disabled {
     background-size: 60px;
 }
 
+.pulsator-mode-on {
+    background-image: url(../svg/pulsator-on.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.pulsator-mode-off {
+    background-image: url(../svg/pulsator-off.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
 .klapan-mode-on {
     background-image: url(../svg/klapan-on.svg);
     background-position: center;
-    
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.brushes-clean-mode-on {
+    background-image: url(../svg/brushes-clean-on.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.brushes-clean-mode-off {
+    background-image: url(../svg/brushes-clean-off.svg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 60px;
 }
@@ -2602,6 +2632,20 @@ button.cup-button:disabled {
 
 .cup-mode-on {
     background-image: url(../svg/cup-open.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.brushes-mode-off {
+    background-image: url(../svg/brushes-close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.brushes-mode-on {
+    background-image: url(../svg/brushes-open.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60px;
@@ -2732,11 +2776,6 @@ option {
     border: solid 1px #bcbcbc;
 }
 
-
-.hide {
-    display: none;
-}
-
 /* status-numpud */
 
 .numpud-content {
@@ -2861,7 +2900,10 @@ option {
 .klapan-mode-div,
 .select-mode-div,
 .pump-mode-div,
-.cup-mode-div {
+.cup-mode-div,
+.brushes-mode-div,
+.brushes-clean-mode-div,
+.pulsator-mode-div {
     background-color: rgb(255, 255, 255, .66);
     display: none;
     backdrop-filter: blur(2px);
@@ -2881,7 +2923,10 @@ option {
 .klapan-mode-div-active,
 .select-mode-div-active,
 .pump-mode-div-active,
-.cup-mode-div-active {
+.cup-mode-div-active,
+.brushes-mode-div-active,
+.brushes-clean-mode-div-active,
+.pulsator-mode-div-active {
     display: block;
 }
 
@@ -2890,7 +2935,10 @@ option {
 .klapan-mode-content,
 .select-mode-content,
 .pump-mode-content,
-.cup-mode-content {
+.cup-mode-content,
+.brushes-mode-content,
+.brushes-clean-mode-content,
+.pulsator-mode-content {
     border-radius: 10px;
     width: 308px;
     margin: auto;
@@ -2914,7 +2962,10 @@ option {
 .klapan-mode-button,
 .select-mode-button,
 .pump-mode-button,
-.cup-mode-button {
+.cup-mode-button,
+.brushes-mode-button,
+.brushes-clean-mode-button,
+.pulsator-mode-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3038,6 +3089,8 @@ option {
     background-size: 60px;
 }
 
+
+
 .klapan-white,
 .pump-white {
     fill: #ffffff;
@@ -3051,4 +3104,8 @@ option {
     background-color: #d4ddeb;
     border: solid 3px #2A569A;
     transition: 0.3s;
+}
+
+.hide {
+    display: none;
 }

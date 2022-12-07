@@ -327,7 +327,86 @@ for (let i = 0; i < pumpStatusButton.length; i++) {
   }
 }
 
+const brushesStatusButton = document.querySelectorAll(".brushes");
+const brushesStatusChange = document.querySelector(".brushes-mode-div");
+for (let i = 0; i < brushesStatusButton.length; i++) {
+  brushesStatusButton[i].addEventListener("click", brushesChangeActive);
+  function brushesChangeActive() {
+    brushesStatusChange.classList.add("brushes-mode-div-active")
+    let brushesOpen = document.querySelector(".brushes-open")
+    let brushesClose = document.querySelector(".brushes-close")
+    const brushesModeOff = document.querySelector(".brushes-mode-off");
+    const brushesModeOn = document.querySelector(".brushes-mode-on");
+    const brushesModeClose = document.querySelector(".brushes-mode-close");
+    brushesModeOff.onclick = function () {
+      brushesStatusChange.classList.remove("brushes-mode-div-active")
+      brushesOpen.classList.add("hide")
+      brushesClose.classList.remove("hide")
+    }
+    brushesModeOn.onclick = function () {
+      brushesStatusChange.classList.remove("brushes-mode-div-active")
+      brushesOpen.classList.remove("hide")
+      brushesClose.classList.add("hide")
+    }
+    brushesModeClose.onclick = function () {
+      brushesStatusChange.classList.remove("brushes-mode-div-active")
+    }
+  }
+}
 
+const pulsatorStatusButton = document.querySelectorAll(".pulsator");
+const pulsatorStatusChange = document.querySelector(".pulsator-mode-div");
+for (let i = 0; i < pulsatorStatusButton.length; i++) {
+  pulsatorStatusButton[i].addEventListener("click", pulsatorChangeActive);
+  function pulsatorChangeActive() {
+    pulsatorStatusChange.classList.add("pulsator-mode-div-active")
+    let pulsatorOn = document.querySelector(".pulsator-on")
+    let pulsatorOff = document.querySelector(".pulsator-off")
+    const pulsatorModeOff = document.querySelector(".pulsator-mode-off");
+    const pulsatorModeOn = document.querySelector(".pulsator-mode-on");
+    const pulsatorModeClose = document.querySelector(".pulsator-mode-close");
+    pulsatorModeOff.onclick = function () {
+      pulsatorStatusChange.classList.remove("pulsator-mode-div-active")
+      pulsatorOn.classList.add("hide")
+      pulsatorOff.classList.remove("hide")
+    }
+    pulsatorModeOn.onclick = function () {
+      pulsatorStatusChange.classList.remove("pulsator-mode-div-active")
+      pulsatorOn.classList.remove("hide")
+      pulsatorOff.classList.add("hide")
+    }
+    pulsatorModeClose.onclick = function () {
+      pulsatorStatusChange.classList.remove("pulsator-mode-div-active")
+    }
+  }
+}
+
+const brushesCleanStatusButton = document.querySelectorAll(".brushes-clean");
+const brushesCleanStatusChange = document.querySelector(".brushes-clean-mode-div");
+for (let i = 0; i < brushesCleanStatusButton.length; i++) {
+  brushesCleanStatusButton[i].addEventListener("click", brushesCleanChangeActive);
+  function brushesCleanChangeActive() {
+    brushesCleanStatusChange.classList.add("brushes-clean-mode-div-active")
+    let brushesCleanOpen = document.querySelector(".brushes-clean-on")
+    let brushesCleanClose = document.querySelector(".brushes-clean-off")
+    const brushesCleanModeOff = document.querySelector(".brushes-clean-mode-off");
+    const brushesCleanModeOn = document.querySelector(".brushes-clean-mode-on");
+    const brushesCleanModeClose = document.querySelector(".brushes-clean-mode-close");
+    brushesCleanModeOff.onclick = function () {
+      brushesCleanStatusChange.classList.remove("brushes-clean-mode-div-active")
+      brushesCleanOpen.classList.add("hide")
+      brushesCleanClose.classList.remove("hide")
+    }
+    brushesCleanModeOn.onclick = function () {
+      brushesCleanStatusChange.classList.remove("brushes-clean-mode-div-active")
+      brushesCleanOpen.classList.remove("hide")
+      brushesCleanClose.classList.add("hide")
+    }
+    brushesCleanModeClose.onclick = function () {
+      brushesCleanStatusChange.classList.remove("brushes-clean-mode-div-active")
+    }
+  }
+}
 
 const klapanPrStatusButton = document.querySelectorAll(".klapan-pr");
 const klapanPrStatusChange = document.querySelector(".klapan-mode-div");
@@ -362,6 +441,7 @@ for (let i = 0; i < klapanPrStatusButton.length; i++) {
 
 const cupStatusButton = document.querySelectorAll(".arm-cup");
 const cupForChangeButton = document.querySelectorAll(".cup");
+const cupStatusUpButton = document.querySelectorAll(".arm-cup-up");
 const cupStatusChange = document.querySelector(".cup-mode-div");
 for (let i = 0; i < cupStatusButton.length; i++) {
   cupStatusButton[i].addEventListener("click", cupChangeActive);
@@ -373,7 +453,8 @@ for (let i = 0; i < cupStatusButton.length; i++) {
     const cupModeClose = document.querySelector(".cup-mode-close");
     cupModeOff.onclick = function () {
       cupStatusChange.classList.remove("cup-mode-div-active")
-      cupStatusButton[i].classList.add("cup-close")
+      cupStatusButton[i].classList.add("hide")
+      cupStatusUpButton[i].classList.remove("hide")
       cup.forEach(cupItem => {
         cupItem.classList.add("klapan-black");
         cupItem.classList.remove("klapan-white");
@@ -381,7 +462,8 @@ for (let i = 0; i < cupStatusButton.length; i++) {
     }
     cupModeOn.onclick = function () {
       cupStatusChange.classList.remove("cup-mode-div-active")
-      cupStatusButton[i].classList.remove("cup-close")
+      cupStatusButton[i].classList.remove("hide")
+      cupStatusUpButton[i].classList.add("hide")
       cup.forEach(cupItem => {
         cupItem.classList.remove("klapan-black");
         cupItem.classList.add("klapan-white");
@@ -393,6 +475,37 @@ for (let i = 0; i < cupStatusButton.length; i++) {
   }
 }
 
+for (let i = 0; i < cupStatusUpButton.length; i++) {
+  cupStatusUpButton[i].addEventListener("click", cupUpChangeActive);
+  function cupUpChangeActive() {
+    cupStatusChange.classList.add("cup-mode-div-active")
+    let cup = Array.from(cupForChangeButton[i].querySelectorAll(".cup-tr"))
+    const cupModeOff = document.querySelector(".cup-mode-off");
+    const cupModeOn = document.querySelector(".cup-mode-on");
+    const cupModeClose = document.querySelector(".cup-mode-close");
+    cupModeOff.onclick = function () {
+      cupStatusChange.classList.remove("cup-mode-div-active")
+      cupStatusButton[i].classList.add("hide")
+      cupStatusUpButton[i].classList.remove("hide")
+      cup.forEach(cupItem => {
+        cupItem.classList.add("klapan-black");
+        cupItem.classList.remove("klapan-white");
+      });
+    }
+    cupModeOn.onclick = function () {
+      cupStatusChange.classList.remove("cup-mode-div-active")
+      cupStatusButton[i].classList.remove("hide")
+      cupStatusUpButton[i].classList.add("hide")
+      cup.forEach(cupItem => {
+        cupItem.classList.remove("klapan-black");
+        cupItem.classList.add("klapan-white");
+      });
+    }
+    cupModeClose.onclick = function () {
+      cupStatusChange.classList.remove("cup-mode-div-active")
+    }
+  }
+}
 
 const milkStatusBtn = document.querySelector(".button-milk-action-select");
 const milkChange = document.querySelector(".milk-mode-div");
