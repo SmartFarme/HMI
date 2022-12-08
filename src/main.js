@@ -64,9 +64,9 @@ function toAlarmList() {
   alarmListContent.classList.add("untab__content_active")
 }
 
-const acidClButton = document.querySelector(".acid-cleaning-icon");
-acidClButton.addEventListener("click", toAcidClean);
-function toAcidClean() {
+const homeContent = document.querySelector(".tab-content-home");
+
+function closeTabs() {
   const tab = Array.from(document.querySelectorAll(".tab"));
   tab.forEach(tab => {
     tab.classList.remove("tab_active")
@@ -74,59 +74,52 @@ function toAcidClean() {
   const homePage = document.querySelector(".home-page");
   homePage.classList.add("tab_active");
   const tabContent = Array.from(document.querySelectorAll(".tab__content"));
-  const homeContent = document.querySelector(".tab-content-home");
   tabContent.forEach(tabContent => { tabContent.classList.remove("tab__content_active") });
   homeContent.classList.add("tab__content_active");
   const homeStatus = Array.from(homeContent.querySelectorAll(".home-status"))
   homeStatus.forEach(homeStatus => {
     homeStatus.classList.remove("status-active")
-  })
+  })}
+
+const acidClButton = document.querySelector(".acid-cleaning-icon");
+acidClButton.addEventListener("click", closeTabs);
+acidClButton.addEventListener("click", toAcidClean);
+function toAcidClean() {
   const acidCleanPage = homeContent.querySelector(".status-acid");
   acidCleanPage.classList.add("status-active");
 }
 
 const alkalineClButton = document.querySelector(".alkaline-cleaning-icon");
+alkalineClButton.addEventListener("click", closeTabs);
 alkalineClButton.addEventListener("click", toAlkalineClean);
 function toAlkalineClean() {
-  const tab = Array.from(document.querySelectorAll(".tab"));
-  tab.forEach(tab => {
-    tab.classList.remove("tab_active")
-  });
-  const homePage = document.querySelector(".home-page");
-  homePage.classList.add("tab_active");
-  const tabContent = Array.from(document.querySelectorAll(".tab__content"));
-  const homeContent = document.querySelector(".tab-content-home");
-  tabContent.forEach(tabContent => { tabContent.classList.remove("tab__content_active") });
-  homeContent.classList.add("tab__content_active");
-  const homeStatus = Array.from(homeContent.querySelectorAll(".home-status"))
-  homeStatus.forEach(homeStatus => {
-    homeStatus.classList.remove("status-active")
-  })
   const alkalineCleanPage = homeContent.querySelector(".status-alkaline");
   alkalineCleanPage.classList.add("status-active");
 }
 
 const milkButton = document.querySelector(".iodine-valve-icon");
+milkButton.addEventListener("click", closeTabs);
 milkButton.addEventListener("click", toMilk);
 function toMilk() {
-  const tab = Array.from(document.querySelectorAll(".tab"));
-  tab.forEach(tab => {
-    tab.classList.remove("tab_active")
-  });
-  const homePage = document.querySelector(".home-page");
-  homePage.classList.add("tab_active");
-  const tabContent = Array.from(document.querySelectorAll(".tab__content"));
-  const homeContent = document.querySelector(".tab-content-home");
-  tabContent.forEach(tabContent => { tabContent.classList.remove("tab__content_active") });
-  homeContent.classList.add("tab__content_active");
-  const homeStatus = Array.from(homeContent.querySelectorAll(".home-status"))
-  homeStatus.forEach(homeStatus => {
-    homeStatus.classList.remove("status-active")
-  })
   const milkPage = homeContent.querySelector(".graphics");
   milkPage.classList.add("status-active");
 }
 
+const lineRisingButton = document.querySelector(".line-rinsing-icon");
+lineRisingButton.addEventListener("click", closeTabs);
+lineRisingButton.addEventListener("click", toLineRising);
+function toLineRising() {
+  const lineRisingPage = homeContent.querySelector(".status-line-rising");
+  lineRisingPage.classList.add("status-active");
+}
+
+const robotRisingButton = document.querySelector(".robot-rinsing-icon");
+robotRisingButton.addEventListener("click", closeTabs);
+robotRisingButton.addEventListener("click", toRobotRising);
+function toRobotRising() {
+  const robotRisingPage = homeContent.querySelector(".status-robot-rising");
+  robotRisingPage.classList.add("status-active");
+}
 /// Отображение реального времени на экране приложения. ///
 let time = setInterval(function () {
   let date = new Date();
@@ -297,6 +290,45 @@ for (let i = 0; i < klapanStatusButton.length; i++) {
   }
 }
 
+const klapanCupStatusButton = document.querySelectorAll(".cup-klapan");
+const klapanCupStatusChange = document.querySelector(".klapan-mode-div");
+for (let i = 0; i < klapanCupStatusButton.length; i++) {
+  klapanCupStatusButton[i].addEventListener("click", klapanCupChangeActive);
+  function klapanCupChangeActive() {
+    klapanCupStatusChange.classList.add("klapan-mode-div-active")
+    let cup = Array.from(cupForChangeButton[i].querySelectorAll(".cup-tr"))
+    let klapanTr = Array.from(klapanCupStatusButton[i].querySelectorAll(".klapan-tr"))
+    const klapanModeOff = document.querySelector(".klapan-mode-off");
+    const klapanModeOn = document.querySelector(".klapan-mode-on");
+    const klapanModeClose = document.querySelector(".klapan-mode-close");
+    klapanModeOff.onclick = function () {
+      klapanCupStatusChange.classList.remove("klapan-mode-div-active")
+      klapanTr.forEach(klapanTriangle => {
+        klapanTriangle.classList.add("klapan-black");
+        klapanTriangle.classList.remove("klapan-white");
+      });
+      cup.forEach(cupItem => {
+        cupItem.classList.add("klapan-black");
+        cupItem.classList.remove("klapan-white");
+      });
+    }
+    klapanModeOn.onclick = function () {
+      klapanCupStatusChange.classList.remove("klapan-mode-div-active")
+      klapanTr.forEach(klapanTriangle => {
+        klapanTriangle.classList.remove("klapan-black");
+        klapanTriangle.classList.add("klapan-white");
+      });
+      cup.forEach(cupItem => {
+        cupItem.classList.remove("klapan-black");
+        cupItem.classList.add("klapan-white");
+      });
+    }
+    klapanModeClose.onclick = function () {
+      klapanCupStatusChange.classList.remove("klapan-mode-div-active")
+    }
+  }
+}
+
 const pumpStatusButton = document.querySelectorAll(".pump");
 const pumpStatusChange = document.querySelector(".pump-mode-div");
 for (let i = 0; i < pumpStatusButton.length; i++) {
@@ -445,9 +477,9 @@ const cupStatusUpButton = document.querySelectorAll(".arm-cup-up");
 const cupStatusChange = document.querySelector(".cup-mode-div");
 for (let i = 0; i < cupStatusButton.length; i++) {
   cupStatusButton[i].addEventListener("click", cupChangeActive);
+  cupStatusUpButton[i].addEventListener("click", cupChangeActive);
   function cupChangeActive() {
     cupStatusChange.classList.add("cup-mode-div-active")
-    let cup = Array.from(cupForChangeButton[i].querySelectorAll(".cup-tr"))
     const cupModeOff = document.querySelector(".cup-mode-off");
     const cupModeOn = document.querySelector(".cup-mode-on");
     const cupModeClose = document.querySelector(".cup-mode-close");
@@ -455,19 +487,11 @@ for (let i = 0; i < cupStatusButton.length; i++) {
       cupStatusChange.classList.remove("cup-mode-div-active")
       cupStatusButton[i].classList.add("hide")
       cupStatusUpButton[i].classList.remove("hide")
-      cup.forEach(cupItem => {
-        cupItem.classList.add("klapan-black");
-        cupItem.classList.remove("klapan-white");
-      });
     }
     cupModeOn.onclick = function () {
       cupStatusChange.classList.remove("cup-mode-div-active")
       cupStatusButton[i].classList.remove("hide")
       cupStatusUpButton[i].classList.add("hide")
-      cup.forEach(cupItem => {
-        cupItem.classList.remove("klapan-black");
-        cupItem.classList.add("klapan-white");
-      });
     }
     cupModeClose.onclick = function () {
       cupStatusChange.classList.remove("cup-mode-div-active")
@@ -475,37 +499,7 @@ for (let i = 0; i < cupStatusButton.length; i++) {
   }
 }
 
-for (let i = 0; i < cupStatusUpButton.length; i++) {
-  cupStatusUpButton[i].addEventListener("click", cupUpChangeActive);
-  function cupUpChangeActive() {
-    cupStatusChange.classList.add("cup-mode-div-active")
-    let cup = Array.from(cupForChangeButton[i].querySelectorAll(".cup-tr"))
-    const cupModeOff = document.querySelector(".cup-mode-off");
-    const cupModeOn = document.querySelector(".cup-mode-on");
-    const cupModeClose = document.querySelector(".cup-mode-close");
-    cupModeOff.onclick = function () {
-      cupStatusChange.classList.remove("cup-mode-div-active")
-      cupStatusButton[i].classList.add("hide")
-      cupStatusUpButton[i].classList.remove("hide")
-      cup.forEach(cupItem => {
-        cupItem.classList.add("klapan-black");
-        cupItem.classList.remove("klapan-white");
-      });
-    }
-    cupModeOn.onclick = function () {
-      cupStatusChange.classList.remove("cup-mode-div-active")
-      cupStatusButton[i].classList.remove("hide")
-      cupStatusUpButton[i].classList.add("hide")
-      cup.forEach(cupItem => {
-        cupItem.classList.remove("klapan-black");
-        cupItem.classList.add("klapan-white");
-      });
-    }
-    cupModeClose.onclick = function () {
-      cupStatusChange.classList.remove("cup-mode-div-active")
-    }
-  }
-}
+
 
 const milkStatusBtn = document.querySelector(".button-milk-action-select");
 const milkChange = document.querySelector(".milk-mode-div");

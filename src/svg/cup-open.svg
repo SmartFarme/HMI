@@ -25,7 +25,7 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="5.9651515"
-     inkscape:cx="-42.580645"
+     inkscape:cx="-42.413005"
      inkscape:cy="25.14605"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -35,11 +35,6 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs27649" />
-  <path
-     id="path33145"
-     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.00027;stroke-dasharray:none;stroke-opacity:1"
-     d="m 431.72465,60.302072 v -1.000487 h 29.99973 v 1.000487"
-     transform="matrix(0.30164897,0,0,0.30164897,-126.81649,-3.3902917)" />
   <g
      inkscape:label="Слой 1"
      inkscape:groupmode="layer"
@@ -47,7 +42,7 @@
     <g
        id="g9356-2"
        inkscape:label="Стакан"
-       transform="matrix(0.30164897,0,0,0.30164897,-126.81649,-1.1007487)"
+       transform="matrix(0.34726563,0,0,0.34726563,-147.19457,-2.7526294)"
        style="fill:none;fill-opacity:1">
       <rect
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.00027;stroke-dasharray:none;stroke-opacity:1"
@@ -56,6 +51,11 @@
          height="29.999735"
          x="441.72464"
          y="21.711761" />
+      <path
+         id="path33145"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.00027;stroke-dasharray:none;stroke-opacity:1"
+         d="m 431.72465,60.302072 v -1.000487 h 29.99973 v 1.000487"
+         transform="translate(-9.6690752e-7,-7.5900906)" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.36643;stroke-linecap:butt;stroke-opacity:1"
          id="rect28843-5"

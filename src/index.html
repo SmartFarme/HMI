@@ -139,7 +139,7 @@
             </div>
           </div>
 
-          <div class="graphics home-status status-active">
+          <div class="graphics home-status">
             <div class="graphics-container">
               <div class="graphics-left-bar">
                 <div class="graphics-tanker-container">
@@ -187,16 +187,102 @@
             </div>
           </div>
 
-          <div class="status-pump home-status">
+          <div class="status-pump-acid home-status">
             <div class="clean-container">
               <div class="icon-and-progress-status">
                 <div class="status-pump-icon home-status-icon"></div>
                 <div class="status-cleaning-bar pumps-bar">
                   <div class="progress-bars pumps-progress-bar">
-                    <div class="local-progress-title">Прогресс этапа:</div>
-                    <div class="status-cleaning-progress-bar-local pump-local"></div>
-                    <div class="global-progress-title">Общий прогресс:</div>
-                    <div class="status-cleaning-progress-bar-global pump-global"></div>
+                    <div class="local-progress-title">Прогресс этапа</div>
+                    <div class="status-cleaning-progress-bar-local pump-local">
+                      <div class="pump-stage progress-child value-progress">
+                        Холодная промывка
+                      </div>
+                      <div class="alkaline-stage progress-child local-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-local-progress-inner"></div>
+                    </div>
+                    <div class="global-progress-title">Общий прогресс</div>
+                    <div class="status-cleaning-progress-bar-global pump-global">
+                      <div class="progress-child value-progress">
+                        Подача кислоты
+                      </div>
+                      <div class="alkaline-stage progress-child global-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-global-progress-inner"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="status-cleaning-icons pumps-icons">
+                <div class="status-icon-cold status-icon current-state"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-pump-alkaline home-status">
+            <div class="clean-container">
+              <div class="icon-and-progress-status">
+                <div class="status-pump-icon home-status-icon"></div>
+                <div class="status-cleaning-bar pumps-bar">
+                  <div class="progress-bars pumps-progress-bar">
+                    <div class="local-progress-title">Прогресс этапа</div>
+                    <div class="status-cleaning-progress-bar-local pump-local">
+                      <div class="pump-stage progress-child value-progress">
+                        Холодная промывка
+                      </div>
+                      <div class="alkaline-stage progress-child local-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-local-progress-inner"></div>
+                    </div>
+                    <div class="global-progress-title">Общий прогресс</div>
+                    <div class="status-cleaning-progress-bar-global pump-global">
+                      <div class="progress-child value-progress">
+                        Подача щелочи
+                      </div>
+                      <div class="alkaline-stage progress-child global-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-global-progress-inner"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="status-cleaning-icons pumps-icons">
+                <div class="status-icon-cold status-icon current-state"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-pump-peracetic home-status">
+            <div class="clean-container">
+              <div class="icon-and-progress-status">
+                <div class="status-pump-icon home-status-icon"></div>
+                <div class="status-cleaning-bar pumps-bar">
+                  <div class="progress-bars pumps-progress-bar">
+                    <div class="local-progress-title">Прогресс этапа</div>
+                    <div class="status-cleaning-progress-bar-local pump-local">
+                      <div class="pump-stage progress-child value-progress">
+                        Холодная промывка
+                      </div>
+                      <div class="alkaline-stage progress-child local-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-local-progress-inner"></div>
+                    </div>
+                    <div class="global-progress-title">Общий прогресс</div>
+                    <div class="status-cleaning-progress-bar-global pump-global">
+                      <div class="progress-child value-progress">
+                        Подача надуксусной кислоты
+                      </div>
+                      <div class="alkaline-stage progress-child global-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-global-progress-inner"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -294,7 +380,7 @@
                     <div class="local-progress-title">Прогресс этапа</div>
                     <div class="status-cleaning-progress-bar-local pump-local">
                       <div class="alkaline-stage progress-child value-progress">
-                        Промывка стаканов доильных
+                        Подготовка
                       </div>
                       <div class="alkaline-stage progress-child local-stage-time">
                         0:00
@@ -365,22 +451,32 @@
             </div>
           </div>
 
-          <div class="status-half-rising home-status">
+          <div class="status-robot-rising home-status">
             <div class="clean-container">
               <div class="icon-and-progress-status">
                 <div class="status-half-rising-icon home-status-icon"></div>
                 <div class="status-cleaning-bar half-rising-bar">
                   <div class="progress-bars half-rising-progress-bar">
-                    <div class="local-progress-title">Прогресс этапа:</div>
-                    <div class="half-stage progress-child value-progress">
-                      Подготовка
+                    <div class="local-progress-title">Прогресс этапа</div>
+                    <div class="status-cleaning-progress-bar-local pump-local">
+                      <div class="alkaline-stage progress-child value-progress">
+                        Промывка стаканов доильных
+                      </div>
+                      <div class="alkaline-stage progress-child local-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-local-progress-inner"></div>
                     </div>
-                    <div class="half-stage progress-child local-stage-time">
-                      0:00
+                    <div class="global-progress-title">Общий прогресс</div>
+                    <div class="status-cleaning-progress-bar-global pump-global">
+                      <div class="progress-child value-progress">
+                        Ополаскивание УДР
+                      </div>
+                      <div class="half-stage progress-child global-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child alkaline-global-progress-inner"></div>
                     </div>
-                    <div class="status-cleaning-progress-bar-local pump-local"></div>
-                    <div class="global-progress-title">Общий прогресс:</div>
-                    <div class="status-cleaning-progress-bar-global pump-global"></div>
                   </div>
                 </div>
               </div>
@@ -395,16 +491,32 @@
             </div>
           </div>
 
-          <div class="status-full-rising home-status">
+          <div class="status-line-rising home-status">
             <div class="clean-container">
               <div class="icon-and-progress-status">
                 <div class="status-full-rising-icon home-status-icon"></div>
-                <div class="status-cleaning-bar full-rising-bar">
-                  <div class="progress-bars full-rising-progress-bar">
-                    <div class="local-progress-title">Прогресс этапа:</div>
-                    <div class="status-cleaning-progress-bar-local pump-local"></div>
-                    <div class="global-progress-title">Общий прогресс:</div>
-                    <div class="status-cleaning-progress-bar-global pump-global"></div>
+                <div class="status-cleaning-bar acid-bar">
+                  <div class="progress-bars acid-progress-bar">
+                    <div class="local-progress-title">Прогресс этапа</div>
+                    <div class="status-cleaning-progress-bar-local pump-local">
+                      <div class="acid-stage progress-child value-progress">
+                        Подготовка
+                      </div>
+                      <div class="acid-stage progress-child local-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child acid-local-progress-inner"></div>
+                    </div>
+                    <div class="global-progress-title">Общий прогресс</div>
+                    <div class="status-cleaning-progress-bar-global pump-global">
+                      <div class="progress-child value-progress">
+                        Промывка линии
+                      </div>
+                      <div class="acid-stage progress-child global-stage-time">
+                        0:00
+                      </div>
+                      <div class="progress-child acid-global-progress-inner"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1263,8 +1375,8 @@
            id="path87150-4-68-6-2-7"
            inkscape:label="Основание" /></g></g><g
        id="g18633-5-5-2-0-18"
-       inkscape:label="Клапан"
-       class="klapan"
+       inkscape:label="Клапан стакана"
+       class="cup-klapan"
        transform="matrix(0,0.26458333,-0.26458333,0,123.56952,59.482338)"
        style="fill:none;fill-opacity:1;stroke-width:2;stroke-dasharray:none"><path
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1283,7 +1395,7 @@
            style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
            id="path87148-1-4-3-6"
-           class="klapan-tr klapan-black"
+           class="klapan-tr klapan-white"
            shape-rendering="geometricPrecision"
            inkscape:label="Угол" /><path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1297,16 +1409,58 @@
            style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
            id="path87148-6-84-1-9-9"
-           class="klapan-tr klapan-black"
+           class="klapan-tr klapan-white"
            shape-rendering="geometricPrecision"
            inkscape:label="Угол" /><path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.85187,351.46878 v 19.7824"
            id="path87150-4-68-6-2-9"
            inkscape:label="Основание" /></g></g><g
-       id="g18633-5-5-2-0-3"
-       inkscape:label="Клапан"
-       class="klapan"
+           id="g18633-5-5-2-0-18-3"
+           inkscape:label="Клапан распылителя"
+           class="klapan"
+           transform="matrix(0,0.26458333,-0.26458333,0,104.3309,72.711725)"
+           style="fill:none;fill-opacity:1;stroke-width:2;stroke-dasharray:none"><path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+             d="M 69.952335,299.65619 V 288.93126"
+             id="path18623-4-58-2-4-10-9" /><rect
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+             id="rect18625-2-58-0-8-40-6"
+             width="9.7764111"
+             height="7.7764153"
+             x="65.064125"
+             y="282.08292" /><g
+             id="g87158-6-9-0-1-1"
+             transform="translate(-28.36668,-61.96896)"
+             style="fill:#ffffff;fill-opacity:1"
+             inkscape:label="Левый"><path
+               style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
+               id="path87148-1-4-3-6-3"
+               class="klapan-tr klapan-black"
+               shape-rendering="geometricPrecision"
+               inkscape:label="Угол" /><path
+               style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.85187,351.46878 v 19.7824"
+               id="path87150-0-1-0-4-2"
+               inkscape:label="Основание" /></g><g
+             id="g87158-7-8-5-1-01-5"
+             transform="matrix(-1,0,0,1,168.0377,-61.960097)"
+             style="fill:#ffffff;fill-opacity:1;stroke-width:2;stroke-dasharray:none"
+             inkscape:label="Правый"><path
+               style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
+               id="path87148-6-84-1-9-9-4"
+               class="klapan-tr klapan-black"
+               shape-rendering="geometricPrecision"
+               inkscape:label="Угол" /><path
+               style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.85187,351.46878 v 19.7824"
+               id="path87150-4-68-6-2-9-2"
+               inkscape:label="Основание" /></g></g><g
+           id="g18633-5-5-2-0-3"
+           inkscape:label="Клапан стакана"
+       class="cup-klapan"
        transform="matrix(0,0.26458333,-0.26458333,0,111.39868,59.482559)"
        style="fill:none;fill-opacity:1;stroke-width:2;stroke-dasharray:none"><path
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1325,7 +1479,7 @@
            style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
            id="path87148-1-4-3-1"
-           class="klapan-tr klapan-black"
+           class="klapan-tr klapan-white"
            shape-rendering="geometricPrecision"
            inkscape:label="Угол" /><path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1339,7 +1493,7 @@
            style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
            id="path87148-6-84-1-9-6"
-           class="klapan-tr klapan-black"
+           class="klapan-tr klapan-white"
            shape-rendering="geometricPrecision"
            inkscape:label="Угол" /><path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1347,8 +1501,8 @@
            id="path87150-4-68-6-2-2"
            inkscape:label="Основание" /></g></g><g
        id="g18633-5-5-2-0-8"
-       inkscape:label="Клапан"
-       class="klapan"
+       inkscape:label="Клапан стакана"
+       class="cup-klapan"
        transform="matrix(0,0.26458333,-0.26458333,0,99.227847,59.482552)"
        style="fill:none;fill-opacity:1;stroke-width:2;stroke-dasharray:none"><path
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1367,7 +1521,7 @@
            style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
            id="path87148-1-4-3-77"
-           class="klapan-tr klapan-black"
+           class="klapan-tr klapan-white"
            shape-rendering="geometricPrecision"
            inkscape:label="Угол" /><path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1381,7 +1535,7 @@
            style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
            id="path87148-6-84-1-9-36"
-           class="klapan-tr klapan-black"
+           class="klapan-tr klapan-white"
            shape-rendering="geometricPrecision"
            inkscape:label="Угол" /><path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1389,8 +1543,8 @@
            id="path87150-4-68-6-2-99"
            inkscape:label="Основание" /></g></g><g
        id="g18633-5-5-2-0-71"
-       inkscape:label="Клапан"
-       class="klapan"
+       inkscape:label="Клапан стакана"
+       class="cup-klapan"
        transform="matrix(0,0.26458333,-0.26458333,0,87.153719,59.48188)"
        style="fill:none;fill-opacity:1;stroke-width:2;stroke-dasharray:none"><path
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1409,7 +1563,7 @@
            style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
            id="path87148-1-4-3-0"
-           class="klapan-tr klapan-black"
+           class="klapan-tr klapan-white"
            shape-rendering="geometricPrecision"
            inkscape:label="Угол" /><path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1423,7 +1577,7 @@
            style="stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
            id="path87148-6-84-1-9-31"
-           class="klapan-tr klapan-black"
+           class="klapan-tr klapan-white"
            shape-rendering="geometricPrecision"
            inkscape:label="Угол" /><path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1781,7 +1935,7 @@
        class="arm-cup-up hide"
        inkscape:label="Стакан-поднятый"
        transform="translate(0,-7.4083538)"><rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="rect14248-2-4"
          width="4.2333488"
          height="13.229183"
@@ -1862,7 +2016,7 @@
        class="arm-cup-up hide"
        inkscape:label="Стакан-поднятый"
        transform="translate(-12.170749,-15.345622)"><rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="rect14248-2-4-0"
          width="4.2333488"
          height="13.229183"
@@ -1943,7 +2097,7 @@
        class="arm-cup-up hide"
        inkscape:label="Стакан-поднятый"
        transform="translate(-24.341582,-15.345622)"><rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="rect14248-2-4-4"
          width="4.2333488"
          height="13.229183"
@@ -2024,7 +2178,7 @@
        class="arm-cup-up hide"
        inkscape:label="Стакан-поднятый"
        transform="translate(-36.41578,-7.4086393)"><rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.529151;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          id="rect14248-2-4-09"
          width="4.2333488"
          height="13.229183"
@@ -3098,46 +3252,25 @@
          id="rect4347-5"
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.99988;stroke-dasharray:none;stroke-opacity:1"
          d="m 467.48892,47.45093 v 1.00391 h -28.50016 v 5.999998 4.999998 h 6.00003 v -4.999998 h 14.50009 v 4.999998 h 6.00003 v -4.999998 h 14.00008 v 4.999998 h 6.00004 v -4.999998 h 14.50008 v 4.999998 h 6.00003 v 0 -4.999998 -5.999998 h -28.50017 v -1.00391" /><g
-         id="g9356"
+         id="g9356-2"
          inkscape:label="Стакан"
-         class="cup"
-         transform="translate(3.3308714,42.643074)"
-         style="fill:#000000;fill-opacity:1"><rect
+         class="cup scheme-arm"
+         transform="translate(64.254567,42.643022)"
+         style="fill:none;fill-opacity:1"><rect
            style="stroke:#000000;stroke-width:2.00027;stroke-dasharray:none;stroke-opacity:1"
            class="klapan-white cup-tr scheme-arm"
-           id="rect6855"
+           id="rect6855-4"
            width="9.9997311"
            height="29.999735"
            x="433.72464"
            y="26.784683" /><rect
            shape-rendering="geometricPrecision"
-           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.36643;stroke-linecap:butt;stroke-opacity:1"
-           id="rect28843"
-           width="15.999984"
-           height="14"
-           x="430.72452"
-           y="13.928336"
-           ry="4.4897714" /></g><g
-         id="g9356-6"
-         inkscape:label="Стакан"
-         class="cup"
-         transform="translate(23.830871,42.643074)"
-         style="fill:#000000;fill-opacity:1"><rect
-           style="stroke:#000000;stroke-width:2.00027;stroke-dasharray:none;stroke-opacity:1"
-           class="klapan-white cup-tr scheme-arm"
-           id="rect6855-5"
-           width="9.9997311"
-           height="29.999735"
-           x="433.72464"
-           y="26.784683"
-           transform="translate(0)" /><rect
-           shape-rendering="geometricPrecision"
            style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.36643;stroke-linecap:butt;stroke-opacity:1"
-           id="rect28843-48"
+           id="rect28843-5"
            width="15.999984"
            height="14"
            x="430.72452"
-           y="13.928336"
+           y="13.928389"
            ry="4.4897714" /></g><g
          id="g9356-5"
          inkscape:label="Стакан"
@@ -3159,26 +3292,47 @@
            x="430.72452"
            y="13.928389"
            ry="4.4897714" /></g><g
-         id="g9356-2"
-         inkscape:label="Стакан"
-         class="cup scheme-arm"
-         transform="translate(64.254567,42.643022)"
-         style="fill:none;fill-opacity:1"><rect
-           style="stroke:#000000;stroke-width:2.00027;stroke-dasharray:none;stroke-opacity:1"
-           class="klapan-white cup-tr scheme-arm"
-           id="rect6855-4"
-           width="9.9997311"
-           height="29.999735"
-           x="433.72464"
-           y="26.784683" /><rect
-           shape-rendering="geometricPrecision"
-           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.36643;stroke-linecap:butt;stroke-opacity:1"
-           id="rect28843-5"
-           width="15.999984"
-           height="14"
-           x="430.72452"
-           y="13.928389"
-           ry="4.4897714" /></g></g><path
+           id="g9356-6"
+           inkscape:label="Стакан"
+           class="cup"
+           transform="translate(23.830871,42.643074)"
+           style="fill:#000000;fill-opacity:1"><rect
+             style="stroke:#000000;stroke-width:2.00027;stroke-dasharray:none;stroke-opacity:1"
+             class="klapan-white cup-tr scheme-arm"
+             id="rect6855-5"
+             width="9.9997311"
+             height="29.999735"
+             x="433.72464"
+             y="26.784683"
+             transform="translate(0)" /><rect
+             shape-rendering="geometricPrecision"
+             style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.36643;stroke-linecap:butt;stroke-opacity:1"
+             id="rect28843-48"
+             width="15.999984"
+             height="14"
+             x="430.72452"
+             y="13.928336"
+             ry="4.4897714" /></g><g
+           id="g9356"
+           inkscape:label="Стакан"
+           class="cup"
+           transform="translate(3.3308714,42.643074)"
+           style="fill:#000000;fill-opacity:1"><rect
+             style="stroke:#000000;stroke-width:2.00027;stroke-dasharray:none;stroke-opacity:1"
+             class="klapan-white cup-tr scheme-arm"
+             id="rect6855"
+             width="9.9997311"
+             height="29.999735"
+             x="433.72464"
+             y="26.784683" /><rect
+             shape-rendering="geometricPrecision"
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.36643;stroke-linecap:butt;stroke-opacity:1"
+             id="rect28843"
+             width="15.999984"
+             height="14"
+             x="430.72452"
+             y="13.928336"
+             ry="4.4897714" /></g></g><path
        id="rect5912-3"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.00018;stroke-dasharray:none;stroke-opacity:1"
        d="M 80.469494 278.6649 L 81.469494 278.6649 L 81.469494 251.6649 L 109.96949 251.6649 L 109.96949 245.6649 L 109.96949 240.6649 L 109.96949 205.38169 L 103.96949 205.38169 L 103.96949 240.6649 L 103.96949 245.6649 L 89.469494 245.6649 L 89.469494 240.6649 L 89.469494 205.38169 L 83.469494 205.38169 L 83.469494 240.6649 L 83.469494 245.6649 L 69.469494 245.6649 L 69.469494 240.6649 L 69.469494 205.38169 L 63.469494 205.38169 L 63.469494 240.6649 L 63.469494 245.6649 L 48.969494 245.6649 L 48.969494 240.6649 L 48.969494 205.38169 L 42.969494 205.38169 L 42.969494 205.38169 L 42.969494 240.6649 L 42.969494 245.6649 L 42.969494 251.6649 L 71.469494 251.6649 L 71.469494 278.6649 L 72.469492 278.66489 "
@@ -3560,7 +3714,7 @@
        ry="3.0000885"
        shape-rendering="geometricPrecision"
        inkscape:label="Индикатор молока - 3" /><g
-       transform="matrix(0.0116279,0,0,-0.0116279,284.44608,549.90808)"
+       transform="matrix(0.0116279,0,0,-0.0116279,284.44608,550.962)"
        fill="#000000"
        stroke="none"
        id="g45824"
@@ -3596,20 +3750,20 @@
          d="M 1130,885 C 389,822 1,675 0,457 -1,213 461,60 1350,10 c 691,-39 1495,40 1830,180 174,72 260,161 260,267 -2,221 -392,366 -1148,428 -274,23 -240,32 -322,-87 -102,-150 -118,-168 -164,-189 -52,-23 -100,-24 -151,0 -49,22 -80,56 -169,189 l -70,102 -65,-1 c -36,-1 -136,-7 -221,-14 z m 316,-140 c 44,-18 40,-36 -12,-53 -43,-15 -150,-10 -185,8 -73,40 110,81 197,45 z m 723,2 c 71,-25 42,-54 -62,-63 -66,-6 -137,11 -145,34 -11,34 134,54 207,29 z M 1080,657 c 19,-7 35,-19 35,-27 0,-8 -16,-20 -35,-27 -72,-24 -205,-7 -205,27 0,20 58,39 120,39 28,0 66,-5 85,-12 z m 1470,0 c 19,-7 35,-19 35,-27 0,-8 -16,-20 -35,-27 -72,-24 -205,-7 -205,27 0,20 58,39 120,39 28,0 66,-5 85,-12 z M 1424,571 c 92,-22 65,-61 -46,-69 -79,-5 -154,16 -146,40 10,29 119,45 192,29 z m 740,-4 c 53,-16 56,-34 9,-53 -76,-32 -245,-2 -206,37 27,27 132,35 197,16 z M 414,496 c 138,-83 480,-135 1038,-156 186,-8 350,-8 535,0 560,21 901,73 1039,156 39,23 64,32 78,28 40,-12 116,-57 116,-69 0,-37 -224,-116 -453,-160 -329,-62 -555,-80 -1047,-80 -492,0 -718,18 -1047,80 -231,44 -453,123 -453,161 0,11 111,74 130,74 4,0 33,-15 64,-34 z m 1389,3 c 75,-21 18,-68 -83,-68 -97,0 -159,47 -88,68 45,13 125,13 171,0 z"
          id="path45822-4"
          style="fill:#000000;fill-opacity:1;stroke-width:1.032;stroke-dasharray:none" /></g><g
-       transform="matrix(0.0116279,0,0,-0.0116279,387.863,395.03798)"
-       fill="#000000"
-       stroke="none"
-       id="g45824-6-4"
-       style="fill:#000000;fill-opacity:1;stroke-width:1.032;stroke-dasharray:none"
-       shape-rendering="geometricPrecision"
-       inkscape:label="Канализация под охладителем"><path
-         d="m 479.99996,2700.7291 c -65,-44 -86,-120 -52,-188 29,-58 67,-76 180,-83 326,-22 613.99994,-189 792.99994,-460 74,-113 137,-274 151,-387 l 3,-25 -151,-5 c -130,-4 -155,-8 -172,-24 -27,-24 -37,-69 -21,-98 18,-35 429,-639.99997 451,-664.99997 11,-12 31,-24 45,-28 58,-14 73,3 313,354.99997 252,371 258,383 205,435 -23,24 -28,25 -179,25 -85,0 -157,3 -159,8 -8,12 39,184 72,262 91,213 292,417 509,517 100,46 243,82 363,90 110,7 147,22 179,75 39,64 16,151 -50,196 -33,23 -41,24 -145,19 -186,-9 -343,-50 -509,-133 -230,-116 -435,-308 -548,-514 -18,-33 -35,-60 -38,-60 -3,0 -17,24 -32,53 -44,84 -151,218 -238,300 -231,217 -514.99994,339 -824.99994,354 -104,5 -112,4 -145,-19 z"
-         id="path45820-9-95"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.032;stroke-dasharray:none" /><path
-         d="m 1129.9999,927.72913 c -740.99994,-63 -1128.99994205,-210 -1129.9999420516,-428 C -1.0000421,255.72913 460.99996,102.72913 1349.9999,52.729124 c 691,-39 1495,40 1830,180.000006 174,72 260,161 260,267 -2,221 -392,366 -1148,428 -274,23 -240,32 -322,-87 -102,-150 -118,-168 -164,-189 -52,-23 -100,-24 -151,0 -49,22 -80,56 -169,189 l -70,102 -65,-1 c -36,-1 -136,-7 -221,-14 z m 316,-140 c 44,-18 40,-36 -12,-53 -43,-15 -150,-10 -185,8 -73,40 110,81 197,45 z m 723,2 c 71,-25 42,-54 -62,-63 -66,-6 -137,11 -145,34 -11,34 134,54 207,29 z m -1088.9999,-90 c 18.9999,-7 34.9999,-19 34.9999,-27 0,-8 -16,-20 -34.9999,-27 -72,-24 -205.00004,-7 -205.00004,27 0,20 58,39 120,39 28.00004,0 66.00004,-5 85.00004,-12 z m 1469.9999,0 c 19,-7 35,-19 35,-27 0,-8 -16,-20 -35,-27 -72,-24 -205,-7 -205,27 0,20 58,39 120,39 28,0 66,-5 85,-12 z m -1126,-86 c 92,-22 65,-61 -46,-69 -79,-5 -154,16 -146,40 10,29 119,45 192,29 z m 740,-4 c 53,-16 56,-34 9,-53 -76,-32 -245,-2 -206,37 27,27 132,35 197,16 z m -1749.99994,-71 c 138,-83 480,-135 1037.99994,-156 186,-8 350,-8 535,0 560,21 901,73 1039,156 39,23 64,32 78,28 40,-12 116,-57 116,-69 0,-37 -224,-116 -453,-160 -329,-62 -555,-80 -1047,-80 -492,0 -717.9999,18 -1046.99994,80 -231,44 -453,123 -453,161 0,11 111,74 130,74 4,0 33,-15 64,-34 z m 1388.99994,3 c 75,-21 18,-68 -83,-68 -97,0 -159,47 -88,68 45,13 125,13 171,0 z"
-         id="path45822-4-90"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.032;stroke-dasharray:none" /></g><g
-       transform="matrix(0.0116279,0,0,-0.0116279,564.1832,394.60288)"
+         transform="matrix(0.0116279,0,0,-0.0116279,387.863,395.24065)"
+         fill="#000000"
+         stroke="none"
+         id="g45824-6-4"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.032;stroke-dasharray:none"
+         shape-rendering="geometricPrecision"
+         inkscape:label="Канализация под охладителем"><path
+           d="m 479.99996,2700.7291 c -65,-44 -86,-120 -52,-188 29,-58 67,-76 180,-83 326,-22 613.99994,-189 792.99994,-460 74,-113 137,-274 151,-387 l 3,-25 -151,-5 c -130,-4 -155,-8 -172,-24 -27,-24 -37,-69 -21,-98 18,-35 429,-639.99997 451,-664.99997 11,-12 31,-24 45,-28 58,-14 73,3 313,354.99997 252,371 258,383 205,435 -23,24 -28,25 -179,25 -85,0 -157,3 -159,8 -8,12 39,184 72,262 91,213 292,417 509,517 100,46 243,82 363,90 110,7 147,22 179,75 39,64 16,151 -50,196 -33,23 -41,24 -145,19 -186,-9 -343,-50 -509,-133 -230,-116 -435,-308 -548,-514 -18,-33 -35,-60 -38,-60 -3,0 -17,24 -32,53 -44,84 -151,218 -238,300 -231,217 -514.99994,339 -824.99994,354 -104,5 -112,4 -145,-19 z"
+           id="path45820-9-95"
+           style="fill:#000000;fill-opacity:1;stroke-width:1.032;stroke-dasharray:none" /><path
+           d="m 1129.9999,927.72913 c -740.99994,-63 -1128.99994205,-210 -1129.9999420516,-428 C -1.0000421,255.72913 460.99996,102.72913 1349.9999,52.729124 c 691,-39 1495,40 1830,180.000006 174,72 260,161 260,267 -2,221 -392,366 -1148,428 -274,23 -240,32 -322,-87 -102,-150 -118,-168 -164,-189 -52,-23 -100,-24 -151,0 -49,22 -80,56 -169,189 l -70,102 -65,-1 c -36,-1 -136,-7 -221,-14 z m 316,-140 c 44,-18 40,-36 -12,-53 -43,-15 -150,-10 -185,8 -73,40 110,81 197,45 z m 723,2 c 71,-25 42,-54 -62,-63 -66,-6 -137,11 -145,34 -11,34 134,54 207,29 z m -1088.9999,-90 c 18.9999,-7 34.9999,-19 34.9999,-27 0,-8 -16,-20 -34.9999,-27 -72,-24 -205.00004,-7 -205.00004,27 0,20 58,39 120,39 28.00004,0 66.00004,-5 85.00004,-12 z m 1469.9999,0 c 19,-7 35,-19 35,-27 0,-8 -16,-20 -35,-27 -72,-24 -205,-7 -205,27 0,20 58,39 120,39 28,0 66,-5 85,-12 z m -1126,-86 c 92,-22 65,-61 -46,-69 -79,-5 -154,16 -146,40 10,29 119,45 192,29 z m 740,-4 c 53,-16 56,-34 9,-53 -76,-32 -245,-2 -206,37 27,27 132,35 197,16 z m -1749.99994,-71 c 138,-83 480,-135 1037.99994,-156 186,-8 350,-8 535,0 560,21 901,73 1039,156 39,23 64,32 78,28 40,-12 116,-57 116,-69 0,-37 -224,-116 -453,-160 -329,-62 -555,-80 -1047,-80 -492,0 -717.9999,18 -1046.99994,80 -231,44 -453,123 -453,161 0,11 111,74 130,74 4,0 33,-15 64,-34 z m 1388.99994,3 c 75,-21 18,-68 -83,-68 -97,0 -159,47 -88,68 45,13 125,13 171,0 z"
+           id="path45822-4-90"
+           style="fill:#000000;fill-opacity:1;stroke-width:1.032;stroke-dasharray:none" /></g><g
+         transform="matrix(0.0116279,0,0,-0.0116279,564.1832,394.60288)"
        fill="#000000"
        stroke="none"
        id="g45824-6-8"
@@ -4665,62 +4819,62 @@
            d="m 78.85187,351.46878 v 19.7824"
            id="path87150-4-76-8-82"
            inkscape:label="Основание" /></g></g><g
-       id="g18633-5-79-900"
-       inkscape:label="Клапан-3"
-       transform="rotate(-90,355.28927,166.36614)"
-       style="fill:none;fill-opacity:1;stroke-width:2;stroke-dasharray:none"><path
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         d="M 69.952335,299.65619 V 288.93126"
-         id="path18623-4-82-0" /><rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         id="rect18625-2-54-85"
-         width="9.7764111"
-         height="7.7764153"
-         x="65.064125"
-         y="282.08292" /><g
-         id="g87158-42-3"
-         transform="translate(-28.36668,-61.96896)"
-         style="fill:#ffffff;fill-opacity:1"
-         inkscape:label="Левый"><path
-           style="stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-           d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
-           id="path87148-52-0"
-           class="klapan-tr klapan-black"
+           id="g18633-5-79-900"
+           inkscape:label="Клапан-3"
+           transform="rotate(-90,355.37965,166.45652)"
+           style="fill:none;fill-opacity:1;stroke-width:2;stroke-dasharray:none"><path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+             d="M 69.952335,299.65619 V 288.93126"
+             id="path18623-4-82-0" /><rect
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+             id="rect18625-2-54-85"
+             width="9.7764111"
+             height="7.7764153"
+             x="65.064125"
+             y="282.08292" /><g
+             id="g87158-42-3"
+             transform="translate(-28.36668,-61.96896)"
+             style="fill:#ffffff;fill-opacity:1"
+             inkscape:label="Левый"><path
+               style="stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
+               id="path87148-52-0"
+               class="klapan-tr klapan-black"
            shape-rendering="geometricPrecision"
-           inkscape:label="Угол" /><path
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-           d="m 78.85187,351.46878 v 19.7824"
-           id="path87150-54-1"
-           inkscape:label="Основание" /></g><g
-         id="g87158-7-36-66"
-         transform="matrix(-1,0,0,1,168.0377,-61.960097)"
-         style="fill:#ffffff;fill-opacity:1;stroke-width:2;stroke-dasharray:none"
-         inkscape:label="Правый"><path
-           style="stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-           d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
-           id="path87148-6-39-2"
-           class="klapan-tr klapan-black"
+               inkscape:label="Угол" /><path
+               style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.85187,351.46878 v 19.7824"
+               id="path87150-54-1"
+               inkscape:label="Основание" /></g><g
+             id="g87158-7-36-66"
+             transform="matrix(-1,0,0,1,168.0377,-61.960097)"
+             style="fill:#ffffff;fill-opacity:1;stroke-width:2;stroke-dasharray:none"
+             inkscape:label="Правый"><path
+               style="stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
+               id="path87148-6-39-2"
+               class="klapan-tr klapan-black"
            shape-rendering="geometricPrecision"
-           inkscape:label="Угол" /><path
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-           d="m 78.85187,351.46878 v 19.7824"
-           id="path87150-4-76-0"
-           inkscape:label="Основание" /></g><g
-         id="g87158-7-36-3-9"
-         transform="matrix(0,-1,-1,0,431.31232,396.86688)"
-         style="fill:#ffffff;fill-opacity:1;stroke-width:2;stroke-dasharray:none"
-         inkscape:label="Низ"><path
-           style="stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-           d="m 78.851874,351.46878 18.35882,9.8912 -18.35882,9.8912"
-           id="path87148-6-39-7-0"
-           class="klapan-tr klapan-black"
+               inkscape:label="Угол" /><path
+               style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.85187,351.46878 v 19.7824"
+               id="path87150-4-76-0"
+               inkscape:label="Основание" /></g><g
+             id="g87158-7-36-3-9"
+             transform="matrix(0,-1,-1,0,431.31232,396.86688)"
+             style="fill:#ffffff;fill-opacity:1;stroke-width:2;stroke-dasharray:none"
+             inkscape:label="Низ"><path
+               style="stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.85187,351.46878 18.35882,9.8912 -18.35882,9.8912"
+               id="path87148-6-39-7-0"
+               class="klapan-tr klapan-black"
            shape-rendering="geometricPrecision"
-           inkscape:label="Угол" /><path
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-           d="m 78.85187,351.46878 v 19.7824"
-           id="path87150-4-76-8-5"
-           inkscape:label="Основание" /></g></g><g
-       id="g18633-5-6"
+               inkscape:label="Угол" /><path
+               style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+               d="m 78.85187,351.46878 v 19.7824"
+               id="path87150-4-76-8-5"
+               inkscape:label="Основание" /></g></g><g
+           id="g18633-5-6"
        inkscape:label="Клапан"
        class="klapan"
        transform="rotate(90,223.98103,483.28183)"
@@ -5164,8 +5318,16 @@
          width="1"
          height="9"
          x="74.469482"
-         y="165.5256" /></g><g
-         id="g24917"
+         y="165.5256" /><rect
+         style="fill:#3f3f3f;fill-opacity:1;stroke-width:0.990007"
+         id="rect24057"
+         width="4"
+         height="1"
+         x="613.73749"
+         y="158.86691"
+         transform="translate(1.0000041,0.49999363)"
+         inkscape:label="Воздух" /></g><g
+       id="g24917"
          inkscape:label="Стрелка влево"
          transform="translate(-1.3847261,0.08388716)"><path
            id="rect24718"
@@ -5191,7 +5353,55 @@
            inkscape:transform-center-x="1.8941244"
            inkscape:transform-center-y="-1.9929559e-06"
            d="m 350.2631,451.21145 2.28122,3.95119 h -13.12288 l 6.56144,-11.36475 v 0 l 2.28024,3.9495"
-           transform="rotate(30,373.20889,414.39864)" /></g></g></svg>
+           transform="rotate(30,373.20889,414.39864)" /></g><g
+           id="g6972"
+           inkscape:label="Забелители-2"
+           style="fill:#ffffff;fill-opacity:1"><rect
+             style="fill:#ffffff;stroke-width:0.0098179;stroke-opacity:0.784722;paint-order:stroke markers fill;fill-opacity:1"
+             id="rect6867"
+             width="4.2426405"
+             height="4.8913937"
+             x="507.93814"
+             y="457.88364" /><rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.0098179;stroke-opacity:0.784722;paint-order:stroke markers fill"
+             id="rect6867-7"
+             width="4.2426405"
+             height="4.8913937"
+             x="507.93814"
+             y="440.99261" /><rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.0118985;stroke-opacity:0.784722;paint-order:stroke markers fill"
+             id="rect6867-0"
+             width="6.2313786"
+             height="4.8913937"
+             x="505.9494"
+             y="436.10123" /><rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.0098179;stroke-opacity:0.784722;paint-order:stroke markers fill"
+             id="rect6867-5"
+             width="4.2426405"
+             height="4.8913937"
+             x="-476.59363"
+             y="494.31396"
+             transform="rotate(-90)" /><rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.0098179;stroke-opacity:0.784722;paint-order:stroke markers fill"
+             id="rect6867-5-5"
+             width="4.2426405"
+             height="4.8913937"
+             x="-476.59363"
+             y="477.42294"
+             transform="rotate(-90)" /><rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.0098179;stroke-opacity:0.784722;paint-order:stroke markers fill"
+             id="rect6867-5-4"
+             width="4.2426405"
+             height="4.8913937"
+             x="473.1803"
+             y="470.35098" /><rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.00393308;stroke-opacity:0.784722;paint-order:stroke markers fill"
+             id="rect6867-5-54"
+             width="1.9999791"
+             height="1.6652189"
+             x="-433.65033"
+             y="475.76657"
+             transform="rotate(-90)" /></g></g></svg>
 
             </div>
             <!-- Глобальная настройка -->

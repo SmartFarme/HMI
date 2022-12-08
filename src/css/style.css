@@ -2918,6 +2918,11 @@ option {
     z-index: 3;
 }
 
+.cup-mode-div {
+    backdrop-filter: blur(0px);
+    background-color: transparent;
+}
+
 .change-mode-div-active,
 .milk-mode-div-active,
 .klapan-mode-div-active,
