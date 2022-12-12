@@ -459,6 +459,7 @@ body {
     display: none;
 }
 
+
 .status-active {
     display: flex;
 }
@@ -2177,6 +2178,7 @@ button.cup-button:disabled {
     display: flex;
 }
 
+
 .main-content {
     height: 526px;
     width: 335px;
@@ -2296,6 +2298,41 @@ button.cup-button:disabled {
     text-align: left;
     margin-top: 12px;
     margin-right: 5px;
+}
+
+.camera-page {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Cera-bold;
+    z-index: 3;
+    background-color: rgb(255, 255, 255, .66);
+    backdrop-filter: blur(2px);
+}
+
+.camera-page-active {
+    display: block;
+}
+
+.camera-container {
+    height: 586px;
+    width: 586px;
+    background: #ffffff;
+    border: solid #2a569a;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 4;
 }
 
 .into-description {
@@ -2551,7 +2588,23 @@ button.cup-button:disabled {
     margin-top: 7px;
 }
 
-.configuration-button {
+.camera-buttons {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.camera-field {
+    width: 540px;
+    height: 445px;
+    border: #2A569A solid;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.configuration-button,
+.camera-button {
     width: 75px;
     height: 75px;
     display: block;
@@ -2560,7 +2613,25 @@ button.cup-button:disabled {
     border-radius: 5px;
 }
 
-.configuration-done {
+.camera-done {
+    margin-right: 8px;
+}
+
+.camera-page-button {
+    width: 225px;
+    height: 75px;
+    border: solid #2A569A;
+    background-color: #FFF;
+    border-radius: 5px;
+    margin-top: 21px;
+    margin-left: 8px;
+    font-family: Cera-regular;
+    font-size: 18px;
+    text-align: center;
+}
+
+.configuration-done,
+.camera-done {
     background-image: url(../svg/ok.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -2569,6 +2640,7 @@ button.cup-button:disabled {
 
 
 .configuration-cancel, 
+.camera-cancel,
 .klapan-mode-close,
 .pump-mode-close,
 .cup-mode-close,

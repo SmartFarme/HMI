@@ -541,8 +541,15 @@ const selectBtn = document.querySelector(".sel");
         selectBtn.innerHTML=selectDitail.innerHTML
       }
     }
-
-
+const cameraPage = document.querySelector(".camera-page")
+const camera = document.querySelector(".camera-page-button")
+camera.onclick = function () {
+  cameraPage.classList.add("camera-page-active")
+}
+const closeCameraPage = document.querySelector(".camera-cancel")
+closeCameraPage.onclick = function () {
+  cameraPage.classList.remove("camera-page-active")
+}
 // const localProgress = document.querySelector(".acid-local-progress-inner");
 // const globalProgress = document.querySelector(".acid-global-progress-inner");
 // const demoStart = document.querySelector(".demo-start");
