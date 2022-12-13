@@ -120,6 +120,30 @@ function toRobotRising() {
   const robotRisingPage = homeContent.querySelector(".status-robot-rising");
   robotRisingPage.classList.add("status-active");
 }
+
+const acidContainerButton = document.querySelector(".acid-container-icon");
+acidContainerButton.addEventListener("click", closeTabs);
+acidContainerButton.addEventListener("click", toAcidPump);
+function toAcidPump() {
+  const acidPumpPage = homeContent.querySelector(".status-pump-acid");
+  acidPumpPage.classList.add("status-active");
+}
+
+const alkalineContainerButton = document.querySelector(".alkaline-container-icon");
+alkalineContainerButton.addEventListener("click", closeTabs);
+alkalineContainerButton.addEventListener("click", toAlkalinePump);
+function toAlkalinePump() {
+  const AlkalinePumpPage = homeContent.querySelector(".status-pump-alkaline");
+  AlkalinePumpPage.classList.add("status-active");
+}
+
+const peraceticContainerButton = document.querySelector(".peracetic-container-icon");
+peraceticContainerButton.addEventListener("click", closeTabs);
+peraceticContainerButton.addEventListener("click", toPeraceticPump);
+function toPeraceticPump() {
+  const peraceticPumpPage = homeContent.querySelector(".status-pump-peracetic");
+  peraceticPumpPage.classList.add("status-active");
+}
 /// Отображение реального времени на экране приложения. ///
 let time = setInterval(function () {
   let date = new Date();

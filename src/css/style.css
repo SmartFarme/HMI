@@ -1008,7 +1008,7 @@ body {
 .graph-swap {
     background-image: url(../svg/61_charge.svg);
     position: absolute;
-    bottom: 20px;
+    bottom: 14px;
     right: 93px;
     z-index: 2;
     image-rendering: pixelated;
@@ -1253,7 +1253,7 @@ body {
     visibility: hidden;
 }
 
-.line-rinsing-container-icon {
+.peracetic-container-icon {
     background-image: url(../svg/line-pump.svg);
     background-color: #FFF;
     margin-left: 63px;
@@ -1261,6 +1261,46 @@ body {
     image-rendering: pixelated;
     border-width: 3px;
     width: 75px;
+}
+
+.graphs-switch {
+    width: 60px;
+    height: 40px;
+    border: solid #2A569A;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+.graphs-left {
+    position: absolute;
+    top: 185px;
+    left: 356px;
+    background-image: url(../svg/arm-left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 39px;
+}
+
+.graphs-right {
+    position: absolute;
+    top: 185px;
+    left: 796px;
+    background-image: url(../svg/arm-right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 39px;
+}
+
+.gr-tittle  {
+    width: 500px;
+    height: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 6px;
+    font-family: Cera-regular;
+    
 }
 
 .robot-rinsing-bar {
