@@ -621,7 +621,7 @@ document
     barChart4.data.labels = list17.map(
       (item17) => item17.pref17
     );
-    barChart2.data.datasets[4].data = list17.map((item17) => item17.patients17);
+    barChart4.data.datasets[4].data = list17.map((item17) => item17.patients17);
 
     barChart4.update();
   }
