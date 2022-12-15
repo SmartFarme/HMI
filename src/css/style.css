@@ -1271,6 +1271,14 @@ body {
     border-radius: 5px;
 }
 
+.three-graphs {
+    display: none;
+}
+
+.graph-active {
+    display: block;
+}
+
 .graphs-left {
     position: absolute;
     top: 185px;

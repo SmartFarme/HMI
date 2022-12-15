@@ -574,6 +574,30 @@ const closeCameraPage = document.querySelector(".camera-cancel")
 closeCameraPage.onclick = function () {
   cameraPage.classList.remove("camera-page-active")
 }
+
+const buttonNext = document.querySelector(".graphs-right");
+const buttonPrev = document.querySelector(".graphs-left");
+const graphsSlider = Array.from(document.querySelectorAll(".three-graphs"));
+
+buttonNext.onclick = function () {
+  let index = graphsSlider.findIndex(item => item.classList.contains('graph-active'));
+  graphsSlider[index].classList.remove("graph-active");
+  index++
+  if (index == graphsSlider.length) {
+    index = 0;
+  }
+  graphsSlider[index].classList.add('graph-active');
+}
+
+buttonPrev.onclick = function () {
+  let index = graphsSlider.findIndex(item => item.classList.contains('graph-active'));
+  graphsSlider[index].classList.remove("graph-active");
+  index--
+  if (index == -1) {
+    index = graphsSlider.length - 1;
+  }
+  graphsSlider[index].classList.add('graph-active');
+}
 // const localProgress = document.querySelector(".acid-local-progress-inner");
 // const globalProgress = document.querySelector(".acid-global-progress-inner");
 // const demoStart = document.querySelector(".demo-start");
