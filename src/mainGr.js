@@ -34,7 +34,7 @@ const data13 = [1499, 1466, 1543, 1423, 1415, 1534, 1553, 1449, 1599, 1538, 1493
 const data14 = [1503, 1493, 1504, 1414, 1592, 1440, 1407, 1431, 1586, 1422, 1581, 1489, 1597, 1493, 1469, 1599, 1430, 1440, 1406, 1402, 1574, 1587, 1521, 1482, 1574, 1575, 1441, 1515, 1418, 1500, 1593, 1406, 1568, 1563, 1495, 1589, 1513, 1597, 1581, 1595, 1445, 1458, 1458, 1467, 1530, 1566, 1456, 1497, 1554, 1513];
 const data15 = [1474, 1449, 1470, 1515, 1561, 1598, 1544, 1587, 1596, 1498, 1579, 1407, 1588, 1595, 1520, 1428, 1507, 1512, 1567, 1571, 1400, 1528, 1408, 1433, 1464, 1581, 1583, 1486, 1461, 1417, 1563, 1456, 1548, 1434, 1427, 1413, 1474, 1498, 1576, 1570, 1577, 1543, 1448, 1500, 1466, 1482, 1591, 1478, 1454, 1433];
 const data16 = [1459, 1531, 1597, 1550, 1405, 1489, 1489, 1452, 1434, 1430, 1414, 1427, 1486, 1500, 1495, 1484, 1414, 1408, 1408, 1486, 1551, 1420, 1404, 1570, 1534, 1578, 1449, 1457, 1542, 1496, 1562, 1525, 1520, 1427, 1562, 1446, 1438, 1563, 1407, 1484, 1569, 1595, 1401, 1404, 1481, 1451, 1592, 1440, 1574, 1492];
-const data17 = [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500];
+const data17 = [];
 const data = {
         datasets: [
           {
@@ -108,14 +108,6 @@ const data_2 = {
       backgroundColor: '#ffc90e',
       cubicInterpolationMode: 'monotone',
     },
-    {
-      label: '17',
-      data: list17.map((item17) => item17.patients17),
-      borderColor: '#000000',
-      borderWidth: 2,
-      backgroundColor: '#000000',
-      cubicInterpolationMode: 'monotone',
-    }
   ]
 }
 
@@ -169,6 +161,14 @@ const data_3 = {
 const data_4 = {
   datasets: [  
     {
+      label: '17',
+      data: [list17.map((item17) => item17.patients17)],
+      borderColor: '#000000',
+      borderWidth: 3,
+      backgroundColor: '#000000',
+      cubicInterpolationMode: 'monotone',
+    },
+    {
       label: '13',
       data: list13.map((item13) => item13.patients13),
       borderColor: '#22b14c',
@@ -199,14 +199,6 @@ const data_4 = {
       borderColor: '#ffc90e',
       borderWidth: 2,
       backgroundColor: '#ffc90e',
-      cubicInterpolationMode: 'monotone',
-    },
-    {
-      label: '17',
-      data: list17.map((item17) => item17.patients17),
-      borderColor: '#000000',
-      borderWidth: 2,
-      backgroundColor: '#000000',
       cubicInterpolationMode: 'monotone',
     }
   ]
@@ -432,7 +424,8 @@ document
     if (g < 50) {
 
       data00.push((data9[g]+data10[g]+data11[g]+data12[g])/4)
-      console.log(list2)
+      data17.push((data13[g]+data14[g]+data15[g]+data16[g])/4)
+      
       
       list00.push({
         pref00: `${list00.length}`,
@@ -509,14 +502,15 @@ document
       g++;
       updateChart();
       updateChart2();
-      updateChart3();
       updateChart4();
+      updateChart3();
     } else if ( g >= 50) {
         clearInterval(grInterval)
     }
   }
 
   function updateChart() {
+    console.log("check"),
     barChart.data.labels = list.map(
       (item) => item.pref
     );
@@ -541,7 +535,7 @@ document
   }
 
   function updateChart2() {
-
+    console.log("check2"),
     barChart2.data.labels = list5.map(
       (item5) => item5.pref5
     );
@@ -567,7 +561,7 @@ document
   }
 
   function updateChart3() {
-
+    console.log("check3"),
     barChart3.data.labels = list00.map(
       (item00) => item00.pref00
     );
@@ -587,42 +581,42 @@ document
       (item11) => item11.pref11
     );
     barChart3.data.datasets[3].data = list11.map((item11) => item11.patients11);
-  
+
     barChart3.data.labels = list12.map(
       (item12) => item12.pref12
     );
     barChart3.data.datasets[4].data = list12.map((item12) => item12.patients12);
-
+    
     barChart3.update();
   }
 
   function updateChart4() {
-
+    console.log("check4")
     barChart4.data.labels = list13.map(
       (item13) => item13.pref13
     );
-    barChart4.data.datasets[0].data = list13.map((item13) => item13.patients13);
+    barChart4.data.datasets[1].data = list13.map((item13) => item13.patients13);
   
     barChart4.data.labels = list14.map(
       (item14) => item14.pref14
     );
-    barChart4.data.datasets[1].data = list14.map((item14) => item14.patients14);
+    barChart4.data.datasets[2].data = list14.map((item14) => item14.patients14);
   
     barChart4.data.labels = list15.map(
       (item15) => item15.pref15
     );
-    barChart4.data.datasets[2].data = list15.map((item15) => item15.patients15);
-  
+    barChart4.data.datasets[3].data = list15.map((item15) => item15.patients15);
+    
     barChart4.data.labels = list16.map(
       (item16) => item16.pref16
     );
-    barChart4.data.datasets[3].data = list16.map((item16) => item16.patients16);
-
+    barChart4.data.datasets[4].data = list16.map((item16) => item16.patients16);
+   
     barChart4.data.labels = list17.map(
       (item17) => item17.pref17
     );
-    barChart4.data.datasets[4].data = list17.map((item17) => item17.patients17);
-
+    barChart4.data.datasets[0].data = list17.map((item17) => item17.patients17);
+    
     barChart4.update();
   }
 
