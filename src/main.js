@@ -597,7 +597,31 @@ buttonPrev.onclick = function () {
     index = graphsSlider.length - 1;
   }
   graphsSlider[index].classList.add('graph-active');
+  
 }
+
+
+const childProcess = require('child_process');
+
+function execProcess(command) {
+
+    childProcess.exec(command, function(error, stdout, stderr) {
+
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+
+        if (error !== null) {
+            console.log(`error: ${error}`);
+        }
+    });
+}
+
+const reboot = document.querySelector(".off-system");
+
+reboot.onclick = function () {
+  execProcess('sudo reboot');
+}
+
 // const localProgress = document.querySelector(".acid-local-progress-inner");
 // const globalProgress = document.querySelector(".acid-global-progress-inner");
 // const demoStart = document.querySelector(".demo-start");
