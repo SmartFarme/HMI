@@ -601,11 +601,11 @@ buttonPrev.onclick = function () {
 }
 
 
-const childProcess = require('child_process');
+const rebootProcess = require('child_process');
 
-function execProcess(command) {
+function rebotProcess(command) {
 
-    childProcess.exec(command, function(error, stdout, stderr) {
+  rebootProcess.exec(command, function(error, stdout, stderr) {
 
         console.log(`stdout: ${stdout}`);
         console.log(`stderr: ${stderr}`);
@@ -619,9 +619,25 @@ function execProcess(command) {
 const reboot = document.querySelector(".off-system");
 
 reboot.onclick = function () {
-  execProcess('sudo reboot');
+  rebotProcess('sudo :reboot');
 }
 
+
+const remoteProcess = require("child_process");
+
+function remoteFunc() {
+
+  remoteProcess.exec("C:\\Program Files (x86)\\AnyDesk\\AnyDesk.exe", function(error, stdout, stderr) {
+    console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+
+        if (error !== null) {
+            console.log(`error: ${error}`);
+        }
+  })
+}
+
+remoteFunc()
 // const localProgress = document.querySelector(".acid-local-progress-inner");
 // const globalProgress = document.querySelector(".acid-global-progress-inner");
 // const demoStart = document.querySelector(".demo-start");
