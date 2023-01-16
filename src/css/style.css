@@ -1008,8 +1008,8 @@ body {
 .graph-swap {
     background-image: url(../svg/61_charge.svg);
     position: absolute;
-    bottom: 14px;
-    right: 93px;
+    bottom: 2px;
+    right: 2px;
     z-index: 2;
     image-rendering: pixelated;
     background-size: 60px;
@@ -1271,9 +1271,6 @@ body {
     border-radius: 5px;
 }
 
-.three-graphs {
-    display: none;
-}
 
 .graph-active {
     display: block;
@@ -1301,12 +1298,8 @@ body {
 
 .gr-tittle  {
     width: 500px;
-    height: 40px;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-top: 6px;
+    height: 20px;
+    font-size: 20px;
     font-family: Cera-regular;
     
 }
