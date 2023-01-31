@@ -1,119 +1,5 @@
-
-
-/// Код для переключения между вкладками на главной области программы. ///
-
-
-/// Код для кнопок боковой панели. ///
-
-
 /// Код для кнопки перехода к списку ошибок. ///
-const alarmButton = document.querySelector(".alarm-button");
-alarmButton.addEventListener("click", toAlarmList);
-function toAlarmList() {
-  const tab = Array.from(document.querySelectorAll(".tab"));
-  tab.forEach(tab => {
-    tab.classList.remove("tab_active")
-  });
-  const infoPage = document.querySelector(".info-page");
-  infoPage.classList.add("tab_active");
-  const tabContent = Array.from(document.querySelectorAll(".tab__content"));
-  const infoContent = document.querySelector(".tab__content_info");
-  tabContent.forEach(tabContent => { tabContent.classList.remove("tab__content_active") });
-  infoContent.classList.add("tab__content_active");
-  const untab = Array.from(infoContent.querySelectorAll(".untab"));
-  untab.forEach(untab => {
-    untab.classList.remove("untab_active")
-  });
-  const alarmList = infoContent.querySelector(".alarm-statistics");
-  alarmList.classList.add("untab_active");
-  const untabContent = Array.from(infoContent.querySelectorAll(".untab__content"));
-  untabContent.forEach(untabContent => {
-    untabContent.classList.remove("untab__content_active")
-  });
-  const alarmListContent = infoContent.querySelector(".alarm-statistics-content");
-  alarmListContent.classList.add("untab__content_active")
-}
 
-const homeContent = document.querySelector(".tab-content-home");
-
-function closeTabs() {
-  const tab = Array.from(document.querySelectorAll(".tab"));
-  tab.forEach(tab => {
-    tab.classList.remove("tab_active")
-  });
-  const homePage = document.querySelector(".home-page");
-  homePage.classList.add("tab_active");
-  const tabContent = Array.from(document.querySelectorAll(".tab__content"));
-  tabContent.forEach(tabContent => { tabContent.classList.remove("tab__content_active") });
-  homeContent.classList.add("tab__content_active");
-  const homeStatus = Array.from(homeContent.querySelectorAll(".home-status"))
-  homeStatus.forEach(homeStatus => {
-    homeStatus.classList.remove("status-active")
-  })}
-
-const acidClButton = document.querySelector(".acid-cleaning-icon");
-acidClButton.addEventListener("click", closeTabs);
-acidClButton.addEventListener("click", toAcidClean);
-function toAcidClean() {
-  const acidCleanPage = homeContent.querySelector(".status-acid");
-  acidCleanPage.classList.add("status-active");
-}
-
-const alkalineClButton = document.querySelector(".alkaline-cleaning-icon");
-alkalineClButton.addEventListener("click", closeTabs);
-alkalineClButton.addEventListener("click", toAlkalineClean);
-function toAlkalineClean() {
-  const alkalineCleanPage = homeContent.querySelector(".status-alkaline");
-  alkalineCleanPage.classList.add("status-active");
-}
-
-const milkButton = document.querySelector(".iodine-valve-icon");
-milkButton.addEventListener("click", closeTabs);
-milkButton.addEventListener("click", toMilk);
-function toMilk() {
-  const milkPage = homeContent.querySelector(".graphics");
-  milkPage.classList.add("status-active");
-}
-
-const lineRisingButton = document.querySelector(".line-rinsing-icon");
-lineRisingButton.addEventListener("click", closeTabs);
-lineRisingButton.addEventListener("click", toLineRising);
-function toLineRising() {
-  const lineRisingPage = homeContent.querySelector(".status-line-rising");
-  lineRisingPage.classList.add("status-active");
-}
-
-const robotRisingButton = document.querySelector(".robot-rinsing-icon");
-robotRisingButton.addEventListener("click", closeTabs);
-robotRisingButton.addEventListener("click", toRobotRising);
-function toRobotRising() {
-  const robotRisingPage = homeContent.querySelector(".status-robot-rising");
-  robotRisingPage.classList.add("status-active");
-}
-
-const acidContainerButton = document.querySelector(".acid-container-icon");
-acidContainerButton.addEventListener("click", closeTabs);
-acidContainerButton.addEventListener("click", toAcidPump);
-function toAcidPump() {
-  const acidPumpPage = homeContent.querySelector(".status-pump-acid");
-  acidPumpPage.classList.add("status-active");
-}
-
-const alkalineContainerButton = document.querySelector(".alkaline-container-icon");
-alkalineContainerButton.addEventListener("click", closeTabs);
-alkalineContainerButton.addEventListener("click", toAlkalinePump);
-function toAlkalinePump() {
-  const AlkalinePumpPage = homeContent.querySelector(".status-pump-alkaline");
-  AlkalinePumpPage.classList.add("status-active");
-}
-
-const peraceticContainerButton = document.querySelector(".peracetic-container-icon");
-peraceticContainerButton.addEventListener("click", closeTabs);
-peraceticContainerButton.addEventListener("click", toPeraceticPump);
-function toPeraceticPump() {
-  const peraceticPumpPage = homeContent.querySelector(".status-pump-peracetic");
-  peraceticPumpPage.classList.add("status-active");
-}
 /// Отображение реального времени на экране приложения. ///
 let time = setInterval(function () {
   let date = new Date();
@@ -145,7 +31,8 @@ for (let i = 0; i < sidetouch.length; i++) {
 
 
 
-const samplerStatusBtn = document.querySelectorAll(".sampler-status-icon");
+const samplerStatusBtn = $(".sampler-status-icon");
+console.log(samplerStatusBtn)
 const samplerChange = document.querySelector(".change-sampler-div");
 for (let i = 0; i < samplerStatusBtn.length; i++) {
   samplerStatusBtn[i].addEventListener("click", samplerChangeActive);
@@ -564,7 +451,7 @@ function rebotProcess(command) {
 const reboot = document.querySelector(".off-system");
 
 reboot.onclick = function () {
-  rebotProcess('sudo :reboot');
+  rebotProcess('sudo reboot');
 }
 
 

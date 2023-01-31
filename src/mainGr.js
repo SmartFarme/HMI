@@ -1,3 +1,5 @@
+import Chart from "chart.js"
+
 let list: { pref: string; patients: number }[] = [];
 let list2: { pref2: string; patients2: number }[] = [];
 let list3: { pref3: string; patients3: number }[] = [];

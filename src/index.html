@@ -5,11 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HMI</title>
+  
   <link rel="stylesheet" href="css/style.css">
   <title>Data Grid Example</title>
-  <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
   <link rel="stylesheet" href="css/ag-grid.css">
   <link rel="stylesheet" href="css/balham.css">
+  <script src="/node_modules/ag-grid-community/dist/ag-grid-community.js"></script>
 </head>
 
 <body>
@@ -324,7 +325,7 @@
                 </div>
               </div>
               <div class="status-cleaning-icons acid-icons">
-                <div class="acid-1 acid-st">
+                <div class="acid-1 acid-st current-state">
                   <div class="stage-name">Проверка</div>
                   <div class="stage-time">10</div>
                   <div class="status-icon-clean-tanker status-icon" value="20" id="acid-1"></div>
@@ -637,39 +638,39 @@
                 <div class="cl-icon container-icon"></div>
               </div>
               <div class="acid-control-bar">
-                <button class="cl-bar-button sidetouch acid-cleaning-icon"></button>
+                <button class="cl-bar-button clean-nav-button sidetouch acid-cleaning-icon" value="HomePage" id="status-acid"></button>
                 <div class="cl-bar-atention-icon acid-atention atention-active"></div>
                 <div class="cl-date-value">
                   <p>25 августа 9:00</p>
                 </div>
-                <div class="cl-bar-button sidetouch acid-container-icon"></div>
+                <div class="cl-bar-button clean-nav-button sidetouch acid-container-icon" id="status-pump-acid"></div>
               </div>
               <div class="alkaline-control-bar">
-                <button class="cl-bar-button sidetouch alkaline-cleaning-icon"></button>
+                <button class="cl-bar-button clean-nav-button sidetouch alkaline-cleaning-icon" id="status-alkaline"></button>
                 <div class="cl-bar-atention-icon alkaline-atention atention-active"></div>
                 <div class="cl-date-value acid-value">
                   <p>25 августа 9:00</p>
                 </div>
-                <div class="cl-bar-button sidetouch alkaline-container-icon"></div>
+                <div class="cl-bar-button clean-nav-button sidetouch alkaline-container-icon" id="status-pump-alkaline"></div>
               </div>
               <div class="line-rinsing-bar">
-                <div class="cl-bar-button sidetouch line-rinsing-icon"></div>
+                <div class="cl-bar-button sidetouch clean-nav-button line-rinsing-icon" id="status-line-rising"></div>
                 <div class="cl-bar-atention-icon line-rinsing-atention atention-active"></div>
                 <div class="cl-date-value line-rinsing-value">
                   <p>25 августа 9:00</p>
                 </div>
-                <div class="cl-bar-button sidetouch peracetic-container-icon"></div>
+                <div class="cl-bar-button sidetouch clean-nav-button peracetic-container-icon" id="status-pump-peracetic"></div>
               </div>
               <div class="robot-rinsing-bar">
-                <div class="cl-bar-button sidetouch robot-rinsing-icon"></div>
+                <div class="cl-bar-button sidetouch clean-nav-button robot-rinsing-icon" id="status-robot-rising"></div>
                 <div class="cl-bar-atention-icon robot-rinsing-atention atention-active"></div>
                 <div class="cl-date-value robot-rinsing-value">
                   <p></p>
                 </div>
-                <div class="cl-bar-button sidetouch robot-rinsing-container-icon"></div>
+                <div class="cl-bar-button sidetouch robot-rinsing-container-icon" ></div>
               </div>
               <div class="iodine-valve">
-                <div class="cl-bar-button sidetouch iodine-valve-icon"></div>
+                <div class="cl-bar-button clean-nav-button sidetouch iodine-valve-icon" id="graphics"></div>
               </div>
             </div>
             <!-- Управление отбором проб -->
@@ -5520,7 +5521,7 @@
           <button class="change-mode-button sidetouch change-mode-play"></button>
         </div>
       </div>
-      <button class="side-bar-button sidetouch alarm-button medium alarm"></button>
+      <button class="side-bar-button sidetouch alarm-button medium" id="tab__content_info" value="info-page"></button>
       <button class="side-bar-button sidetouch button-close-cow-exit"></button>
       <button class="side-bar-button sidetouch button-feed"></button>
       <button class="side-bar-button sidetouch button-skip"></button>
@@ -5535,10 +5536,17 @@
       <button class="side-bar-button sidetouch button-open-cell"></button>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="./jquery-3.6.3.min.js"></script>
+  <script>window.$ = window.jQuery = require('./jquery-3.6.3.min.js');</script>
+  <script>
+  $(document).ready(function(){
+     console.log('Библиотека подключена и работает!');
+  });
+</script>
   <script src="./mainGr.js"></script>
-  <script src="./navigation.js"></script>
   <script src="./sideGr.js"></script>
+  <script src="./navigation.js"></script>
   <script src="./main.js"></script>
   <script src="./numpud.js"></script>
   <script src="./tables.js" charset="utf-8"> </script>
