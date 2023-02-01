@@ -1,13 +1,29 @@
-import Chart from "chart.js"
 
-let list: { pref: string; patients: number }[] = [];
-let list2: { pref2: string; patients2: number }[] = [];
-let list3: { pref3: string; patients3: number }[] = [];
-let list4: { pref4: string; patients4: number }[] = [];
-let list5: { pref5: string; patients5: number }[] = [];
-let list6: { pref6: string; patients6: number }[] = [];
-let list7: { pref7: string; patients7: number }[] = [];
-let list8: { pref8: string; patients8: number }[] = [];
+
+let pref;
+let pref2;
+let pref3;
+let pref4;
+let pref5;
+let pref6;
+let pref7;
+let pref8;
+let patients;
+let patients2;
+let patients3;
+let patients4;
+let patients5;
+let patients6;
+let patients7;
+let patients8;
+let list = { pref, patients } = [];
+let list2 = { pref2, patients2} = [];
+let list3 = { pref3, patients3} = [];
+let list4 = { pref4,  patients4} = [];
+let list5 = { pref5, patients5} = [];
+let list6 = { pref6, patients6 } = [];
+let list7 = { pref7, patients7 } = [];
+let list8 = { pref8, patients8 } = [];
 let g = 0;
 const data1 = [0, 0, 0, 0, 0, 0, 2, 4, 6, 8, 12, 18, 28, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 34, 34, 36, 32, 36, 36, 36, 36, 36, 28, 24, 22, 15, 10, 10, 0, 0, 0];
 const data2 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 8, 12, 20, 22, 24, 30, 30, 30, 30, 30, 32, 32, 32, 30, 30, 30, 34, 34, 36, 36, 38, 34, 32, 30, 30, 30, 30, 30, 30, 28, 28, 28, 22, 20, 20, 20, 12, 4, 2, 0, 0];

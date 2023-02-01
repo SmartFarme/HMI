@@ -1,5 +1,5 @@
 /// Код для кнопки перехода к списку ошибок. ///
-
+import * as navigate from "./navigation.js"
 /// Отображение реального времени на экране приложения. ///
 let time = setInterval(function () {
   let date = new Date();

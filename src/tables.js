@@ -1,5 +1,5 @@
 
-    import { Grid } from 'ag-grid-community';dd
+const { Grid } = require('ag-grid-community');
     const milkColumnDefs = [
       { headerName: 'Время', field: 'Время начала доения', width: 140, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
       { headerName: 'Животное', field: 'ID Коровы', width: 100, resizable: true, wrapHeaderText: true, autoHeaderHeight: true, cellClass: "grid-cell-centered", lockPosition: 'left' },
