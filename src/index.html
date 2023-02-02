@@ -72,7 +72,7 @@
         <div class="tab_bar">
           <div class="tab__navigation">
             <div class="home">
-              <div class="tab home-page"></div>
+              <div class="tab home-page" id="home-page"></div>
             </div>
             <div class="info">
               <button class="tab info-page tab_active"></button>
@@ -90,14 +90,14 @@
           </div>
         </div>
         <!-- Состояния "Домашней" вкладки -->
-        <div class="tab__content tab-content-home">
-          <div class="status-wait home-status">
+        <div class="tab__content tab-content-home" id="tab-content-home">
+          <div class="status-wait home-status status-active">
             <div class="status-weit-icon-bar">
               <div class="status-wait-icon home-status-icon "></div>
             </div>
           </div>
 
-          <div class="status-cow-in-cell home-status status-active">
+          <div class="status-cow-in-cell home-status">
             <div class="status-cow-in-cell-bar">
               <div class="status-cow-in-cell-icon home-status-icon"></div>
               <div class="cow-in-cell-id">0</div>
@@ -536,7 +536,7 @@
 
         </div>
         <!-- Вкладки содержащие статистику -->
-        <div class="tab__content tab__content_info tab__content_active">
+        <div class="tab__content tab__content_active" id="tab-info">
           <div class="untabs" id="untabs2">
             <div class="untab__navigation">
               <div class="yield">
@@ -546,7 +546,7 @@
                 <div class="untab cleaning-statistics untab_active"></div>
               </div>
               <div class="alarm-stat">
-                <div class="untab alarm-statistics"></div>
+                <div class="untab alarm-statistics" id="alarm-statistics"></div>
               </div>
             </div>
             <!-- Статистика по надоям -->
@@ -580,7 +580,7 @@
               </div>
             </div>
             <!-- Статистика по ошибкам -->
-            <div class="untab__content alarm-statistics-content">
+            <div class="untab__content alarm-statistics-content" id="alarm-statistics-content">
               <style>
                 #new-alarm-table {
                   font-family: Cera-regular;

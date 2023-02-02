@@ -1,9 +1,9 @@
 class NavigationTab {
     constructor(arrayName, name, contentName) {
-        this.arrayName = Array.from(document.querySelectorAll(`.${arrayName}`))
+        this.arrayName = $(`.${arrayName}`)
         for (let b = 0; b < this.arrayName.length; b++) {
-            this.contentName = Array.from(this.arrayName[b].querySelectorAll(`.${contentName}`))
-            this.tabArr = Array.from(this.arrayName[b].querySelectorAll(`.${name}`))
+            this.contentName = $(this.arrayName[b]).find(`.${contentName}`)
+            this.tabArr = $(this.arrayName[b]).find(`.${name}`)
             console.log(this.tabArr)
             for (let i = 0; i < this.tabArr.length; i++) {
                 this.tabArr[i].addEventListener("click", this.getActive.bind(null, name, this.tabArr, i, this.contentName), false);
@@ -11,7 +11,9 @@ class NavigationTab {
         }
     }
     getActive(target, targetArr, i, targetContent) {
-        let curentIndex = targetArr.findIndex(element => element.classList.contains(`${target}_active`));
+        let curent = targetArr.filter((`.${target}_active`));
+        let curentIndex = targetArr.index(curent)
+        console.log(curentIndex)
         targetArr[curentIndex].classList.remove(`${target}_active`)
         targetContent[curentIndex].classList.remove(`${target}__content_active`);
         targetArr[i].classList.add(`${target}_active`);
@@ -22,7 +24,7 @@ class NavigationTab {
 const unTabNavigation = new NavigationTab(`untabs`, `untab`, `untab__content`)
 const tabNavigation = new NavigationTab(`tabs`, `tab`, `tab__content`)
 
-$(".alarm-button").click(toAlarmList);
+$(".alarm-button").on('click', (toAlarmList));
 function toAlarmList() {
     $(".tab").each(function() {
         $(this).removeClass("tab_active")
@@ -31,46 +33,46 @@ function toAlarmList() {
         $(this).removeClass("tab__content_active")
     })
     $(".info-page").addClass("tab_active");
-    $(".tab__content_info").addClass("tab__content_active");
-    $(".tab__content_info .untab").each(function() {
+    let $tabInfo = $("#tab-info")
+    $tabInfo.addClass("tab__content_active");
+    $tabInfo.find(".untab").each(function() {
         $(this).removeClass("untab_active")
     });
-    $(".tab__content_info .alarm-statistics").first().addClass("untab_active")
-    $(".tab__content_info .untab__content").each(function() {
+    $tabInfo.find("#alarm-statistics").addClass("untab_active")
+    $tabInfo.find(".untab__content").each(function() {
         $(this).removeClass("untab__content_active")
     });
-    $(".tab__content_info .alarm-statistics-content").first().addClass("untab__content_active");
+    $tabInfo.find("#alarm-statistics-content").addClass("untab__content_active");
 }
 
-const homeContent = document.querySelector(".tab-content-home");
+let $homeContent = $("#tab-content-home");
 
 function closeTabs() {
-    const tab = Array.from(document.querySelectorAll(".tab"));
-    const homeStatus = Array.from(homeContent.querySelectorAll(".home-status"))
-    const tabContent = Array.from(document.querySelectorAll(".tab__content"));
-    tab.forEach(tab => {
-        tab.classList.remove("tab_active")
+    const $tab = $(".tab");
+    const $homeStatus = $homeContent.find(".home-status")
+    const $tabContent = $(".tab__content");
+    $tab.each(function() {
+        $(this).removeClass("tab_active")
     });
-    homeStatus.forEach(homeStatus => {
-        homeStatus.classList.remove("status-active")
+    $homeStatus.each(function() {
+        $(this).removeClass("status-active")
     })
-    tabContent.forEach(tabContent => {
-        tabContent.classList.remove("tab__content_active")
+    $tabContent.each(function() {
+        $(this).removeClass("tab__content_active")
     });
 }
 
-let cleanNavButton = Array.from(document.querySelectorAll(".clean-nav-button"));
-for (let n = 0; n < cleanNavButton.length; n++) {
-    cleanNavButton[n].addEventListener("click", closeTabs);
-    cleanNavButton[n].addEventListener("click", toClean);
+let $cleanNavButton = $(".clean-nav-button");
+$cleanNavButton.each(function(index) {
+    $(this).on("click", closeTabs);
+    $(this).on("click", toClean);
     function toClean() {
-        const homePage = document.querySelector(".home-page");
-        homePage.classList.add("tab_active")
-        homeContent.classList.add("tab__content_active");
-        let CleanPage = homeContent.querySelector(`.${cleanNavButton[n].id}`);
-        console.log(cleanNavButton[n].id)
-        CleanPage.classList.add("status-active");
+        const $homePage = $("#home-page");
+        $homePage.addClass("tab_active")
+        $homeContent.addClass("tab__content_active");
+        let $CleanPage = $homeContent.find(`.${$cleanNavButton[index].id}`);
+        $CleanPage.addClass("status-active");
     }
-}
+})
 
 
