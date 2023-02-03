@@ -1,58 +1,55 @@
-/// Код описывающий работу вспплывающего цифрового блока для ввода значений ///
-
-const inputt = Array.from(document.querySelectorAll(".input-button"));
-const mark = document.querySelector(".mark");
-const dot = document.querySelector(".dot");
-for (let b = 0; b < inputt.length; b += 1) {
-	inputt[b].onclick = function () {
-		let elements = document.querySelectorAll(".num-button");
-		let screen = document.querySelectorAll('.screen')[0];
-		let clear = document.getElementsByClassName('clear')[0];
-		let main = document.querySelector('.main-div');
-		let mainContetn = document.querySelector(".main-content");
-		main.classList.toggle("main-div-active");
-		main.onclick = function (e) {
+/// Код описывающий работу вспплывающего цифрового блока для ввода значений //
+const $input = $(".input-button");
+$input.each(function(index) {
+	$(this).on("click", function () {
+		let $elements = $(".num-button");
+		let $screen = $('#screen');
+		let $clear = $('#clear');
+		let $main = $('#main-div');
+		let $mainContetn = $("#main-content");
+		$main.toggleClass("main-div-active");
+		$main.on("click", function (e) {
 			if (!e.target.closest(".main-content")) {
-				main.classList.remove("main-div-active");
-				screen.innerHTML = '0';
+				$main.removeClass("main-div-active");
+				$screen.innerHTML = '0';
 			}
-		}
+		})
 		false
-		for (let i = 0; i < elements.length; i += 1) {
-			if (elements[i].innerHTML === 'ОК') {
-				elements[i].onclick = function () {
-					inputt[b].innerHTML = screen.innerHTML;
-					main.classList.remove("main-div-active")
-					screen.innerHTML = '0';
-				}
+		$elements.each(function(i) {
+			console.log($elements[i])
+			console.log($screen.html().length)
+			if ($elements[i].html() === 'ОК') {
+				$elements[i].on("click", function () {
+					$input[index].innerHTML = $screen.innerHTML;
+					$main.removeClass("main-div-active")
+					$screen.innerHTML = '0';
+					console.log($screen.innerHTML.length)
+				})
 			} else {
-				elements[i].onclick = function () {
-          if (screen.innerHTML.length == 4) {
-            screen.innerHTML = screen.innerHTML;
+				$elements[i].on("click", function () {
+          if ($screen.innerHTML.length == 4) {
+            $screen.innerHTML = $screen.innerHTML;
           } else {
-            if (elements[i].innerHTML === "÷") {
-              screen.innerHTML += "/ ";
+            if ($elements[i].innerHTML === "÷") {
+              $screen.innerHTML += "/ ";
             } else {
-              if (screen.innerHTML === "0") {
-                screen.innerHTML = elements[i].innerHTML;
+              if ($screen.innerHTML === "0") {
+                $screen.innerHTML = $elements[i].innerHTML;
               } else {
-                screen.innerHTML += elements[i].innerHTML;
-                console.log(screen.textContent);
-                if (screen.innerHTML.indexOf(".") != "-1") {
-                  screen.innerHTML = screen.innerHTML.substring(0, screen.innerHTML.indexOf(".") + 3);
-                }
+                $screen.innerHTML += $elements[i].innerHTML;
+                console.log($screen.textContent);
               }
             }
           }
-				};
+				});
 			}
-		}
+		})
 	
 		clear.onclick = function () {
 			screen.innerHTML = '0';
 		};
-	}
-}
+	})
+})
 
 
 const btnStart = document.querySelector(".clean-touch");
