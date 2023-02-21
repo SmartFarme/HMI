@@ -457,27 +457,24 @@ reboot.onclick = function () {
 
 // const localProgress = document.querySelector(".acid-local-progress-inner");
 // const globalProgress = document.querySelector(".acid-global-progress-inner");
-// const demoStart = document.querySelector(".demo-start");
+
 // const timerLeft = document.querySelector(".timer-count");
 // const timerCount = document.querySelector(".local-stage-time");
 // const timerCountAll = document.querySelector(".global-stage-time");
 // const start = document.querySelector(".demo-start");
-// const acid1 = document.getElementById("acid-1");
-// const firstA = document.querySelector(".acid-main");
+
 // const stages = Array.from(document.querySelectorAll(".acid-st"));
 // const acidStage = document.querySelector(".acid-stage");
 // let secondsRemainingAll;
 // let secondsRemaining;
 // let secondsCount;
 // let intervalProgress;
-// let intervalAllProgress;
-// let intervalHandle;
-// let progressAllWidth;
+
 // let i = 0;
 
 // let interval = 0;
 // let progressWidth = 0;
-// let intervalAll = 0;
+
 
 // function tick() {
 //   let min = Math.floor(secondsRemaining / 60);
@@ -544,9 +541,9 @@ reboot.onclick = function () {
 //   progressCont.classList.remove("hide");
 //   let intervalAll = 0;
 //   let countDownAll = setInterval(() => {
-//     let progressAllWidth = intervalAll / 90000 * 100;
+//     let progressAllWidth = intervalAll / 130000 * 100;
 
-//     if (intervalAll < 90000) {
+//     if (intervalAll < 130000) {
 //       globalProgress.style.width = progressAllWidth + "%";
 //       intervalAll += 10;
 //     } else {
@@ -557,7 +554,6 @@ reboot.onclick = function () {
 
 // function tilt() {
 //   progressWidth = interval / (secondsCount * 1000) * 100;
-//   console.log(progressWidth);
 //   if (progressWidth < 100) {
 //     interval += 10;
 //     localProgress.style.width = progressWidth + "%";
@@ -575,6 +571,7 @@ reboot.onclick = function () {
 //   acidStage.innerHTML = curName.innerHTML;
 //   secondsCount = curTime.innerHTML;
 //   secondsRemaining = curTime.innerHTML;
+//   console.log(secondsRemaining)
 //   tick();
 //   intervalProgress = setInterval(tilt, 10)
 // }
@@ -584,7 +581,7 @@ reboot.onclick = function () {
 //   stages[i].classList.add("current")
 //   startCountdown();
 //   tiltAll();
-//   secondsRemainingAll = 90;
+//   secondsRemainingAll = 130;
 //   tickAll();
 // };
 
@@ -593,6 +590,113 @@ reboot.onclick = function () {
 //   stages[i].classList.add("current")
 //   startCountdown();
 // }
+
+const localProgress = document.querySelector(".acid-local-progress-inner");
+const globalProgress = document.querySelector(".acid-global-progress-inner");
+const timerCount = document.querySelector(".timer-count");
+const start = document.querySelector(".demo-start");
+const stages = Array.from(document.querySelectorAll(".acid-st"));
+const acidStage = document.querySelector(".acid-stage");
+let secondsRemaining;
+let secondsCount;
+let secondsRemainingAll;
+let secondsCountAll;
+let intervalHandle;
+let intervalHandleAll;
+let currentClean;
+let i = 0;
+
+
+let progressWidth = 0;
+let progressAllWidth = 0
+
+async function tick() {
+  let min = Math.floor(secondsRemaining / 6000);
+  let sec = Math.ceil((secondsRemaining - (min * 6000))/100);
+  progressWidth = (100/secondsCount)*(secondsCount - secondsRemaining);
+  if (progressWidth <= 100) {
+    
+    localProgress.style.width = progressWidth + "%";
+  }
+
+
+  if (sec < 10) {
+    sec = "0" + sec;
+  }
+  let localTimer = currentClean.querySelector(".local-stage-time")
+  let timeValue = min.toString() + ":" + sec;
+  localTimer.innerHTML = timeValue
+
+  if (secondsRemaining === 0) {
+    if (i === 8) {
+      clearInterval(intervalHandle);
+      stages[i].classList.remove("current-state")
+      stages[i].classList.remove("current")
+      i = 0
+    } else {
+      secondsCount = 0;
+      clearInterval(intervalHandle);
+      stages[i].classList.remove("current-state")
+      stages[i].classList.remove("current")
+      i++;
+      next();
+    }
+  }
+  secondsRemaining--
+}
+
+async function tickAll() {
+  let min = Math.floor(secondsRemainingAll / 6000);
+  let sec = Math.ceil((secondsRemainingAll - (min * 6000))/100);
+  progressAllWidth = (100/secondsCountAll)*(secondsCountAll - secondsRemainingAll);
+  console.log(progressAllWidth)
+  if (progressAllWidth <= 100) {
+    
+    globalProgress.style.width = progressAllWidth + "%";
+  }
+
+
+  if (sec < 10) {
+    sec = "0" + sec;
+  }
+  let globalTimer = currentClean.querySelector(".global-stage-time")
+  let timeValue = min.toString() + ":" + sec;
+  globalTimer.innerHTML = timeValue
+ 
+
+  if (secondsRemainingAll === 0) {
+    clearInterval(intervalHandleAll);
+  }
+  secondsRemainingAll--
+}
+
+function startCountdown() {
+  let curSt = document.querySelector(".current");
+  let curTime = curSt.querySelector(".stage-time");
+  let curName = curSt.querySelector(".stage-name");
+  acidStage.innerHTML = curName.innerHTML;
+  console.log(curTime);
+  secondsCount = curTime.innerHTML * 100;
+  secondsRemaining = curTime.innerHTML * 100;
+  console.log(secondsRemaining)
+  intervalHandle = setInterval(tick, 10);
+}
+
+start.onclick = function () {
+  stages[i].classList.add("current-state")
+  stages[i].classList.add("current")
+  startCountdown();
+  secondsCountAll = 130 * 100;
+  secondsRemainingAll = 130 * 100;
+  intervalHandleAll = setInterval(tickAll, 10);
+  currentClean = document.querySelector(".status-active");
+};
+
+function next() {
+  stages[i].classList.add("current-state")
+  stages[i].classList.add("current")
+  startCountdown();
+}
 
 const schemeArmButton = Array.from(document.querySelectorAll(".scheme-arm"))
 const schemeMainDiv = document.querySelector(".main-div-mnem")

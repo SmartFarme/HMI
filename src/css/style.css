@@ -219,7 +219,7 @@ body {
     background-repeat: no-repeat;
     background-size: 170px 65px;
     background-position: center;
-    background-image: url(../images/logo.png);
+    background-image: url(../svg/logo.svg);
     margin-top: 2px;
 }
 
@@ -740,6 +740,7 @@ body {
     position: absolute;
     width: 0%;
     height: 100%;
+    
 }
 
 .local-progress-title,
