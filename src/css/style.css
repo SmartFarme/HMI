@@ -996,6 +996,19 @@ body {
     height: 74px;
 }
 
+.sampler-button {
+    display: flex;
+    width: 75px;
+    height: 43px;
+    background-size: 60px;
+    border: solid #2A569A;
+    border-radius: 5px;
+    background-color: #FFF;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 .milk-filter {
     background-image: url(../svg/filter.svg);
     position: absolute;

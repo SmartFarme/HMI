@@ -1,55 +1,59 @@
 /// Код описывающий работу вспплывающего цифрового блока для ввода значений //
 const $input = $(".input-button");
 $input.each(function(index) {
-	$(this).on("click", function () {
+	$(this).on("click", function (index) {
 		let $elements = $(".num-button");
 		let $screen = $('#screen');
 		let $clear = $('#clear');
 		let $main = $('#main-div');
-		let $mainContetn = $("#main-content");
+		let $current = $(this);
 		$main.toggleClass("main-div-active");
 		$main.on("click", function (e) {
 			if (!e.target.closest(".main-content")) {
 				$main.removeClass("main-div-active");
-				$screen.innerHTML = '0';
+				console.log($screen.text());
+				$screen.text(0)
+				$elements.off()
 			}
 		})
 		false
-		$elements.each(function(i) {
-			console.log($elements[i])
-			console.log($screen.html().length)
-			if ($elements[i].html() === 'ОК') {
-				$elements[i].on("click", function () {
-					$input[index].innerHTML = $screen.innerHTML;
-					$main.removeClass("main-div-active")
-					$screen.innerHTML = '0';
-					console.log($screen.innerHTML.length)
+		$elements.each(function() {
+			console.log($(this).text())
+			if ($(this).text() === 'ОК') {
+				$(this).on("click" , function () {
+					$current.text($screen.text())
+					$main.removeClass("main-div-active");
+					$screen.text(0)
+					$elements.off()
 				})
 			} else {
-				$elements[i].on("click", function () {
-          if ($screen.innerHTML.length == 4) {
-            $screen.innerHTML = $screen.innerHTML;
+				$(this).on("click", function (ev) {
+          if ($screen.text().length == 4) {
+            $screen.text(($screen.text()))
           } else {
-            if ($elements[i].innerHTML === "÷") {
-              $screen.innerHTML += "/ ";
+            if ($(this).text() == "÷") {
+              $screen.text('/');
             } else {
-              if ($screen.innerHTML === "0") {
-                $screen.innerHTML = $elements[i].innerHTML;
+              if ($screen.text() == "0") {
+                $screen.text($(this).text());
               } else {
-                $screen.innerHTML += $elements[i].innerHTML;
-                console.log($screen.textContent);
+                $screen.text($screen.text() + $(this).text())
+                console.log($screen.text());
               }
-            }
+            } 
           }
 				});
 			}
 		})
 	
-		clear.onclick = function () {
-			screen.innerHTML = '0';
-		};
+		$clear.on("click", function () {
+			$screen.text(0);
+		});
 	})
 })
+
+
+
 
 
 const btnStart = document.querySelector(".clean-touch");
