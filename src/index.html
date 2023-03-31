@@ -2642,7 +2642,6 @@
                d="M 82.786804,66.539503 H 77.759712"
                id="path2426-7-2-3-1-9-0-9-2-7" /></g></g></g></svg>
 
-
                 </div>
               </div>
               <div class="klapan-mode-div">
@@ -5416,56 +5415,56 @@
                   <div class="configuration-field">
                     <div class="configuration-item">
                       <div class="configuration-item-name">Порог отсоединения</div>
-                      <button id="datachment-threshold" class="configuration-item-button input-button">-</button>
+                      <button id="datachmentThreshold" class="configuration-item-button input-button">-</button>
                    
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Задержка отсоединения, сек</div>
-                      <button id="datachment-delay" class="configuration-item-button input-button">-</button>
+                      <button id="datachmentDelay" class="configuration-item-button input-button">-</button>
                     </div>
                     <div class="configuration-item">
                       <div  class="configuration-item-name">Частота пульсации, ppm</div>
-                      <button id="pulse-frequency" class="configuration-item-button input-button">-</button>
+                      <button id="pulseFrequency" class="configuration-item-button input-button">-</button>
                     </div>
                     <div class="configuration-item">
                       <div  class="configuration-item-name">Соотношение тактов</div>
-                      <button id="clock-ratio" class="configuration-item-button input-button">-</button>
+                      <button id="clockRatio" class="configuration-item-button input-button">-</button>
                       
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Время подготовки сосков, сек</div>
-                      <button id="teat-oreoaration-time" class="configuration-item-button input-button">-</button>
+                      <button id="teatOreoarationTime" class="configuration-item-button input-button">-</button>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Высота подъема щеток, см</div>
-                      <button id="brush-lift-height" class="configuration-item-button input-button">-</button>
+                      <button id="brushLiftHeight" class="configuration-item-button input-button">-</button>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Время обработки сосков, сек</div>
-                      <button id="teat-treatment-time" class="configuration-item-button input-button">-</button>
+                      <button id="teatTreatmentTime" class="configuration-item-button input-button">-</button>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Корректировка по горизонтали, мм</div>
-                      <button id="horizontal-adjustment" class="configuration-item-button input-button">-</button>
+                      <button id="horizontalAdjustment" class="configuration-item-button input-button">-</button>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Корректировка по вертикали, мм</div>
-                      <button id="vertical-adjustment" class="configuration-item-button input-button">-</button>
+                      <button id="verticalAdjustment" class="configuration-item-button input-button">-</button>
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Адрес УДР</div>
-                      <button id="UDR adress" class="configuration-item-button input-button">-</button>
+                      <button id="udrAdress" class="configuration-item-button input-button">-</button>
                     
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Количество ведер</div>
-                      <button id="number-of-buckets" class="configuration-item-button input-button">-</button>
+                      <button id="numberOfBuckets" class="configuration-item-button input-button">-</button>
                     
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Уровень доступа</div>
-                      <button id="access-level" name="select" class="configuration-item-button sel">
-                        Нет
+                      <button id="accessLevel" name="select" class="configuration-item-button sel">
+                        
                       </button>
                       <div class="select-mode-div">
                         <div class="select-mode-content">
@@ -5478,7 +5477,7 @@
                     </div>
                     <div class="configuration-item">
                       <div class="configuration-item-name">Журнал событий</div>
-                      <button id="event-log" class="configuration-item-button input-button">-</button>
+                      <button id="eventLog" class="configuration-item-button input-button"></button>
                     
                     </div>
                   </div>
@@ -5537,18 +5536,14 @@
     </div>
   </div>
 
-  <script src="./jquery-3.6.3.min.js"></script>
-  <script>window.$ = window.jQuery = require('./jquery-3.6.3.min.js');</script>
-  <script>
-  $(document).ready(function(){
-     console.log('Библиотека подключена и работает!');
-  });
-</script>
+  <script src="./js/jquery-3.6.3.min.js"></script>
+  <script>window.$ = window.jQuery = require('./js/jquery-3.6.3.min.js');</script>
   <script src="../node_modules/chart.js/dist/chart.js"></script>
-  <script type="module" src="./mainGr.js"></script>
-  <script type="module" src="./main.js"></script>
-  <script src="./numpud.js"></script>
-  <script type="module" src="./tables.js" charset="utf-8"> </script>
+  <script src="./js/mainGr.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/numpud.js"></script>
+  <script src="./js/navigation.js"></script>
+  <script src="./js/tables.js" charset="utf-8"> </script>
 </body>
 <!-- <div class="milk-action-select-list">
   <button class="side-bar-button milk-action-select-button button-milk-save"></button>

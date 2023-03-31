@@ -1,5 +1,4 @@
-/// Код для кнопки перехода к списку ошибок. ///
-import * as navigate from "./navigation.js"
+
 /// Отображение реального времени на экране приложения. ///
 let time = setInterval(function () {
   let date = new Date();
@@ -9,8 +8,34 @@ let time = setInterval(function () {
   document.querySelector('.time').innerHTML = hours + ':' + minutes + ':' + seconds;
 }, 1000);
 
+let settingValues = { datachmentThreshold: "12", datachmentDelay: '4', pulseFrequency: "32", clockRatio: "3", teatOreoarationTime: "6", brushLiftHeight: "6", teatTreatmentTime: "15", horizontalAdjustment: "30", verticalAdjustment: "27", udrAdress: "1378", numberOfBuckets: "5", accessLevel: "Обычный", eventLog: "14" }
 
 
+let settingConfiguration = Array.from(document.querySelectorAll(".configuration-item-button"))
+settingConfiguration.forEach(function (element) {
+  if (settingValues.hasOwnProperty(`${element.id}`)) {
+    element.innerText = settingValues[`${element.id}`]
+  } else {
+ 
+  }
+
+})
+
+//сохранение веденых параметров
+let configDone = document.querySelector(".configuration-done");
+configDone.onclick = function () {
+  settingConfiguration.forEach(function (element) {
+    settingValues[`${element.id}`] = element.innerText;
+  })
+}
+
+//отмена последних введенных изменений
+let configCancel = document.querySelector(".configuration-cancel");
+configCancel.onclick = function () {
+  settingConfiguration.forEach(function (element) {
+    element.innerText = settingValues[`${element.id}`]
+  })
+}
 
 
 const sidetouch = Array.from(document.querySelectorAll(".sidetouch"));
@@ -32,7 +57,6 @@ for (let i = 0; i < sidetouch.length; i++) {
 
 
 const samplerStatusBtn = $(".sampler-status-icon");
-console.log(samplerStatusBtn)
 const samplerChange = document.querySelector(".change-sampler-div");
 for (let i = 0; i < samplerStatusBtn.length; i++) {
   samplerStatusBtn[i].addEventListener("click", samplerChangeActive);
@@ -240,6 +264,7 @@ for (let i = 0; i < pumpStatusButton.length; i++) {
   }
 }
 
+
 const brushesStatusButton = document.querySelectorAll(".brushes");
 const brushesStatusChange = document.querySelector(".brushes-mode-div");
 for (let i = 0; i < brushesStatusButton.length; i++) {
@@ -321,35 +346,48 @@ for (let i = 0; i < brushesCleanStatusButton.length; i++) {
   }
 }
 
-const klapanPrStatusButton = document.querySelectorAll(".klapan-pr");
-const klapanPrStatusChange = document.querySelector(".klapan-mode-div");
-for (let i = 0; i < klapanPrStatusButton.length; i++) {
-  klapanPrStatusButton[i].addEventListener("click", klapanPrChangeActive);
-  function klapanPrChangeActive() {
-    klapanStatusChange.classList.add("klapan-mode-div-active")
-    let klapanPr = Array.from(document.querySelectorAll(".klapan-pr-tr"))
-    const klapanPrModeOff = document.querySelector(".klapan-mode-off");
-    const klapanPrModeOn = document.querySelector(".klapan-mode-on");
-    const klapanPrModeClose = document.querySelector(".klapan-mode-close");
-    klapanPrModeOff.onclick = function () {
-      klapanStatusChange.classList.remove("klapan-mode-div-active")
-      klapanPr.forEach(klapanPrTriangle => {
-        klapanPrTriangle.classList.add("klapan-black");
-        klapanPrTriangle.classList.remove("klapan-white");
-      });
-    }
-    klapanPrModeOn.onclick = function () {
-      klapanStatusChange.classList.remove("klapan-mode-div-active")
-      klapanPr.forEach(klapanPrTriangle => {
-        klapanPrTriangle.classList.remove("klapan-black");
-        klapanPrTriangle.classList.add("klapan-white");
-      });
-    }
-    klapanPrModeClose.onclick = function () {
-      klapanStatusChange.classList.remove("klapan-mode-div-active")
-    }
+const schemeArmButton = Array.from(document.querySelectorAll(".scheme-arm"))
+const schemeMainDiv = document.querySelector(".main-div-mnem")
+schemeArmButton.forEach(armButton => {
+  armButton.onclick = function () {
+    schemeMainDiv.classList.add("main-div-mnem-active")
   }
+});
+const armDivClose = document.querySelector(".arm-close")
+armDivClose.onclick = function () {
+  schemeMainDiv.classList.remove("main-div-mnem-active")
 }
+
+
+// const klapanPrStatusButton = document.querySelectorAll(".klapan-pr");
+// const klapanPrStatusChange = document.querySelector(".klapan-mode-div");
+// for (let i = 0; i < klapanPrStatusButton.length; i++) {
+//   klapanPrStatusButton[i].addEventListener("click", klapanPrChangeActive);
+//   function klapanPrChangeActive() {
+//     klapanStatusChange.classList.add("klapan-mode-div-active")
+//     let klapanPr = Array.from(document.querySelectorAll(".klapan-pr-tr"))
+//     const klapanPrModeOff = document.querySelector(".klapan-mode-off");
+//     const klapanPrModeOn = document.querySelector(".klapan-mode-on");
+//     const klapanPrModeClose = document.querySelector(".klapan-mode-close");
+//     klapanPrModeOff.onclick = function () {
+//       klapanStatusChange.classList.remove("klapan-mode-div-active")
+//       klapanPr.forEach(klapanPrTriangle => {
+//         klapanPrTriangle.classList.add("klapan-black");
+//         klapanPrTriangle.classList.remove("klapan-white");
+//       });
+//     }
+//     klapanPrModeOn.onclick = function () {
+//       klapanStatusChange.classList.remove("klapan-mode-div-active")
+//       klapanPr.forEach(klapanPrTriangle => {
+//         klapanPrTriangle.classList.remove("klapan-black");
+//         klapanPrTriangle.classList.add("klapan-white");
+//       });
+//     }
+//     klapanPrModeClose.onclick = function () {
+//       klapanStatusChange.classList.remove("klapan-mode-div-active")
+//     }
+//   }
+// }
 
 
 const cupStatusButton = document.querySelectorAll(".arm-cup");
@@ -402,26 +440,26 @@ function milkChangeActive() {
 }
 
 const selectBtn = document.querySelector(".sel");
-  const selectChange = document.querySelector(".select-mode-div");
-  selectBtn.addEventListener("click", selectChangeActive);
-    function selectChangeActive() {
-      selectChange.classList.add("select-mode-div-active")
-      const selectNote = document.querySelector(".select-note");
-      const selectSimple = document.querySelector(".select-simple");
-      const selectDitail = document.querySelector(".select-ditail");
-      selectNote.onclick = function () {
-        selectChange.classList.remove("select-mode-div-active")
-        selectBtn.innerHTML=selectNote.innerHTML
-      }
-      selectSimple.onclick = function () {
-        selectChange.classList.remove("select-mode-div-active")
-        selectBtn.innerHTML=selectSimple.innerHTML
-      }
-      selectDitail.onclick = function () {
-        selectChange.classList.remove("select-mode-div-active")
-        selectBtn.innerHTML=selectDitail.innerHTML
-      }
-    }
+const selectChange = document.querySelector(".select-mode-div");
+selectBtn.addEventListener("click", selectChangeActive);
+function selectChangeActive() {
+  selectChange.classList.add("select-mode-div-active")
+  const selectNote = document.querySelector(".select-note");
+  const selectSimple = document.querySelector(".select-simple");
+  const selectDitail = document.querySelector(".select-ditail");
+  selectNote.onclick = function () {
+    selectChange.classList.remove("select-mode-div-active")
+    selectBtn.innerHTML = selectNote.innerHTML
+  }
+  selectSimple.onclick = function () {
+    selectChange.classList.remove("select-mode-div-active")
+    selectBtn.innerHTML = selectSimple.innerHTML
+  }
+  selectDitail.onclick = function () {
+    selectChange.classList.remove("select-mode-div-active")
+    selectBtn.innerHTML = selectDitail.innerHTML
+  }
+}
 const cameraPage = document.querySelector(".camera-page")
 const camera = document.querySelector(".camera-page-button")
 camera.onclick = function () {
@@ -437,15 +475,15 @@ const rebootProcess = require('child_process');
 
 function rebotProcess(command) {
 
-  rebootProcess.exec(command, function(error, stdout, stderr) {
+  rebootProcess.exec(command, function (error, stdout, stderr) {
 
-        console.log(`stdout: ${stdout}`);
-        console.log(`stderr: ${stderr}`);
+    console.log(`stdout: ${stdout}`);
+    console.log(`stderr: ${stderr}`);
 
-        if (error !== null) {
-            console.log(`error: ${error}`);
-        }
-    });
+    if (error !== null) {
+      console.log(`error: ${error}`);
+    }
+  });
 }
 
 const reboot = document.querySelector(".off-system");
@@ -455,142 +493,8 @@ reboot.onclick = function () {
 }
 
 
-// const localProgress = document.querySelector(".acid-local-progress-inner");
-// const globalProgress = document.querySelector(".acid-global-progress-inner");
 
-// const timerLeft = document.querySelector(".timer-count");
-// const timerCount = document.querySelector(".local-stage-time");
-// const timerCountAll = document.querySelector(".global-stage-time");
-// const start = document.querySelector(".demo-start");
-
-// const stages = Array.from(document.querySelectorAll(".acid-st"));
-// const acidStage = document.querySelector(".acid-stage");
-// let secondsRemainingAll;
-// let secondsRemaining;
-// let secondsCount;
-// let intervalProgress;
-
-// let i = 0;
-
-// let interval = 0;
-// let progressWidth = 0;
-
-
-// function tick() {
-//   let min = Math.floor(secondsRemaining / 60);
-//   let sec = secondsRemaining - (min * 60);
-
-//   if (sec >= 10) {
-//     sec = sec;
-//   }
-
-//   if (sec < 10) {
-//     sec = "0" + sec;
-//   }
-
-//   let timeValue = min.toString() + ":" + sec;
-//   timerCount.innerHTML = timeValue
-
-//   if (secondsRemaining === 0) {
-//     if (i === 8) {
-//       clearInterval(intervalProgress);
-//     } else {
-//       stages[i].classList.remove("current-state")
-//       stages[i].classList.remove("current")
-//       i++;
-//       next();
-//     }
-//   } else {
-//     secondsRemaining--
-//     setTimeout(tick, 1000);
-//   }
-
-// }
-
-// function tickAll() {
-//   let minAll = Math.floor(secondsRemainingAll / 60);
-//   let secAll = secondsRemainingAll - (minAll * 60);
-
-//   if (secAll >= 10) {
-//     secAll = secAll;
-//   }
-
-//   if (secAll < 10) {
-//     secAll = "0" + secAll;
-//   }
-
-//   let timeValueAll = minAll.toString() + ":" + secAll;
-//   timerCountAll.innerHTML = timeValueAll
-
-//   if (secondsRemainingAll === 0) {
-//     if (i === 8) {
-//       clearInterval(intervalProgress);
-//     } else {
-//       stages[i].classList.remove("current-state")
-//       stages[i].classList.remove("current")
-//       i++;
-//       next();
-//     }
-//   } else {
-//     secondsRemainingAll--
-//     setTimeout(tickAll, 1000);
-//   }
-// }
-
-// function tiltAll() {
-//   progressCont.classList.remove("hide");
-//   let intervalAll = 0;
-//   let countDownAll = setInterval(() => {
-//     let progressAllWidth = intervalAll / 130000 * 100;
-
-//     if (intervalAll < 130000) {
-//       globalProgress.style.width = progressAllWidth + "%";
-//       intervalAll += 10;
-//     } else {
-//       clearInterval(countDownAll)
-//     }
-//   }, 10)
-// };
-
-// function tilt() {
-//   progressWidth = interval / (secondsCount * 1000) * 100;
-//   if (progressWidth < 100) {
-//     interval += 10;
-//     localProgress.style.width = progressWidth + "%";
-//   } else {
-//     interval = 0;
-//     progressWidth = 0;
-//     clearInterval(intervalProgress);
-//   }
-// }
-
-// function startCountdown() {
-//   let curSt = document.querySelector(".current");
-//   let curTime = curSt.querySelector(".stage-time");
-//   let curName = curSt.querySelector(".stage-name");
-//   acidStage.innerHTML = curName.innerHTML;
-//   secondsCount = curTime.innerHTML;
-//   secondsRemaining = curTime.innerHTML;
-//   console.log(secondsRemaining)
-//   tick();
-//   intervalProgress = setInterval(tilt, 10)
-// }
-
-// start.onclick = function () {
-//   stages[i].classList.add("current-state")
-//   stages[i].classList.add("current")
-//   startCountdown();
-//   tiltAll();
-//   secondsRemainingAll = 130;
-//   tickAll();
-// };
-
-// function next() {
-//   stages[i].classList.add("current-state")
-//   stages[i].classList.add("current")
-//   startCountdown();
-// }
-
+//Индикация этапов промывки
 const localProgress = document.querySelector(".acid-local-progress-inner");
 const globalProgress = document.querySelector(".acid-global-progress-inner");
 const timerCount = document.querySelector(".timer-count");
@@ -612,10 +516,10 @@ let progressAllWidth = 0
 
 async function tick() {
   let min = Math.floor(secondsRemaining / 6000);
-  let sec = Math.ceil((secondsRemaining - (min * 6000))/100);
-  progressWidth = (100/secondsCount)*(secondsCount - secondsRemaining);
+  let sec = Math.ceil((secondsRemaining - (min * 6000)) / 100);
+  progressWidth = (100 / secondsCount) * (secondsCount - secondsRemaining);
   if (progressWidth <= 100) {
-    
+
     localProgress.style.width = progressWidth + "%";
   }
 
@@ -647,11 +551,11 @@ async function tick() {
 
 async function tickAll() {
   let min = Math.floor(secondsRemainingAll / 6000);
-  let sec = Math.ceil((secondsRemainingAll - (min * 6000))/100);
-  progressAllWidth = (100/secondsCountAll)*(secondsCountAll - secondsRemainingAll);
+  let sec = Math.ceil((secondsRemainingAll - (min * 6000)) / 100);
+  progressAllWidth = (100 / secondsCountAll) * (secondsCountAll - secondsRemainingAll);
   console.log(progressAllWidth)
   if (progressAllWidth <= 100) {
-    
+
     globalProgress.style.width = progressAllWidth + "%";
   }
 
@@ -662,7 +566,7 @@ async function tickAll() {
   let globalTimer = currentClean.querySelector(".global-stage-time")
   let timeValue = min.toString() + ":" + sec;
   globalTimer.innerHTML = timeValue
- 
+
 
   if (secondsRemainingAll === 0) {
     clearInterval(intervalHandleAll);
@@ -698,14 +602,3 @@ function next() {
   startCountdown();
 }
 
-const schemeArmButton = Array.from(document.querySelectorAll(".scheme-arm"))
-const schemeMainDiv = document.querySelector(".main-div-mnem")
-  schemeArmButton.forEach(armButton => {
-    armButton.onclick = function () {
-      schemeMainDiv.classList.add("main-div-mnem-active")
-    }
-  });
-const armDivClose = document.querySelector(".arm-close")
-armDivClose.onclick = function () {
-  schemeMainDiv.classList.remove("main-div-mnem-active")
-}

@@ -55,7 +55,7 @@ $input.each(function(index) {
 
 
 
-
+//Блокировка экрана на 30 секунд для возможности протереть сенсоный экран
 const btnStart = document.querySelector(".clean-touch");
 const progressBar = document.querySelector(".progress-inner");
 const progressCont = document.querySelector(".cleaning-popup-main");

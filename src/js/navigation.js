@@ -1,3 +1,4 @@
+//Навигация по вкладкам и подвкладкам
 class NavigationTab {
     constructor(arrayName, name, contentName) {
         this.arrayName = $(`.${arrayName}`)
@@ -24,6 +25,7 @@ class NavigationTab {
 const unTabNavigation = new NavigationTab(`untabs`, `untab`, `untab__content`)
 const tabNavigation = new NavigationTab(`tabs`, `tab`, `tab__content`)
 
+//Переход к таблице ошибок
 $(".alarm-button").on('click', (toAlarmList));
 function toAlarmList() {
     $(".tab").each(function() {
@@ -47,6 +49,7 @@ function toAlarmList() {
 
 let $homeContent = $("#tab-content-home");
 
+
 function closeTabs() {
     const $tab = $(".tab");
     const $homeStatus = $homeContent.find(".home-status")
@@ -62,6 +65,7 @@ function closeTabs() {
     });
 }
 
+//В данный момент для доступа к различным состояниям главного экрана переход сделан по клику по иконкам промывок
 let $cleanNavButton = $(".clean-nav-button");
 $cleanNavButton.each(function(index) {
     $(this).on("click", closeTabs);
